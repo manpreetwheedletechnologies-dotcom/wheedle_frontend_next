@@ -1,0 +1,30 @@
+# Wheedle Technologies
+
+> Wheedle Technologies is an AI-first technology company headquartered in Noida, Uttar Pradesh, India (incorporated 2017). The company builds and deploys autonomous AI agents and agentic platforms across web engineering, app development, software, IT consulting, digital marketing, graphic design, UI/UX, and intelligent automation — helping businesses replace manual workflows with self-operating AI systems.
+
+## About
+
+- [Home](https://www.wheedletechnologies.ai/): Overview of Wheedle Technologies' autonomous AI agent ecosystem, core value proposition, and how the platform transforms business operations.
+- [About Us](https://www.wheedletechnologies.ai/about-us): Company background, founding story (2017), mission to democratize autonomous AI, leadership team, and company values.
+
+## Services & AI Agent Offerings
+
+- [AI Web Engineering Agents](https://www.wheedletechnologies.ai/our-service/ai-web-engineering-agents): Autonomous agents that plan, build, test, and deploy websites and web applications using cutting-edge technologies and responsive design principles — with minimal human intervention.
+- [AI App Development Agent](https://www.wheedletechnologies.ai/our-service/ai-app-development-agent): Agentic platform for autonomously developing native and cross-platform mobile applications that deliver high-quality user experiences across all devices.
+- [Software Development Agentic Platform](https://www.wheedletechnologies.ai/our-service/software-development-agentic-platform): End-to-end autonomous software development platform covering requirement gathering, architecture, coding, testing, and deployment using AI-driven workflows.
+- [Autonomous IT Consulting & Advisory Agent](https://www.wheedletechnologies.ai/our-service/autonomous-it-consulting-and-advisory-agent): AI agent that independently assesses IT infrastructure, identifies gaps, and delivers strategic technology roadmaps and advisory recommendations for businesses.
+- [Autonomous Digital Marketing Agents](https://www.wheedletechnologies.ai/our-service/autonomous-digital-marketing-agents): Self-operating agents for SEO, content marketing, paid campaigns, social media, and performance optimization — autonomously executing and refining digital marketing strategies.
+- [AI Graphic Design Automation Agent](https://www.wheedletechnologies.ai/our-service/ai-graphic-design-automation-agent): Agent that autonomously generates brand-consistent visual assets including logos, banners, social creatives, and marketing collateral using AI design intelligence.
+- [AI Solutions & Intelligent Automation](https://www.wheedletechnologies.ai/our-service/ai-solutions-and-intelligent-automation): Custom AI solutions and intelligent process automation (IPA) to streamline enterprise operations, reduce manual effort, and optimize business outcomes.
+- [Autonomous UI/UX Design Intelligence](https://www.wheedletechnologies.ai/our-service/autonomous-ui-ux-design-intelligence): AI-driven agent for autonomously creating user-centered, intuitive, and visually engaging UI/UX designs for web and mobile products.
+
+## Careers
+
+- [Careers](https://www.wheedletechnologies.ai/career): Open roles at Wheedle Technologies for engineers, AI specialists, designers, and marketers looking to work on autonomous AI agent development.
+
+## Contact & Support
+
+- Contact Email: info@wheedletechnologies.ai
+- HR Email: hr@wheedletechnologies.ai
+- Phone: +91 9718290455
+- Office: Sector-63, Noida, Uttar Pradesh, India — 201301
