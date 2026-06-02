@@ -47,7 +47,7 @@ export default function AboutPageClient() {
           <Newsletter content={{ titleLine1: "Let's Build", titleLine2Primary: '', titleLine2Secondary: 'Something Great Together', description: "Speak with our experts to explore our autonomous platforms and intelligent agents, and discover the right AI-driven solution for your business needs.", inputType: 'tel', inputPlaceholder: '+91 254 568 XXXX', buttonText: 'Request a Call', successMessage: 'Your contact is successfully registered for newsletter' }} />
           <Testimonials />
           <div className="relative"><div className="absolute inset-x-0 -top-16 h-16 bg-black z-50 pointer-events-none"></div></div>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </div>
       </motion.div>
