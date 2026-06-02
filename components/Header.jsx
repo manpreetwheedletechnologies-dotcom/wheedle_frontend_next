@@ -8,19 +8,16 @@ import servicesData from '../lib/ServicesData';
 import LogosData from '../lib/LogosData';
 import dynamic from 'next/dynamic';
 
-const ContactModal = dynamic(() => import('./ContactModal'), { ssr: false });
-
-const HEADER_HEIGHT_MOBILE = 82;
-const HEADER_HEIGHT_DESKTOP = 100;
+const ContactModal = dynamic(() => import('./ContactModal'), { ssr: true });
 
 export default function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [showHeader, setShowHeader] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [openContact, setOpenContact] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
   const servicesRef = useRef(null);
 
   const services = Object.keys(servicesData).map((key) => ({
@@ -36,8 +33,31 @@ export default function Header() {
     { name: 'Careers', path: '/career' },
   ];
 
-  useEffect(() => { setIsMobile(window.innerWidth < 1024); }, []);
+  // Scroll effect - hide header when scrolling down, show with blur when scrolling up
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Set scrolled state for background blur
+      setIsScrolled(currentScrollY > 20);
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down & past 100px
+        setIsVisible(false);
+        setServicesOpen(false);
+      } else {
+        // Scrolling up
+        setIsVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
 
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
+  // Close services dropdown on scroll
   useEffect(() => {
     if (!servicesOpen) return;
     const handleScroll = () => setServicesOpen(false);
@@ -53,19 +73,6 @@ export default function Header() {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [servicesOpen]);
-
-  useEffect(() => {
-    if (mobileMenuOpen || openContact || isMobile) { setShowHeader(true); return; }
-    const handleScroll = () => {
-      const cy = window.scrollY;
-      if (cy < 50) setShowHeader(true);
-      else if (cy > lastScrollY) setShowHeader(false);
-      else setShowHeader(true);
-      setLastScrollY(cy);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY, mobileMenuOpen, openContact, isMobile]);
 
   useEffect(() => {
     document.body.style.overflow = mobileMenuOpen || openContact ? 'hidden' : '';
@@ -93,8 +100,13 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-50 bg-black backdrop-blur-md transition-transform duration-300 ${showHeader || mobileMenuOpen || openContact ? 'translate-y-0' : '-translate-y-full'}`}
-        style={{ height: isMobile ? HEADER_HEIGHT_MOBILE : HEADER_HEIGHT_DESKTOP }}
+        className={`fixed top-0 left-0 w-full z-50 h-[82px] lg:h-[100px] transition-all duration-300 ${
+          isVisible ? 'translate-y-0' : '-translate-y-full'
+        } ${
+          isScrolled 
+            ? 'bg-black/20 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20' 
+            : 'bg-transparent'
+        }`}
       >
         <div className="h-full flex items-center justify-between px-4 lg:px-[100px]">
           <Link href="/" className="flex items-center">
@@ -117,7 +129,7 @@ export default function Header() {
                     <AnimatePresence>
                       {servicesOpen && (
                         <motion.div initial={{ opacity: 0, scale: 0.75, y: -10 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.75, y: -10 }} transition={{ duration: 0.25, ease: 'easeOut' }} style={{ transformOrigin: 'top left' }}
-                          className="absolute top-full left-0 mt-4 w-[440px] xl:w-[480px] bg-[#010509] border border-[#0B2CC3] rounded-2xl p-6 z-50">
+                          className="absolute top-full left-0 mt-4 w-[440px] xl:w-[480px] bg-[#010509]/95 backdrop-blur-xl border border-[#0B2CC3]/50 rounded-2xl p-6 z-50 shadow-2xl shadow-blue-900/20">
                           <div className="flex justify-start mb-5">
                             <Link href="/our-services" onClick={() => setServicesOpen(false)} className="relative group">
                               <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#C6D0FF] via-[#002EFF] to-[#6D87FF] p-[1.5px]" />
@@ -149,13 +161,13 @@ export default function Header() {
 
           <div className="flex items-center">
             <button onClick={() => setOpenContact(true)}
-              className="group relative hidden lg:flex h-12 w-[126px] flex-shrink-0 items-center justify-center gap-2 overflow-hidden isolate rounded-full border border-white bg-white text-sm text-black shadow-[0_10px_20px_-10px_rgba(0,0,0,0.35)] hover:shadow-neutral-600">
+              className="group relative hidden lg:flex h-12 w-[126px] flex-shrink-0 items-center justify-center gap-2 overflow-hidden isolate rounded-full border border-white/80 bg-white/10 backdrop-blur-md text-sm text-white shadow-[0_10px_20px_-10px_rgba(0,0,0,0.35)] hover:shadow-neutral-600 hover:bg-white hover:text-black transition-all duration-300">
               <span className="absolute inset-0 overflow-hidden rounded-full">
-                <span className="absolute left-0 h-full w-full translate-x-full rounded-full bg-black transition-all duration-500 group-hover:translate-x-0 group-hover:scale-150" />
+                <span className="absolute left-0 h-full w-full translate-x-full rounded-full bg-white transition-all duration-500 group-hover:translate-x-0 group-hover:scale-150" />
               </span>
-              <span className="relative z-10 transition-colors duration-300 group-hover:text-white">Contact Us</span>
+              <span className="relative z-10 transition-colors duration-300 group-hover:text-black">Contact Us</span>
               <span className="relative z-10 hidden items-center transition-all duration-300 group-hover:flex">
-                <svg className="h-4 w-4 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <svg className="h-4 w-4 text-black" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3l2 5-2 2a16 16 0 006 6l2-2 5 2v3a2 2 0 01-2 2A18 18 0 013 5z" />
                 </svg>
               </span>
@@ -181,7 +193,7 @@ export default function Header() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div initial={{ x: '-100%' }} animate={{ x: 0 }} exit={{ x: '-100%' }} transition={{ duration: 0.35, ease: 'easeInOut' }}
-            className="h-full lg:hidden fixed left-0 right-0 z-40 bg-[#0a0f1a]/98 backdrop-blur-xl">
+            className="h-full lg:hidden fixed left-0 right-0 z-40 bg-[#0a0f1a]/95 backdrop-blur-xl">
             <nav className="flex flex-col items-center justify-center h-full gap-4">
               {navLinks.map((link) =>
                 link.name === 'Our Services' ? (

@@ -10,7 +10,7 @@ import API_BASE_URL from '../lib/api';
 import Badge from './Badge';
 import LogosData from '../lib/LogosData';
 
-const ContactModal = dynamic(() => import('./ContactModal'), { ssr: false });
+const ContactModal = dynamic(() => import('./ContactModal'), { ssr: true });
 
 export default function Hero({ openBot }) {
   const [openContact, setOpenContact] = useState(false);
@@ -32,7 +32,7 @@ export default function Hero({ openBot }) {
       style={{ background: `radial-gradient(circle at center, rgba(90,108,255,0.35), transparent 60%), linear-gradient(180deg, #000000 5%, #000000 10%, #0f1c5c 25%, #3f5efb 40%, #1a237e 60%, #020617 100%)` }}
     >
       <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
-        <img src="/BGImage.png" alt="Background" className="w-full h-full object-cover opacity-20" />
+        <img src="/BG.png" alt="Background" className="w-full h-full object-cover opacity-20" />
       </div>
       <div className="relative w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 max-w-7xl mx-auto flex flex-col items-center text-center">
         <Badge text={heroData.badge} />
@@ -62,9 +62,12 @@ export default function Hero({ openBot }) {
             description="" contactEmail="info@wheedletechnologies.ai"
             contactPhone="+91 9717672561" messagePlaceholder="Tell us your message" />
         )}
-        <div className="relative w-full max-w-[9000px] lg:max-w-[1000px] xl:max-w-[1100px] px-0 mt-[-1%] mb-[-6%]">
-          <img src={LogosData.dashboard} alt="Digital Solutions"
-            className="w-full h-full object-cover rounded-xl sm:rounded-2xl lg:rounded-3xl" />
+        <div className="relative w-full max-w-[1100px] px-0 mt-[-1%] mb-0 sm:mt-0 overflow-hidden">
+          <img
+            src={LogosData.dashboard}
+            alt="Digital Solutions"
+            className="w-full h-auto object-cover rounded-xl sm:rounded-2xl lg:rounded-3xl"
+          />
         </div>
       </div>
     </section>

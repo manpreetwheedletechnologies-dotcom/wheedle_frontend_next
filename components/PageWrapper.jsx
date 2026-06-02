@@ -4,8 +4,8 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import { useState, useEffect } from 'react';
 
-const AnimatedCursor = dynamic(() => import('react-animated-cursor'), { ssr: false });
-const WhebotPage = dynamic(() => import('./WhebotPage'), { ssr: false });
+const AnimatedCursor = dynamic(() => import('react-animated-cursor'), { ssr: true });
+const WhebotPage = dynamic(() => import('./WhebotPage'), { ssr: true });
 
 export default function PageWrapper({ children }) {
   const [isMobile, setIsMobile] = useState(false);

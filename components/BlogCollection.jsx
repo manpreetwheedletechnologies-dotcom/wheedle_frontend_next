@@ -89,7 +89,7 @@ function BlogCollection() {
 
                       <div>
                         <Button
-                          onClick={() => navigate(`/blog/${blog.slug}`)}
+                          onClick={() => router.push(`/blog/${blog.slug}`)}
                           className="px-4 py-2 text-xs font-Inter text-[#000000] bg-[#FFFFFF] border border-white/20 rounded-full transition-colors"
                         >
                           View Blog

@@ -32,10 +32,22 @@ const Form = forwardRef((props, ref) => {
       if (formData.resume) bodyData.append('resume', formData.resume);
       const res = await fetch(`${API_BASE_URL}/contact/`, { method: 'POST', body: bodyData });
       const data = await res.json();
-      if (data.success) {
-        setMessage('✔ Saved Successfully. We will contact you soon.');
-        setFormData({ name: '', email: '', phone: '', lookingFor: '', resume: null });
-      } else setMessage('Something went wrong');
+if (res.ok) {
+  setMessage('✔ Saved Successfully. We will contact you soon.');
+
+  setFormData({
+    name: '',
+    email: '',
+    phone: '',
+    lookingFor: '',
+    resume: null,
+  });
+
+  // reset file input
+  e.target.reset();
+} else {
+  setMessage(data.message || 'Something went wrong');
+}
     } catch { setMessage('Server error. Try again'); }
     setLoading(false);
   };

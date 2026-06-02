@@ -3,6 +3,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Badge from '../../components/Badge';
 import PageWrapper from '../../components/PageWrapper';
+import { AnimatePresence, motion } from 'framer-motion';
 const PolicyCard = ({ title, text, list }) => (
   <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-7">
     <h3 className="text-xl font-semibold mb-3">{title}</h3>
@@ -13,8 +14,27 @@ const PolicyCard = ({ title, text, list }) => (
 export default function TermsClient() {
   return (
     <PageWrapper>
+       <AnimatePresence mode="wait">
+          
+            <motion.div
+              key="landing-content"
+              initial={{
+                opacity: 0,
+                y: 150,
+                filter: 'blur(10px)',
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                filter: 'blur(0px)',
+              }}
+              transition={{
+                duration: 1,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
       <div className="w-full min-h-screen bg-black text-white">
-        <Header />
+        {/* <Header /> */}
         <section className="w-full flex justify-center bg-[#010509] mt-16 lg:mt-10">
           <div className="relative w-full max-w-[1440px] min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh]">
             <img src="/frame-image.png" alt="Frame" className="absolute inset-0 w-full h-full object-cover lg:object-contain" />
@@ -39,8 +59,11 @@ export default function TermsClient() {
             </div>
           </div>
         </section>
-        <Footer />
+        {/* <Footer /> */}
       </div>
+       </motion.div>
+
+</AnimatePresence>
     </PageWrapper>
   );
 }

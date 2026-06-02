@@ -6,9 +6,9 @@ import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 
-const Preloader = dynamic(() => import('./Preloader'), { ssr: false });
-const WhebotPage = dynamic(() => import('./WhebotPage'), { ssr: false });
-const AnimatedCursor = dynamic(() => import('react-animated-cursor'), { ssr: false });
+const Preloader = dynamic(() => import('./Preloader'), { ssr: true });
+const WhebotPage = dynamic(() => import('./WhebotPage'), { ssr: true });
+const AnimatedCursor = dynamic(() => import('react-animated-cursor'), { ssr: true });
 
 export default function ClientProviders({ children }) {
   const pathname = usePathname();

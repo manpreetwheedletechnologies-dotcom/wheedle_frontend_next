@@ -180,3 +180,4 @@ CMD ["npm", "start"]
 | `/src/jsondata/` | `/lib/` |
 | Client-side routing | App Router with SSR/SSG |
 | `index.html` entry | `app/layout.js` root layout |
+"# wheedle_frontend_next" 

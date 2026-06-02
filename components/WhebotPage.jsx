@@ -1,265 +1,730 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
-import { io } from 'socket.io-client';
-import { AnimatePresence, motion } from 'framer-motion';
-import LogosData from '../lib/LogosData';
+/**
+ * WhebotPage.jsx
+ * WheBot - Interactive chatbot widget with live chat support
+ */
 
-const SOCKET_URL = process.env.NEXT_PUBLIC_SOCKET_URL || 'https://wheedletechnologies.ai';
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import { motion } from "framer-motion";
+import axios from "axios";
+import { io } from "socket.io-client";
+import LogosData from "../lib/LogosData";
+import API_BASE_URL from "../lib/api";
+import {
+  RefreshCcw, ChevronDown, Send, CheckCircle2, Pencil,
+  UserPlus, Building2, Globe, Smartphone, Megaphone,
+  BrainCircuit, Bot, Search, BarChart3, Briefcase,
+  ShoppingCart, LayoutTemplate, Workflow, Cpu, Sparkles, Boxes,
+} from "lucide-react";
 
-const SERVICES = ['Marketing & Advertising','AI & Tech Solutions','Social Media Management','Website Design & Dev','Ecommerce Solutions','Automation & AI Agents','Design & Media Production','Consulting & Strategy'];
 
-const STEPS = {
-  welcome: { key: 'welcome', text: null, buttons: [] },
-  ask_type: { key: 'ask_type', text: "Let's get you to the right place! Are you a New User or an Existing Client?", buttons: ['New User', 'Existing Client'] },
-  ask_service_new: { key: 'ask_service_new', text: "Which service are you interested in?", buttons: SERVICES },
-  ask_service_existing: { key: 'ask_service_existing', text: "What do you need help with?", buttons: ['Technical Support', 'Billing Inquiry', 'Project Update', 'Other'] },
-  ask_name: { key: 'ask_name', text: null, buttons: [] },
-  ask_email: { key: 'ask_email', text: null, buttons: [] },
-  ask_mobile: { key: 'ask_mobile', text: null, buttons: [] },
-  ask_address: { key: 'ask_address', text: null, buttons: [] },
-  ask_issue: { key: 'ask_issue', text: null, buttons: [] },
-  live_chat: { key: 'live_chat', text: null, buttons: [] },
+
+/* ─────────────────────────────────────────────
+   SOCKET URL
+───────────────────────────────────────────── */
+const getSocketUrl = () => {
+  try {
+    const u = new URL(API_BASE_URL);
+    const basePath = u.pathname.split('/py/api')[0];
+    return `${u.protocol}//${u.host}${basePath}`;
+  } catch {
+    return API_BASE_URL.replace(/\/py\/api.*$/, '');
+  }
 };
 
-export default function WhebotPage({ isMinimized, setIsMinimized }) {
-  const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState('');
-  const [step, setStep] = useState('welcome');
-  const [userData, setUserData] = useState({ type: '', service: '', name: '', email: '', mobile: '', address: '', issue: '' });
-  const [chatId, setChatId] = useState(null);
-  const [isLive, setIsLive] = useState(false);
-  const [agentConnected, setAgentConnected] = useState(false);
-  const [unreadCount, setUnreadCount] = useState(0);
-  const [inputError, setInputError] = useState('');
-  const socketRef = useRef(null);
-  const inputRef = useRef(null);
-  const bodyRef = useRef(null);
-  const isLiveRef = useRef(false);
-  const chatIdRef = useRef(null);
+const SOCKET_URL = getSocketUrl();
 
-  useEffect(() => { isLiveRef.current = isLive; }, [isLive]);
-  useEffect(() => { chatIdRef.current = chatId; }, [chatId]);
+/* ─────────────────────────────────────────────
+   CONSTANTS
+───────────────────────────────────────────── */
+const SERVICE_LIST = [
+  'Web Development', 'App Development', 'Digital Marketing',
+  'AI Solution & Intelligent Agent', 'Other',
+];
+
+const SUB_OPTIONS = {
+  'Web Development':                   ['Business Website', 'Ecommerce Website', 'Landing Page', 'Custom Portal', 'Other'],
+  'App Development':                   ['Android App', 'iOS App', 'Both Android & iOS', 'Internal App', 'Other'],
+  'Digital Marketing':                 ['Leads Generation', 'Sales Growth', 'Brand Awareness', 'SEO Ranking', 'Other'],
+  'AI Solution & Intelligent Agent':   ['AI Chatbot', 'Business Automation', 'CRM AI', 'Custom AI Agent', 'Other'],
+};
+
+const CLIENT_COMPANIES = ['Savorka', '123-setup(printer)', 'NCCL', 'Purifier India'];
+
+const INPUT_ENABLED_STEPS = new Set([
+  'requirement', 'name', 'mobile', 'email', 'address',
+  'client_issue', 'client_email', 'client_mobile', 'live_chat',
+]);
+
+const EMPTY_FORM   = { service: '', subRequirement: '', requirement: '', name: '', mobile: '', email: '', address: '' };
+const EMPTY_CLIENT = { company: '', issue: '', email: '', mobile: '' };
+
+/* ─────────────────────────────────────────────
+   ICON HELPERS
+───────────────────────────────────────────── */
+const getTypeIcon    = (i) => i === 'New User' ? UserPlus : Building2;
+const getServiceIcon = (i) => ({
+  'Web Development': Globe, 'App Development': Smartphone, 'Digital Marketing': Megaphone,
+  'AI Solution & Intelligent Agent': BrainCircuit, Other: Boxes,
+})[i] || Sparkles;
+const getSubIcon = (i) => ({
+  'Business Website': Briefcase, 'Ecommerce Website': ShoppingCart, 'Landing Page': LayoutTemplate,
+  'Custom Portal': Globe, 'Android App': Smartphone, 'iOS App': Smartphone,
+  'Both Android & iOS': Smartphone, 'Internal App': Building2, 'Leads Generation': Megaphone,
+  'Sales Growth': BarChart3, 'Brand Awareness': Sparkles, 'SEO Ranking': Search,
+  'AI Chatbot': Bot, 'Business Automation': Workflow, 'CRM AI': BrainCircuit,
+  'Custom AI Agent': Cpu, Other: Boxes,
+})[i] || Sparkles;
+
+/* ─────────────────────────────────────────────
+   SUB-COMPONENTS
+───────────────────────────────────────────── */
+const SelectionButton = React.memo(({ label, onClick, Icon }) => (
+  <button
+    type="button"
+    onClick={onClick}
+    className="w-full cursor-pointer flex items-center gap-3 px-3 py-2 rounded-full bg-black border border-white/10 text-white hover:border-[#0B2CC3] hover:bg-gradient-to-r hover:from-[#040010] hover:to-[#0B2CC3] hover:shadow-[0_0_14px_rgba(11,44,195,0.35)] active:scale-[0.98] transition-all duration-300"
+  >
+    <span className="w-7 h-7 rounded-full bg-[#0B2CC3]/15 border border-[#0B2CC3]/40 flex items-center justify-center shrink-0">
+      <Icon size={14} className="text-[#7ea2ff]" />
+    </span>
+    <span className="text-[13px] font-medium text-left leading-tight">{label}</span>
+  </button>
+));
+SelectionButton.displayName = 'SelectionButton';
+
+const TypingIndicator = () => (
+  <div className="flex items-start">
+    <div className="max-w-[85%] px-4 py-3 rounded-xl bg-[#040010] border border-[#0B2CC3]">
+      <div className="flex gap-1">
+        {[0, 0.2, 0.4].map((delay, i) => (
+          <motion.span
+            key={i}
+            className="w-2 h-2 bg-white rounded-full"
+            animate={{ y: [0, -8, 0] }}
+            transition={{ duration: 0.6, repeat: Infinity, delay }}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+);
+
+/* ─────────────────────────────────────────────
+   HELPERS
+───────────────────────────────────────────── */
+const sleep        = (ms) => new Promise((r) => setTimeout(r, ms));
+const isValidName  = (v) => /^[A-Za-z ]{2,50}$/.test(v);
+const isValidMobile = (v) => v.replace(/\D/g, '').length >= 10;
+const isValidEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+
+const getInitialMessages = () => [
+  { type: 'bot', text: "Hey! I'm WheBot, How can I help you?", isComplete: true },
+  { type: 'bot', text: 'Please select an option below.', isComplete: true, showOptions: true },
+];
+
+/* ═══════════════════════════════════════════
+   MAIN COMPONENT
+═══════════════════════════════════════════ */
+const WhebotPage = ({ isMinimized, setIsMinimized }) => {
+  const [messages,       setMessages]       = useState([]);
+  const [input,          setInput]          = useState('');
+  const [showIntroText,  setShowIntroText]  = useState(false);
+  const [isTyping,       setIsTyping]       = useState(false);
+  const [chatStep,       setChatStep]       = useState('select_type');
+  const [showConfirmBox, setShowConfirmBox] = useState(false);
+  const [formData,       setFormData]       = useState(EMPTY_FORM);
+  const [clientFormData, setClientFormData] = useState(EMPTY_CLIENT);
+  const [chatId,         setChatId]         = useState(null);
+  const [isLive,         setIsLive]         = useState(false);
+  const [agentOnline,    setAgentOnline]    = useState(false);
+
+  // Socket.IO is loaded dynamically to avoid SSR issues in Next.js
+  const chatBodyRef        = useRef(null);
+  const userScrolledUpRef  = useRef(false);
+  const scrollTimerRef     = useRef(null);
+  const socketRef          = useRef(null);
+  const chatIdRef          = useRef(null);
+  const isMountedRef       = useRef(true);
+
+  const isInputEnabled = INPUT_ENABLED_STEPS.has(chatStep);
 
   useEffect(() => {
-    if (bodyRef.current) bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
-  }, [messages, isMinimized]);
+    chatIdRef.current = chatId;
+  }, [chatId]);
 
-  const addMsg = (sender, text, type = 'text', extra = {}) =>
-    setMessages(prev => [...prev, { sender, text, type, ...extra, id: Date.now() + Math.random() }]);
-
-  const addBotMsg = (text, type = 'text', extra = {}) => addMsg('bot', text, type, extra);
-
+  /* ─── Socket.IO setup (dynamic import prevents SSR crash) ─── */
   useEffect(() => {
-    addBotMsg("Hi there! 👋 I'm WheBot – your AI assistant. I can help you explore services, connect you with a live agent, or answer your questions.", 'text');
-    setTimeout(() => {
-      addBotMsg(STEPS.ask_type.text, 'buttons', { buttons: STEPS.ask_type.buttons });
-      setStep('ask_type');
-    }, 800);
+    isMountedRef.current = true;
+    let socket;
+
+    // Dynamically import socket.io-client so Next.js doesn't try to SSR it
+    import('socket.io-client').then(({ io }) => {
+      if (!isMountedRef.current) return;
+
+      socket = io('https://wheedletechnologies.ai', {
+        path: '/socket.io',
+        transports: ['polling', 'websocket'],
+        upgrade: true,
+        withCredentials: true,
+        autoConnect: false,
+        reconnection: true,
+        reconnectionAttempts: 5,
+        reconnectionDelay: 1000,
+      });
+      socketRef.current = socket;
+
+      socket.on('connect', () => {
+        console.log('[Bot] Connected:', socket.id);
+        if (chatIdRef.current) {
+          socket.emit('join_chat', { chat_id: chatIdRef.current, role: 'user' });
+        }
+      });
+
+      socket.on('disconnect', () => console.log('[Bot] Disconnected'));
+      socket.on('connect_error', (err) => console.error('[Bot] Connection error:', err));
+
+      socket.on('new_message', (data) => {
+        const { chat_id, sender, text } = data;
+        if (chat_id !== chatIdRef.current) return;
+        if (sender === 'agent') {
+          setIsTyping(false);
+          addStaticBot(text);
+        }
+      });
+
+      socket.on('agent_connected', (data) => {
+        if (data.chat_id === chatIdRef.current) {
+          setAgentOnline(true);
+          addStaticBot('🟢 An agent has joined the chat. You can start chatting now!');
+        }
+      });
+
+      socket.on('chat_closed', (data) => {
+        if (data.chat_id === chatIdRef.current) {
+          addStaticBot('This chat has been closed by our team. Thank you!');
+          setChatStep('completed');
+          setIsLive(false);
+          setAgentOnline(false);
+        }
+      });
+    });
+
+    return () => {
+      isMountedRef.current = false;
+      if (socket) {
+        socket.disconnect();
+        socket.removeAllListeners();
+      }
+    };
   }, []);
 
-  const initSocket = (cid, name, type) => {
-    if (socketRef.current) { socketRef.current.disconnect(); socketRef.current.removeAllListeners(); }
-    const socket = io(SOCKET_URL, {
-      path: '/socket.io', transports: ['polling', 'websocket'], upgrade: true, withCredentials: true,
-      reconnection: true, reconnectionAttempts: 10, reconnectionDelay: 1000,
-    });
-    socketRef.current = socket;
-    socket.on('connect', () => { socket.emit('join_chat', { chat_id: cid, role: 'user' }); });
-    socket.on('new_message', (data) => {
-      if (data.chat_id !== chatIdRef.current || data.sender === 'user') return;
-      addMsg('agent', data.text);
-      if (isMinimized) setUnreadCount(n => n + 1);
-      setAgentConnected(true);
-    });
-    socket.on('agent_joined', (data) => {
-      if (data.chat_id === chatIdRef.current) {
-        setAgentConnected(true);
-        addBotMsg('🎉 A live agent has joined the chat!');
+  /* ─── Join room when chatId changes ─── */
+  useEffect(() => {
+    if (!chatId) return;
+    const socket = socketRef.current;
+    if (!socket) return;
+
+    const joinRoom = () => {
+      socket.emit('join_chat', { chat_id: chatId, role: 'user' });
+      setIsLive(true);
+      setAgentOnline(false);
+    };
+
+    if (!socket.connected) {
+      socket.connect();
+      socket.once('connect', joinRoom);
+    } else {
+      joinRoom();
+    }
+
+    return () => {
+      if (socket.connected && isMountedRef.current) {
+        socket.emit('leave_chat', { chat_id: chatId });
       }
+    };
+  }, [chatId]);
+
+  /* ─── Scroll helpers ─── */
+  const isNearBottom = () => {
+    const el = chatBodyRef.current;
+    if (!el) return true;
+    return el.scrollHeight - el.scrollTop - el.clientHeight < 140;
+  };
+
+  const scrollToBottom = useCallback((smooth = true) => {
+    const el = chatBodyRef.current;
+    if (!el) return;
+    el.scrollTo({ top: el.scrollHeight, behavior: smooth ? 'smooth' : 'auto' });
+  }, []);
+
+  useEffect(() => {
+    if (userScrolledUpRef.current) return;
+    const id = requestAnimationFrame(() => scrollToBottom(messages.length > 1));
+    return () => cancelAnimationFrame(id);
+  }, [messages.length, isTyping, showConfirmBox, scrollToBottom]);
+
+  useEffect(() => {
+    const el = chatBodyRef.current;
+    if (!el) return;
+    const handleScroll = () => {
+      if (scrollTimerRef.current) clearTimeout(scrollTimerRef.current);
+      userScrolledUpRef.current = !isNearBottom();
+      scrollTimerRef.current = setTimeout(() => {
+        if (isNearBottom()) userScrolledUpRef.current = false;
+      }, 150);
+    };
+    el.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      el.removeEventListener('scroll', handleScroll);
+      if (scrollTimerRef.current) clearTimeout(scrollTimerRef.current);
+    };
+  }, []);
+
+  /* ─── Intro ─── */
+  useEffect(() => {
+    if (!isMinimized && messages.length === 0) setMessages(getInitialMessages());
+  }, [isMinimized]);
+
+  useEffect(() => {
+    if (!isMinimized) return;
+    const show = setTimeout(() => setShowIntroText(true),  3000);
+    const hide = setTimeout(() => setShowIntroText(false), 12000);
+    return () => { clearTimeout(show); clearTimeout(hide); };
+  }, [isMinimized]);
+
+  /* ─── Message engine ─── */
+  const typeWriterEffect = (text, ownerIndex) =>
+    new Promise((resolve) => {
+      let i = 0;
+      const interval = setInterval(() => {
+        i++;
+        setMessages((prev) => {
+          const updated = [...prev];
+          const target  = updated[ownerIndex];
+          if (!target || target.type !== 'bot' || target.isComplete) {
+            clearInterval(interval);
+            resolve();
+            return prev;
+          }
+          const done = i >= text.length;
+          updated[ownerIndex] = { ...target, displayText: text.slice(0, i), isComplete: done };
+          if (done) { clearInterval(interval); resolve(); }
+          return updated;
+        });
+      }, 35);
     });
-    socket.on('chat_closed', (data) => {
-      if (data.chat_id === chatIdRef.current) {
-        setIsLive(false);
-        addBotMsg('This chat session has been closed. Thank you for contacting us!');
-      }
-    });
-    socket.on('disconnect', () => {
-      if (isLiveRef.current) setTimeout(() => socket.connect(), 2000);
+
+  const addUserMessage = (text) => {
+    userScrolledUpRef.current = false;
+    setMessages((prev) => {
+      const cleaned = prev.map((m) => ({
+        ...m, showOptions: false, showServices: false,
+        showSubOptions: false, showClientCompanies: false,
+      }));
+      return [...cleaned, { type: 'user', text, isComplete: true }];
     });
   };
 
-  const handleBotFlow = async (text) => {
-    addMsg('user', text);
-    const val = text.trim();
-    if (step === 'ask_type') {
-      const type = val === 'New User' ? 'new_user' : 'existing_client';
-      setUserData(u => ({ ...u, type }));
-      if (type === 'new_user') {
-        setTimeout(() => { addBotMsg(STEPS.ask_service_new.text, 'buttons', { buttons: STEPS.ask_service_new.buttons }); setStep('ask_service_new'); }, 400);
-      } else {
-        setTimeout(() => { addBotMsg(STEPS.ask_service_existing.text, 'buttons', { buttons: STEPS.ask_service_existing.buttons }); setStep('ask_service_existing'); }, 400);
-      }
-    } else if (step === 'ask_service_new' || step === 'ask_service_existing') {
-      setUserData(u => ({ ...u, service: val }));
-      setTimeout(() => { addBotMsg("Great! What's your name?"); setStep('ask_name'); }, 400);
-    } else if (step === 'ask_name') {
-      if (val.length < 2) { addBotMsg("Please enter a valid name (at least 2 characters)."); return; }
-      setUserData(u => ({ ...u, name: val }));
-      setTimeout(() => { addBotMsg("Got it! What's your email address?"); setStep('ask_email'); }, 400);
-    } else if (step === 'ask_email') {
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) { addBotMsg("That doesn't look like a valid email. Please try again."); return; }
-      setUserData(u => ({ ...u, email: val }));
-      setTimeout(() => { addBotMsg("Thanks! What's your mobile number?"); setStep('ask_mobile'); }, 400);
-    } else if (step === 'ask_mobile') {
-      if (!/^\d{10}$/.test(val.replace(/[\s-]/g, ''))) { addBotMsg("Please enter a valid 10-digit mobile number."); return; }
-      setUserData(u => ({ ...u, mobile: val }));
-      setTimeout(() => { addBotMsg("What's your city/address?"); setStep('ask_address'); }, 400);
-    } else if (step === 'ask_address') {
-      setUserData(u => ({ ...u, address: val }));
-      setTimeout(() => { addBotMsg("Briefly describe your requirement or question:"); setStep('ask_issue'); }, 400);
-    } else if (step === 'ask_issue') {
-      const issue = val;
-      setUserData(u => ({ ...u, issue }));
-      setStep('live_chat');
-      setIsLive(true);
-      const finalData = { ...userData, issue };
-      try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:5000/py/api'}/live/start`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(finalData),
-        });
-        const data = await res.json();
-        if (data.chat_id) {
-          setChatId(data.chat_id);
-          initSocket(data.chat_id, finalData.name, finalData.type);
-          setTimeout(() => addBotMsg("✅ You're now connected! An agent will join shortly. Feel free to type your messages below."), 300);
-        } else {
-          addBotMsg("Something went wrong starting the chat. Please try again.");
-          setIsLive(false); setStep('welcome');
-        }
-      } catch {
-        addBotMsg("Failed to connect. Please check your network and try again.");
-        setIsLive(false); setStep('welcome');
-      }
-    } else if (step === 'live_chat') {
-      if (!chatIdRef.current || !socketRef.current?.connected) {
-        addBotMsg("Not connected. Please wait or refresh.");
-        return;
-      }
-      socketRef.current.emit('user_message', { chat_id: chatIdRef.current, text: val });
+  const addBotMessage = async (text, extra = {}) => {
+    userScrolledUpRef.current = false;
+    setIsTyping(true);
+    await sleep(550);
+    setIsTyping(false);
+
+    // Use a ref to capture the real index synchronously inside the setter,
+    // because React may batch the update — reading idx outside is not reliable.
+    const idxRef = { current: -1 };
+    await new Promise((resolve) => {
+      setMessages((prev) => {
+        idxRef.current = prev.length;
+        resolve();
+        return [...prev, { type: 'bot', text, displayText: '', isComplete: false, ...extra }];
+      });
+    });
+
+    // Give React one frame to commit the new message before we start mutating it
+    await new Promise((r) => requestAnimationFrame(r));
+
+    await typeWriterEffect(text, idxRef.current);
+  };
+
+  const addStaticBot = (text, extra = {}) => {
+    userScrolledUpRef.current = false;
+    setMessages((prev) => [...prev, { type: 'bot', text, isComplete: true, ...extra }]);
+  };
+
+  /* ─── Reset ─── */
+  const resetAll = () => {
+    setFormData(EMPTY_FORM);
+    setClientFormData(EMPTY_CLIENT);
+    setChatStep('select_type');
+    setShowConfirmBox(false);
+    setIsTyping(false);
+    setInput('');
+    setChatId(null);
+    setIsLive(false);
+    setAgentOnline(false);
+    userScrolledUpRef.current = false;
+    if (socketRef.current?.connected) {
+      socketRef.current.emit('leave_chat', { chat_id: chatId });
+    }
+    if (chatBodyRef.current) chatBodyRef.current.scrollTop = 0;
+  };
+
+  const refreshChat = () => { resetAll(); setMessages(getInitialMessages()); };
+
+  /* ─── Flow handlers ─── */
+  const handleSelectType = async (type) => {
+    addUserMessage(type === 'new_user' ? 'New User' : 'Wheedle Client');
+    if (type === 'new_user') {
+      setChatStep('service_select');
+      await addBotMessage('Please select the service you are interested in.');
+      addStaticBot('Please choose one service from the options below.', { showServices: true });
+    } else {
+      setChatStep('client_company');
+      await addBotMessage('Welcome back! Please select your company.');
+      addStaticBot('Choose your company below.', { showClientCompanies: true });
     }
   };
 
-  const handleSend = () => {
-    const val = input.trim();
-    if (!val) return;
-    setInputError('');
-    handleBotFlow(val);
-    setInput('');
+  const handleServiceSelect = async (service) => {
+    addUserMessage(service);
+    setFormData((p) => ({ ...p, service }));
+    if (service === 'Other') {
+      setChatStep('requirement');
+      await addBotMessage('Please describe your requirement or business need.');
+      return;
+    }
+    setChatStep('sub_option');
+    await addBotMessage('Please select one option below.');
+    addStaticBot('Please choose one option below.', { showSubOptions: true, subItems: SUB_OPTIONS[service] });
   };
 
-  const handleButtonClick = (btn) => handleBotFlow(btn);
+  const handleSubOption = async (option) => {
+    addUserMessage(option);
+    setFormData((p) => ({ ...p, subRequirement: option }));
+    if (option === 'Other') {
+      setChatStep('requirement');
+      await addBotMessage('Please describe your exact requirement.');
+      return;
+    }
+    setChatStep('name');
+    await addBotMessage('Please share your full name.');
+  };
 
-  useEffect(() => {
-    if (!isMinimized && unreadCount > 0) setUnreadCount(0);
-  }, [isMinimized]);
+  const handleClientCompany = async (company) => {
+    addUserMessage(company);
+    setClientFormData((p) => ({ ...p, company }));
+    setChatStep('client_issue');
+    await addBotMessage('Please share your issue.');
+  };
 
+  /* ─── API calls ─── */
+  const submitLead = async () => {
+    try {
+      const res = await axios.post(
+        `${API_BASE_URL}/live/new-user-lead`,
+        { userType: 'new_user', ...formData },
+        { headers: { 'x-api-key': 'test_tesing_chat', 'Content-Type': 'application/json' } }
+      );
+      const id = res.data.chat_id;
+      setShowConfirmBox(false);
+      setChatId(id);
+      setChatStep('live_chat');
+      await addBotMessage(
+        '✅ Your enquiry is submitted!\n\nYou are now connected to our support team. Please type your message below — an agent will reply shortly.'
+      );
+    } catch (err) {
+      setShowConfirmBox(false);
+      const msg = err?.response?.data?.error || 'Unable to submit request right now. Please try again later.';
+      await addBotMessage(msg);
+    }
+  };
+
+  const submitClientSupport = async () => {
+    try {
+      const res = await axios.post(
+        `${API_BASE_URL}/live/client-support`,
+        clientFormData,
+        { headers: { 'x-api-key': 'test_tesing_chat', 'Content-Type': 'application/json' } }
+      );
+      const id = res.data.chat_id;
+      setChatId(id);
+      setChatStep('live_chat');
+      await addBotMessage('✅ Support request submitted!\n\nYou are now connected to our team. An agent will reply to you shortly.');
+    } catch (err) {
+      const msg = err?.response?.data?.error || 'Unable to submit request right now. Please try again later.';
+      await addBotMessage(msg);
+    }
+  };
+
+  const restartFlow = async () => {
+    setShowConfirmBox(false);
+    setFormData(EMPTY_FORM);
+    setChatStep('service_select');
+    await addBotMessage("Let's start again. Please select the service you are interested in.");
+    addStaticBot('Please select your service again.', { showServices: true });
+  };
+
+  /* ─── Send message ─── */
+  const sendMessage = async () => {
+    const value = input.trim();
+    if (!value || !isInputEnabled) return;
+
+    if (chatStep === 'live_chat' && chatId) {
+      addUserMessage(value);
+      setInput('');
+      if (socketRef.current?.connected) {
+        socketRef.current.emit('user_message', { chat_id: chatId, text: value });
+      }
+      return;
+    }
+
+    const steps = {
+      client_issue: async () => {
+        if (value.length < 3) { await addBotMessage('Please enter a valid issue.'); return; }
+        addUserMessage(value); setClientFormData((p) => ({ ...p, issue: value })); setInput('');
+        setChatStep('client_email'); await addBotMessage('Please share your email address.');
+      },
+      client_email: async () => {
+        if (!isValidEmail(value)) { await addBotMessage('Please enter a valid email.'); return; }
+        addUserMessage(value); setClientFormData((p) => ({ ...p, email: value })); setInput('');
+        setChatStep('client_mobile'); await addBotMessage('Please share your mobile number.');
+      },
+      client_mobile: async () => {
+        if (!isValidMobile(value)) { await addBotMessage('Please enter a valid mobile number.'); return; }
+        addUserMessage(value); setClientFormData((p) => ({ ...p, mobile: value })); setInput('');
+        await submitClientSupport();
+      },
+      requirement: async () => {
+        if (value.length < 3) { await addBotMessage('Please enter a valid requirement.'); return; }
+        addUserMessage(value); setFormData((p) => ({ ...p, requirement: value })); setInput('');
+        setChatStep('name'); await addBotMessage('Please share your full name.');
+      },
+      name: async () => {
+        if (!isValidName(value)) { await addBotMessage('Please enter a valid full name.'); return; }
+        addUserMessage(value); setFormData((p) => ({ ...p, name: value })); setInput('');
+        setChatStep('mobile'); await addBotMessage('Please share your mobile number.');
+      },
+      mobile: async () => {
+        if (!isValidMobile(value)) { await addBotMessage('Please enter a valid 10 digit mobile number.'); return; }
+        addUserMessage(value); setFormData((p) => ({ ...p, mobile: value })); setInput('');
+        setChatStep('email'); await addBotMessage('Please share your email address.');
+      },
+      email: async () => {
+        if (!isValidEmail(value)) { await addBotMessage('Please enter a valid email address.'); return; }
+        addUserMessage(value); setFormData((p) => ({ ...p, email: value })); setInput('');
+        setChatStep('address'); await addBotMessage('Please provide your complete address.');
+      },
+      address: async () => {
+        if (value.length < 5) { await addBotMessage('Please enter a valid address.'); return; }
+        addUserMessage(value); setFormData((p) => ({ ...p, address: value })); setInput('');
+        setChatStep('confirm'); setShowConfirmBox(true);
+      },
+    };
+
+    if (steps[chatStep]) await steps[chatStep]();
+  };
+
+  /* ─── Minimized view ─── */
+  if (isMinimized) {
+    return (
+      <div className="fixed bottom-4 right-4 z-50 flex items-center gap-2">
+        {showIntroText && (
+          <div className="px-4 py-2 bg-[#040010] border border-[#0B2CC3] rounded-full text-white text-[13px] max-w-[210px]">
+            Hey! I'm <span className="font-semibold">WheBot</span><br />How can I help you?
+          </div>
+        )}
+        <button
+          onClick={() => setIsMinimized(false)}
+          className="w-10 h-10 rounded-full bg-black border-2 border-[#0B2CC3] animate-bounce"
+          aria-label="Open WheBot chat"
+        >
+          <img src={LogosData.botLogo} alt="WheBot" className="w-full h-full object-contain scale-[2.2]" />
+        </button>
+      </div>
+    );
+  }
+
+  /* ─── Full view ─── */
   return (
-    <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-[100] flex flex-col items-end gap-3">
-      {!isMinimized && (
-        <AnimatePresence>
-          <motion.div
-            key="chat-window"
-            initial={{ opacity: 0, y: 24, scale: 0.85 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 24, scale: 0.85 }}
-            transition={{ duration: 0.32, ease: 'easeOut' }}
-            style={{ animation: 'whebotPopup 0.32s ease-out' }}
-            className="relative flex flex-col bg-[#0a0014] rounded-[24px] overflow-hidden w-[92vw] sm:w-[380px] h-[500px] sm:h-[520px] shadow-[0_8px_48px_rgba(90,60,200,0.45)] border border-white/10"
+    <div className="fixed bottom-4 right-4 sm:right-6 sm:bottom-6 z-50">
+      <div className="rounded-[26px] p-[1.5px] bg-gradient-to-b from-[#0B2CC3] to-white">
+        <div className="relative w-[92vw] sm:w-[380px] h-[75vh] sm:h-[600px] rounded-[26px] px-4 pt-4 pb-3 flex flex-col bg-gradient-to-b from-[#040010] to-[#0B2CC3] text-white overflow-hidden">
+
+          {/* HEADER */}
+          <div className="flex items-center justify-between h-[38px]">
+            <div className="flex items-center gap-2">
+              <img src={LogosData.whebot} alt="WheBot" className="w-[200px] h-[200px]" />
+              {isLive && (
+                <span className="flex items-center gap-1 text-[11px] text-green-400 font-medium">
+                  <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                  Live
+                </span>
+              )}
+            </div>
+            <div className="flex items-center gap-4">
+              <button onClick={refreshChat} aria-label="Refresh chat"><RefreshCcw size={18} /></button>
+              <button onClick={() => setIsMinimized(true)} aria-label="Minimize chat"><ChevronDown size={20} /></button>
+            </div>
+          </div>
+
+          {/* LIVE CHAT BANNER */}
+          {isLive && (
+            <div className="mt-2 mb-1 px-3 py-1.5 rounded-xl bg-[#0B2CC3]/30 border border-[#0B2CC3]/60 text-[12px] text-center text-white/80">
+              💬 Connected to support — agent will reply shortly
+            </div>
+          )}
+
+          {/* BODY */}
+          <div
+            ref={chatBodyRef}
+            className="flex-1 overflow-y-auto flex flex-col gap-2 pr-1 mt-3 mb-3 overscroll-contain"
           >
-            {/* Header */}
-            <div className="px-4 py-3 flex items-center justify-between border-b border-white/10 bg-gradient-to-r from-[#140030] to-[#1a0040]">
-              <div className="flex items-center gap-3">
-                <img src={LogosData.botLogo} alt="WheBot" className="w-8 h-8 rounded-full object-cover" />
-                <div>
-                  <div className="text-white font-semibold text-sm flex items-center gap-1.5">
-                    WheBot
-                    {agentConnected && <span className="text-[10px] bg-green-500 px-1.5 py-0.5 rounded-full">Agent Connected</span>}
-                  </div>
-                  <div className="flex items-center gap-1.5 mt-0.5">
-                    <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse inline-block" />
-                    <span className="text-[11px] text-gray-400">Active now</span>
-                  </div>
+            {messages.map((msg, i) => (
+              <div key={i} className={`flex flex-col ${msg.type === 'user' ? 'items-end' : 'items-start'}`}>
+                <span className="text-[11px] opacity-80 mb-1">
+                  {msg.type === 'user' ? 'You' : msg.sender === 'agent' ? 'Agent' : 'WheBot'}
+                </span>
+                <div className={`max-w-[85%] text-sm px-4 py-2 rounded-xl whitespace-pre-line ${
+                  msg.type === 'user'
+                    ? 'bg-[#0B2CC3]'
+                    : 'bg-[#040010] border border-[#0B2CC3]'
+                }`}>
+                  {msg.type === 'bot' && !msg.isComplete ? (
+                    <>{msg.displayText}<span className="inline-block w-[2px] h-[14px] bg-white ml-[2px] animate-pulse" /></>
+                  ) : msg.text}
+
+                  {msg.showOptions && (
+                    <div className="mt-3">
+                      <div className="text-[12px] text-white/70 mb-2 px-1">Please choose one option</div>
+                      <div className="space-y-2">
+                        {['Wheedle Client', 'New User'].map((item) => (
+                          <SelectionButton
+                            key={item} label={item} Icon={getTypeIcon(item)}
+                            onClick={() => handleSelectType(item === 'New User' ? 'new_user' : 'wheedle_client')}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {msg.showClientCompanies && (
+                    <div className="mt-3">
+                      <div className="text-[12px] text-white/70 mb-2 px-1">Select your company</div>
+                      <div className="space-y-2">
+                        {CLIENT_COMPANIES.map((item) => (
+                          <SelectionButton key={item} label={item} Icon={Building2} onClick={() => handleClientCompany(item)} />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {msg.showServices && (
+                    <div className="mt-3">
+                      <div className="text-[12px] text-white/70 mb-2 px-1">Select a service</div>
+                      <div className="space-y-2">
+                        {SERVICE_LIST.map((item) => (
+                          <SelectionButton key={item} label={item} Icon={getServiceIcon(item)} onClick={() => handleServiceSelect(item)} />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {msg.showSubOptions && (
+                    <div className="mt-3">
+                      <div className="text-[12px] text-white/70 mb-2 px-1">Choose requirement</div>
+                      <div className="space-y-2">
+                        {msg.subItems?.map((item) => (
+                          <SelectionButton key={item} label={item} Icon={getSubIcon(item)} onClick={() => handleSubOption(item)} />
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
-              <button onClick={() => setIsMinimized(true)} className="text-gray-400 hover:text-white transition ml-2">
-                <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" /></svg>
+            ))}
+
+            {isTyping && (
+              <div className="flex flex-col items-start">
+                <span className="text-[11px] opacity-80 mb-1">WheBot</span>
+                <TypingIndicator />
+              </div>
+            )}
+          </div>
+
+          {/* INPUT */}
+          <div className="mt-auto">
+            <div className={`flex items-center gap-2 border rounded-[12px] px-4 py-2 ${
+              isInputEnabled ? 'border-white bg-[#040010]' : 'border-white/20 bg-[#040010]/50'
+            }`}>
+              <input
+                type="text"
+                disabled={!isInputEnabled}
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder={
+                  isLive ? 'Type your message...'
+                  : isInputEnabled ? 'Type your answer...'
+                  : 'Select option above...'
+                }
+                className="bg-transparent outline-none flex-1 text-sm text-white disabled:cursor-not-allowed placeholder:text-white/50"
+                onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
+              />
+              <button
+                disabled={!isInputEnabled}
+                onClick={sendMessage}
+                aria-label="Send message"
+                className="w-8 h-8 rounded-full bg-[#0B2CC3] flex items-center justify-center disabled:opacity-40"
+              >
+                <Send size={16} className="text-white" />
               </button>
             </div>
+          </div>
 
-            {/* Messages */}
-            <div ref={bodyRef} className="flex-1 overflow-y-auto px-4 py-4 flex flex-col gap-3">
-              {messages.map((msg) => (
-                <div key={msg.id} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-                  {(msg.sender === 'bot' || msg.sender === 'agent') && (
-                    <img src={LogosData.botLogo} alt="WheBot" className="w-6 h-6 rounded-full object-cover mr-2 mt-1 flex-shrink-0 self-start" />
-                  )}
-                  <div className="flex flex-col gap-2 max-w-[78%]">
-                    {msg.type === 'buttons' ? (
-                      <div className="flex flex-col gap-2">
-                        <div className="bg-[#1e1035] text-white text-sm px-4 py-2.5 rounded-2xl rounded-tl-sm leading-relaxed">{msg.text}</div>
-                        <div className="flex flex-wrap gap-2 mt-1">
-                          {msg.buttons?.map((btn) => (
-                            <button key={btn} onClick={() => handleButtonClick(btn)}
-                              className="text-xs px-3 py-1.5 rounded-full border border-[#5a3cff]/60 text-white/80 hover:bg-[#5a3cff]/30 hover:text-white transition">
-                              {btn}
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-                    ) : (
-                      <div className={`text-sm px-4 py-2.5 rounded-2xl leading-relaxed ${
-                        msg.sender === 'user' ? 'bg-[#4b6bfd] text-white rounded-tr-sm' :
-                        msg.sender === 'agent' ? 'bg-[#2d1a6e] text-white rounded-tl-sm border border-purple-500/40' :
-                        'bg-[#1e1035] text-white rounded-tl-sm'
-                      }`}>
-                        {msg.text}
-                        {msg.sender === 'agent' && <span className="block text-[10px] text-purple-300 mt-1">Agent</span>}
-                      </div>
-                    )}
-                  </div>
+          {/* FOOTER */}
+          <div className="text-center text-xs mt-2 text-white/50">
+            Powered by <span className="font-semibold text-white">Wheedle</span> Technologies
+          </div>
+
+          {/* CONFIRM BOX */}
+          {showConfirmBox && (
+            <div className="absolute inset-0 bg-black/60 z-50 flex items-center justify-center px-4">
+              <div className="w-full max-w-sm rounded-2xl border border-[#0B2CC3] bg-gradient-to-b from-[#040010] to-[#0B2CC3] p-5">
+                <div className="text-lg font-semibold mb-4 text-white">Confirm Details</div>
+                <div className="space-y-2 text-sm mb-5 text-white">
+                  <div><b>Service:</b>     {formData.service}</div>
+                  <div><b>Option:</b>      {formData.subRequirement}</div>
+                  <div><b>Requirement:</b> {formData.requirement}</div>
+                  <div><b>Name:</b>        {formData.name}</div>
+                  <div><b>Mobile:</b>      {formData.mobile}</div>
+                  <div><b>Email:</b>       {formData.email}</div>
+                  <div><b>Address:</b>     {formData.address}</div>
                 </div>
-              ))}
-            </div>
-
-            {/* Input */}
-            <div className="px-3 py-3 border-t border-white/10 bg-[#0a0014]">
-              {inputError && <p className="text-red-400 text-xs mb-2">{inputError}</p>}
-              <div className="flex items-center gap-2 bg-white/5 rounded-full px-4 py-2 border border-white/10">
-                <input ref={inputRef} value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-                  placeholder={step === 'live_chat' ? "Type a message..." : "Type your answer..."}
-                  className="flex-1 bg-transparent text-white text-sm placeholder-white/30 outline-none" />
-                <button onClick={handleSend} className="w-8 h-8 rounded-full bg-[#4b6bfd] flex items-center justify-center text-white hover:bg-[#3a5aef] transition">
-                  <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" /></svg>
-                </button>
+                <div className="flex gap-3">
+                  <button
+                    onClick={restartFlow}
+                    className="flex-1 border border-white rounded-xl py-2 flex justify-center items-center gap-2 text-white"
+                  >
+                    <Pencil size={16} /> Edit
+                  </button>
+                  <button
+                    onClick={submitLead}
+                    className="flex-1 bg-[#0B2CC3] rounded-xl py-2 flex justify-center items-center gap-2 text-white"
+                  >
+                    <CheckCircle2 size={16} /> Confirm
+                  </button>
+                </div>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
-      )}
+          )}
 
-      {/* Toggle button */}
-      <button onClick={() => setIsMinimized(!isMinimized)}
-        className="relative w-14 h-14 rounded-full shadow-[0_4px_24px_rgba(90,60,200,0.5)] bg-gradient-to-br from-[#4b6bfd] to-[#2E1A6D] flex items-center justify-center hover:scale-105 transition-transform">
-        <img src={LogosData.botLogo} alt="WheBot" className="w-8 h-8 rounded-full object-cover" />
-        {isMinimized && unreadCount > 0 && (
-          <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-red-500 text-white text-[10px] font-bold flex items-center justify-center">
-            {unreadCount}
-          </span>
-        )}
-      </button>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default WhebotPage;

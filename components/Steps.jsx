@@ -39,13 +39,20 @@ function Steps() {
   const fetchSteps = async () => {
     try {
       const res = await axios.get(`${API_BASE_URL}/steps/`);
-      
-        const formatted = res.data.map((step, index) => ({
-        number: index + 1,
-        title: step.title,
-        description: step.description,
-        image: step.image ? `${API_BASE_URL}/uploads/${step.image}/` : `/placeholder-step-${index + 1}.jpeg`,
-      }));
+
+      const formatted = res.data.map((step, index) => {
+        // If backend returns a filename, keep using Next.js public/ assets.
+        // Example backend value: "Business.jpeg" -> "/Business.jpeg".
+        const imgName = typeof step.image === 'string' ? step.image.trim() : '';
+        const localImagePath = imgName ? `/${imgName}` : '';
+
+        return {
+          number: index + 1,
+          title: step.title,
+          description: step.description,
+          image: localImagePath || `/placeholder-step-${index + 1}.jpeg`,
+        };
+      });
 
       if (formatted.length === 0) {
         setSteps(staticSteps);

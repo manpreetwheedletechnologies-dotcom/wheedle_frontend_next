@@ -112,7 +112,7 @@ function WhatWeDo() {
       </h3>
 
       {/* Communication Points */}
-      <ul className="space-y-4 max-w-4xl mt-8">
+      <ul className="space-y-4 max-w-6xl mx-auto mt-8">
         {communicationPoints.map((point, index) => (
           <motion.li
             key={index}

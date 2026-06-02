@@ -594,29 +594,38 @@ const AdminDashboard = () => {
     return () => socket.disconnect();
   }, []);
 
-  const fetchCounts = async () => {
-    try {
-      const headers = authHeader();
-      const [jobRes, testimonialRes, blogRes, applicationsRes, leadsRes, formLeadsRes] =
-        await Promise.all([
-          axios.get(`${API_BASE_URL}/jobs/count/all`, { headers }),
-          axios.get(`${API_BASE_URL}/testimonial/count/all`, { headers }),
-          axios.get(`${API_BASE_URL}/blogs/count/all`, { headers }),
-          axios.get(`${API_BASE_URL}/contact/count/all`, { headers }),
-          axios.get(`${API_BASE_URL}/leads/count/all`, { headers }),
-          axios.get(`${API_BASE_URL}/formleads/count/all`, { headers }),
-        ]);
+const fetchCounts = async () => {
+  try {
+    const headers = authHeader();
+    
+    // Fetch data and get counts from response length
+    const [jobsRes, testimonialsRes, blogsRes, contactsRes, leadsRes, formLeadsRes] =
+      await Promise.all([
+        axios.get(`${API_BASE_URL}/jobs`, { headers }),
+        axios.get(`${API_BASE_URL}/testimonial`, { headers }),
+        axios.get(`${API_BASE_URL}/blogs`, { headers }),
+        axios.get(`${API_BASE_URL}/contact`, { headers }),
+        axios.get(`${API_BASE_URL}/leads`, { headers }),
+        axios.get(`${API_BASE_URL}/formleads`, { headers }),
+      ]);
 
-      setJobCount(jobRes.data.count ?? 0);
-      setTestimonialCount(testimonialRes.data.count ?? 0);
-      setBlogCount(blogRes.data.count ?? 0);
-      setApplications(applicationsRes.data.count ?? 0);
-      setLeadsCount(leadsRes.data.count ?? 0);
-      setFormLeadsCount(formLeadsRes.data.count ?? 0);
-    } catch (error) {
-      console.error("fetchCounts error:", error);
-    }
-  };
+    setJobCount(jobsRes.data.length || jobsRes.data.total || jobsRes.data.count || 0);
+    setTestimonialCount(testimonialsRes.data.length || testimonialsRes.data.total || 0);
+    setBlogCount(blogsRes.data.length || blogsRes.data.total || 0);
+    setApplications(contactsRes.data.length || contactsRes.data.total || 0);
+    setLeadsCount(leadsRes.data.length || leadsRes.data.total || 0);
+    setFormLeadsCount(formLeadsRes.data.length || formLeadsRes.data.total || 0);
+  } catch (error) {
+    console.error("fetchCounts error:", error);
+    // Set defaults to avoid breaking the UI
+    setJobCount(0);
+    setTestimonialCount(0);
+    setBlogCount(0);
+    setApplications(0);
+    setLeadsCount(0);
+    setFormLeadsCount(0);
+  }
+};
 
   const logout = () => {
     localStorage.removeItem("adminToken");

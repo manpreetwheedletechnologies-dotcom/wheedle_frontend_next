@@ -1,5 +1,10 @@
+// app/layout.jsx
 import './globals.css';
+import { PreloaderProvider } from '../lib/PreloaderContext';
 import PageTransition from '../components/PageTransition';
+import ConditionalHeader from '../components/ConditionalHeader';
+import ConditionalFooter from '../components/ConditionalFooter';
+import Footer from '../components/Footer';
 
 export const metadata = {
   title: 'AI Automation & Development | Wheedle Technologies',
@@ -19,9 +24,15 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <PageTransition>
-          {children}
-        </PageTransition>
+        <PreloaderProvider>
+          <ConditionalHeader />
+          {/* Only the page BODY slides/blurs — header is untouched */}
+          {/* <PageTransition> */}
+            
+            {children}
+          {/* </PageTransition> */}
+          <ConditionalFooter />
+        </PreloaderProvider>
       </body>
     </html>
   );

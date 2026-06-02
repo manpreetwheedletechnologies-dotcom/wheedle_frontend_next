@@ -9,6 +9,7 @@ import Button from "../../components/Button_x";
 import Badge from "../../components/Badge";
 import Image from "next/image";
 import PageWrapper from "../../components/PageWrapper";
+import { AnimatePresence, motion } from 'framer-motion';
 
 const Career = () => {
   const joinUsRef = useRef(null);
@@ -24,13 +25,32 @@ const Career = () => {
     <PageWrapper>
 
       {/* ================= HEADER / HERO SECTION ================= */}
+              <AnimatePresence mode="wait">
+          
+            <motion.div
+              key="landing-content"
+              initial={{
+                opacity: 0,
+                y: 150,
+                filter: 'blur(10px)',
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                filter: 'blur(0px)',
+              }}
+              transition={{
+                duration: 1,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
       <div
         className="w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/career.png')",
         }}
       >
-        <Header />
+        {/* <Header /> */}
 
         <section className="w-full flex justify-center bg-[#010509] mt-16 lg:mt-22">
           <div className="relative w-full max-w-[1440px] min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh]">
@@ -264,8 +284,10 @@ const Career = () => {
         <div ref={joinUsRef}>
           <Form />
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
+      </motion.div>
+</AnimatePresence>
     </PageWrapper>
   );
 };

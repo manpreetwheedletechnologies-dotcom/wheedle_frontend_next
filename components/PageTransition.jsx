@@ -1,36 +1,47 @@
+// components/PageTransition.jsx
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
-
-const pageVariants = {
-  initial: { opacity: 0, x: 100 },
-  in: { opacity: 1, x: 0 },
-  out: { opacity: 0, x: -100 },
-};
-
-const pageTransition = {
-  type: "tween",
-  ease: "easeInOut",
-  duration: 0.5,
-};
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function PageTransition({ children }) {
   const pathname = usePathname();
+  const [displayChildren, setDisplayChildren] = useState(children);
+  const [transitionStage, setTransitionStage] = useState('fadeIn'); // 'fadeIn' | 'fadeOut'
+  const prevPathname = useRef(pathname);
+
+  useEffect(() => {
+    // Route actually changed
+    if (prevPathname.current !== pathname) {
+      // 1. New children are ready — trigger fade-out of old, fade-in of new
+      setTransitionStage('fadeOut');
+    }
+  }, [pathname]);
+
+  const handleAnimationEnd = () => {
+    if (transitionStage === 'fadeOut') {
+      // Old page finished sliding out → swap content → slide new page in
+      setDisplayChildren(children);
+      prevPathname.current = pathname;
+      setTransitionStage('fadeIn');
+    }
+  };
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={pathname}
-        className="min-h-screen w-full"
-        initial="initial"
-        animate="in"
-        exit="out"
-        variants={pageVariants}
-        transition={pageTransition}
-      >
-        {children}
-      </motion.div>
-    </AnimatePresence>
+    <motion.div
+      key={transitionStage === 'fadeOut' ? prevPathname.current : pathname}
+      initial={{ opacity: 0, x: 200 }}
+      animate={
+        transitionStage === 'fadeOut'
+          ? { opacity: 0, x: -200 }
+          : { opacity: 1, x: 0 }
+      }
+      transition={{ type: 'tween', ease: 'easeInOut', duration: 0.3 }}
+      onAnimationComplete={handleAnimationEnd}
+      style={{ minHeight: '100vh', width: '100%' }}
+    >
+      {displayChildren}
+    </motion.div>
   );
 }

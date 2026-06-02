@@ -7,7 +7,7 @@ import servicesData from '../lib/ServicesData';
 import LogosData from '../lib/LogosData';
 import Image from 'next/image';
 
-const ContactModal = dynamic(() => import('./ContactModal'), { ssr: false });
+const ContactModal = dynamic(() => import('./ContactModal'), { ssr: true });
 
 function Footer() {
   const navLinks = [
@@ -29,13 +29,14 @@ function Footer() {
   const [openContact, setOpenContact] = useState(false);
 
   return (
+     <>
     <footer className="w-full bg-[#010509] text-white flex justify-center">
       <div className="w-full flex flex-col items-center px-6 pb-8 sm:pb-10">
         <div className="w-full max-w-[1240px] min-h-[401px] px-6 sm:px-10 lg:px-[60px] py-[40px] flex flex-col gap-[35px]">
 
           {/* TOP ROW */}
           <div className="flex flex-col items-center text-center gap-5 sm:flex-row sm:items-start sm:justify-between sm:text-left">
-            <div className="relative h-13 lg:h-15 w-[150px] lg:w-[340px]">
+            <div className="relative h-16 lg:h-20 w-[150px] lg:w-[340px]">
               <Image
                 src={LogosData.mainLogo}
                 alt="Wheedle Logo"
@@ -50,18 +51,12 @@ function Footer() {
             >
               Talk To An Expert
             </button>
+            
           </div>
 
-          {openContact && (
-            <ContactModal
-              onClose={() => setOpenContact(false)}
-              title="Talk To An Expert"
-              description=""
-              contactEmail="info@wheedletechnologies.ai"
-              contactPhone="+91 9717672561"
-              messagePlaceholder="Tell us your message"
-            />
-          )}
+
+
+          
 
           {/* LINKS */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[35px] text-center md:text-left">
@@ -114,42 +109,105 @@ function Footer() {
             <div className="flex flex-col gap-6">
               <div>
                 <h4 className="text-sm font-semibold mb-4">Other Links</h4>
-                <ul className="space-y-2 flex flex-col items-center md:items-start">
-                  {["Privacy Policy"].map((text, i) => (
-                    <li key={i}>
-                      <Link
-                        href="/privacy-policy"
-                        className="group relative inline-flex h-5 overflow-hidden text-sm font-medium"
-                      >
-                        <span className="translate-y-0 transition duration-300 group-hover:-translate-y-[150%]">
-                          {text}
-                        </span>
-                        <span className="absolute translate-y-[150%] text-[#0B2CC3] transition duration-300 group-hover:translate-y-0">
-                          {text}
-                        </span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
 
-                <ul className="space-y-2 flex flex-col items-center md:items-start mt-2">
-                  {["Terms & Conditions"].map((text, i) => (
-                    <li key={i}>
-                      <Link
-                        href="/terms-conditions"
-                        className="group relative inline-flex h-5 overflow-hidden text-sm font-medium"
-                      >
-                        <span className="translate-y-0 transition duration-300 group-hover:-translate-y-[150%]">
-                          {text}
-                        </span>
-                        <span className="absolute translate-y-[150%] text-[#0B2CC3] transition duration-300 group-hover:translate-y-0">
-                          {text}
-                        </span>
-                      </Link>
-                    </li>
-                  ))}
+                <ul className="space-y-2 flex flex-col items-center md:items-start">
+
+                  <li>
+                    <a
+                      href="/privacy-policy.html"
+                      className="group relative inline-flex h-5 overflow-hidden text-sm font-medium"
+                    >
+                      <span className="translate-y-0 transition duration-300 group-hover:-translate-y-[150%]">
+                        Privacy Policy
+                      </span>
+
+                      <span className="absolute translate-y-[150%] text-[#0B2CC3] transition duration-300 group-hover:translate-y-0">
+                        Privacy Policy
+                      </span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/delete-account.html"
+                      className="group relative inline-flex h-5 overflow-hidden text-sm font-medium"
+                    >
+                      <span className="translate-y-0 transition duration-300 group-hover:-translate-y-[150%]">
+                        User Data Deletion
+                      </span>
+
+                      <span className="absolute translate-y-[150%] text-[#0B2CC3] transition duration-300 group-hover:translate-y-0">
+                        User Data Deletion
+                      </span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/terms-conditions.html"
+                      className="group relative inline-flex h-5 overflow-hidden text-sm font-medium"
+                    >
+                      <span className="translate-y-0 transition duration-300 group-hover:-translate-y-[150%]">
+                        Terms & Conditions
+                      </span>
+
+                      <span className="absolute translate-y-[150%] text-[#0B2CC3] transition duration-300 group-hover:translate-y-0">
+                        Terms & Conditions
+                      </span>
+                    </a>
+                  </li>
+
                 </ul>
               </div>
+              {/* <div>
+                <h4 className="text-sm font-semibold mb-4">Other Links</h4>
+                <ul className="space-y-2 flex flex-col items-center md:items-start">
+                  <li>
+                    <Link
+                      to="/privacy-policy"
+                      className="group relative inline-flex h-5 overflow-hidden text-sm font-medium"
+                    >
+                      <span className="translate-y-0 transition duration-300 group-hover:-translate-y-[150%]">
+                        Privacy Policy
+                      </span>
+                      <span className="absolute translate-y-[150%] text-[#0B2CC3] transition duration-300 group-hover:translate-y-0">
+                        Privacy Policy
+                      </span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/delete-account"
+                      className="group relative inline-flex h-5 overflow-hidden text-sm font-medium"
+                    >
+                      <span className="translate-y-0 transition duration-300 group-hover:-translate-y-[150%]">
+                        User Data Deletion
+                      </span>
+                      <span className="absolute translate-y-[150%] text-[#0B2CC3] transition duration-300 group-hover:translate-y-0">
+                        User Data Deletion
+                      </span>
+                    </Link>
+                  </li>
+
+
+                  <li>
+                    <Link
+                      to="/terms-conditions"
+                      className="group relative inline-flex h-5 overflow-hidden text-sm font-medium"
+                    >
+                      <span className="translate-y-0 transition duration-300 group-hover:-translate-y-[150%]">
+                        Terms & Conditions
+                      </span>
+                      <span className="absolute translate-y-[150%] text-[#0B2CC3] transition duration-300 group-hover:translate-y-0">
+                        Terms & Conditions
+                      </span>
+                    </Link>
+                  </li>
+                </ul>
+
+
+               
+              </div> */}
 
               {/* SOCIAL ICONS */}
               <div className="flex gap-4 justify-center md:justify-start">
@@ -240,7 +298,20 @@ function Footer() {
           All Rights Reserved.
         </p>
       </div>
+               
     </footer>
+   
+     {openContact && (
+            <ContactModal
+              onClose={() => setOpenContact(false)}
+              title="Talk To An Expert"
+              description=""
+              contactEmail="info@wheedletechnologies.ai"
+              contactPhone="+91 9717672561"
+              messagePlaceholder="Tell us your message"
+            />
+          )}
+    </>
   );
 }
 

@@ -39,7 +39,7 @@ export default function BlogDetails({ slug }) {
 
   return (
     <div className="w-full min-h-screen bg-black text-white">
-      <Header />
+      {/* <Header /> */}
       <section className="w-full flex justify-center bg-[#010509] mt-16 lg:mt-22">
         <div className="relative w-full max-w-[1440px] min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] mt-[-5%]">
           <img src="/frame-image.png" alt="Frame" className="absolute inset-0 w-full h-full object-cover lg:object-contain" />
@@ -89,7 +89,7 @@ export default function BlogDetails({ slug }) {
           </div>
         </div>
       </section>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
