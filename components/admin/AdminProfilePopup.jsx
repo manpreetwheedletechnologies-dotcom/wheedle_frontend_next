@@ -4,7 +4,10 @@ import { X, User, Mail, Phone, Pencil } from "lucide-react";
 import axios from "axios";
 import API_BASE_URL from '../../lib/api';
 
-const AdminProfilePopup = ({ isOpen, onClose }) => {
+const AdminProfilePopup = ({ isOpen, onClose, currentUser }) => {
+  const authHeader = () => ({
+    Authorization: `Bearer ${typeof window !== "undefined" ? localStorage.getItem("adminToken") || "" : ""}`,
+  });
   const [editMode, setEditMode] = useState(false);
 
   const [admin, setAdmin] = useState({
@@ -23,10 +26,12 @@ const AdminProfilePopup = ({ isOpen, onClose }) => {
 
   const fetchAdmin = async () => {
     try {
-      const res = await axios.get(`${API_BASE_URL}/profile/`);
+      const res = await axios.get(`${API_BASE_URL}/profile/`, { headers: authHeader() });
 
-      // ✅ FIXED HERE
-      setAdmin(res.data.profile);
+      // Backend is expected to return { profile }, but guard against unexpected shapes
+      const profile = res?.data?.profile;
+      setAdmin(profile || { name: '', email: '', phone: '' });
+
     } catch (error) {
       console.log(error);
     }
@@ -48,7 +53,8 @@ const AdminProfilePopup = ({ isOpen, onClose }) => {
 
     const res = await axios.put(
       `${API_BASE_URL}/profile/`,
-      admin
+      admin,
+      { headers: authHeader() }
     );
 
     setMessage(res.data.message); // ✅ show backend message
@@ -93,8 +99,8 @@ const AdminProfilePopup = ({ isOpen, onClose }) => {
             <User className="text-white" size={28} />
           </div>
 
-          <h2 className="text-xl font-semibold mt-3 text-gray-800">
-            Admin Profile
+          <h2 className="text-xl font-semibold mt-3 text-gray-800 capitalize">
+            {currentUser?.role || 'User'} Profile
           </h2>
         </div>
 

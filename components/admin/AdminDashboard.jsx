@@ -21,6 +21,12 @@ import AdminProfilePopup from "./AdminProfilePopup";
 import ViewAllContacts from "./ViewAllContacts";
 import ViewAllLeads from "./ViewAllLeads";
 import ViewAllFormLeads from "./ViewAllFormLeads";
+import TasksTab from "./TasksTab";
+import CalendarTab from "./CalendarTab";
+import ClientQueriesTab from "./ClientQueriesTab";
+import ReportsTab from "./ReportsTab";
+import TeamTab from "./TeamTab";
+import ProjectsTab from "./ProjectsTab";
 import API_BASE_URL from '../../lib/api';
 import { io } from "socket.io-client";
 import axios from 'axios';
@@ -28,8 +34,10 @@ import { useRouter } from 'next/navigation';
 import {
   LayoutDashboard, Briefcase, FileText, MessageSquare,
   LogOut, User, X, Mail, Users, Newspaper, ClipboardList,
-  MessageCircle, Send, ChevronLeft, Circle,
+  MessageCircle, Send, ChevronLeft, Circle, CheckSquare, Calendar,
+  BarChart2, MessageCircleQuestion,
 } from "lucide-react";
+import Toast from "./Toast";
 
  
 
@@ -123,7 +131,7 @@ const LiveChatPanel = () => {
   useEffect(() => {
     isMountedRef.current = true;
     
-    const socket = io("https://wheedletechnologies.ai", {
+    const socket = io(SOCKET_URL, {
       path: "/socket.io",
       transports: ["polling", "websocket"],
       upgrade: true,
@@ -572,8 +580,15 @@ const AdminDashboard = () => {
   const [leadsCount, setLeadsCount] = useState(0);
   const [formLeadsCount, setFormLeadsCount] = useState(0);
   const [liveChatCount, setLiveChatCount] = useState(0);
+  const [currentUser, setCurrentUser] = useState(null);
+  const [toast, setToast] = useState(null);
 
-  useEffect(() => { fetchCounts(); }, []);
+  useEffect(() => {
+    fetchCounts();
+    axios.get(`${API_BASE_URL}/auth/me`, { headers: authHeader() })
+      .then((res) => setCurrentUser(res.data))
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     axios
@@ -581,7 +596,7 @@ const AdminDashboard = () => {
       .then((res) => setLiveChatCount(res.data.filter((c) => c.status === "open").length))
       .catch(() => {});
 
-    const socket = io("https://wheedletechnologies.ai", {
+    const socket = io(SOCKET_URL, {
       path: "/socket.io",
       transports: ["polling", "websocket"],
       upgrade: true,
@@ -598,15 +613,15 @@ const fetchCounts = async () => {
   try {
     const headers = authHeader();
     
-    // Fetch data and get counts from response length
+    // Fetch data and get counts from response length, with individual request catch fallbacks
     const [jobsRes, testimonialsRes, blogsRes, contactsRes, leadsRes, formLeadsRes] =
       await Promise.all([
-        axios.get(`${API_BASE_URL}/jobs`, { headers }),
-        axios.get(`${API_BASE_URL}/testimonial`, { headers }),
-        axios.get(`${API_BASE_URL}/blogs`, { headers }),
-        axios.get(`${API_BASE_URL}/contact`, { headers }),
-        axios.get(`${API_BASE_URL}/leads`, { headers }),
-        axios.get(`${API_BASE_URL}/formleads`, { headers }),
+        axios.get(`${API_BASE_URL}/jobs`, { headers }).catch(() => ({ data: [] })),
+        axios.get(`${API_BASE_URL}/testimonial`, { headers }).catch(() => ({ data: [] })),
+        axios.get(`${API_BASE_URL}/blogs`, { headers }).catch(() => ({ data: [] })),
+        axios.get(`${API_BASE_URL}/contact`, { headers }).catch(() => ({ data: [] })),
+        axios.get(`${API_BASE_URL}/leads`, { headers }).catch(() => ({ data: [] })),
+        axios.get(`${API_BASE_URL}/formleads`, { headers }).catch(() => ({ data: [] })),
       ]);
 
     setJobCount(jobsRes.data.length || jobsRes.data.total || jobsRes.data.count || 0);
@@ -628,8 +643,16 @@ const fetchCounts = async () => {
 };
 
   const logout = () => {
-    localStorage.removeItem("adminToken");
-    router.push('/admin/login');
+    setToast({ message: 'Logged out successfully!', type: 'success' });
+    setTimeout(() => {
+      localStorage.removeItem("adminToken");
+      router.push('/admin/login');
+    }, 1000);
+  };
+
+  const hasPermission = (moduleKey, permKey) => {
+    if (!currentUser || !currentUser.permissions) return false;
+    return currentUser.permissions.includes(`${moduleKey}:${permKey}`);
   };
 
   const NavBtn = ({ icon: Icon, label, pages, onClick, badge }) => {
@@ -681,47 +704,71 @@ const fetchCounts = async () => {
         <nav className="flex-1 px-4 py-4 space-y-1 text-white overflow-y-auto">
           <NavBtn icon={LayoutDashboard} label="Dashboard" pages="dashboard" />
 
-          <div>
-            <button
-              onClick={() => setHomeOpen(!homeOpen)}
-              className="flex items-center justify-between w-full px-4 py-3 text-white hover:bg-white/10 rounded-lg cursor-pointer"
-            >
-              <div className="flex items-center gap-3">
-                <svg width="18" height="18" fill="white" viewBox="0 0 24 24">
-                  <path d="M3 12l9-9 9 9h-3v9h-12v-9h-3z" />
-                </svg>
-                Home
+          {(hasPermission('content', 'hero.view') || hasPermission('content', 'partners.view') || hasPermission('content', 'steps.view')) && (
+            <div>
+              <button
+                onClick={() => setHomeOpen(!homeOpen)}
+                className="flex items-center justify-between w-full px-4 py-3 text-white hover:bg-white/10 rounded-lg cursor-pointer"
+              >
+                <div className="flex items-center gap-3">
+                  <svg width="18" height="18" fill="white" viewBox="0 0 24 24">
+                    <path d="M3 12l9-9 9 9h-3v9h-12v-9h-3z" />
+                  </svg>
+                  Home
+                </div>
+                <span>{homeOpen ? "⌄" : "›"}</span>
+              </button>
+
+              <div className={`overflow-hidden transition-all duration-300 ${homeOpen ? "max-h-40" : "max-h-0"}`}>
+                {[
+                  hasPermission('content', 'hero.view') && { label: "Hero", page: "hero" },
+                  hasPermission('content', 'partners.view') && { label: "Partners", page: "partners" },
+                  hasPermission('content', 'steps.view') && { label: "Steps", page: "steps" },
+                ].filter(Boolean).map(({ label, page }) => (
+                  <button key={page} onClick={() => setActivePage(page)}
+                    className={`flex items-center gap-3 w-full px-5 py-3 rounded-lg transition-all duration-200 cursor-pointer
+                      ${activePage === page ? "bg-white text-black shadow-md" : "text-white hover:bg-white/10"}`}
+                  >
+                    <span className="w-[18px]" />
+                    {label}
+                  </button>
+                ))}
               </div>
-              <span>{homeOpen ? "⌄" : "›"}</span>
-            </button>
-
-            <div className={`overflow-hidden transition-all duration-300 ${homeOpen ? "max-h-40" : "max-h-0"}`}>
-              {[
-                { label: "Hero", page: "hero" },
-                { label: "Partners", page: "partners" },
-                { label: "Steps", page: "steps" },
-              ].map(({ label, page }) => (
-                <button key={page} onClick={() => setActivePage(page)}
-                  className={`flex items-center gap-3 w-full px-5 py-3 rounded-lg transition-all duration-200 cursor-pointer
-                    ${activePage === page ? "bg-white text-black shadow-md" : "text-white hover:bg-white/10"}`}
-                >
-                  <span className="w-[18px]" />
-                  {label}
-                </button>
-              ))}
             </div>
-          </div>
+          )}
 
-          <NavBtn icon={Briefcase} label="Jobs" pages={["jobs", "postJob"]} />
-          <NavBtn icon={FileText} label="Blogs" pages={["blogs", "selectBlogCategory", "postBlog"]} />
-          <NavBtn icon={MessageSquare} label="Testimonials" pages={["testimonials", "postTestimonial"]} />
+          {hasPermission('content', 'jobs.view') && <NavBtn icon={Briefcase} label="Jobs" pages={["jobs", "postJob"]} />}
+          {hasPermission('content', 'blogs.view') && <NavBtn icon={FileText} label="Blogs" pages={["blogs", "selectBlogCategory", "postBlog"]} />}
+          {hasPermission('content', 'testimonials.view') && <NavBtn icon={MessageSquare} label="Testimonials" pages={["testimonials", "postTestimonial"]} />}
 
-          <div className="border-t border-white/10 my-2" />
+          {/* HR Line if CRM features are available */}
+          {(hasPermission('crm', 'applications.view') || hasPermission('crm', 'leads.view') || hasPermission('crm', 'formleads.view') || hasPermission('live-chat', 'livechat.view')) && (
+            <div className="border-t border-white/10 my-2" />
+          )}
 
-          <NavBtn icon={ClipboardList} label="Applications" pages="applications" badge={applications} />
-          <NavBtn icon={Mail} label="Newsletter" pages="leads" badge={leadsCount} />
-          <NavBtn icon={Users} label="Form Leads" pages="formleads" badge={formLeadsCount} />
-          <NavBtn icon={MessageCircle} label="Live Chats" pages="livechat" badge={liveChatCount} />
+          {hasPermission('crm', 'applications.view') && <NavBtn icon={ClipboardList} label="Applications" pages="applications" badge={applications} />}
+          {hasPermission('crm', 'leads.view') && <NavBtn icon={Mail} label="Newsletter" pages="leads" badge={leadsCount} />}
+          {hasPermission('crm', 'formleads.view') && <NavBtn icon={Users} label="Form Leads" pages="formleads" badge={formLeadsCount} />}
+          {hasPermission('live-chat', 'livechat.view') && <NavBtn icon={MessageCircle} label="Live Chats" pages="livechat" badge={liveChatCount} />}
+
+          {/* HR Line if Task Management features are available */}
+          {(hasPermission('tasks', 'tasks.view') || hasPermission('client-queries', 'queries.view') || hasPermission('reports', 'reports.view') || hasPermission('user-management', 'users.view')) && (
+            <>
+              <div className="border-t border-white/10 my-2" />
+              <div className="text-[10px] font-bold uppercase tracking-wider text-white/40 px-5 py-2">Task Management</div>
+            </>
+          )}
+          
+          {hasPermission('tasks', 'tasks.view') && (
+            <>
+              <NavBtn icon={CheckSquare} label="Projects" pages="projects" />
+              <NavBtn icon={CheckSquare} label="Tasks" pages="tasks" />
+              <NavBtn icon={Calendar} label="Weekly Calendar" pages="calendar" />
+            </>
+          )}
+          {hasPermission('client-queries', 'queries.view') && <NavBtn icon={MessageCircleQuestion} label="Client Queries" pages="queries" />}
+          {hasPermission('reports', 'reports.view') && <NavBtn icon={BarChart2} label="Reports" pages="reports" />}
+          {hasPermission('user-management', 'users.view') && <NavBtn icon={Users} label="Team & Permissions" pages="team" />}
         </nav>
       </aside>
 
@@ -738,11 +785,13 @@ const fetchCounts = async () => {
             <div onClick={() => setProfileDropdown(!profileDropdown)}
               className="flex items-center gap-2 cursor-pointer"
             >
-              <div className="text-white p-2 rounded-full shadow-sm"
-                style={{ background: "linear-gradient(135deg, #2E1A6D 0%, #4B2D73 100%)" }}>
-                <User size={18} />
+              <div className="text-white p-2 rounded-full shadow-sm flex items-center justify-center font-bold"
+                style={{ background: "linear-gradient(135deg, #2E1A6D 0%, #4B2D73 100%)", width: '36px', height: '36px' }}>
+                {currentUser?.name ? initials(currentUser.name) : <User size={18} />}
               </div>
-              <p className="text-gray-700 font-semibold hidden sm:block">Admin</p>
+              <p className="text-gray-700 font-semibold hidden sm:block">
+                {currentUser?.name || currentUser?.role || 'Admin'}
+              </p>
             </div>
 
             {profileDropdown && (
@@ -778,14 +827,14 @@ const fetchCounts = async () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 p-2 rounded-2xl">
                 {[
-                  { label: "Total Jobs", count: jobCount, icon: Briefcase, page: "jobs" },
-                  { label: "Applications", count: applications, icon: ClipboardList, page: "applications" },
-                  { label: "Blogs", count: blogCount, icon: Newspaper, page: "blogs" },
-                  { label: "Testimonials", count: testimonialCount, icon: MessageSquare, page: "testimonials" },
-                  { label: "Newsletter", count: leadsCount, icon: Mail, page: "leads" },
-                  { label: "Form Leads", count: formLeadsCount, icon: Users, page: "formleads" },
-                  { label: "Open Chats", count: liveChatCount, icon: MessageCircle, page: "livechat" },
-                ].map(({ label, count, icon: Icon, page }) => (
+                  hasPermission('content', 'jobs.view') && { label: "Total Jobs", count: jobCount, icon: Briefcase, page: "jobs" },
+                  hasPermission('crm', 'applications.view') && { label: "Applications", count: applications, icon: ClipboardList, page: "applications" },
+                  hasPermission('content', 'blogs.view') && { label: "Blogs", count: blogCount, icon: Newspaper, page: "blogs" },
+                  hasPermission('content', 'testimonials.view') && { label: "Testimonials", count: testimonialCount, icon: MessageSquare, page: "testimonials" },
+                  hasPermission('crm', 'leads.view') && { label: "Newsletter", count: leadsCount, icon: Mail, page: "leads" },
+                  hasPermission('crm', 'formleads.view') && { label: "Form Leads", count: formLeadsCount, icon: Users, page: "formleads" },
+                  hasPermission('live-chat', 'livechat.view') && { label: "Open Chats", count: liveChatCount, icon: MessageCircle, page: "livechat" },
+                ].filter(Boolean).map(({ label, count, icon: Icon, page }) => (
                   <div key={page} onClick={() => setActivePage(page)}
                     className="bg-white rounded-xl p-6 shadow-sm hover:-translate-y-2 hover:scale-[1.04]
                       transition cursor-pointer flex items-center justify-between"
@@ -859,10 +908,28 @@ const fetchCounts = async () => {
               </div>
             </div>
           )}
+
+          {activePage === "projects" && <ProjectsTab hasPermission={hasPermission} />}
+          {activePage === "tasks" && <TasksTab currentUser={currentUser} />}
+          {activePage === "calendar" && <CalendarTab currentUser={currentUser} />}
+          {activePage === "queries" && <ClientQueriesTab currentUser={currentUser} />}
+          {activePage === "reports" && <ReportsTab currentUser={currentUser} />}
+          {activePage === "team" && <TeamTab currentUser={currentUser} />}
+          <AdminProfilePopup
+            isOpen={profileOpen}
+            onClose={() => setProfileOpen(false)}
+            currentUser={currentUser}
+          />
         </main>
       </div>
 
-      <AdminProfilePopup isOpen={profileOpen} onClose={() => setProfileOpen(false)} />
+      {toast && (
+        <Toast
+          message={toast.message}
+          type={toast.type}
+          onClose={() => setToast(null)}
+        />
+      )}
     </div>
   );
 };

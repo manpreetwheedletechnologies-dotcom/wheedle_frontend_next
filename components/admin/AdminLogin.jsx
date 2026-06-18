@@ -3,12 +3,14 @@ import React, { useState } from "react";
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import API_BASE_URL from '../../lib/api';
+import Toast from './Toast';
 
 const AdminLogin = () => {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [toast, setToast] = useState(null);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -20,13 +22,14 @@ const AdminLogin = () => {
       });
       console.log('dkdoenodnoe',res);
       localStorage.setItem("adminToken", res.data.token);
+      setToast({ message: 'Login successful!', type: 'success' });
       if (res.data.message == "Login success") {
-
-        router.push('/admin/dashboard');
+        setTimeout(() => router.push('/admin/dashboard'), 1000);
       }
-
-      // router.push('/admin/dashboard');
     } catch (err) {
+      const errorMsg = err?.response?.data?.message || 'Invalid credentials. Please try again.';
+      setError(errorMsg);
+      setToast({ message: errorMsg, type: 'error' });
     }
   };
 
@@ -128,6 +131,13 @@ const AdminLogin = () => {
           Login
         </button>
       </form>
+      {toast && (
+        <Toast
+          message={toast.message}
+          type={toast.type}
+          onClose={() => setToast(null)}
+        />
+      )}
     </div>
   );
 };

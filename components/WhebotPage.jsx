@@ -55,6 +55,7 @@ const CLIENT_COMPANIES = ['Savorka', '123-setup(printer)', 'NCCL', 'Purifier Ind
 const INPUT_ENABLED_STEPS = new Set([
   'requirement', 'name', 'mobile', 'email', 'address',
   'client_issue', 'client_email', 'client_mobile', 'live_chat',
+  'continue_phone',
 ]);
 
 const EMPTY_FORM   = { service: '', subRequirement: '', requirement: '', name: '', mobile: '', email: '', address: '' };
@@ -120,9 +121,14 @@ const isValidMobile = (v) => v.replace(/\D/g, '').length >= 10;
 const isValidEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 
 const getInitialMessages = () => [
-  { type: 'bot', text: "Hey! I'm WheBot, How can I help you?", isComplete: true },
-  { type: 'bot', text: 'Please select an option below.', isComplete: true, showOptions: true },
+  {
+    type: 'bot',
+    text: '👋 Welcome to Wheedle Technologies.\n\nWould you like to continue a previous conversation or start a new chat?',
+    isComplete: true,
+    showWelcomeActions: true,
+  },
 ];
+
 
 /* ═══════════════════════════════════════════
    MAIN COMPONENT
@@ -140,7 +146,13 @@ const WhebotPage = ({ isMinimized, setIsMinimized }) => {
   const [isLive,         setIsLive]         = useState(false);
   const [agentOnline,    setAgentOnline]    = useState(false);
 
+  const [continuePhone, setContinuePhone] = useState('');
+  const [sessionsLoading, setSessionsLoading] = useState(false);
+  const [sessionsError, setSessionsError] = useState('');
+  const [sessions, setSessions] = useState([]);
+
   // Socket.IO is loaded dynamically to avoid SSR issues in Next.js
+
   const chatBodyRef        = useRef(null);
   const userScrolledUpRef  = useRef(false);
   const scrollTimerRef     = useRef(null);
@@ -523,7 +535,60 @@ const WhebotPage = ({ isMinimized, setIsMinimized }) => {
         addUserMessage(value); setFormData((p) => ({ ...p, address: value })); setInput('');
         setChatStep('confirm'); setShowConfirmBox(true);
       },
+
+      continue_phone: async () => {
+        const normalized = value.replace(/\D/g, '');
+        if (normalized.length < 10 || normalized.length > 15) {
+          await addBotMessage('Please enter a valid mobile number (10–15 digits).');
+          return;
+        }
+
+        addUserMessage(normalized);
+        setInput('');
+        setContinuePhone(normalized);
+        setSessionsLoading(true);
+        setSessionsError('');
+
+        try {
+const res = await axios.post(
+            `${API_BASE_URL}/chat/find-by-phone`,
+            { phone: normalized },
+            { headers: { 'x-api-key': process.env.NEXT_PUBLIC_API_KEY_SECRET || 'test_tesing_chat', 'Content-Type': 'application/json' } }
+          );
+
+          const payload = res.data;
+          if (!payload?.success || !payload?.sessions || payload.sessions.length === 0) {
+            setSessions([]);
+            addStaticBot('No previous conversations found.');
+            addStaticBot('Tap "Start New Chat" to begin.');
+            setChatStep('select_type');
+            setMessages(getInitialMessages());
+            return;
+          }
+
+          setSessions(payload.sessions);
+          setChatStep('continue_session_select');
+          addBotMessage('Select a previous conversation to continue.');
+          addStaticBot('Choose one chat below.', {
+            showSessions: true,
+            sessions: payload.sessions,
+          });
+        } catch (err) {
+          const msg = err?.response?.data?.message || 'Unable to fetch previous conversations.';
+          setSessionsError(msg);
+          await addBotMessage(msg);
+          setChatStep('select_type');
+        } finally {
+          setSessionsLoading(false);
+        }
+      },
+
+      continue_session_select: async () => {
+        // No-op: selection is handled by button clicks.
+      },
+
     };
+
 
     if (steps[chatStep]) await steps[chatStep]();
   };
@@ -643,7 +708,108 @@ const WhebotPage = ({ isMinimized, setIsMinimized }) => {
                       </div>
                     </div>
                   )}
+
+                  {msg.showSessions && (
+                    <div className="mt-3">
+                      <div className="text-[12px] text-white/70 mb-2 px-1">Previous Conversations</div>
+                      <div className="space-y-2">
+                        {(msg.sessions || []).map((s, idx) => (
+                          <button
+                            key={s.sessionId || idx}
+                            type="button"
+                            onClick={async () => {
+                              try {
+                                const sid = s.sessionId;
+                                if (!sid) return;
+                                setSessionsLoading(true);
+                                setSessionsError('');
+
+                                // Load history for selected session
+                                const histRes = await axios.get(
+                                  `${API_BASE_URL}/chat/history/${encodeURIComponent(sid)}`,
+                                  { headers: { 'x-api-key': 'test_tesing_chat' } }
+                                );
+
+                                const history = histRes.data;
+                                const normalizedHistory = Array.isArray(history) ? history : [];
+
+                                // Replace chat window content with restored history
+                                setMessages(
+                                  normalizedHistory.map((h, i) => ({
+                                    type: h.role === 'user' ? 'user' : 'bot',
+                                    text: h.message,
+                                    isComplete: true,
+                                    sender: h.role === 'agent' ? 'agent' : undefined,
+                                    key: i,
+                                  }))
+                                );
+
+                                // Continue using existing socket live-agent room conventions
+                                setChatId(sid);
+                                setChatStep('live_chat');
+                                setIsLive(true);
+                                setAgentOnline(false);
+
+                                addStaticBot('✅ Restored previous conversation. You can continue now.');
+                              } catch (e) {
+                                const msg = e?.response?.data?.message || 'Unable to restore chat history.';
+                                addStaticBot(msg);
+                                setChatStep('select_type');
+                              } finally {
+                                setSessionsLoading(false);
+                              }
+                            }}
+                            className="w-full cursor-pointer flex items-center gap-3 px-3 py-2 rounded-full bg-black border border-white/10 text-white hover:border-[#0B2CC3] hover:bg-gradient-to-r hover:from-[#040010] hover:to-[#0B2CC3] hover:shadow-[0_0_14px_rgba(11,44,195,0.35)] active:scale-[0.98] transition-all duration-300"
+                          >
+                            <span className="w-7 h-7 rounded-full bg-[#0B2CC3]/15 border border-[#0B2CC3]/40 flex items-center justify-center shrink-0">
+                              <Bot size={14} className="text-[#7ea2ff]" />
+                            </span>
+                            <span className="flex-1 text-left">
+                              <div className="text-[13px] font-medium leading-tight">
+                                Chat #{idx + 1}
+                              </div>
+                              <div className="text-[11px] text-white/70 leading-tight truncate">
+                                {(s.lastMessage || '').toString().slice(0, 45) || 'Conversation'}
+                              </div>
+                            </span>
+                            <span className="text-[12px] text-white/70">Continue</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {msg.showWelcomeActions && (
+                    <div className="mt-3">
+                      <div className="text-[12px] text-white/70 mb-2 px-1">Choose an option</div>
+                      <div className="space-y-2">
+                        <SelectionButton
+                          label="Continue Previous Chat"
+                          Icon={Bot}
+                          onClick={() => {
+                            // Continue previous chat: ask for mobile (handled in sendMessage based on chatStep)
+                            setChatStep('continue_phone');
+                            addStaticBot('Please enter your mobile number.');
+                            addStaticBot('Tip: enter digits only (10–15 digits).');
+                          }}
+                        />
+                        <SelectionButton
+                          label="Start New Chat"
+                          Icon={Sparkles}
+                          onClick={async () => {
+                            resetAll();
+                            setMessages(getInitialMessages());
+                            addStaticBot('Starting a new chat…');
+                            // reuse existing flow
+                            await handleSelectType('new_user');
+                          }}
+                        />
+                      </div>
+                    </div>
+                  )}
+
                 </div>
+
               </div>
             ))}
 
