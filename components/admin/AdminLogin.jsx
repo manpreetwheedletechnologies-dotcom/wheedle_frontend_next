@@ -9,7 +9,9 @@ const AdminLogin = () => {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const [generalError, setGeneralError] = useState("");
   const [toast, setToast] = useState(null);
 
   const handleLogin = async (e) => {
@@ -27,9 +29,15 @@ const AdminLogin = () => {
         setTimeout(() => router.push('/admin/dashboard'), 1000);
       }
     } catch (err) {
-      const errorMsg = err?.response?.data?.message || 'Invalid credentials. Please try again.';
-      setError(errorMsg);
-      setToast({ message: errorMsg, type: 'error' });
+      const errorMsg = err?.response?.data?.message || 'Server error';
+      if (errorMsg.toLowerCase().includes('email')) {
+        setEmailError(errorMsg);
+      } else if (errorMsg.toLowerCase().includes('password')) {
+        setPasswordError(errorMsg);
+      } else {
+        setGeneralError(errorMsg);
+        setToast({ message: errorMsg, type: 'error' });
+      }
     }
   };
 
@@ -53,7 +61,7 @@ const AdminLogin = () => {
 
         {/* Error */}
 
-        {error && <p className="text-red-500 mb-4 text-center">{error}</p>}
+        {generalError && <p className="text-red-500 mb-4 text-center">{generalError}</p>}
 
         {/* Email */}
 
@@ -63,24 +71,11 @@ const AdminLogin = () => {
           <input
             type="email"
             placeholder="Enter your email"
-            className="
-            w-full
-            px-4
-            py-3
-            rounded-xl
-            text-white
-            bg-gradient-to-r
-            from-[#1a1a1a]
-            to-[#2a2a2a]
-            border
-            border-gray-700
-            focus:border-[#0B2CC3]
-            focus:outline-none
-            placeholder-gray-500
-            "
+            className="w-full px-4 py-3 rounded-xl text-white bg-gradient-to-r from-[#1a1a1a] to-[#2a2a2a] border border-gray-700 focus:border-[#0B2CC3] focus:outline-none placeholder-gray-500"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
+          {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
         </div>
 
         {/* Password */}
@@ -91,24 +86,11 @@ const AdminLogin = () => {
           <input
             type="password"
             placeholder="Enter your password"
-            className="
-            w-full
-            px-4
-            py-3
-            rounded-xl
-            text-white
-            bg-gradient-to-r
-            from-[#1a1a1a]
-            to-[#2a2a2a]
-            border
-            border-gray-700
-            focus:border-[#0B2CC3]
-            focus:outline-none
-            placeholder-gray-500
-            "
+            className="w-full px-4 py-3 rounded-xl text-white bg-gradient-to-r from-[#1a1a1a] to-[#2a2a2a] border border-gray-700 focus:border-[#0B2CC3] focus:outline-none placeholder-gray-500"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          {passwordError && <p className="text-red-500 text-sm mt-1">{passwordError}</p>}
         </div>
 
         {/* Button */}

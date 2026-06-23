@@ -27,6 +27,7 @@ import ClientQueriesTab from "./ClientQueriesTab";
 import ReportsTab from "./ReportsTab";
 import TeamTab from "./TeamTab";
 import ProjectsTab from "./ProjectsTab";
+import InvoiceTab from "./InvoiceTab";
 import API_BASE_URL from '../../lib/api';
 import { io } from "socket.io-client";
 import axios from 'axios';
@@ -35,7 +36,7 @@ import {
   LayoutDashboard, Briefcase, FileText, MessageSquare,
   LogOut, User, X, Mail, Users, Newspaper, ClipboardList,
   MessageCircle, Send, ChevronLeft, Circle, CheckSquare, Calendar,
-  BarChart2, MessageCircleQuestion,
+  BarChart2, MessageCircleQuestion, AlertCircle, Bell
 } from "lucide-react";
 import Toast from "./Toast";
 
@@ -582,6 +583,49 @@ const AdminDashboard = () => {
   const [liveChatCount, setLiveChatCount] = useState(0);
   const [currentUser, setCurrentUser] = useState(null);
   const [toast, setToast] = useState(null);
+  const [targetQueryTaskId, setTargetQueryTaskId] = useState(null);
+
+  // Notifications State
+  const [notifications, setNotifications] = useState([]);
+  const [unreadCount, setUnreadCount] = useState(0);
+  const [notificationsOpen, setNotificationsOpen] = useState(false);
+  const [notificationToast, setNotificationToast] = useState(null);
+
+  // Auth Modals
+  const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
+  const [isSessionWarningOpen, setIsSessionWarningOpen] = useState(false);
+
+  // Activity timer ref
+  const inactivityTimerRef = useRef(null);
+  const warningTimerRef = useRef(null);
+
+  const resetTimers = React.useCallback(() => {
+    if (inactivityTimerRef.current) clearTimeout(inactivityTimerRef.current);
+    if (warningTimerRef.current) clearTimeout(warningTimerRef.current);
+    setIsSessionWarningOpen(false);
+
+    // 19 minutes = 1140000 ms
+    warningTimerRef.current = setTimeout(() => {
+      setIsSessionWarningOpen(true);
+    }, 1140000);
+
+    // 20 minutes = 1200000 ms
+    inactivityTimerRef.current = setTimeout(() => {
+      logout(true);
+    }, 1200000);
+  }, []);
+
+  useEffect(() => {
+    const events = ['mousemove', 'keydown', 'scroll', 'click', 'touchstart'];
+    events.forEach(e => window.addEventListener(e, resetTimers));
+    resetTimers(); // start initially
+
+    return () => {
+      events.forEach(e => window.removeEventListener(e, resetTimers));
+      if (inactivityTimerRef.current) clearTimeout(inactivityTimerRef.current);
+      if (warningTimerRef.current) clearTimeout(warningTimerRef.current);
+    };
+  }, [resetTimers]);
 
   useEffect(() => {
     fetchCounts();
@@ -596,18 +640,55 @@ const AdminDashboard = () => {
       .then((res) => setLiveChatCount(res.data.filter((c) => c.status === "open").length))
       .catch(() => {});
 
+    // Using a single socket connection for both live chat and notifications
+    const token = typeof window !== "undefined" ? localStorage.getItem("adminToken") : null;
     const socket = io(SOCKET_URL, {
       path: "/socket.io",
       transports: ["polling", "websocket"],
       upgrade: true,
       withCredentials: true,
+      auth: { token }
     });
 
     socket.on("new_chat", () => setLiveChatCount((n) => n + 1));
     socket.on("chat_closed", () => setLiveChatCount((n) => Math.max(0, n - 1)));
 
-    return () => socket.disconnect();
-  }, []);
+    // Emit join_notifications when currentUser is available
+    if (currentUser && currentUser._id) {
+      socket.emit("join_notifications", { userId: currentUser._id });
+    }
+
+    const fetchNotifications = async () => {
+      try {
+        const [notifRes, unreadRes] = await Promise.all([
+          axios.get(`${API_BASE_URL}/notifications?limit=50`, { headers: authHeader() }),
+          axios.get(`${API_BASE_URL}/notifications/unread-count`, { headers: authHeader() })
+        ]);
+        setNotifications(notifRes.data);
+        setUnreadCount(unreadRes.data.count);
+      } catch (err) {
+        console.error("Failed to fetch notifications:", err);
+      }
+    };
+
+    fetchNotifications();
+
+    socket.on("new_notification", (notification) => {
+      setNotifications(prev => [notification, ...prev]);
+      setUnreadCount(prev => prev + 1);
+      
+      setNotificationToast({
+        title: notification.title,
+        message: notification.message,
+        type: "notification",
+        data: notification
+      });
+    });
+
+    return () => {
+      socket.disconnect();
+    };
+  }, [currentUser?._id]);
 
 const fetchCounts = async () => {
   try {
@@ -642,12 +723,20 @@ const fetchCounts = async () => {
   }
 };
 
-  const logout = () => {
-    setToast({ message: 'Logged out successfully!', type: 'success' });
+  const confirmLogout = () => {
+    setIsLogoutModalOpen(true);
+  };
+
+  const logout = (isAuto = false) => {
+    setIsLogoutModalOpen(false);
+    setIsSessionWarningOpen(false);
+    if (!isAuto) {
+      setToast({ message: 'Logged out successfully!', type: 'success' });
+    }
     setTimeout(() => {
       localStorage.removeItem("adminToken");
       router.push('/admin/login');
-    }, 1000);
+    }, isAuto ? 0 : 1000);
   };
 
   const hasPermission = (moduleKey, permKey) => {
@@ -768,6 +857,7 @@ const fetchCounts = async () => {
           )}
           {hasPermission('client-queries', 'queries.view') && <NavBtn icon={MessageCircleQuestion} label="Client Queries" pages="queries" />}
           {hasPermission('reports', 'reports.view') && <NavBtn icon={BarChart2} label="Reports" pages="reports" />}
+          {(currentUser?.role === 'superadmin' || currentUser?.role === 'Super Admin') && <NavBtn icon={FileText} label="Tax Invoice" pages="invoice" />}
           {hasPermission('user-management', 'users.view') && <NavBtn icon={Users} label="Team & Permissions" pages="team" />}
         </nav>
       </aside>
@@ -778,10 +868,96 @@ const fetchCounts = async () => {
         >
           <div className="flex items-center gap-4">
             <button className="lg:hidden text-3xl" onClick={() => setSidebarOpen(true)}>☰</button>
-            <h1 className="text-xl lg:text-2xl font-bold text-gray-800 tracking-wide">Admin Dashboard</h1>
+            <h1 className="text-xl lg:text-2xl font-bold text-gray-800 tracking-wide">Dashboard</h1>
           </div>
 
           <div className="flex items-center gap-6 relative">
+            
+            {/* Notification Bell */}
+            <div className="relative">
+              <button 
+                onClick={() => setNotificationsOpen(!notificationsOpen)}
+                className="p-2 text-gray-500 hover:text-gray-700 transition relative"
+              >
+                <Bell size={24} />
+                {unreadCount > 0 && (
+                  <span className="absolute top-1 right-1 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full border border-white">
+                    {unreadCount > 99 ? '99+' : unreadCount}
+                  </span>
+                )}
+              </button>
+
+              {/* Notification Dropdown */}
+              {notificationsOpen && (
+                <div className="absolute right-0 mt-2 w-80 max-h-[400px] bg-white border border-gray-200 rounded-xl shadow-2xl z-50 flex flex-col overflow-hidden">
+                  <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100 bg-gray-50">
+                    <h3 className="font-bold text-gray-800">Notifications</h3>
+                    {unreadCount > 0 && (
+                      <button 
+                        onClick={async () => {
+                          try {
+                            await axios.put(`${API_BASE_URL}/notifications/read-all`, {}, { headers: authHeader() });
+                            setUnreadCount(0);
+                            setNotifications(prev => prev.map(n => ({ ...n, isRead: true })));
+                          } catch (e) {}
+                        }}
+                        className="text-xs text-blue-600 hover:text-blue-800 font-semibold"
+                      >
+                        Mark all read
+                      </button>
+                    )}
+                  </div>
+                  
+                  <div className="overflow-y-auto flex-1">
+                    {notifications.length === 0 ? (
+                      <div className="p-6 text-center text-gray-400 text-sm">
+                        No new notifications
+                      </div>
+                    ) : (
+                      <div className="divide-y divide-gray-100">
+                        {notifications.map((notif) => (
+                          <div 
+                            key={notif._id} 
+                            onClick={async () => {
+                              // Mark read
+                              if (!notif.isRead) {
+                                try {
+                                  await axios.put(`${API_BASE_URL}/notifications/${notif._id}/read`, {}, { headers: authHeader() });
+                                  setUnreadCount(prev => Math.max(0, prev - 1));
+                                  setNotifications(prev => prev.map(n => n._id === notif._id ? { ...n, isRead: true } : n));
+                                } catch (e) {}
+                              }
+                              
+                              // Deep Link logic
+                              setNotificationsOpen(false);
+                              if (notif.link) {
+                                setActivePage(notif.link);
+                              }
+                              if (notif.resourceType === 'task' && notif.resourceId) {
+                                // Task deep link might require opening the task modal. For now, it just goes to 'tasks' page.
+                                // Further integration might require storing targetTaskId globally or emitting an event.
+                              }
+                              if (notif.resourceType === 'client-query' && notif.resourceId) {
+                                setTargetQueryTaskId(notif.resourceId);
+                              }
+                            }}
+                            className={`p-4 hover:bg-gray-50 cursor-pointer transition flex items-start gap-3 ${notif.isRead ? 'opacity-70' : 'bg-blue-50/30'}`}
+                          >
+                            <div className={`mt-0.5 w-2 h-2 rounded-full flex-shrink-0 ${notif.isRead ? 'bg-transparent' : 'bg-blue-500'}`} />
+                            <div>
+                              <h4 className="text-sm font-semibold text-gray-800 mb-0.5">{notif.title}</h4>
+                              <p className="text-xs text-gray-600 mb-1">{notif.message}</p>
+                              <span className="text-[10px] text-gray-400 font-medium uppercase">{notif.category}</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+
             <div onClick={() => setProfileDropdown(!profileDropdown)}
               className="flex items-center gap-2 cursor-pointer"
             >
@@ -804,7 +980,7 @@ const fetchCounts = async () => {
                 >
                   <User size={16} /> Profile
                 </button>
-                <button onClick={logout}
+                <button onClick={confirmLogout}
                   className="w-full text-left px-4 py-3 hover:bg-red-50 flex items-center gap-2 text-red-500 transition"
                 >
                   <LogOut size={16} /> Logout
@@ -819,9 +995,9 @@ const fetchCounts = async () => {
           {activePage === "dashboard" && (
             <div className="space-y-6">
               <div className="bg-white rounded-xl p-8 shadow-sm border">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-2">Welcome Admin 👋</h2>
+                <h2 className="text-2xl font-semibold text-gray-800 mb-2">Welcome 👋</h2>
                 <p className="text-gray-500">
-                  Manage jobs, blogs, testimonials and website content easily from this dashboard.
+                  Access and manage the resources available to you based on your assigned policies and permissions.
                 </p>
               </div>
 
@@ -910,10 +1086,25 @@ const fetchCounts = async () => {
           )}
 
           {activePage === "projects" && <ProjectsTab hasPermission={hasPermission} />}
-          {activePage === "tasks" && <TasksTab currentUser={currentUser} />}
+          {activePage === "tasks" && (
+            <TasksTab 
+              currentUser={currentUser} 
+              onNavigateToQuery={(taskId) => {
+                setTargetQueryTaskId(taskId);
+                setActivePage("queries");
+              }} 
+            />
+          )}
           {activePage === "calendar" && <CalendarTab currentUser={currentUser} />}
-          {activePage === "queries" && <ClientQueriesTab currentUser={currentUser} />}
+          {activePage === "queries" && (
+            <ClientQueriesTab 
+              currentUser={currentUser} 
+              targetQueryTaskId={targetQueryTaskId}
+              setTargetQueryTaskId={setTargetQueryTaskId}
+            />
+          )}
           {activePage === "reports" && <ReportsTab currentUser={currentUser} />}
+          {activePage === "invoice" && <InvoiceTab />}
           {activePage === "team" && <TeamTab currentUser={currentUser} />}
           <AdminProfilePopup
             isOpen={profileOpen}
@@ -923,11 +1114,96 @@ const fetchCounts = async () => {
         </main>
       </div>
 
+      {/* LOGOUT CONFIRMATION MODAL */}
+      {isLogoutModalOpen && (
+        <div className="fixed inset-0 bg-black/60 z-[9999] flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl p-6 w-full max-w-sm shadow-2xl animate-popup border">
+            <div className="flex items-center gap-3 text-red-600 mb-4">
+              <AlertCircle size={28} />
+              <h3 className="text-xl font-bold text-gray-800">Confirm Logout</h3>
+            </div>
+            <p className="text-gray-600 text-sm mb-6">Are you sure you want to logout?</p>
+            <div className="flex gap-3 justify-end">
+              <button
+                onClick={() => setIsLogoutModalOpen(false)}
+                className="px-4 py-2 border rounded-xl hover:bg-gray-50 text-gray-700 font-semibold transition"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={() => logout(false)}
+                className="px-5 py-2 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold shadow transition"
+              >
+                Logout
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* SESSION EXPIRING WARNING MODAL */}
+      {isSessionWarningOpen && (
+        <div className="fixed inset-0 bg-black/60 z-[9999] flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl p-6 w-full max-w-sm shadow-2xl animate-popup border border-orange-200">
+            <div className="flex items-center gap-3 text-orange-500 mb-4">
+              <AlertCircle size={28} />
+              <h3 className="text-xl font-bold text-gray-800">Session Expiring</h3>
+            </div>
+            <p className="text-gray-600 text-sm mb-6">You will be logged out in 1 minute due to inactivity.</p>
+            <div className="flex gap-3 justify-end">
+              <button
+                onClick={() => logout(true)}
+                className="px-4 py-2 border rounded-xl hover:bg-gray-50 text-gray-700 font-semibold transition"
+              >
+                Logout Now
+              </button>
+              <button
+                onClick={resetTimers}
+                className="px-5 py-2 bg-[#0B2CC3] hover:bg-blue-700 text-white rounded-xl font-bold shadow transition"
+              >
+                Stay Logged In
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {toast && (
         <Toast
           message={toast.message}
           type={toast.type}
           onClose={() => setToast(null)}
+        />
+      )}
+
+      {notificationToast && (
+        <Toast
+          title={notificationToast.title}
+          message={notificationToast.message}
+          type={notificationToast.type}
+          duration={8000}
+          onClose={() => setNotificationToast(null)}
+          onClick={() => {
+            const notif = notificationToast.data;
+            if (!notif) return;
+
+            // Mark read logic since it was clicked
+            if (!notif.isRead) {
+              try {
+                axios.put(`${API_BASE_URL}/notifications/${notif._id}/read`, {}, { headers: authHeader() });
+                setUnreadCount(prev => Math.max(0, prev - 1));
+                setNotifications(prev => prev.map(n => n._id === notif._id ? { ...n, isRead: true } : n));
+              } catch (e) {}
+            }
+            
+            // Navigate
+            if (notif.link) {
+              setActivePage(notif.link);
+            }
+            if (notif.resourceType === 'client-query' && notif.resourceId) {
+              setTargetQueryTaskId(notif.resourceId);
+            }
+          }}
         />
       )}
     </div>

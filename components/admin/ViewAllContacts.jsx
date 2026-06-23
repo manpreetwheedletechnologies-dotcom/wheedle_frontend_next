@@ -129,7 +129,7 @@ const ViewAllContacts = () => {
   const totalPages = Math.ceil(filteredContacts.length / itemsPerPage);
 
   return (
-    <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-300">
+    <div className="text-black bg-white p-8 rounded-xl shadow-sm border border-gray-300">
       {toast && (
         <Toast
           message={toast.message}
@@ -271,13 +271,13 @@ const ViewAllContacts = () => {
 
           {/* PAGINATION */}
           {totalPages > 1 && (
-            <div className="flex justify-center mt-5 gap-2">
+            <div className="text-black flex justify-center mt-5 gap-2">
               <button
                 disabled={currentPage === 1}
                 onClick={() => setCurrentPage(currentPage - 1)}
                 className="p-2 border rounded"
               >
-                <ChevronLeft size={16} />
+                <ChevronLeft size={16} />   
               </button>
 
               {[...Array(totalPages)].map((_, i) => (

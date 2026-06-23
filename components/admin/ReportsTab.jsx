@@ -240,8 +240,9 @@ export default function ReportsTab({ currentUser }) {
           </div>
 
           {/* Employee Performance Table */}
-          <div className="bg-white border rounded-2xl shadow-sm overflow-hidden">
-            <div className="p-5 border-b bg-gradient-to-r from-[#2E1A6D] to-[#4B2D73]">
+          {(currentUser?.role === 'Super Admin' || currentUser?.role === 'Admin' || currentUser?.userType === 'admin') && (
+            <div className="bg-white border rounded-2xl shadow-sm overflow-hidden">
+              <div className="p-5 border-b bg-gradient-to-r from-[#2E1A6D] to-[#4B2D73]">
               <h4 className="font-bold text-white flex items-center gap-2">
                 <Users size={18} />
                 <span>Employee Performance Sheet</span>
@@ -314,6 +315,7 @@ export default function ReportsTab({ currentUser }) {
               </table>
             </div>
           </div>
+          )}
         </div>
       )}
     </div>

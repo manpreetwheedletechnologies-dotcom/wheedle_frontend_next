@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { io } from "socket.io-client";
 import Toast from './Toast';
+import DocumentViewerModal from './DocumentViewerModal';
 
 const getSocketUrl = () => {
   try {
@@ -40,6 +41,8 @@ export default function TasksTab({ currentUser, onNavigateToQuery }) {
   const [isCreateOpen, setIsCreateOpen] = useState(false);
   const [isEditOpen, setIsEditOpen] = useState(false);
   const [activeTask, setActiveTask] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [viewingDocument, setViewingDocument] = useState(null);
 
   // Form states
   const [title, setTitle] = useState('');
@@ -63,10 +66,7 @@ export default function TasksTab({ currentUser, onNavigateToQuery }) {
   const [queryAttachmentName, setQueryAttachmentName] = useState('');
   const [uploadingQueryMedia, setUploadingQueryMedia] = useState(false);
   const [isAttachmentsOpen, setIsAttachmentsOpen] = useState(false);
-  const [isChatOpen, setIsChatOpen] = useState(false);
-  const [activeChatQuery, setActiveChatQuery] = useState(null);
-  const [chatMessageText, setChatMessageText] = useState('');
-  const [chatMediaUrl, setChatMediaUrl] = useState('');
+
 
   const socketRef = React.useRef(null);
 
@@ -90,30 +90,14 @@ export default function TasksTab({ currentUser, onNavigateToQuery }) {
     });
     socketRef.current = socket;
 
-    socket.on('query_updated', (updatedQuery) => {
-      setActiveChatQuery(prev => {
-        if (prev?._id === updatedQuery._id) {
-          return updatedQuery;
-        }
-        return prev;
-      });
-    });
+
 
     return () => {
       socket.disconnect();
     };
   }, []);
 
-  useEffect(() => {
-    if (socketRef.current && activeChatQuery?._id && isChatOpen) {
-      socketRef.current.emit('join_query', { queryId: activeChatQuery._id });
-    }
-    return () => {
-      if (socketRef.current && activeChatQuery?._id) {
-        socketRef.current.emit('leave_query', { queryId: activeChatQuery._id });
-      }
-    };
-  }, [activeChatQuery?._id, isChatOpen]);
+
 
   const fetchTasks = async () => {
     try {
@@ -133,37 +117,13 @@ export default function TasksTab({ currentUser, onNavigateToQuery }) {
     }
   };
 
-  const openChatForTask = async (task) => {
-    try {
-      setLoading(true);
-      setActiveTask(task);
-      const res = await axios.get(`${API_BASE_URL}/client-queries/task/${task._id}`, { headers: authHeader() });
-      setActiveChatQuery(res.data);
-      setIsChatOpen(true);
-    } catch (e) {
-      console.error('Failed to open chat', e);
-      setToast({ message: 'Failed to open chat or query not found.', type: 'error' });
-    } finally {
-      setLoading(false);
+  const openChatForTask = (task) => {
+    if (onNavigateToQuery) {
+      onNavigateToQuery(task._id);
     }
   };
 
-  const handleSendChatMessage = async (e) => {
-    e.preventDefault();
-    if (!chatMessageText.trim() && !chatMediaUrl.trim()) return;
-    try {
-      await axios.post(
-        `${API_BASE_URL}/client-queries/${activeChatQuery._id}/messages`,
-        { text: chatMessageText, mediaUrl: chatMediaUrl },
-        { headers: authHeader() }
-      );
-      setChatMessageText('');
-      setChatMediaUrl('');
-    } catch (e) {
-      console.error('Failed to send message', e);
-      setToast({ message: 'Failed to send message', type: 'error' });
-    }
-  };
+
 
   const fetchTeamMembers = async () => {
     try {
@@ -186,6 +146,8 @@ export default function TasksTab({ currentUser, onNavigateToQuery }) {
 
   const handleCreate = async (e) => {
     e.preventDefault();
+    if (isSubmitting) return;
+    setIsSubmitting(true);
     try {
       await axios.post(
         `${API_BASE_URL}/tasks`,
@@ -210,6 +172,8 @@ export default function TasksTab({ currentUser, onNavigateToQuery }) {
     } catch (e) {
       console.error('Failed to create task', e);
       setToast({ message: e?.response?.data?.message || 'Failed to create task', type: 'error' });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -352,17 +316,17 @@ export default function TasksTab({ currentUser, onNavigateToQuery }) {
   };
 
   const handleFileUpload = async (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
+    const files = Array.from(e.target.files);
+    if (!files || files.length === 0) return;
     try {
       setUploadingMedia(true);
       const formData = new FormData();
-      formData.append('file', file);
-      const res = await axios.post(`${API_BASE_URL}/upload`, formData, {
+      files.forEach(file => formData.append('files', file));
+      const res = await axios.post(`${API_BASE_URL}/upload/multiple`, formData, {
         headers: { ...authHeader(), 'Content-Type': 'multipart/form-data' },
       });
-      if (res.data && res.data.url) {
-        setAttachments([...attachments, { filename: res.data.filename || file.name, url: res.data.url }]);
+      if (res.data && res.data.files) {
+        setAttachments(prev => [...prev, ...res.data.files]);
       }
     } catch (err) {
       console.error('Upload failed', err);
@@ -862,9 +826,13 @@ export default function TasksTab({ currentUser, onNavigateToQuery }) {
                     <div className="flex flex-wrap gap-2 mt-2">
                       {attachments.map((att, i) => (
                         <div key={i} className="flex items-center gap-1 bg-gray-50 px-3 py-1.5 rounded-lg border text-sm">
-                          <a href={att.url.startsWith('/') ? `${API_BASE_URL}${att.url}` : att.url} target="_blank" rel="noopener noreferrer" className="text-[#0B2CC3] hover:underline truncate max-w-[150px]">
+                          <button 
+                            type="button" 
+                            onClick={() => setViewingDocument({ url: att.url.startsWith('/') ? `${API_BASE_URL}${att.url}` : att.url, filename: att.filename })}
+                            className="text-[#0B2CC3] hover:underline truncate max-w-[150px] text-left"
+                          >
                             {att.filename}
-                          </a>
+                          </button>
                           <button
                             type="button"
                             onClick={() => setAttachments(attachments.filter((_, idx) => idx !== i))}
@@ -889,9 +857,10 @@ export default function TasksTab({ currentUser, onNavigateToQuery }) {
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2 bg-[#0B2CC3] hover:bg-blue-700 text-white rounded-xl font-semibold transition"
+                  disabled={isSubmitting}
+                  className={`px-5 py-2 rounded-xl font-semibold transition ${isSubmitting ? 'bg-blue-400 text-white cursor-not-allowed' : 'bg-[#0B2CC3] hover:bg-blue-700 text-white'}`}
                 >
-                  Create Task
+                  {isSubmitting ? 'Creating...' : 'Create Task'}
                 </button>
               </div>
             </form>
@@ -1083,9 +1052,13 @@ export default function TasksTab({ currentUser, onNavigateToQuery }) {
                     <div className="flex flex-wrap gap-2 mt-2">
                       {attachments.map((att, i) => (
                         <div key={i} className="flex items-center gap-1 bg-gray-50 px-3 py-1.5 rounded-lg border text-sm">
-                          <a href={att.url.startsWith('/') ? `${API_BASE_URL}${att.url}` : att.url} target="_blank" rel="noopener noreferrer" className="text-[#0B2CC3] hover:underline truncate max-w-[150px]">
+                          <button 
+                            type="button" 
+                            onClick={() => setViewingDocument({ url: att.url.startsWith('/') ? `${API_BASE_URL}${att.url}` : att.url, filename: att.filename })}
+                            className="text-[#0B2CC3] hover:underline truncate max-w-[150px] text-left"
+                          >
                             {att.filename}
-                          </a>
+                          </button>
                           <button
                             type="button"
                             onClick={() => setAttachments(attachments.filter((_, idx) => idx !== i))}
@@ -1278,19 +1251,32 @@ export default function TasksTab({ currentUser, onNavigateToQuery }) {
                   {attachments.length > 0 && (
                     <div className="flex flex-wrap gap-2 mt-2">
                       {attachments.map((att, i) => (
-                        <div key={i} className="flex items-center gap-1 bg-gray-50 px-3 py-1.5 rounded-lg border text-sm">
-                          <a href={att.url.startsWith('/') ? `${API_BASE_URL}${att.url}` : att.url} target="_blank" rel="noopener noreferrer" className="text-[#0B2CC3] hover:underline truncate max-w-[150px]">
+                        <div key={i} className="flex items-center gap-3 bg-gray-50 px-3 py-2 rounded-lg border text-sm justify-between w-full">
+                          <span className="text-gray-700 font-medium truncate flex-1" title={att.filename}>
                             {att.filename}
-                          </a>
-                          {!isClient && (
-                            <button
+                          </span>
+                          <div className="flex items-center gap-3">
+                            <button 
                               type="button"
-                              onClick={() => setAttachments(attachments.filter((_, idx) => idx !== i))}
-                              className="text-gray-400 hover:text-red-500"
+                              onClick={() => setViewingDocument({ url: att.url.startsWith('/') ? `${API_BASE_URL}${att.url}` : att.url, filename: att.filename })}
+                              className="text-[#0B2CC3] hover:underline text-xs font-bold px-2 py-1 bg-blue-100 rounded"
                             >
-                              <X size={14} />
+                              View
                             </button>
-                          )}
+                            <a href={att.url.startsWith('/') ? `${API_BASE_URL}${att.url}` : att.url} download={att.filename} className="text-[#0B2CC3] hover:underline text-xs font-bold px-2 py-1 bg-blue-100 rounded">
+                              Download
+                            </a>
+                            {!isClient && (
+                              <button
+                                type="button"
+                                onClick={() => setAttachments(attachments.filter((_, idx) => idx !== i))}
+                                className="text-red-500 hover:text-red-700 bg-red-100 px-2 py-1 rounded"
+                                title="Remove Attachment"
+                              >
+                                <X size={14} />
+                              </button>
+                            )}
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -1319,84 +1305,7 @@ export default function TasksTab({ currentUser, onNavigateToQuery }) {
           </div>
         </div>
       )}
-      {/* INLINE CHAT MODAL */}
-      {isChatOpen && activeChatQuery && (
-        <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4">
-          <div className="bg-white w-full max-w-2xl rounded-2xl overflow-hidden shadow-2xl animate-popup border h-[80vh] flex flex-col">
-            <div className="p-6 border-b flex justify-between items-center bg-[#2E1A6D] text-white flex-shrink-0">
-              <div>
-                <h3 className="font-bold text-lg">{activeChatQuery.title}</h3>
-                <p className="text-xs text-white/70 mt-1 line-clamp-1">{activeChatQuery.description}</p>
-              </div>
-              <button onClick={() => { setIsChatOpen(false); setActiveChatQuery(null); }} className="text-white/80 hover:text-white">
-                <X size={20} />
-              </button>
-            </div>
 
-            {/* Chat Messages */}
-            <div className="flex-1 overflow-y-auto p-6 bg-slate-50 space-y-4">
-              {activeChatQuery.messages && activeChatQuery.messages.length > 0 ? (
-                activeChatQuery.messages.map((msg, idx) => {
-                  const isMe = msg.authorId === currentUser?.id;
-                  return (
-                    <div key={idx} className={`flex ${isMe ? 'justify-end' : 'justify-start'}`}>
-                      <div className={`max-w-[85%] rounded-2xl p-3 ${isMe ? 'bg-[#0B2CC3] text-white rounded-br-none' : 'bg-gray-200 text-gray-800 rounded-bl-none'}`}>
-                        <div className="flex justify-between items-center text-[10px] opacity-70 mb-1 gap-4">
-                          <span className="font-bold">{msg.authorName}</span>
-                          <span>{new Date(msg.createdAt).toLocaleString([], { dateStyle: 'short', timeStyle: 'short' })}</span>
-                        </div>
-                        <p className="text-sm leading-snug break-words">{msg.text}</p>
-                        {msg.mediaUrl && (
-                          <a href={msg.mediaUrl.startsWith('/') ? `${API_BASE_URL}${msg.mediaUrl}` : msg.mediaUrl} target="_blank" rel="noopener noreferrer" className={`text-xs mt-2 inline-flex items-center gap-1 font-semibold underline ${isMe ? 'text-blue-200' : 'text-blue-600'}`}>
-                            <Paperclip size={12} /> View Attachment
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  );
-                })
-              ) : (
-                <div className="h-full flex items-center justify-center text-gray-400 flex-col gap-2">
-                  <MessageSquare size={32} className="opacity-20" />
-                  <p className="text-sm">No messages yet. Start the conversation!</p>
-                </div>
-              )}
-            </div>
-
-            {/* Chat Input */}
-            <form onSubmit={handleSendChatMessage} className="p-4 bg-white text-black border-t flex gap-2 items-end">
-              <div className="flex-1 space-y-2">
-                <input
-                  type="text"
-                  placeholder="Media Link (optional)..."
-                  className="w-full text-xs border rounded-lg px-3 py-1.5 outline-none focus:border-[#0B2CC3] bg-gray-50"
-                  value={chatMediaUrl}
-                  onChange={(e) => setChatMediaUrl(e.target.value)}
-                />
-                <textarea
-                  className="w-full border rounded-xl p-3 text-sm outline-none focus:border-[#0B2CC3] bg-gray-50 resize-none min-h-[60px]"
-                  placeholder="Type your message..."
-                  value={chatMessageText}
-                  onChange={(e) => setChatMessageText(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' && !e.shiftKey) {
-                      e.preventDefault();
-                      handleSendChatMessage(e);
-                    }
-                  }}
-                />
-              </div>
-              <button
-                type="submit"
-                disabled={!chatMessageText.trim() && !chatMediaUrl.trim()}
-                className="bg-[#0B2CC3] hover:bg-blue-700 disabled:bg-gray-300 text-white p-3 rounded-xl transition flex-shrink-0 mb-1"
-              >
-                <Send size={18} />
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
 
 
       {toast && (
@@ -1406,6 +1315,12 @@ export default function TasksTab({ currentUser, onNavigateToQuery }) {
           onClose={() => setToast(null)}
         />
       )}
+      
+      {/* DOCUMENT VIEWER MODAL */}
+      <DocumentViewerModal 
+        file={viewingDocument} 
+        onClose={() => setViewingDocument(null)} 
+      />
     </div>
   );
 }
