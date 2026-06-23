@@ -1,35 +1,38 @@
 // src/app/industry/[slug]/page.tsx
 
-import { redirect } from "next/navigation";
-import dynamic from "next/dynamic";
-import { getIndustryBySlug, getAllIndustrySlugs } from "../../../lib/industries";
+import { notFound } from "next/navigation";
+// import { redirect } from "next/navigation";
+// import dynamic from "next/dynamic";
+// import { getIndustryBySlug, getAllIndustrySlugs } from "../../../lib/industries";
 
-import Header from "../../../components/Header";
-import HeroSection from "../../../components/HeroSection";
-import HowWeHelpSection from "../../../components/Howwehelpsection";
-import SolutionsSection from "../../../components/Solutionssection";
-import WhyChooseSection from "../../../components/Whychoosesection";
-// import LaunchCTA from "@/landing/components/LaunchCTA";
-import Newsletter from "../../../components/Newsletter";
-import ServeSection from "../../../components/Whoweserve";
-import Footer from "../../../components/Footer";
-// import FAQ from "@/landing/components/FAQ";
+// import Header from "../../../components/Header";
+// import HeroSection from "../../../components/HeroSection";
+// import HowWeHelpSection from "../../../components/Howwehelpsection";
+// import SolutionsSection from "../../../components/Solutionssection";
+// import WhyChooseSection from "../../../components/Whychoosesection";
+// // import LaunchCTA from "@/landing/components/LaunchCTA";
+// import Newsletter from "../../../components/Newsletter";
+// import ServeSection from "../../../components/Whoweserve";
+// import Footer from "../../../components/Footer";
+// // import FAQ from "@/landing/components/FAQ";
 
-import {
-  industryHeroImages,
-  solutionsHeroImages,
-  serveImages,
-} from "../../../lib/industryHeroImages";
+// import {
+//   industryHeroImages,
+//   solutionsHeroImages,
+//   serveImages,
+// } from "../../../lib/industryHeroImages";
 
-const AnimatedCursor = dynamic(
-  () => import("react-animated-cursor"),
+// const AnimatedCursor = dynamic(
+//   () => import("react-animated-cursor"),
   
-);
+// );
 
+/* DISABLED FOR NOW — uncomment to re-enable static generation of industry pages
 // Tells Next.js every valid industry slug so pages are statically generated
 export function generateStaticParams() {
   return getAllIndustrySlugs().map((slug) => ({ slug }));
 }
+*/
 
 // SEO Metadata
 export async function generateMetadata({
@@ -37,13 +40,18 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params;
+  return {
+    title: "Industry",
+  };
 
+  /* DISABLED FOR NOW
+  const { slug } = await params;
   const industry = getIndustryBySlug(slug);
 
   return {
     title: industry?.heroSection?.title ?? "Industry",
   };
+  */
 }
 
 export default async function IndustryPage({
@@ -51,6 +59,11 @@ export default async function IndustryPage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
+  // Route disabled for now — always 404
+  notFound();
+
+  /* DISABLED FOR NOW — original page logic preserved below
+
   const { slug } = await params;
 
   const industry = getIndustryBySlug(slug);
@@ -104,14 +117,6 @@ export default async function IndustryPage({
         />
       )}
 
-      {/* {industry.ctaSection && (
-        <LaunchCTA data={industry.ctaSection} />
-      )} */}
-
-      {/* {industry.faqSection && (
-        <FAQ data={industry.faqSection} />
-      )} */}
-
       <Newsletter
         content={{
           titleLine1: "Subscribe to Our",
@@ -127,4 +132,5 @@ export default async function IndustryPage({
       />
     </main>
   );
+  */
 }
