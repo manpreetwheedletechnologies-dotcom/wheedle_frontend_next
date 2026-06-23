@@ -1,53 +1,36 @@
 {
   "app/LandingPageClient.jsx -> react-animated-cursor": {
-    "id": 7434,
+    "id": "app/LandingPageClient.jsx -> react-animated-cursor",
     "files": [
-      "static/chunks/434.6daba898d0d3d1bd.js"
+      "static/chunks/_app-pages-browser_node_modules_react-animated-cursor_dist_index_umd_js.js"
     ]
   },
   "components/ContactModal.jsx -> @emailjs/browser": {
-    "id": 8368,
+    "id": "components/ContactModal.jsx -> @emailjs/browser",
     "files": [
-      "static/chunks/368.be94ba891677098c.js"
+      "static/chunks/_app-pages-browser_node_modules_emailjs_browser_es_index_js.js"
     ]
   },
   "components/Footer.jsx -> ./ContactModal": {
-    "id": 4647,
+    "id": "components/Footer.jsx -> ./ContactModal",
     "files": [
-      "static/chunks/870-80a25d23f23d6b10.js",
-      "static/chunks/647.22f963bef952564c.js"
+      "static/chunks/_app-pages-browser_components_ContactModal_jsx-_54581.js"
     ]
   },
   "components/Header.jsx -> ./ContactModal": {
-    "id": 4647,
+    "id": "components/Header.jsx -> ./ContactModal",
     "files": [
-      "static/chunks/870-80a25d23f23d6b10.js",
-      "static/chunks/647.22f963bef952564c.js"
+      "static/chunks/_app-pages-browser_components_ContactModal_jsx-_54581.js"
     ]
   },
   "components/Hero.jsx -> ./ContactModal": {
-    "id": 4647,
+    "id": "components/Hero.jsx -> ./ContactModal",
     "files": [
-      "static/chunks/28.b0f3604dc13d38c0.js"
-    ]
-  },
-  "components/PageWrapper.jsx -> ./WhebotPage": {
-    "id": 3975,
-    "files": [
-      "static/chunks/870-80a25d23f23d6b10.js",
-      "static/chunks/544-52fb1c92aa2196c0.js",
-      "static/chunks/975-af7ce8dea4fc7c87.js",
-      "static/chunks/248.820eaf01acc235d9.js"
-    ]
-  },
-  "components/PageWrapper.jsx -> react-animated-cursor": {
-    "id": 7434,
-    "files": [
-      "static/chunks/434.6daba898d0d3d1bd.js"
+      "static/chunks/_app-pages-browser_components_ContactModal_jsx-_54580.js"
     ]
   },
   "components/WhebotPage.jsx -> socket.io-client": {
-    "id": 9829,
+    "id": "components/WhebotPage.jsx -> socket.io-client",
     "files": []
   }
 }

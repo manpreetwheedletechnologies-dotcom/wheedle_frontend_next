@@ -1,17 +1,4 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/employee/login/page": "app/employee/login/page.js",
-  "/blog/[slug]/page": "app/blog/[slug]/page.js",
-  "/admin/dashboard/page": "app/admin/dashboard/page.js",
-  "/employee/dashboard/page": "app/employee/dashboard/page.js",
-  "/admin/login/page": "app/admin/login/page.js",
-  "/career/page": "app/career/page.js",
-  "/blog/page": "app/blog/page.js",
-  "/our-service/[serviceKey]/page": "app/our-service/[serviceKey]/page.js",
-  "/privacy-policy/page": "app/privacy-policy/page.js",
-  "/our-services/page": "app/our-services/page.js",
-  "/terms-conditions/page": "app/terms-conditions/page.js",
-  "/page": "app/page.js",
   "/industry/[slug]/page": "app/industry/[slug]/page.js",
-  "/about-us/page": "app/about-us/page.js"
+  "/page": "app/page.js"
 }
