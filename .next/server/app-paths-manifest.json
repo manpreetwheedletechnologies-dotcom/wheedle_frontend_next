@@ -1,5 +1,6 @@
 {
   "/industry/[slug]/page": "app/industry/[slug]/page.js",
+  "/blog/page": "app/blog/page.js",
   "/page": "app/page.js",
   "/our-service/[serviceKey]/page": "app/our-service/[serviceKey]/page.js"
 }
