@@ -22,6 +22,8 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
+        <link rel="icon" href="/fevicon.png" />
+        <meta name="trustpilot-one-time-domain-verification-id" content="c597699b-cae4-4980-8b4d-082f2074f81e"/>
       </head>
       <body>
         <PreloaderProvider>

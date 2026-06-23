@@ -16,6 +16,8 @@ export default function CalendarTab({ currentUser }) {
   const [loading, setLoading] = useState(true);
   const [teamMembers, setTeamMembers] = useState([]);
   const [toast, setToast] = useState(null);
+  const [selectedTask, setSelectedTask] = useState(null);
+  const [isTaskPopupOpen, setIsTaskPopupOpen] = useState(false);
 
   const canEdit = currentUser?.role === 'Super Admin' || currentUser?.role === 'Admin' || currentUser?.role === 'Team Lead';
 
@@ -77,6 +79,20 @@ export default function CalendarTab({ currentUser }) {
 
   const handleDragStart = (e, taskId) => {
     e.dataTransfer.setData('text/plain', taskId);
+  };
+
+  const handleTaskClick = async (taskId) => {
+    try {
+      setLoading(true);
+      const res = await axios.get(`${API_BASE_URL}/tasks/${taskId}`, { headers: authHeader() });
+      setSelectedTask(res.data);
+      setIsTaskPopupOpen(true);
+    } catch (e) {
+      console.error('Failed to load task details', e);
+      setToast({ message: 'Failed to load task details', type: 'error' });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleDrop = async (e, dayName) => {
@@ -188,7 +204,8 @@ export default function CalendarTab({ currentUser }) {
                       key={task._id}
                       draggable={canEdit}
                       onDragStart={(e) => handleDragStart(e, task._id)}
-                      className={`bg-white rounded-xl p-3 border shadow-sm ${getPriorityBorder(task.priority)} ${canEdit ? 'cursor-grab active:cursor-grabbing hover:shadow-md' : ''} transition`}
+                      onClick={() => handleTaskClick(task._id)}
+                      className={`bg-white rounded-xl p-3 border shadow-sm ${getPriorityBorder(task.priority)} cursor-pointer ${canEdit ? 'active:cursor-grabbing' : ''} hover:shadow-md transition`}
                     >
                       <h4 className="font-bold text-xs text-gray-800 line-clamp-2 leading-tight mb-2">
                         {task.title}
@@ -218,6 +235,87 @@ export default function CalendarTab({ currentUser }) {
               </div>
             );
           })}
+        </div>
+      )}
+
+      {isTaskPopupOpen && selectedTask && (
+        <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4">
+          <div className="bg-white w-full max-w-md rounded-2xl overflow-hidden shadow-2xl animate-popup border flex flex-col max-h-[80vh]">
+            <div className="p-5 border-b flex justify-between items-start bg-[#2E1A6D] text-white">
+              <div>
+                <h3 className="font-bold text-lg leading-tight">{selectedTask.title}</h3>
+                <p className="text-xs text-white/70 mt-1 flex items-center gap-1">
+                  <Clock size={12} /> {selectedTask.deadline ? new Date(selectedTask.deadline).toLocaleDateString() : 'No Deadline'}
+                </p>
+              </div>
+              <button onClick={() => { setIsTaskPopupOpen(false); setSelectedTask(null); }} className="text-white/80 hover:text-white mt-0.5">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+              </button>
+            </div>
+            <div className="p-5 overflow-y-auto space-y-4 text-sm text-gray-700">
+              {selectedTask.description && (
+                <div>
+                  <h4 className="font-semibold text-xs text-gray-400 uppercase tracking-wide mb-1">Description</h4>
+                  <p className="bg-slate-50 p-3 rounded-xl border leading-relaxed text-xs">{selectedTask.description}</p>
+                </div>
+              )}
+              
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-semibold text-xs text-gray-400 uppercase tracking-wide mb-1">Status</h4>
+                  <span className="inline-block bg-blue-50 text-[#0B2CC3] px-2 py-1 rounded font-bold text-xs">{selectedTask.status}</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-xs text-gray-400 uppercase tracking-wide mb-1">Priority</h4>
+                  <span className={`inline-block px-2 py-1 rounded font-bold text-xs ${
+                    selectedTask.priority === 'High' ? 'bg-red-50 text-red-600' :
+                    selectedTask.priority === 'Medium' ? 'bg-amber-50 text-amber-600' : 'bg-emerald-50 text-emerald-600'
+                  }`}>
+                    {selectedTask.priority}
+                  </span>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-semibold text-xs text-gray-400 uppercase tracking-wide mb-1">Est. Hours</h4>
+                  <p className="font-semibold">{selectedTask.estimatedHours || 0} hrs</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-xs text-gray-400 uppercase tracking-wide mb-1">Progress</h4>
+                  <div className="flex items-center gap-2">
+                    <div className="flex-1 bg-gray-200 h-1.5 rounded-full overflow-hidden">
+                      <div className="bg-[#0B2CC3] h-full rounded-full" style={{ width: `${selectedTask.progress || 0}%` }} />
+                    </div>
+                    <span className="text-xs font-bold">{selectedTask.progress || 0}%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-semibold text-xs text-gray-400 uppercase tracking-wide mb-1">Assignees</h4>
+                <div className="flex flex-wrap gap-2">
+                  {selectedTask.assignees && selectedTask.assignees.length > 0 ? (
+                    selectedTask.assignees.map(a => (
+                      <div key={a._id} className="flex items-center gap-1.5 bg-gray-100 px-2 py-1 rounded-md text-xs font-medium">
+                        <User size={12} className="text-gray-500" />
+                        {a.name}
+                      </div>
+                    ))
+                  ) : (
+                    <span className="text-xs text-gray-400 italic">Unassigned</span>
+                  )}
+                </div>
+              </div>
+
+              {selectedTask.projectId && (
+                <div>
+                  <h4 className="font-semibold text-xs text-gray-400 uppercase tracking-wide mb-1">Project</h4>
+                  <p className="font-medium text-[#0B2CC3] text-xs">{selectedTask.projectId.projectName}</p>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       )}
 

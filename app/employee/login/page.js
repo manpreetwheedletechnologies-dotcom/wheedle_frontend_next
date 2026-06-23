@@ -10,13 +10,17 @@ export default function EmployeeLoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [passwordError, setPasswordError] = useState('');
+  const [generalError, setGeneralError] = useState('');
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState(null);
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError('');
+    setEmailError('');
+    setPasswordError('');
+    setGeneralError('');
     setLoading(true);
     try {
       const res = await axios.post(`${API_BASE_URL}/auth/login`, { email, password });
@@ -24,9 +28,15 @@ export default function EmployeeLoginPage() {
       setToast({ message: 'Login successful!', type: 'success' });
       setTimeout(() => router.push('/employee/dashboard'), 1000);
     } catch (err) {
-      const errorMsg = err?.response?.data?.message || 'Invalid credentials. Please try again.';
-      setError(errorMsg);
-      setToast({ message: errorMsg, type: 'error' });
+      const errorMsg = err?.response?.data?.message || 'Server error';
+      if (errorMsg.toLowerCase().includes('email')) {
+        setEmailError(errorMsg);
+      } else if (errorMsg.toLowerCase().includes('password')) {
+        setPasswordError(errorMsg);
+      } else {
+        setGeneralError(errorMsg);
+        setToast({ message: errorMsg, type: 'error' });
+      }
     } finally {
       setLoading(false);
     }
@@ -61,6 +71,7 @@ export default function EmployeeLoginPage() {
                 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/30
                   outline-none focus:border-violet-400 focus:bg-white/15 transition text-sm"
               />
+              {emailError && <p className="text-red-400 text-xs font-semibold mt-1">{emailError}</p>}
             </div>
 
             <div className="space-y-1.5">
@@ -71,14 +82,14 @@ export default function EmployeeLoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/30
-                  outline-none focus:border-violet-400 focus:bg-white/15 transition text-sm"
+                className="w-full bg-white/10 border border-white/20 text-white placeholder:text-white/30 rounded-2xl px-4 py-3 outline-none focus:border-violet-500 focus:bg-white/20 transition text-sm font-medium"
               />
+              {passwordError && <p className="text-red-400 text-xs font-semibold mt-1">{passwordError}</p>}
             </div>
 
-            {error && (
-              <div className="bg-red-500/20 border border-red-500/30 text-red-300 px-4 py-3 rounded-xl text-sm">
-                {error}
+            {generalError && (
+              <div className="bg-red-500/20 border border-red-500/50 text-red-200 text-sm font-medium px-4 py-3 rounded-2xl">
+                {generalError}
               </div>
             )}
 

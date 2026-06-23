@@ -41,6 +41,42 @@ export default function EmployeeDashboard() {
   const [toast, setToast] = useState(null);
   const [targetQueryTaskId, setTargetQueryTaskId] = useState(null);
 
+  // Modals for auth
+  const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
+  const [isSessionWarningOpen, setIsSessionWarningOpen] = useState(false);
+
+  // Activity timer ref
+  const inactivityTimerRef = React.useRef(null);
+  const warningTimerRef = React.useRef(null);
+
+  const resetTimers = React.useCallback(() => {
+    if (inactivityTimerRef.current) clearTimeout(inactivityTimerRef.current);
+    if (warningTimerRef.current) clearTimeout(warningTimerRef.current);
+    setIsSessionWarningOpen(false);
+
+    // 19 minutes = 1140000 ms
+    warningTimerRef.current = setTimeout(() => {
+      setIsSessionWarningOpen(true);
+    }, 1140000);
+
+    // 20 minutes = 1200000 ms
+    inactivityTimerRef.current = setTimeout(() => {
+      logout(true);
+    }, 1200000);
+  }, []);
+
+  useEffect(() => {
+    const events = ['mousemove', 'keydown', 'scroll', 'click', 'touchstart'];
+    events.forEach(e => window.addEventListener(e, resetTimers));
+    resetTimers(); // start initially
+
+    return () => {
+      events.forEach(e => window.removeEventListener(e, resetTimers));
+      if (inactivityTimerRef.current) clearTimeout(inactivityTimerRef.current);
+      if (warningTimerRef.current) clearTimeout(warningTimerRef.current);
+    };
+  }, [resetTimers]);
+
   useEffect(() => {
     const token = localStorage.getItem('adminToken');
     if (!token) { router.push('/employee/login'); return; }
@@ -86,12 +122,20 @@ export default function EmployeeDashboard() {
     } catch { /* ignore */ }
   };
 
-  const logout = () => {
-    setToast({ message: 'Logged out successfully!', type: 'success' });
+  const confirmLogout = () => {
+    setIsLogoutModalOpen(true);
+  };
+
+  const logout = (isAuto = false) => {
+    setIsLogoutModalOpen(false);
+    setIsSessionWarningOpen(false);
+    if (!isAuto) {
+      setToast({ message: 'Logged out successfully!', type: 'success' });
+    }
     setTimeout(() => {
       localStorage.removeItem('adminToken');
       router.push('/employee/login');
-    }, 1000);
+    }, isAuto ? 0 : 1000);
   };
 
   const unreadCount = notifications.filter(n => !n.isRead).length;
@@ -255,7 +299,7 @@ export default function EmployeeDashboard() {
                     <p className="text-[11px] text-gray-400 truncate">{currentUser?.email}</p>
                   </div>
                   <button
-                    onClick={logout}
+                    onClick={confirmLogout}
                     className="w-full text-left px-4 py-3 hover:bg-red-50 flex items-center gap-2 text-red-500 text-sm transition"
                   >
                     <LogOut size={15} /> Sign Out
@@ -278,6 +322,60 @@ export default function EmployeeDashboard() {
           {activeTab === 'team' && <TeamTab currentUser={currentUser} />}
         </main>
       </div>
+
+      {/* LOGOUT CONFIRMATION MODAL */}
+      {isLogoutModalOpen && (
+        <div className="fixed inset-0 bg-black/60 z-[9999] flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl p-6 w-full max-w-sm shadow-2xl animate-popup border">
+            <div className="flex items-center gap-3 text-red-600 mb-4">
+              <AlertCircle size={28} />
+              <h3 className="text-xl font-bold text-gray-800">Confirm Logout</h3>
+            </div>
+            <p className="text-gray-600 text-sm mb-6">Are you sure you want to logout?</p>
+            <div className="flex gap-3 justify-end">
+              <button
+                onClick={() => setIsLogoutModalOpen(false)}
+                className="px-4 py-2 border rounded-xl hover:bg-gray-50 text-gray-700 font-semibold transition"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={() => logout(false)}
+                className="px-5 py-2 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold shadow transition"
+              >
+                Logout
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* SESSION EXPIRING WARNING MODAL */}
+      {isSessionWarningOpen && (
+        <div className="fixed inset-0 bg-black/60 z-[9999] flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl p-6 w-full max-w-sm shadow-2xl animate-popup border border-orange-200">
+            <div className="flex items-center gap-3 text-orange-500 mb-4">
+              <AlertCircle size={28} />
+              <h3 className="text-xl font-bold text-gray-800">Session Expiring</h3>
+            </div>
+            <p className="text-gray-600 text-sm mb-6">You will be logged out in 1 minute due to inactivity.</p>
+            <div className="flex gap-3 justify-end">
+              <button
+                onClick={() => logout(true)}
+                className="px-4 py-2 border rounded-xl hover:bg-gray-50 text-gray-700 font-semibold transition"
+              >
+                Logout Now
+              </button>
+              <button
+                onClick={resetTimers}
+                className="px-5 py-2 bg-[#0B2CC3] hover:bg-blue-700 text-white rounded-xl font-bold shadow transition"
+              >
+                Stay Logged In
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {toast && (
         <Toast

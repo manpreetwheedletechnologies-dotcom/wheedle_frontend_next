@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { io } from "socket.io-client";
 import Toast from './Toast';
+import DocumentViewerModal from './DocumentViewerModal';
 
 const getSocketUrl = () => {
   try {
@@ -37,6 +38,8 @@ export default function ClientQueriesTab({ currentUser, targetQueryTaskId, setTa
   const [filterPriority, setFilterPriority] = useState('');
 
   // Modals
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [viewingDocument, setViewingDocument] = useState(null);
   const [isRaiseOpen, setIsRaiseOpen] = useState(false);
 
   // Form states
@@ -44,8 +47,8 @@ export default function ClientQueriesTab({ currentUser, targetQueryTaskId, setTa
   const [category, setCategory] = useState('Bug Report');
   const [priority, setPriority] = useState('Medium');
   const [description, setDescription] = useState('');
-  const [attachmentName, setAttachmentName] = useState('');
-  const [attachmentUrl, setAttachmentUrl] = useState('');
+  const [attachments, setAttachments] = useState([]);
+  const [uploadingMedia, setUploadingMedia] = useState(false);
 
   // Chat state
   const [chatMessageText, setChatMessageText] = useState('');
@@ -148,7 +151,6 @@ export default function ClientQueriesTab({ currentUser, targetQueryTaskId, setTa
   const handleRaiseQuery = async (e) => {
     e.preventDefault();
     try {
-      const attachments = attachmentName && attachmentUrl ? [{ filename: attachmentName, url: attachmentUrl }] : [];
       await axios.post(
         `${API_BASE_URL}/client-queries`,
         { title, category, priority, description, attachments },
@@ -238,9 +240,29 @@ export default function ClientQueriesTab({ currentUser, targetQueryTaskId, setTa
       }
     } catch (err) {
       console.error('Upload failed', err);
-      setToast({ message: 'File upload failed', type: 'error' });
     } finally {
       setUploadingChatMedia(false);
+    }
+  };
+
+  const handleQueryFileUpload = async (e) => {
+    const files = Array.from(e.target.files);
+    if (!files || files.length === 0) return;
+    try {
+      setUploadingMedia(true);
+      const formData = new FormData();
+      files.forEach(file => formData.append('files', file));
+      const res = await axios.post(`${API_BASE_URL}/upload/multiple`, formData, {
+        headers: { ...authHeader(), 'Content-Type': 'multipart/form-data' },
+      });
+      if (res.data && res.data.files) {
+        setAttachments(prev => [...prev, ...res.data.files]);
+      }
+    } catch (err) {
+      console.error('Upload failed', err);
+      setToast({ message: 'File upload failed', type: 'error' });
+    } finally {
+      setUploadingMedia(false);
     }
   };
 
@@ -249,8 +271,7 @@ export default function ClientQueriesTab({ currentUser, targetQueryTaskId, setTa
     setCategory('General');
     setPriority('Medium');
     setDescription('');
-    setAttachmentName('');
-    setAttachmentUrl('');
+    setAttachments([]);
   };
 
   const getPriorityStyle = (p) => {
@@ -441,16 +462,24 @@ export default function ClientQueriesTab({ currentUser, targetQueryTaskId, setTa
                   </h4>
                   <div className="flex flex-wrap gap-3">
                     {activeQuery.attachments.map((file, idx) => (
-                      <a
-                        key={idx}
-                        href={file.url.startsWith('/') ? `${API_BASE_URL}${file.url}` : file.url}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 border rounded-xl hover:bg-slate-50 hover:border-[#0B2CC3] transition text-xs font-semibold text-gray-600 bg-white"
-                      >
-                        <Paperclip size={14} className="text-[#0B2CC3]" />
-                        <span>{file.filename}</span>
-                      </a>
+                      <div key={idx} className="flex items-center gap-3 px-4 py-2 border rounded-xl bg-white shadow-sm">
+                        <div className="flex items-center gap-2 text-xs font-semibold text-gray-600 truncate max-w-[150px]">
+                          <Paperclip size={14} className="text-[#0B2CC3]" />
+                          <span title={file.filename}>{file.filename}</span>
+                        </div>
+                        <div className="flex items-center gap-2 border-l pl-3">
+                          <button 
+                            type="button"
+                            onClick={() => setViewingDocument({ url: file.url.startsWith('/') ? `${API_BASE_URL}${file.url}` : file.url, filename: file.filename })}
+                            className="text-[#0B2CC3] hover:underline text-xs font-bold bg-blue-50 px-2 py-1 rounded"
+                          >
+                            View
+                          </button>
+                          <a href={file.url.startsWith('/') ? `${API_BASE_URL}${file.url}` : file.url} download={file.filename} className="text-[#0B2CC3] hover:underline text-xs font-bold bg-blue-50 px-2 py-1 rounded">
+                            Download
+                          </a>
+                        </div>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -632,22 +661,35 @@ export default function ClientQueriesTab({ currentUser, targetQueryTaskId, setTa
               </div>
 
               <div className="border-t pt-4 space-y-3">
-                <label className="text-xs font-bold text-gray-500 uppercase">Attachment File (Mockup)</label>
-                <div className="grid grid-cols-2 gap-2">
-                  <input
-                    type="text"
-                    className="px-3 py-1.5 border rounded-lg text-xs"
-                    placeholder="Filename (e.g. error.png)"
-                    value={attachmentName}
-                    onChange={(e) => setAttachmentName(e.target.value)}
-                  />
-                  <input
-                    type="text"
-                    className="px-3 py-1.5 border rounded-lg text-xs"
-                    placeholder="Mock url (drive-link)"
-                    value={attachmentUrl}
-                    onChange={(e) => setAttachmentUrl(e.target.value)}
-                  />
+                <label className="text-xs font-bold text-gray-500 uppercase">Attachments / Media</label>
+                <div className="space-y-3">
+                  <label className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-[#0B2CC3] rounded-xl hover:bg-blue-100 cursor-pointer text-sm font-semibold transition">
+                    <Plus size={16} />
+                    {uploadingMedia ? 'Uploading...' : 'Upload Files'}
+                    <input
+                      type="file"
+                      multiple
+                      className="hidden"
+                      onChange={handleQueryFileUpload}
+                      disabled={uploadingMedia}
+                    />
+                  </label>
+                  {attachments.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {attachments.map((att, i) => (
+                        <div key={i} className="flex items-center gap-2 bg-gray-50 px-3 py-1.5 rounded-lg border text-sm">
+                          <span className="text-[#0B2CC3] font-semibold truncate max-w-[150px]">{att.filename}</span>
+                          <button
+                            type="button"
+                            onClick={() => setAttachments(attachments.filter((_, idx) => idx !== i))}
+                            className="text-gray-400 hover:text-red-500"
+                          >
+                            <X size={14} />
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -678,6 +720,12 @@ export default function ClientQueriesTab({ currentUser, targetQueryTaskId, setTa
           onClose={() => setToast(null)}
         />
       )}
+
+      {/* DOCUMENT VIEWER MODAL */}
+      <DocumentViewerModal 
+        file={viewingDocument} 
+        onClose={() => setViewingDocument(null)} 
+      />
     </div>
   );
 }

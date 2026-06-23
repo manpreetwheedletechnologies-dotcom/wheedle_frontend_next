@@ -455,6 +455,7 @@ export default function TeamTab({ currentUser }) {
                     value={uType}
                     onChange={(e) => setUType(e.target.value)}
                   >
+                    <option value="superadmin">Super Admin</option>
                     <option value="admin">Admin</option>
                     <option value="team-lead">Team Lead</option>
                     <option value="employee">Employee</option>
