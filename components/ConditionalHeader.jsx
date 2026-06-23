@@ -8,7 +8,7 @@ export default function ConditionalHeader() {
   const pathname = usePathname();
   
   // Routes where header should be hidden
-  const hideHeaderRoutes = ['/admin/login', '/admin/dashboard'];
+  const hideHeaderRoutes = ['/admin/login', '/admin/dashboard','/not-found']; // Add more routes as needed
   
   // Check if current path matches any hide routes
   const shouldHideHeader = hideHeaderRoutes.includes(pathname);

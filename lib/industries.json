@@ -1,0 +1,1773 @@
+{
+  "Healthcare-Industry": {
+    "heroSection": {
+      "title": "Build Patient's Trust. Deliver Better Patient Experiences.",
+      "description": "Today's patients begin their healthcare journey online. They search for providers, read reviews, compare clinics, and evaluate patient experiences before booking an appointment. At Wheelee, we help healthcare organizations strengthen their digital presence, enhance patient engagement, and drive sustainable growth through strategic digital marketing solutions.",
+      "heroImageAlt": "Healthcare professionals collaborating around an AI interface"
+    },
+    "challengesSection": {
+      "title": "Challenges Healthcare Providers Face",
+      "list": [
+        "Growing Healthcare Competition",
+        "Importance of Patient Trust",
+        "Limited Search Visibility",
+        "Demand for Digital Convenience",
+        "Rising Acquisition Costs",
+        "Need for Patient Engagement"
+      ],
+      "imageAlt": "Healthcare professional using a futuristic digital interface"
+    },
+    "servicesSection": {
+      "title": "How Wheelee Helps Healthcare Organizations Grow",
+      "services": [
+        {
+          "title": "Local SEO & Search Visibility",
+          "description": "Optimize your practice for high-intent local searches and ensure patients find your practice when they need care."
+        },
+        {
+          "title": "Website Design & Development",
+          "description": "Build patient-centric, conversion-friendly websites that build trust, enhance engagement, and drive appointments."
+        },
+        {
+          "title": "Reputation Management",
+          "description": "Proactively manage and grow your online reviews, ratings, and patient feedback to build a trustworthy brand."
+        },
+        {
+          "title": "Content Marketing",
+          "description": "Educate patients and establish authority with authoritative, high-quality health content that answers their questions."
+        },
+        {
+          "title": "Social Media Marketing",
+          "description": "Engage patients with condition-specific, educational, and community-focused content that fosters connection."
+        },
+        {
+          "title": "Performance Marketing",
+          "description": "Generate quality patient inquiries through targeted PPC campaigns, video ads, and sponsored content."
+        }
+      ]
+    },
+    "whoWeServeSection": {
+      "title": "Who We Serve:",
+      "list": [
+        "Hospitals & Healthcare Networks",
+        "Multi-Specialty Clinics",
+        "Dental Practices",
+        "Diagnostic Centers",
+        "Healthcare & Wellness Brands",
+        "Physiotherapy & Rehabilitation Centers",
+        "Individual Practitioners & Specialists"
+      ],
+      "imageAlt": "Medical professional in white coat pointing at digital blueprints"
+    },
+    "whyChooseUsSection": {
+      "title": "Why Healthcare Organizations Choose Wheelee",
+      "description": "Whether you're a single-location clinic or a multi-specialty healthcare organization, Wheelee helps you attract more patients, strengthen your online presence, and create exceptional digital experiences that drive long-term growth.",
+      "benefits": [
+        "Increased Patient Acquisition",
+        "Enhanced Patient Trust",
+        "Strategic Brand Reputation",
+        "Data-Driven Marketing Insights",
+        "Measurable Marketing ROI"
+      ],
+      "closingQuote": "More Visibility. More Patients. Better Healthcare Experiences."
+    },
+    "ctaSection": {
+      "headline": "Ready to launch Smarter Campaigns?",
+      "subHeadline": "Generate your first AI-powered advertising strategy in minutes.",
+      "buttons": [
+        {
+          "label": "Start 3 Days Trial for Free",
+          "url": "#",
+          "style": "primary"
+        },
+        {
+          "label": "Watch the Demo",
+          "url": "#",
+          "style": "secondary"
+        }
+      ],
+      "finePrint": "Join 1,000+ businesses using Wheelee to plan, launch, and optimize winning ad campaigns. 3 days free trial • No credit card required"
+    },
+    "faqSection": {
+      "title": "Frequently asked questions",
+      "faqs": [
+        {
+          "id": 1,
+          "question": "Lorem ipsum dolor sit amet consectetur. Sagittis id.",
+          "answer": "Lorem ipsum dolor sit amet consectetur. In augue ipsum ultrices. Ac pharetra ultrices consectetur consequat tellus mattis. Nec aliquam ante sagittis dui sed egestas. Orci, nunc orci, semper nunc, arcu mauris. Nulla porttitor ornare metus tortor consequat eget orci. Mauris magna nisi, diam orci duis. Viverra neque ullamcorper dui, nisi eget, posuere proin. In nam nisi, scelerisque tortor nec. Nisi amet, pulvinar aenean turpis egestas nisi. Tristique. Nulla est, amet, nisi ut orci.",
+          "isOpen": true
+        },
+        {
+          "id": 2,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 3,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 4,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 5,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        }
+      ]
+    },
+    "newsletterSection": {
+      "title": "Stay connected with our newsletter",
+      "placeholderText": "Your email",
+      "buttonText": "Subscribe"
+    },
+    "footer": {
+      "brand": {
+        "name": "Wheelee.ai",
+        "description": "We're building the future of automated commerce. Wheelee.ai uses state-of-the-art Generative AI to manage world-class marketing & creation at scale."
+      },
+      "socialLinks": [
+        {
+          "platform": "Instagram",
+          "url": "#",
+          "icon": "instagram"
+        },
+        {
+          "platform": "Facebook",
+          "url": "#",
+          "icon": "facebook"
+        },
+        {
+          "platform": "Twitter",
+          "url": "#",
+          "icon": "twitter"
+        },
+        {
+          "platform": "YouTube",
+          "url": "#",
+          "icon": "youtube"
+        }
+      ],
+      "columns": [
+        {
+          "header": "Product",
+          "links": [
+            {
+              "label": "AI Ads",
+              "url": "#"
+            },
+            {
+              "label": "B2B Partner",
+              "url": "#"
+            },
+            {
+              "label": "AI Sale Bot",
+              "url": "#"
+            },
+            {
+              "label": "AI Website",
+              "url": "#"
+            },
+            {
+              "label": "Workflows",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "header": "Company",
+          "links": [
+            {
+              "label": "About Us",
+              "url": "#"
+            },
+            {
+              "label": "Blog",
+              "url": "#"
+            },
+            {
+              "label": "Contact",
+              "url": "#"
+            },
+            {
+              "label": "Security",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "header": "Community",
+          "links": [
+            {
+              "label": "Twitter",
+              "url": "#"
+            },
+            {
+              "label": "Linkedin",
+              "url": "#"
+            },
+            {
+              "label": "Discord",
+              "url": "#"
+            },
+            {
+              "label": "Tutorials",
+              "url": "#"
+            },
+            {
+              "label": "Service Status",
+              "url": "#"
+            }
+          ]
+        }
+      ],
+      "copyright": "© 2026 Wheelee Technologies Inc. All rights reserved. Built with ❤️ for Indian brands.",
+      "legalLinks": [
+        {
+          "label": "Terms",
+          "url": "#"
+        },
+        {
+          "label": "Privacy",
+          "url": "#"
+        },
+        {
+          "label": "Cookies",
+          "url": "#"
+        }
+      ]
+    }
+  },
+  "Law-Firms": {
+    "heroSection": {
+      "title": "Build Trust. Attract More Clients. Grow Your Practice.",
+      "description": "In the legal industry, trust drives client decisions. Wheedle helps law firms enhance their online presence, build authority, attract qualified leads, and convert prospects into clients through effective digital marketing.",
+      "heroImageAlt": "Law Firms & Legal Professionals Industry collaborating around an AI interface"
+    },
+    "challengesSection": {
+      "title": "Challenges Facing by Modern Law Firms",
+      "list": [
+        "Increasing competition in legal services",
+        "Growing influence of online reviews and reputation",
+        "Difficulty standing out in search results",
+        "Rising client acquisition costs",
+        "Clients expect seamless digital experiences",
+        "Need to establish trust before the first consultation"
+      ],
+      "imageAlt": "Law Firms & Legal Professionals Industry using a futuristic digital interface"
+    },
+    "servicesSection": {
+      "title": "How Wheedle Helps Legal Businesses Grow",
+      "services": [
+        {
+          "title": "Local SEO & Search Visibility",
+          "description": "Improve visibility for legal searches like personal injury, family law, corporate law, criminal defense, and legal consultation services. Our SEO strategies help attract qualified local clients."
+        },
+        {
+          "title": "Website Design & Development",
+          "description": "Build a professional, mobile-friendly website with attorney profiles, practice area pages, consultation forms, and a user experience designed to generate leads."
+        },
+        {
+          "title": "Reputation Management",
+          "description": "Strengthen your firm’s credibility through review management, client testimonials, and brand-building strategies that increase trust and confidence."
+        },
+        {
+          "title": "Content Marketing",
+          "description": "Establish authority with legal blogs, practice area guides, FAQs, newsletters, educational articles, and informative video content."
+        },
+        {
+          "title": "Social Media Marketing",
+          "description": "Engage potential clients with legal insights, industry updates, case studies, educational content, and thought leadership campaigns."
+        },
+        {
+          "title": "Performance Marketing",
+          "description": "Drive qualified legal leads through Google Ads, Meta Ads, local lead generation campaigns, retargeting, and conversion-focused advertising."
+        }
+      ]
+    },
+    "whoWeServeSection": {
+      "title": "Who We Serve:",
+      "list": [
+        "Corporate Law Firms",
+        "Litigation & Dispute Resolution Firms",
+        "Property & Real Estate Lawyers",
+        "Family Law Practices",
+        "Personal Injury Law Firms",
+        "Criminal Defense Attorneys",
+        "Immigration & Employment Law Firms",
+        "Multi-Location Legal Practices"
+      ],
+      "imageAlt": "Law professional in suit pointing at digital blueprints"
+    },
+    "whyChooseUsSection": {
+      "title": "Why Law Firms Choose Wheedle?",
+      "description": "Whether you're an independent attorney, boutique practice, or multi-location law firm, Wheedle helps you attract more clients, strengthen your reputation, and create a digital presence that drives sustainable growth.",
+      "benefits": [
+        "Increased Client Inquiries",
+        "Improved Search Visibility",
+        "Stronger Online Reputation",
+        "Higher Consultation Bookings",
+        "Better Client Engagement",
+        "Measurable Marketing ROI"
+      ],
+      "closingQuote": "More Visibility. More Consultations. More Growth."
+    },
+    "ctaSection": {
+      "headline": "Ready to launch Smarter Campaigns?",
+      "subHeadline": "Generate your first AI-powered advertising strategy in minutes.",
+      "buttons": [
+        {
+          "label": "Start 3 Days Trial for Free",
+          "url": "#",
+          "style": "primary"
+        },
+        {
+          "label": "Watch the Demo",
+          "url": "#",
+          "style": "secondary"
+        }
+      ],
+      "finePrint": "Join 1,000+ businesses using Wheelee to plan, launch, and optimize winning ad campaigns. 3 days free trial • No credit card required"
+    },
+    "faqSection": {
+      "title": "Frequently asked questions",
+      "faqs": [
+        {
+          "id": 1,
+          "question": "Lorem ipsum dolor sit amet consectetur. Sagittis id.",
+          "answer": "Lorem ipsum dolor sit amet consectetur. In augue ipsum ultrices. Ac pharetra ultrices consectetur consequat tellus mattis. Nec aliquam ante sagittis dui sed egestas. Orci, nunc orci, semper nunc, arcu mauris. Nulla porttitor ornare metus tortor consequat eget orci. Mauris magna nisi, diam orci duis. Viverra neque ullamcorper dui, nisi eget, posuere proin. In nam nisi, scelerisque tortor nec. Nisi amet, pulvinar aenean turpis egestas nisi. Tristique. Nulla est, amet, nisi ut orci.",
+          "isOpen": true
+        },
+        {
+          "id": 2,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 3,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 4,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 5,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        }
+      ]
+    },
+    "newsletterSection": {
+      "title": "Stay connected with our newsletter",
+      "placeholderText": "Your email",
+      "buttonText": "Subscribe"
+    },
+    "footer": {
+      "brand": {
+        "name": "Wheelee.ai",
+        "description": "We're building the future of automated commerce. Wheelee.ai uses state-of-the-art Generative AI to manage world-class marketing & creation at scale."
+      },
+      "socialLinks": [
+        {
+          "platform": "Instagram",
+          "url": "#",
+          "icon": "instagram"
+        },
+        {
+          "platform": "Facebook",
+          "url": "#",
+          "icon": "facebook"
+        },
+        {
+          "platform": "Twitter",
+          "url": "#",
+          "icon": "twitter"
+        },
+        {
+          "platform": "YouTube",
+          "url": "#",
+          "icon": "youtube"
+        }
+      ],
+      "columns": [
+        {
+          "header": "Product",
+          "links": [
+            {
+              "label": "AI Ads",
+              "url": "#"
+            },
+            {
+              "label": "B2B Partner",
+              "url": "#"
+            },
+            {
+              "label": "AI Sale Bot",
+              "url": "#"
+            },
+            {
+              "label": "AI Website",
+              "url": "#"
+            },
+            {
+              "label": "Workflows",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "header": "Company",
+          "links": [
+            {
+              "label": "About Us",
+              "url": "#"
+            },
+            {
+              "label": "Blog",
+              "url": "#"
+            },
+            {
+              "label": "Contact",
+              "url": "#"
+            },
+            {
+              "label": "Security",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "header": "Community",
+          "links": [
+            {
+              "label": "Twitter",
+              "url": "#"
+            },
+            {
+              "label": "Linkedin",
+              "url": "#"
+            },
+            {
+              "label": "Discord",
+              "url": "#"
+            },
+            {
+              "label": "Tutorials",
+              "url": "#"
+            },
+            {
+              "label": "Service Status",
+              "url": "#"
+            }
+          ]
+        }
+      ],
+      "copyright": "© 2026 Wheelee Technologies Inc. All rights reserved. Built with ❤️ for Indian brands.",
+      "legalLinks": [
+        {
+          "label": "Terms",
+          "url": "#"
+        },
+        {
+          "label": "Privacy",
+          "url": "#"
+        },
+        {
+          "label": "Cookies",
+          "url": "#"
+        }
+      ]
+    }
+  },
+  "Home-Services": {
+    "heroSection": {
+      "title": "Generate More Leads. Book More Jobs. Grow Your Business.",
+      "description": "Today’s homeowners rely on online searches, reviews, and reputation when choosing service providers. Wheedle helps home service businesses increase visibility, attract qualified leads, and build customer trust through effective digital marketing strategies.",
+      "heroImageAlt": "Home Service Businesses collaborating around an AI interface"
+    },
+    "challengesSection": {
+      "title": "Challenges Home Service Businesses Face",
+      "list": [
+        "Standing out in competitive local markets",
+        "Managing online reviews and reputation",
+        "Generating consistent, high-quality leads",
+        "Converting website visitors into booked appointments",
+        "Expanding visibility across service areas",
+        "Building customer trust before the first call"
+      ],
+      "imageAlt": "Home Service Businesses using a futuristic digital interface"
+    },
+    "servicesSection": {
+      "title": "How Wheedle Helps Home Service Businesses Grow?",
+      "services": [
+        {
+          "title": "Local SEO & Search Visibility",
+          "description": "Increase visibility for searches like plumbers, electricians, HVAC services, roofing, pest control, and home renovation experts. Our local SEO helps homeowners find your business when they need it most."
+        },
+        {
+          "title": "Website Design & Development",
+          "description": " Create a fast, mobile-friendly website with service pages, online booking forms, and a user experience designed to generate more leads."
+        },
+        {
+          "title": "Reputation Management",
+          "description": "Build trust through positive reviews, customer testimonials, and a strong online reputation that helps convert prospects into customers."
+        },
+        {
+          "title": "Content Marketing",
+          "description": "Improve authority and search rankings with service guides, home maintenance blogs, case studies, videos, FAQs & local SEO content."
+        },
+        {
+          "title": "Social Media Marketing",
+          "description": "Engage local list with project showcases, before-and-after transformations, customer stories, maintenance tips, and promotional content."
+        },
+        {
+          "title": "Performance Marketing",
+          "description": "Generate more inquiries through Google Ads, Meta Ads, local lead generation campaigns, retargeting, and conversion-focused advertising."
+        }
+      ]
+    },
+    "whoWeServeSection": {
+      "title": "Who We Serve:",
+      "list": [
+        "HVAC Companies",
+        "Plumbing Businesses",
+        "Electrical Contractors",
+        "Roofing Companies",
+        "Landscaping Services",
+        "Home Renovation & Remodeling Firms",
+        "Pest Control Companies",
+        "Garage Door & Home Repair Services",
+        "Solar Installation Companies"
+      ],
+      "imageAlt": "Home service professional in suit pointing at digital blueprints"
+    },
+    "whyChooseUsSection": {
+      "title": "Why Home Service Businesses Choose Wheedle?",
+      "description": "Whether you're a local contractor or a multi-location home services company, Wheedle helps you attract more customers, strengthen your reputation, and create a digital presence that drives sustainable growth.",
+      "benefits": [
+        "More Qualified Leads",
+        "Increased Local Visibility",
+        "Higher Search Rankings",
+        "Stronger Online Reputation",
+        "More Appointment Bookings",
+        "Measurable Marketing ROI"
+      ],
+      "closingQuote": "More Visibility. More Leads. More Jobs."
+    },
+    "ctaSection": {
+      "headline": "Ready to launch Smarter Campaigns?",
+      "subHeadline": "Generate your first AI-powered advertising strategy in minutes.",
+      "buttons": [
+        {
+          "label": "Start 3 Days Trial for Free",
+          "url": "#",
+          "style": "primary"
+        },
+        {
+          "label": "Watch the Demo",
+          "url": "#",
+          "style": "secondary"
+        }
+      ],
+      "finePrint": "Join 1,000+ businesses using Wheelee to plan, launch, and optimize winning ad campaigns. 3 days free trial • No credit card required"
+    },
+    "faqSection": {
+      "title": "Frequently asked questions",
+      "faqs": [
+        {
+          "id": 1,
+          "question": "Lorem ipsum dolor sit amet consectetur. Sagittis id.",
+          "answer": "Lorem ipsum dolor sit amet consectetur. In augue ipsum ultrices. Ac pharetra ultrices consectetur consequat tellus mattis. Nec aliquam ante sagittis dui sed egestas. Orci, nunc orci, semper nunc, arcu mauris. Nulla porttitor ornare metus tortor consequat eget orci. Mauris magna nisi, diam orci duis. Viverra neque ullamcorper dui, nisi eget, posuere proin. In nam nisi, scelerisque tortor nec. Nisi amet, pulvinar aenean turpis egestas nisi. Tristique. Nulla est, amet, nisi ut orci.",
+          "isOpen": true
+        },
+        {
+          "id": 2,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 3,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 4,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 5,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        }
+      ]
+    },
+    "newsletterSection": {
+      "title": "Stay connected with our newsletter",
+      "placeholderText": "Your email",
+      "buttonText": "Subscribe"
+    },
+    "footer": {
+      "brand": {
+        "name": "Wheelee.ai",
+        "description": "We're building the future of automated commerce. Wheelee.ai uses state-of-the-art Generative AI to manage world-class marketing & creation at scale."
+      },
+      "socialLinks": [
+        {
+          "platform": "Instagram",
+          "url": "#",
+          "icon": "instagram"
+        },
+        {
+          "platform": "Facebook",
+          "url": "#",
+          "icon": "facebook"
+        },
+        {
+          "platform": "Twitter",
+          "url": "#",
+          "icon": "twitter"
+        },
+        {
+          "platform": "YouTube",
+          "url": "#",
+          "icon": "youtube"
+        }
+      ],
+      "columns": [
+        {
+          "header": "Product",
+          "links": [
+            {
+              "label": "AI Ads",
+              "url": "#"
+            },
+            {
+              "label": "B2B Partner",
+              "url": "#"
+            },
+            {
+              "label": "AI Sale Bot",
+              "url": "#"
+            },
+            {
+              "label": "AI Website",
+              "url": "#"
+            },
+            {
+              "label": "Workflows",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "header": "Company",
+          "links": [
+            {
+              "label": "About Us",
+              "url": "#"
+            },
+            {
+              "label": "Blog",
+              "url": "#"
+            },
+            {
+              "label": "Contact",
+              "url": "#"
+            },
+            {
+              "label": "Security",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "header": "Community",
+          "links": [
+            {
+              "label": "Twitter",
+              "url": "#"
+            },
+            {
+              "label": "Linkedin",
+              "url": "#"
+            },
+            {
+              "label": "Discord",
+              "url": "#"
+            },
+            {
+              "label": "Tutorials",
+              "url": "#"
+            },
+            {
+              "label": "Service Status",
+              "url": "#"
+            }
+          ]
+        }
+      ],
+      "copyright": "© 2026 Wheelee Technologies Inc. All rights reserved. Built with ❤️ for Indian brands.",
+      "legalLinks": [
+        {
+          "label": "Terms",
+          "url": "#"
+        },
+        {
+          "label": "Privacy",
+          "url": "#"
+        },
+        {
+          "label": "Cookies",
+          "url": "#"
+        }
+      ]
+    }
+  },
+  "Real-Estate": {
+    "heroSection": {
+      "title": "Generate More Leads. Build Trust. Close More Deals.",
+      "description": "Today’s buyers, sellers, and investors begin their property search online, comparing listings, agencies, reviews, and real estate professionals before making contact. Wheedle helps real estate businesses increase visibility, generate quality leads, build credibility, and convert prospects into clients through strategic digital marketing.",
+      "heroImageAlt": "Real Estate Industries collaborating around an AI interface"
+    },
+    "challengesSection": {
+      "title": "Challenges Real Estate Businesses Face",
+      "list": [
+        "Increasing competition in local markets",
+        "Standing out in search results",
+        "Building trust with buyers and sellers",
+        "Generating qualified leads consistently",
+        "Managing multiple digital touchpoints",
+        "Nurturing prospects through long sales cycles"
+      ],
+      "imageAlt": "Real Estate Businesses using a futuristic digital interface"
+    },
+    "servicesSection": {
+      "title": "How Wheedle Helps Real Estate Businesses Grow?",
+      "services": [
+        {
+          "title": "Real Estate SEO & Search Visibility",
+          "description": "ncrease visibility for property-related searches, helping attract buyers, sellers, and investors through stronger search rankings and local presence."
+        },
+        {
+          "title": "Website Design & Development",
+          "description": " Create a modern property platform with listings, project showcases, lead capture forms, interactive galleries, and seamless CRM integration."
+        },
+        {
+          "title": "Reputation Management",
+          "description": "Build trust through client testimonials, success stories, positive reviews, and a strong online reputation that boosts buyer confidence."
+        },
+        {
+          "title": "Content Marketing",
+          "description": "Attract organic traffic and establish authority with real estate blogs, investment guides, market reports, locality insights, videos, and buyer resources."
+        },
+        {
+          "title": "Social Media Marketing",
+          "description": "Engage list with property showcases, virtual tours, market insights, investment opportunities, and project promotion campaigns."
+        },
+        {
+          "title": "Performance Marketing",
+          "description": "Generate qualified property inquiries through Google Ads, Meta Ads, project launch campaigns, remarketing, and conversion-focused strategies."
+        }
+      ]
+    },
+    "whoWeServeSection": {
+      "title": "Who We Serve:",
+      "list": [
+        "Real Estate Agencies",
+        "Property Consultants",
+        "Real Estate Developers",
+        "Residential Builders",
+        "Commercial Property Firms",
+        "Property Management Companies",
+        "Luxury Real Estate Brands",
+        "Real Estate Investment Firms"
+      ],
+      "imageAlt": "Real Estate Industries in suit pointing at digital blueprints"
+    },
+    "whyChooseUsSection": {
+      "title": "Why Real Estate Businesses Choose Wheedle?",
+      "description": "Whether you're a local contractor or a multi-location home services company, Wheedle helps you attract more customers, strengthen your reputation, and create a digital presence that drives sustainable growth.",
+      "benefits": [
+        "More Qualified Leads",
+        "Increased Local Visibility",
+        "Higher Search Rankings",
+        "Stronger Online Reputation",
+        "More Appointment Bookings",
+        "Measurable Marketing ROI"
+      ],
+      "closingQuote": "More Visibility. More Leads. More Closings."
+    },
+    "ctaSection": {
+      "headline": "Ready to launch Smarter Campaigns?",
+      "subHeadline": "Generate your first AI-powered advertising strategy in minutes.",
+      "buttons": [
+        {
+          "label": "Start 3 Days Trial for Free",
+          "url": "#",
+          "style": "primary"
+        },
+        {
+          "label": "Watch the Demo",
+          "url": "#",
+          "style": "secondary"
+        }
+      ],
+      "finePrint": "Join 1,000+ businesses using Wheelee to plan, launch, and optimize winning ad campaigns. 3 days free trial • No credit card required"
+    },
+    "faqSection": {
+      "title": "Frequently asked questions",
+      "faqs": [
+        {
+          "id": 1,
+          "question": "Lorem ipsum dolor sit amet consectetur. Sagittis id.",
+          "answer": "Lorem ipsum dolor sit amet consectetur. In augue ipsum ultrices. Ac pharetra ultrices consectetur consequat tellus mattis. Nec aliquam ante sagittis dui sed egestas. Orci, nunc orci, semper nunc, arcu mauris. Nulla porttitor ornare metus tortor consequat eget orci. Mauris magna nisi, diam orci duis. Viverra neque ullamcorper dui, nisi eget, posuere proin. In nam nisi, scelerisque tortor nec. Nisi amet, pulvinar aenean turpis egestas nisi. Tristique. Nulla est, amet, nisi ut orci.",
+          "isOpen": true
+        },
+        {
+          "id": 2,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 3,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 4,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 5,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        }
+      ]
+    },
+    "newsletterSection": {
+      "title": "Stay connected with our newsletter",
+      "placeholderText": "Your email",
+      "buttonText": "Subscribe"
+    },
+    "footer": {
+      "brand": {
+        "name": "Wheelee.ai",
+        "description": "We're building the future of automated commerce. Wheelee.ai uses state-of-the-art Generative AI to manage world-class marketing & creation at scale."
+      },
+      "socialLinks": [
+        {
+          "platform": "Instagram",
+          "url": "#",
+          "icon": "instagram"
+        },
+        {
+          "platform": "Facebook",
+          "url": "#",
+          "icon": "facebook"
+        },
+        {
+          "platform": "Twitter",
+          "url": "#",
+          "icon": "twitter"
+        },
+        {
+          "platform": "YouTube",
+          "url": "#",
+          "icon": "youtube"
+        }
+      ],
+      "columns": [
+        {
+          "header": "Product",
+          "links": [
+            {
+              "label": "AI Ads",
+              "url": "#"
+            },
+            {
+              "label": "B2B Partner",
+              "url": "#"
+            },
+            {
+              "label": "AI Sale Bot",
+              "url": "#"
+            },
+            {
+              "label": "AI Website",
+              "url": "#"
+            },
+            {
+              "label": "Workflows",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "header": "Company",
+          "links": [
+            {
+              "label": "About Us",
+              "url": "#"
+            },
+            {
+              "label": "Blog",
+              "url": "#"
+            },
+            {
+              "label": "Contact",
+              "url": "#"
+            },
+            {
+              "label": "Security",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "header": "Community",
+          "links": [
+            {
+              "label": "Twitter",
+              "url": "#"
+            },
+            {
+              "label": "Linkedin",
+              "url": "#"
+            },
+            {
+              "label": "Discord",
+              "url": "#"
+            },
+            {
+              "label": "Tutorials",
+              "url": "#"
+            },
+            {
+              "label": "Service Status",
+              "url": "#"
+            }
+          ]
+        }
+      ],
+      "copyright": "© 2026 Wheelee Technologies Inc. All rights reserved. Built with ❤️ for Indian brands.",
+      "legalLinks": [
+        {
+          "label": "Terms",
+          "url": "#"
+        },
+        {
+          "label": "Privacy",
+          "url": "#"
+        },
+        {
+          "label": "Cookies",
+          "url": "#"
+        }
+      ]
+    }
+  },
+  "Food-Restaurants": {
+    "heroSection": {
+      "title": "Attract More Diners. Increase Reservations. Grow Revenue.",
+      "description": "Today’s diners research restaurants online before making a decision. They explore menus, reviews, ratings, and social media to choose where to dine. At Wheedle, we help restaurants increase visibility, attract more customers, boost reservations, and encourage repeat visits through effective digital marketing strategies.",
+      "heroImageAlt": "Food & Restaurants collaborating around an AI interface"
+    },
+    "challengesSection": {
+      "title": "Challenges Restaurants Face Today",
+      "list": [
+        "Standing out in a highly competitive market",
+        "Managing online reviews and reputation",
+        "Improving local search visibility",
+        "Converting online visitors into diners",
+        "Increasing reservations and direct orders",
+        "Encouraging repeat visits and customer loyalty"
+      ],
+      "imageAlt": "Food & Restaurants using a futuristic digital interface"
+    },
+    "servicesSection": {
+      "title": "How Wheedle Helps Restaurants Grow?",
+      "services": [
+        {
+          "title": "Local SEO & Search Visibility",
+          "description": "Increase your restaurant’s visibility in local searches and help diners discover your business more easily."
+        },
+        {
+          "title": "Website Design & Development",
+          "description": " Create a seamless online experience that drives reservations, orders, and customer engagement."
+        },
+        {
+          "title": "Reputation Management",
+          "description": "Build customer trust through positive reviews, strong ratings, and effective feedback management."
+        },
+        {
+          "title": "Content Marketing",
+          "description": "Boost visibility and strengthen your brand through engaging content that attracts and informs potential customers."
+        },
+        {
+          "title": "Social Media Marketing",
+          "description": "Engage your audience with compelling food content, special offers, events, and brand storytelling."
+        },
+        {
+          "title": "Performance Marketing",
+          "description": "Attract more diners with targeted advertising, promotional campaigns, and reservation-focused marketing."
+        }
+      ]
+    },
+    "whoWeServeSection": {
+      "title": "Who We Serve:",
+      "list": [
+        "Fine Dining Restaurants",
+        "Cafés & Coffee Chains",
+        "Quick Service Restaurants (QSRs)",
+        "Cloud Kitchens",
+        "Multi-Location Restaurant Brands",
+        "Bakeries & Dessert Brands",
+        "Specialty Cuisine Restaurants",
+        "Lounges & Casual Dining Concepts"
+      ],
+      "imageAlt": "Food & Restaurants using a futuristic digital interface"
+    },
+    "whyChooseUsSection": {
+      "title": "Why Restaurants Choose Wheedle?",
+      "description": "From local cafés to multi-location restaurant brands, Wheedle helps increase visibility, attract diners, and create digital experiences that keep customers coming back.",
+      "benefits": [
+        "More Reservations & Bookings",
+        "Increased Footfall",
+        "Better Local Search Rankings",
+        "Stronger Online Reputation",
+        "Higher Customer Engagement",
+        "Measurable Marketing ROI"
+      ],
+      "closingQuote": "More Visibility. More Reservations. More Revenue."
+    },
+    "ctaSection": {
+      "headline": "Ready to launch Smarter Campaigns?",
+      "subHeadline": "Generate your first AI-powered advertising strategy in minutes.",
+      "buttons": [
+        {
+          "label": "Start 3 Days Trial for Free",
+          "url": "#",
+          "style": "primary"
+        },
+        {
+          "label": "Watch the Demo",
+          "url": "#",
+          "style": "secondary"
+        }
+      ],
+      "finePrint": "Join 1,000+ businesses using Wheelee to plan, launch, and optimize winning ad campaigns. 3 days free trial • No credit card required"
+    },
+    "faqSection": {
+      "title": "Frequently asked questions",
+      "faqs": [
+        {
+          "id": 1,
+          "question": "Lorem ipsum dolor sit amet consectetur. Sagittis id.",
+          "answer": "Lorem ipsum dolor sit amet consectetur. In augue ipsum ultrices. Ac pharetra ultrices consectetur consequat tellus mattis. Nec aliquam ante sagittis dui sed egestas. Orci, nunc orci, semper nunc, arcu mauris. Nulla porttitor ornare metus tortor consequat eget orci. Mauris magna nisi, diam orci duis. Viverra neque ullamcorper dui, nisi eget, posuere proin. In nam nisi, scelerisque tortor nec. Nisi amet, pulvinar aenean turpis egestas nisi. Tristique. Nulla est, amet, nisi ut orci.",
+          "isOpen": true
+        },
+        {
+          "id": 2,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 3,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 4,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 5,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        }
+      ]
+    },
+    "newsletterSection": {
+      "title": "Stay connected with our newsletter",
+      "placeholderText": "Your email",
+      "buttonText": "Subscribe"
+    },
+    "footer": {
+      "brand": {
+        "name": "Wheelee.ai",
+        "description": "We're building the future of automated commerce. Wheelee.ai uses state-of-the-art Generative AI to manage world-class marketing & creation at scale."
+      },
+      "socialLinks": [
+        {
+          "platform": "Instagram",
+          "url": "#",
+          "icon": "instagram"
+        },
+        {
+          "platform": "Facebook",
+          "url": "#",
+          "icon": "facebook"
+        },
+        {
+          "platform": "Twitter",
+          "url": "#",
+          "icon": "twitter"
+        },
+        {
+          "platform": "YouTube",
+          "url": "#",
+          "icon": "youtube"
+        }
+      ],
+      "columns": [
+        {
+          "header": "Product",
+          "links": [
+            {
+              "label": "AI Ads",
+              "url": "#"
+            },
+            {
+              "label": "B2B Partner",
+              "url": "#"
+            },
+            {
+              "label": "AI Sale Bot",
+              "url": "#"
+            },
+            {
+              "label": "AI Website",
+              "url": "#"
+            },
+            {
+              "label": "Workflows",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "header": "Company",
+          "links": [
+            {
+              "label": "About Us",
+              "url": "#"
+            },
+            {
+              "label": "Blog",
+              "url": "#"
+            },
+            {
+              "label": "Contact",
+              "url": "#"
+            },
+            {
+              "label": "Security",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "header": "Community",
+          "links": [
+            {
+              "label": "Twitter",
+              "url": "#"
+            },
+            {
+              "label": "Linkedin",
+              "url": "#"
+            },
+            {
+              "label": "Discord",
+              "url": "#"
+            },
+            {
+              "label": "Tutorials",
+              "url": "#"
+            },
+            {
+              "label": "Service Status",
+              "url": "#"
+            }
+          ]
+        }
+      ],
+      "copyright": "© 2026 Wheelee Technologies Inc. All rights reserved. Built with ❤️ for Indian brands.",
+      "legalLinks": [
+        {
+          "label": "Terms",
+          "url": "#"
+        },
+        {
+          "label": "Privacy",
+          "url": "#"
+        },
+        {
+          "label": "Cookies",
+          "url": "#"
+        }
+      ]
+    }
+  },
+  "Automotive-Industry": {
+    "heroSection": {
+      "title": "Accelerate Growth. Generate More Leads. Drive More Sales.",
+      "description": "Today’s automotive customers begin their buying journey online. From researching vehicles and comparing dealerships to reading reviews and booking test drives, digital channels influence every stage of the decision-making process.At Wheedle, we help automotive businesses build a powerful online presence, attract qualified leads, and convert prospects into loyal customers through data-driven digital marketing solutions.",
+      "heroImageAlt": "../../assets/images/Automotive-Industry.png"
+    },
+    "servicesSection": {
+      "title": "How We Help Automotive Businesses ",
+      "titleHighlight": "Businesses Grow",
+      "services": [
+        {
+          "title": "Lead Generation",
+          "highlight": "Campaigns",
+          "description": "Generate high-quality inquiries for dealerships, service centers, auto accessories, and automotive brands through targeted advertising and performance marketing."
+        },
+        {
+          "title": "Website Design &",
+          "highlight": "Development",
+          "description": "Build fast, responsive, and conversion-focused websites that showcase inventory, services, offers, and customer testimonials."
+        },
+        {
+          "title": "Search Engine",
+          "highlight": "Optimization (SEO)",
+          "description": "Improve visibility on Google and local search results to ensure customers find your business when searching for vehicles, repairs, servicing, or automotive solutions."
+        },
+        {
+          "title": "Online Reputation",
+          "highlight": "Management",
+          "description": "Strengthen customer trust by managing reviews, improving ratings, and enhancing your brand reputation across digital platforms."
+        },
+        {
+          "title": "Social Media",
+          "highlight": "Marketing",
+          "description": "Engage potential buyers with compelling content, promotional campaigns, vehicle launches, customer success stories, and brand-building initiatives."
+        },
+        {
+          "title": "Performance",
+          "highlight": "Marketing",
+          "description": "Drive measurable results through Google Ads, Meta Ads, remarketing campaigns, and targeted lead-generation strategies."
+        }
+      ]
+    },
+    "challengesSection": {
+      "title": "We have Solutions for",
+      "list": [
+        "Car Dealerships",
+        "Two-Wheeler Showrooms",
+        "Auto Service & Repair Centers",
+        "Automotive Parts & Accessories Businesses",
+        "EV Manufacturers & Dealers",
+        "Vehicle Rental & Fleet Companies"
+      ],
+      "imageAlt": "Automotive professional reviewing digital reports"
+    },
+    "whyChooseUsSection": {
+      "title": "Why Automotive Businesses Choose Wheelee",
+      "description": "Whether you're a single dealership or a multi-location automotive group, Wheelee helps you attract more qualified buyers, strengthen your online presence, and create exceptional digital experiences that drive long-term growth.",
+      "benefits": [
+        "Increased Lead Generation",
+        "Enhanced Buyer Trust",
+        "Strategic Brand Reputation",
+        "Data-Driven Marketing Insights",
+        "Measurable Marketing ROI"
+      ],
+      "closingQuote": "More Visibility. More Buyers. Better Automotive Experiences."
+    },
+    "ctaSection": {
+      "headline": "Ready to launch Smarter Campaigns?",
+      "subHeadline": "Generate your first AI-powered advertising strategy in minutes.",
+      "buttons": [
+        {
+          "label": "Start 3 Days Trial for Free",
+          "url": "#",
+          "style": "primary"
+        },
+        {
+          "label": "Watch the Demo",
+          "url": "#",
+          "style": "secondary"
+        }
+      ],
+      "finePrint": "Join 1,000+ businesses using Wheelee to plan, launch, and optimize winning ad campaigns. 3 days free trial • No credit card required"
+    },
+    "faqSection": {
+      "title": "Frequently asked questions",
+      "faqs": [
+        {
+          "id": 1,
+          "question": "Lorem ipsum dolor sit amet consectetur. Sagittis id.",
+          "answer": "Lorem ipsum dolor sit amet consectetur. In augue ipsum ultrices. Ac pharetra ultrices consectetur consequat tellus mattis. Nec aliquam ante sagittis dui sed egestas. Orci, nunc orci, semper nunc, arcu mauris. Nulla porttitor ornare metus tortor consequat eget orci. Mauris magna nisi, diam orci duis. Viverra neque ullamcorper dui, nisi eget, posuere proin. In nam nisi, scelerisque tortor nec. Nisi amet, pulvinar aenean turpis egestas nisi. Tristique. Nulla est, amet, nisi ut orci.",
+          "isOpen": true
+        },
+        {
+          "id": 2,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 3,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 4,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 5,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        }
+      ]
+    },
+    "newsletterSection": {
+      "title": "Stay connected with our newsletter",
+      "placeholderText": "Your email",
+      "buttonText": "Subscribe"
+    },
+    "footer": {
+      "brand": {
+        "name": "Wheelee.ai",
+        "description": "We're building the future of automated commerce. Wheelee.ai uses state-of-the-art Generative AI to manage world-class marketing & creation at scale."
+      },
+      "socialLinks": [
+        {
+          "platform": "Instagram",
+          "url": "#",
+          "icon": "instagram"
+        },
+        {
+          "platform": "Facebook",
+          "url": "#",
+          "icon": "facebook"
+        },
+        {
+          "platform": "Twitter",
+          "url": "#",
+          "icon": "twitter"
+        },
+        {
+          "platform": "YouTube",
+          "url": "#",
+          "icon": "youtube"
+        }
+      ],
+      "columns": [
+        {
+          "header": "Product",
+          "links": [
+            {
+              "label": "AI Ads",
+              "url": "#"
+            },
+            {
+              "label": "B2B Partner",
+              "url": "#"
+            },
+            {
+              "label": "AI Sale Bot",
+              "url": "#"
+            },
+            {
+              "label": "AI Website",
+              "url": "#"
+            },
+            {
+              "label": "Workflows",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "header": "Company",
+          "links": [
+            {
+              "label": "About Us",
+              "url": "#"
+            },
+            {
+              "label": "Blog",
+              "url": "#"
+            },
+            {
+              "label": "Contact",
+              "url": "#"
+            },
+            {
+              "label": "Security",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "header": "Community",
+          "links": [
+            {
+              "label": "Twitter",
+              "url": "#"
+            },
+            {
+              "label": "Linkedin",
+              "url": "#"
+            },
+            {
+              "label": "Discord",
+              "url": "#"
+            },
+            {
+              "label": "Tutorials",
+              "url": "#"
+            },
+            {
+              "label": "Service Status",
+              "url": "#"
+            }
+          ]
+        }
+      ],
+      "copyright": "© 2026 Wheelee Technologies Inc. All rights reserved. Built with ❤️ for Indian brands.",
+      "legalLinks": [
+        {
+          "label": "Terms",
+          "url": "#"
+        },
+        {
+          "label": "Privacy",
+          "url": "#"
+        },
+        {
+          "label": "Cookies",
+          "url": "#"
+        }
+      ]
+    }
+  },
+  "Financial": {
+    "heroSection": {
+      "title": "Build Trust. Generate Quality Leads. Grow Client Relationships.",
+      "description": "In the financial services industry, trust is everything. Whether you&#39;re a financial advisor, insurance provider, mortgage company, wealth management firm, fintech startup, credit union, or lending institution, your potential clients research extensively before making financial decisions.At Wheedle, we help financial businesses strengthen their digital presence, build credibility, generate qualified leads, and create meaningful customer experiences that drive long-term growth.",
+      "heroImageAlt": "../../assets/images/Automotive-Industry.png"
+    },
+    "servicesSection": {
+      "title": "Our Solutions for Financial Services ",
+      "titleHighlight": "",
+      "services": [
+        {
+          "title": "Search Engine",
+          "highlight": "Optimization (SEO)",
+          "description": "Increase visibility when potential clients search for:",
+          "list": [
+            "Financial Advisor Near Me",
+            "Home Loans & Mortgages",
+            "Wealth Management Services",
+            "Insurance Solutions",
+            "Tax & Accounting Services",
+            "Investment Planning"
+          ]
+        },
+        {
+          "title": "Website Design &",
+          "highlight": "Development",
+          "description": "Create Digital Experiences That Inspire Confidence",
+          "list": [
+            "Responsive & secure websites",
+            "Lead generation landing Pages",
+            "Appointment scheduling integration",
+            "Financial service portals",
+            "Conversion-focused design",
+            "Mobile-optimized UI"
+          ]
+        },
+        {
+          "title": "Reputation",
+          "highlight": "Management",
+          "description": "We help businesses strengthen their reputation:",
+          "list": [
+            "Review Generation Strategies",
+            "Brand Monitoring",
+            "Trust-Building Content",
+            "Online Credibility Enhancement",
+            "Customer Feedback"
+          ]
+        },
+        {
+          "title": "Social Media",
+          "highlight": "Marketing",
+          "description": "Educate, engage, and build authority with:",
+          "list": [
+            "Financial Literacy Content",
+            "Investment Insights",
+            "Market Updates",
+            "Client Success Stories",
+            "Brand Awareness Campaigns",
+            "Thought Leadership Content"
+          ]
+        },
+        {
+          "title": "Performance",
+          "highlight": "Marketing",
+          "description": "Reach high-intent prospects through:",
+          "list": [
+            "Google Ads",
+            "Meta Advertising",
+            "Re-marketing Campaigns",
+            "Lead Generation Funnels",
+            "Location-Based Campaigns",
+            "Conversion Optimization"
+          ]
+        },
+        {
+          "title": "Content",
+          "highlight": "Marketing",
+          "description": "Position your business as a trusted financial expert:",
+          "list": [
+            "Educational Blogs",
+            "Financial Guides",
+            "Industry Reports",
+            "Video Content",
+            "Newsletters",
+            "Case Studies"
+          ]
+        }
+      ]
+    },
+    "challengesSection": {
+      "title": "Industry Challenges We Help Solve",
+      "list": [
+        "Build Trust",
+        "Improve Search Visibility",
+        "Manage Reputation",
+        "Generate Quality Leads",
+        "Create Seamless Journeys",
+        "Increase Client Retention"
+      ],
+      "imageAlt": "Financial professional reviewing digital reports"
+    },
+    "whyChooseUsSection": {
+      "title": "Why Financial Businesses Choose Wheedle",
+      "description": "",
+      "benefits": [
+        "✔ Increased Lead Generation",
+        "✔ Enhanced Brand Credibility",
+        "✔ Improved Search Visibility",
+        "✔ Stronger Client Engagement",
+        "✔ Data-Driven Marketing Strategies",
+        "✔ Measurable Return on Investment"
+      ],
+      "closingQuote": ""
+    },
+    "accelerateGrowth": {
+      "title": "Industry Challenges We Help Solve",
+      "description": "In an industry where credibility drives conversions, your digital presence can be your greatest competitive advantage. Wheedle helps financial services businesses attract more qualified clients, strengthen trust, and build lasting customer relationships through strategic digital solutions."
+    },
+    "ctaSection": {
+      "headline": "Ready to launch Smarter Campaigns?",
+      "subHeadline": "Generate your first AI-powered advertising strategy in minutes.",
+      "buttons": [
+        {
+          "label": "Start 3 Days Trial for Free",
+          "url": "#",
+          "style": "primary"
+        },
+        {
+          "label": "Watch the Demo",
+          "url": "#",
+          "style": "secondary"
+        }
+      ],
+      "finePrint": "Join 1,000+ businesses using Wheelee to plan, launch, and optimize winning ad campaigns. 3 days free trial • No credit card required"
+    },
+    "faqSection": {
+      "title": "Frequently asked questions",
+      "faqs": [
+        {
+          "id": 1,
+          "question": "Lorem ipsum dolor sit amet consectetur. Sagittis id.",
+          "answer": "Lorem ipsum dolor sit amet consectetur. In augue ipsum ultrices. Ac pharetra ultrices consectetur consequat tellus mattis. Nec aliquam ante sagittis dui sed egestas. Orci, nunc orci, semper nunc, arcu mauris. Nulla porttitor ornare metus tortor consequat eget orci. Mauris magna nisi, diam orci duis. Viverra neque ullamcorper dui, nisi eget, posuere proin. In nam nisi, scelerisque tortor nec. Nisi amet, pulvinar aenean turpis egestas nisi. Tristique. Nulla est, amet, nisi ut orci.",
+          "isOpen": true
+        },
+        {
+          "id": 2,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 3,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 4,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        },
+        {
+          "id": 5,
+          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "isOpen": false
+        }
+      ]
+    },
+    "newsletterSection": {
+      "title": "Stay connected with our newsletter",
+      "placeholderText": "Your email",
+      "buttonText": "Subscribe"
+    },
+    "footer": {
+      "brand": {
+        "name": "Wheelee.ai",
+        "description": "We're building the future of automated commerce. Wheelee.ai uses state-of-the-art Generative AI to manage world-class marketing & creation at scale."
+      },
+      "socialLinks": [
+        {
+          "platform": "Instagram",
+          "url": "#",
+          "icon": "instagram"
+        },
+        {
+          "platform": "Facebook",
+          "url": "#",
+          "icon": "facebook"
+        },
+        {
+          "platform": "Twitter",
+          "url": "#",
+          "icon": "twitter"
+        },
+        {
+          "platform": "YouTube",
+          "url": "#",
+          "icon": "youtube"
+        }
+      ],
+      "columns": [
+        {
+          "header": "Product",
+          "links": [
+            {
+              "label": "AI Ads",
+              "url": "#"
+            },
+            {
+              "label": "B2B Partner",
+              "url": "#"
+            },
+            {
+              "label": "AI Sale Bot",
+              "url": "#"
+            },
+            {
+              "label": "AI Website",
+              "url": "#"
+            },
+            {
+              "label": "Workflows",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "header": "Company",
+          "links": [
+            {
+              "label": "About Us",
+              "url": "#"
+            },
+            {
+              "label": "Blog",
+              "url": "#"
+            },
+            {
+              "label": "Contact",
+              "url": "#"
+            },
+            {
+              "label": "Security",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "header": "Community",
+          "links": [
+            {
+              "label": "Twitter",
+              "url": "#"
+            },
+            {
+              "label": "Linkedin",
+              "url": "#"
+            },
+            {
+              "label": "Discord",
+              "url": "#"
+            },
+            {
+              "label": "Tutorials",
+              "url": "#"
+            },
+            {
+              "label": "Service Status",
+              "url": "#"
+            }
+          ]
+        }
+      ],
+      "copyright": "© 2026 Wheelee Technologies Inc. All rights reserved. Built with ❤️ for Indian brands.",
+      "legalLinks": [
+        {
+          "label": "Terms",
+          "url": "#"
+        },
+        {
+          "label": "Privacy",
+          "url": "#"
+        },
+        {
+          "label": "Cookies",
+          "url": "#"
+        }
+      ]
+    }
+  }
+}

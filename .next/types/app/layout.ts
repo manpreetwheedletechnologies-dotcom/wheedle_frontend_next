@@ -1,4 +1,4 @@
-// File: D:\wheedle_technologies\wheedle_frontend_next\app\layout.js
+// File: /Users/mac/git_repo/wheedle_frontend_next/app/layout.js
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

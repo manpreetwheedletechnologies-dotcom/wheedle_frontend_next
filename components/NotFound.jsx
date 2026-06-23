@@ -224,6 +224,20 @@ function Glitch404() {
    MAIN  PAGE
 ═══════════════════════════════════════════════ */
 export default function NotFound() {
+
+useEffect(() => {
+    const header = document.querySelector("header") // 👈 adjust selector if needed
+    const footer = document.querySelector("footer") // 👈 adjust selector if needed
+
+    if (header) header.style.display = "none"
+    if (footer) footer.style.display = "none"
+
+    return () => {
+        if (header) header.style.display = ""
+        if (footer) footer.style.display = ""
+    }
+}, [])
+
     return (
         <div className="fixed inset-0 overflow-hidden flex flex-col items-center justify-center px-4 py-8 text-center"
             style={{ background: "#030309" }}>
