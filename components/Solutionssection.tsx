@@ -13,7 +13,7 @@ const solutions = [
 ];
 
 // Animation variants
-const containerVariants = {
+const containerVariants: any = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -24,7 +24,7 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
+const itemVariants: any = {
   hidden: {
     opacity: 0,
     x: -20,
@@ -41,9 +41,9 @@ const itemVariants = {
   }
 };
 
-export default function SolutionsSection({  data , solutionsImage }: { solutionsImage: string }) {
+export default function SolutionsSection({ data, solutionsImage }: { data: { title: string; list: string[]; imageAlt?: string }; solutionsImage: string }) {
 
-  const sectionVariants = {
+  const sectionVariants: any = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -55,7 +55,7 @@ export default function SolutionsSection({  data , solutionsImage }: { solutions
     }
   };
 
-  const containerWrapperVariants = {
+  const containerWrapperVariants: any = {
     hidden: { opacity: 0, scale: 0.95 },
     visible: {
       opacity: 1,

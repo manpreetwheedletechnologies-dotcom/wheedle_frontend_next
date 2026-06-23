@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 interface Service {
     title: string;
-    highlight: string;
+    highlight?: string;
     description: string;
     icon?: string;
     list?: string[]; // optional — not every service has this
@@ -56,7 +56,7 @@ const services: Service[] = [
     },
 ];
 
-const containerVariants = {
+const containerVariants: any = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
@@ -67,7 +67,7 @@ const containerVariants = {
     }
 };
 
-const cardVariants = {
+const cardVariants: any = {
     hidden: {
         opacity: 0,
         y: 40,
@@ -433,8 +433,8 @@ function ServiceCard({ title, highlight, description, icon, list }: Service) {
     );
 }
 
-export default function HowWeHelpSection( { data }: { data: { title: string; titleHighlight: string; services: Service[] } }) {
-    const sectionVariants = {
+export default function HowWeHelpSection( { data }: { data: { title: string; titleHighlight?: string; services: Service[] } }) {
+    const sectionVariants: any = {
         hidden: { opacity: 0, y: 30 },
         visible: {
             opacity: 1,
@@ -534,10 +534,14 @@ export default function HowWeHelpSection( { data }: { data: { title: string; tit
 
                     <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
                         {data.title}
-                        <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0665ff] to-[#22d3ee]">
-                            {data.titleHighlight}
-                        </span>
+                            {data.titleHighlight && (
+                                <>
+                                    <br />
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0665ff] to-[#22d3ee]">
+                                        {data.titleHighlight}
+                                    </span>
+                                </>
+                            )}
                     </h2>
 
                     {/* Premium animated underline */}
@@ -580,7 +584,7 @@ export default function HowWeHelpSection( { data }: { data: { title: string; tit
                     viewport={{ once: true, amount: 0.1 }}
                 >
                     {data.services.map((service) => (
-                        <ServiceCard key={service.title + service.highlight} {...service} />
+                        <ServiceCard key={service.title} {...service} />
                     ))}
                 </motion.div>
             </div>

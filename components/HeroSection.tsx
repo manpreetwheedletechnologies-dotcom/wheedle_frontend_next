@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 // --- Animation variants (unchanged) ---
-const containerVariants = {
+const containerVariants: any = {
   hidden: { opacity: 0, y: 60 },
   visible: {
     opacity: 1,
@@ -13,7 +13,7 @@ const containerVariants = {
   }
 };
 
-const textBoxVariants = {
+const textBoxVariants: any = {
   hidden: { opacity: 0, scale: 0.92, y: 30 },
   visible: {
     opacity: 1,
@@ -23,7 +23,7 @@ const textBoxVariants = {
   }
 };
 
-const textVariants = {
+const textVariants: any = {
   hidden: { opacity: 0, y: 15, filter: "blur(5px)" },
   visible: {
     opacity: 1,
@@ -33,7 +33,7 @@ const textVariants = {
   }
 };
 
-const floatingAnimation = {
+const floatingAnimation: any = {
   y: [0, -8, 0],
   transition: { duration: 3, repeat: Infinity, ease: "easeInOut" }
 };

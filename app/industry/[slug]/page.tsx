@@ -9,7 +9,7 @@ import HeroSection from "../../../components/HeroSection";
 import HowWeHelpSection from "../../../components/Howwehelpsection";
 import SolutionsSection from "../../../components/Solutionssection";
 import WhyChooseSection from "../../../components/Whychoosesection";
-import LaunchCTA from "@/landing/components/LaunchCTA";
+// import LaunchCTA from "@/landing/components/LaunchCTA";
 import Newsletter from "../../../components/Newsletter";
 import ServeSection from "../../../components/Whoweserve";
 import Footer from "../../../components/Footer";
@@ -97,7 +97,7 @@ export default async function IndustryPage({
         />
       )}
 
-      {industry.whoWeServeSection && (
+      {'whoWeServeSection' in industry && industry.whoWeServeSection && (
         <ServeSection
           data={industry.whoWeServeSection}
           serveimage={serveimage}

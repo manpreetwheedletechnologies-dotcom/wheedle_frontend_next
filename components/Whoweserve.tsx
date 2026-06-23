@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from 'framer-motion';
 
 // Animation variants
-const containerVariants = {
+const containerVariants: any = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -15,7 +15,7 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
+const itemVariants: any = {
   hidden: {
     opacity: 0,
     x: -20,
@@ -47,7 +47,7 @@ export default function ServeSection({ data, serveimage }: ServeSectionProps) {
   // undefined, partially populated, or missing fields.
   const title = data?.title ?? "";
   const list = data?.list ?? [];
-  const sectionVariants = {
+  const sectionVariants: any = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -59,7 +59,7 @@ export default function ServeSection({ data, serveimage }: ServeSectionProps) {
     }
   };
 
-  const containerWrapperVariants = {
+  const containerWrapperVariants: any = {
     hidden: { opacity: 0, scale: 0.95 },
     visible: {
       opacity: 1,
