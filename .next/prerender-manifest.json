@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/industry/healthcare-industry":{},"/industry/law-firms":{},"/industry/home-services":{},"/industry/real-estate":{},"/industry/food-restaurants":{},"/industry/automotive-industry":{},"/industry/financial":{}},"dynamicRoutes":{"/industry/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/industry/[slug]","routeRegex":"^\\/industry\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"ba05384d424da37dea8f545c9ad7b555","previewModeSigningKey":"c2849569492d798b00d3936e4515d8a66ca50c19d08284733208470096643dc7","previewModeEncryptionKey":"91e3538c670d0f05c1c67f0343e3cc36fcbc9b9f00ef5c0ef943450301ad7275"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "2e00d8d2f5c8bb4d0e0398897a22217b",
+    "previewModeSigningKey": "67f30528262a61f2c497a76693f5dbf7b6a3ae11e1674895fb2659f16b76f5c4",
+    "previewModeEncryptionKey": "aafe6dfb753074451cc39d8bb8bf15722041dfdf2dd967b0bcb9298783889bc5"
+  }
+}
