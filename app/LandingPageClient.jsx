@@ -19,6 +19,12 @@ import Footer from '../components/Footer';
 import Preloader from '../components/Preloader';
 import WhebotPage from '../components/WhebotPage';
 
+import GoogleVerificationInfo from '../components/GoogleVerificationInfo';
+
+// import AboutApp from "../components/AboutApp";
+// import AppFeatures from "../components/AppFeatures";
+// import DataUsage from "../components/DataUsage";
+
 const AnimatedCursor = dynamic(() => import('react-animated-cursor'), { ssr: false });
 
 export default function LandingPageClient() {
@@ -90,6 +96,7 @@ export default function LandingPageClient() {
                 <Vision />
                 <Steps />
                 <Features />
+                <GoogleVerificationInfo />
                 <Businesses />
                 <Newsletter
                   content={{
