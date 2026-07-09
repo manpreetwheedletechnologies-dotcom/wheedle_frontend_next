@@ -18,20 +18,6 @@ export function generateStaticParams() {
   return getAllIndustrySlugs().map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-
-  const industry = getIndustryBySlug(slug);
-
-  return {
-    title: industry?.heroSection?.title ?? "Industry",
-  };
-}
-
 export default async function IndustryPage({
   params,
 }: {
@@ -47,7 +33,7 @@ export default async function IndustryPage({
 
   return (
     <PageWrapper>
-      <HeroSection data={industry.heroSection} />
+      <HeroSection data={industry.heroSection } />
 
       {industry.challengesSection && (
         <Challenges data={industry.challengesSection} />
