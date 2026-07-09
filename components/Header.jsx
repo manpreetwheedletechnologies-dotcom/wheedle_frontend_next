@@ -39,7 +39,7 @@ export default function Header() {
     { name: 'About', path: '/about-us' },
     { name: 'Our Services', path: '/our-services' },
     { name: 'Blog', path: '/blog' },
-    // { name: 'Industries', path: '/industries' },
+    { name: 'Industries', path: '/industries' },
     { name: 'Careers', path: '/career' },
   ];
 
