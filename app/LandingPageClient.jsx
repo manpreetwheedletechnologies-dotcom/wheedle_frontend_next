@@ -18,6 +18,7 @@ import Testimonials from '../components/Testimonials';
 import Footer from '../components/Footer';
 import Preloader from '../components/Preloader';
 import WhebotPage from '../components/WhebotPage';
+import IndustriesSection from '../components/Industriessection';
 
 import GoogleVerificationInfo from '../components/GoogleVerificationInfo';
 
@@ -96,6 +97,7 @@ export default function LandingPageClient() {
                 <Vision />
                 <Steps />
                 <Features />
+                <IndustriesSection />
                 <GoogleVerificationInfo />
                 <Businesses />
                 <Newsletter

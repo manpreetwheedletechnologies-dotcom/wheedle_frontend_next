@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Button from "./Button_x"
 
 /**
  * HeroSection
@@ -11,6 +12,11 @@ import { motion } from "framer-motion";
  * Every visible string (badge, headline, highlighted word(s), tagline,
  * description, button labels/links) is driven entirely by JSON so this
  * component never needs to change when a new industry is added.
+ *
+ * Same #05070d -> #1131c8/#4b6bfd theme as before, but with more
+ * depth: layered glows, a soft animated aura behind the badge,
+ * floating accent particles, a glow-on-hover primary CTA, and a
+ * subtle gradient underline beneath the highlighted headline word.
  */
 
 // --- Types matching the new heroSection JSON shape ---
@@ -53,6 +59,16 @@ const itemVariants: any = {
   },
 };
 
+// Floating particle positions (purely decorative, subtle)
+const particles = [
+  { top: "18%", left: "12%", size: 5, delay: 0 },
+  { top: "28%", left: "85%", size: 4, delay: 0.6 },
+  { top: "62%", left: "8%", size: 3, delay: 1.1 },
+  { top: "70%", left: "90%", size: 6, delay: 0.3 },
+  { top: "45%", left: "95%", size: 3, delay: 1.6 },
+  { top: "50%", left: "4%", size: 4, delay: 2 },
+];
+
 export default function HeroSection({ data }: HeroSectionProps) {
   return (
     <section className="relative w-full overflow-hidden bg-[#05070d]">
@@ -61,14 +77,52 @@ export default function HeroSection({ data }: HeroSectionProps) {
 
       {/* --- background atmosphere --- */}
       <div className="pointer-events-none absolute inset-0">
-        {/* radial glow */}
+        {/* large centered radial glow */}
         <div
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full animate-[pulse_8s_ease-in-out_infinite]"
           style={{
             background:
-              "radial-gradient(circle, rgba(11,44,195,0.45) 0%, rgba(6,101,255,0.18) 35%, rgba(5,7,13,0) 70%)",
+              "radial-gradient(circle, rgba(75,107,253,0.7) 0%, rgba(17,49,200,0.35) 35%, rgba(5,7,13,0) 70%)",
           }}
         />
+        {/* secondary accent glows for extra depth */}
+        <div
+          className="absolute top-[8%] left-[8%] w-[380px] h-[380px] rounded-full opacity-70"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(34,211,238,0.18) 0%, rgba(34,211,238,0) 70%)",
+          }}
+        />
+        <div
+          className="absolute bottom-[6%] right-[6%] w-[420px] h-[420px] rounded-full opacity-70"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(75,107,253,0.22) 0%, rgba(75,107,253,0) 70%)",
+          }}
+        />
+
+        {/* floating particles */}
+        {particles.map((p, i) => (
+          <motion.span
+            key={i}
+            className="absolute rounded-full bg-[#8ea2ff]"
+            style={{
+              top: p.top,
+              left: p.left,
+              width: p.size,
+              height: p.size,
+              boxShadow: "0 0 8px 2px rgba(142,162,255,0.6)",
+            }}
+            animate={{ y: [0, -14, 0], opacity: [0.3, 0.9, 0.3] }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              delay: p.delay,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+
         {/* dot grid texture */}
         <div
           className="absolute inset-0 opacity-[0.25]"
@@ -97,22 +151,31 @@ export default function HeroSection({ data }: HeroSectionProps) {
         {/* Badge */}
         <motion.span
           variants={itemVariants}
-          className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-4 py-1.5 text-[11px] md:text-xs font-semibold tracking-[0.18em] text-blue-100/80 uppercase backdrop-blur-sm"
+          className="relative inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.05] px-4 py-1.5 text-[11px] md:text-xs font-semibold tracking-[0.18em] text-blue-100/80 uppercase backdrop-blur-md shadow-[0_0_20px_-4px_rgba(75,107,253,0.5)]"
         >
-          <span aria-hidden className="text-cyan-300">✦</span>
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-300 opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan-300" />
+          </span>
           {data.badge}
         </motion.span>
 
         {/* Headline */}
         <motion.h1
           variants={itemVariants}
-          className="mt-6 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-white"
+          className="mt-6 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-white [text-wrap:balance]"
         >
           {data.titleMain}
           <br />
           {data.titlePrefix}
-          <span className="bg-gradient-to-r from-[#9DB6FF] to-[#6FA8FF] bg-clip-text text-transparent">
-            {data.titleHighlight}
+          <span className="relative inline-block">
+            <span className="bg-gradient-to-r from-[#1131c8] via-[#4b6bfd] to-[#1131c8] bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradientShift_6s_ease_infinite]">
+              {data.titleHighlight}
+            </span>
+            <span
+              aria-hidden
+              className="absolute left-0 -bottom-1.5 h-[3px] w-full rounded-full bg-gradient-to-r from-transparent via-[#4b6bfd] to-transparent opacity-80"
+            />
           </span>
         </motion.h1>
 
@@ -139,218 +202,49 @@ export default function HeroSection({ data }: HeroSectionProps) {
         >
           {data.buttons?.map((btn, i) =>
             btn.style === "secondary" ? (
+
               <Link
                 key={i}
                 href={btn.url}
-                className="inline-flex items-center justify-center rounded-full border border-white/25 px-6 py-2.5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-white/10"
               >
-                {btn.label}
+                <Button padding="25px 20px">{btn.label}</Button>
               </Link>
             ) : (
               <Link
                 key={i}
                 href={btn.url}
-                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#C6D3FF] to-[#9FB6FF] px-6 py-2.5 text-sm font-semibold text-[#061436] shadow-[0_8px_24px_-8px_rgba(111,168,255,0.6)] transition-transform duration-300 hover:scale-[1.03]"
+                className="group relative"
               >
-                {btn.label}
+                {/* glow that blooms behind the button on hover */}
+                <span
+                  aria-hidden
+                  className="absolute -inset-1 rounded-full bg-gradient-to-r from-[#1131c8] via-[#4b6bfd] to-[#1131c8] opacity-40 blur-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <button
+                  className="relative inline-flex items-center justify-center gap-3 w-full sm:w-auto px-6 sm:px-9 md:px-10 lg:px-11 h-[54px] sm:h-[56px] lg:h-[60px] bg-gradient-to-l from-[#1131c8] via-[#4b6bfd] to-[#1131c8] text-white text-[15px] sm:text-[16px] lg:text-[17px] font-medium rounded-full transition-all duration-300 shadow-md shadow-neutral-600 max-w-[400px] sm:max-w-none group-hover:scale-[1.03] group-hover:from-[#1131c8] group-hover:via-[#212ba9] group-hover:to-[#212ba9] border-2 border-blue-300"
+                >
+                  <img src="/GetFree.png" alt={`${btn.label}`} />
+                  {btn.label}
+                </button>
               </Link>
             )
           )}
         </motion.div>
       </motion.div>
+
+      <style jsx>{`
+        @keyframes gradientShift {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+      `}</style>
     </section>
   );
 }
-
-
-
-// "use client";
-
-// import React, { useEffect, useRef, useState } from "react";
-// import { motion } from "framer-motion";
-
-// // --- Animation variants (unchanged) ---
-// const containerVariants: any = {
-//   hidden: { opacity: 0, y: 60 },
-//   visible: {
-//     opacity: 1,
-//     y: 0,
-//     transition: { duration: 0.8, ease: "easeOut", staggerChildren: 0.15, delayChildren: 0.2 }
-//   }
-// };
-
-// const textBoxVariants: any = {
-//   hidden: { opacity: 0, scale: 0.92, y: 30 },
-//   visible: {
-//     opacity: 1,
-//     scale: 1,
-//     y: 0,
-//     transition: { duration: 0.7, ease: [0.34, 1.56, 0.64, 1], delay: 0.3 }
-//   }
-// };
-
-// const textVariants: any = {
-//   hidden: { opacity: 0, y: 15, filter: "blur(5px)" },
-//   visible: {
-//     opacity: 1,
-//     y: 0,
-//     filter: "blur(0px)",
-//     transition: { duration: 0.6, ease: "easeOut", delay: 0.5 }
-//   }
-// };
-
-// const floatingAnimation: any = {
-//   y: [0, -8, 0],
-//   transition: { duration: 3, repeat: Infinity, ease: "easeInOut" }
-// };
-
-// // --- Inline scroll animation hook (unchanged) ---
-// function useScrollAnimation<T extends HTMLElement = HTMLDivElement>(threshold: number = 0.08) {
-//   const ref = useRef<T | null>(null);
-//   const [isVisible, setIsVisible] = useState(false);
-
-//   useEffect(() => {
-//     const el = ref.current;
-//     if (!el) return;
-
-//     const observer = new IntersectionObserver(
-//       ([entry]) => {
-//         if (entry.isIntersecting) {
-//           setIsVisible(true);
-//           observer.unobserve(el);
-//         }
-//       },
-//       { threshold }
-//     );
-
-//     observer.observe(el);
-//     return () => observer.disconnect();
-//   }, [threshold]);
-
-//   return { ref, isVisible };
-// }
-
-// // --- Types matching your JSON's heroSection shape ---
-// type HeroSectionData = {
-//   title: string;
-//   description: string;
-//   heroImageAlt: string;
-// };
-
-// type HeroSectionProps = {
-//   data: HeroSectionData;
-//   heroImage: string; // resolved from industryHeroImages[slug] by the parent page
-// };
-
-// export default function HeroSection({ data, heroImage }: HeroSectionProps) {
-//   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation<HTMLElement>();
-//   const { ref: textRef, isVisible: textVisible } = useScrollAnimation<HTMLDivElement>();
-
-//   const zoomStyle: React.CSSProperties = {
-//     opacity: heroVisible ? 1 : 0,
-//     transform: heroVisible ? "scale(1)" : "scale(0.85)",
-//     transition: "opacity 0.7s ease-out, transform 0.7s ease-out",
-//     willChange: "opacity, transform",
-//   };
-
-//   const fadeUpStyle: React.CSSProperties = {
-//     opacity: textVisible ? 1 : 0,
-//     transform: textVisible ? "translateY(0)" : "translateY(40px)",
-//     transition: "opacity 0.7s ease-out, transform 0.7s ease-out",
-//     willChange: "opacity, transform",
-//   };
-
-//   return (
-//     <section
-//       ref={heroRef}
-//       style={zoomStyle}
-//       className="relative w-full min-h-[480px] lg:min-h-[600px] flex flex-col bg-[#0b0c10]"
-//     >
-//       <div className="w-full h-[70px] lg:h-[80px] bg-black flex-shrink-0" />
-
-//       <div className="relative w-full flex-1 min-h-[400px] lg:min-h-[500px]">
-//         <div className="absolute inset-0 w-full h-full z-0">
-//           <img
-//             src={heroImage}
-//             alt={data.heroImageAlt}
-//             className="w-full h-full object-cover object-center"
-//           />
-          
-//         </div>
-
-//         <div className="absolute top-0 left-0 right-0 z-10">
-//           <div className="w-full h-[20px] lg:h-[30px] bg-gradient-to-b from-[#0b0c10] via-[#0b0c10]/85 to-transparent" />
-//         </div>
-
-//         <div className="absolute bottom-0 left-0 right-0 z-10">
-//           <div className="w-full h-[20px] lg:h-[30px] bg-gradient-to-t from-[#0b0c10] via-[#0b0c10]/85 to-transparent" />
-//         </div>
-
-//         <motion.div
-//           className="absolute bottom-[40px] lg:bottom-[-50px] left-0 right-0 z-20 px-6 pb-6 md:pb-8 lg:pb-10"
-//           initial="hidden"
-//           animate="visible"
-//           variants={containerVariants}
-//         >
-//           <motion.div className="w-full max-w-5xl mx-auto" animate={floatingAnimation}>
-//             <div className="relative w-full">
-//               <motion.div
-//                 className="relative backdrop-blur-md rounded-2xl p-5 md:p-7 shadow-2xl"
-//                 style={{ border: "1px solid transparent", backgroundClip: "padding-box", position: "relative" }}
-//                 variants={textBoxVariants}
-//                 whileHover={{ scale: 1.02, transition: { duration: 0.3, ease: "easeOut" } }}
-//                 whileTap={{ scale: 0.98 }}
-//               >
-//                 <div
-//                   style={{
-//                     position: "absolute", top: "-1px", right: "-1px", width: "60px", height: "60px",
-//                     borderTop: "3px solid transparent", borderRight: "3px solid transparent",
-//                     borderImage: "linear-gradient(135deg, #0665ff, #22d3ee)", borderImageSlice: 1,
-//                     borderRadius: "0 16px 0 0",
-//                   }}
-//                 />
-//                 <div
-//                   style={{
-//                     position: "absolute", bottom: "-1px", left: "-1px", width: "60px", height: "60px",
-//                     borderBottom: "3px solid transparent", borderLeft: "3px solid transparent",
-//                     borderImage: "linear-gradient(135deg, #22d3ee, #0665ff)", borderImageSlice: 1,
-//                     borderRadius: "0 0 0 16px",
-//                   }}
-//                 />
-//                 <div
-//                   style={{
-//                     position: "absolute", top: "-1px", right: "-1px", width: "80px", height: "80px",
-//                     background: "linear-gradient(135deg, transparent 50%, #0665ff 50%, #22d3ee 100%)",
-//                     borderRadius: "0 16px 0 0", opacity: 0.3, pointerEvents: "none",
-//                   }}
-//                 />
-//                 <div
-//                   style={{
-//                     position: "absolute", bottom: "-1px", left: "-1px", width: "80px", height: "80px",
-//                     background: "linear-gradient(135deg, #22d3ee 0%, #0665ff 50%, transparent 50%)",
-//                     borderRadius: "0 0 0 16px", opacity: 0.3, pointerEvents: "none",
-//                   }}
-//                 />
-
-//                 <motion.h1
-//                   className="text-white text-xl md:text-2xl lg:text-3xl font-bold text-center leading-tight tracking-wide relative z-10"
-//                   variants={textVariants}
-//                 >
-//                   {data.title}
-//                 </motion.h1>
-//               </motion.div>
-//             </div>
-//           </motion.div>
-//         </motion.div>
-//       </div>
-
-//       <div ref={textRef} style={fadeUpStyle} className="w-full bg-[#0b0c10] py-8 md:py-10 lg:py-12">
-//         <div className="w-full max-w-7xl mx-auto px-6 text-center">
-//           <p className="text-gray-300 text-sm md:text-base leading-relaxed font-light tracking-wide max-w-4xl mx-auto">
-//             {data.description}
-//           </p>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }

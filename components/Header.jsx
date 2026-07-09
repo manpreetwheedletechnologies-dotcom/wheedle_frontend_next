@@ -121,12 +121,23 @@ export default function Header() {
     return pathname.startsWith(path);
   };
 
-  // Shared dropdown panel style
+  // Shared dropdown panel motion
   const dropdownMotion = {
-    initial: { opacity: 0, scale: 0.75, y: -10 },
+    initial: { opacity: 0, scale: 0.96, y: -8 },
     animate: { opacity: 1, scale: 1, y: 0 },
-    exit: { opacity: 0, scale: 0.75, y: -10 },
-    transition: { duration: 0.25, ease: 'easeOut' },
+    exit: { opacity: 0, scale: 0.97, y: -6 },
+    transition: { duration: 0.22, ease: [0.16, 1, 0.3, 1] },
+  };
+
+  // Stagger container for dropdown items
+  const listContainer = {
+    animate: {
+      transition: { staggerChildren: 0.035, delayChildren: 0.05 },
+    },
+  };
+  const listItem = {
+    initial: { opacity: 0, x: -6 },
+    animate: { opacity: 1, x: 0, transition: { duration: 0.2, ease: 'easeOut' } },
   };
 
   return (
@@ -164,8 +175,15 @@ export default function Header() {
                       <span className="block translate-y-0 transition duration-300 group-hover:-translate-y-[150%]">{link.name}</span>
                       <span className="absolute left-0 top-0 block translate-y-[150%] text-[#2934E4] transition duration-300 group-hover:translate-y-0">{link.name}</span>
                     </button>
-                    <button onClick={() => { setServicesOpen((v) => !v); setIndustriesOpen(false); }} className="ml-1 opacity-0 group-hover/services:opacity-100 transition">
-                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <button
+                      onClick={() => { setServicesOpen((v) => !v); setIndustriesOpen(false); }}
+                      className="ml-1 opacity-0 group-hover/services:opacity-100 transition"
+                      aria-label="Toggle services menu"
+                    >
+                      <svg
+                        className={`w-3 h-3 text-white transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`}
+                        fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"
+                      >
                         <path d="M6 9l6 6 6-6" />
                       </svg>
                     </button>
@@ -174,24 +192,67 @@ export default function Header() {
                         <motion.div
                           {...dropdownMotion}
                           style={{ transformOrigin: 'top left' }}
-                          className="absolute top-full left-0 mt-4 w-[440px] xl:w-[480px] bg-[#010509]/95 backdrop-blur-xl border border-[#0B2CC3]/50 rounded-2xl p-6 z-50 shadow-2xl shadow-blue-900/20"
+                          className="absolute top-full left-0 mt-5 w-[520px] xl:w-[580px] rounded-[22px] p-[1px] bg-gradient-to-br from-white/15 via-[#0B2CC3]/40 to-white/5 shadow-[0_25px_60px_-15px_rgba(0,10,60,0.7)] z-50"
                         >
-                          <div className="flex justify-start mb-5">
-                            <Link href="/our-services" onClick={() => setServicesOpen(false)} className="relative group">
-                              <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#C6D0FF] via-[#002EFF] to-[#6D87FF] p-[1.5px]" />
-                              <span className="relative z-10 flex items-center justify-center px-6 py-2 rounded-xl bg-gradient-to-r from-[#0B2CC3] via-[#4D6DFF] to-[#0B2CC3] text-white text-sm font-semibold group-hover:shadow-[0_0_20px_rgba(77,109,255,0.9)]">
-                                Our Services
-                              </span>
-                            </Link>
-                          </div>
-                          <div className="grid grid-cols-2 gap-x-10 gap-y-3">
-                            {services.map((service, i) => (
-                              <Link key={i} href={service.path} onClick={() => setServicesOpen(false)}
-                                className="relative inline-flex h-5 overflow-hidden text-sm font-medium text-white group">
-                                <span className="absolute left-0 top-0 transition duration-300 group-hover:-translate-y-[150%]">{service.label}</span>
-                                <span className="absolute left-0 top-0 translate-y-[150%] text-[#0B2CC3] transition duration-300 group-hover:translate-y-0">{service.label}</span>
-                              </Link>
-                            ))}
+                          <div className="relative rounded-[21px] bg-[#040814]/98 backdrop-blur-2xl overflow-hidden">
+                            {/* ambient glow */}
+                            <div className="pointer-events-none absolute -top-24 -left-16 w-64 h-64 bg-[#0B2CC3]/30 rounded-full blur-[80px]" />
+                            <div className="pointer-events-none absolute -bottom-20 -right-10 w-56 h-56 bg-[#4D6DFF]/15 rounded-full blur-[80px]" />
+
+                            <div className="relative flex">
+                              {/* Left rail */}
+                              <div className="w-[38%] border-r border-white/10 p-6 flex flex-col justify-between bg-white/[0.02]">
+                                <div>
+                                  <span className="text-[11px] tracking-[0.18em] uppercase text-[#7C8DFF] font-semibold">Capabilities</span>
+                                  <h3 className="text-white text-lg font-bold mt-2 leading-snug">What we build for you</h3>
+                                  <p className="text-white/50 text-xs mt-2 leading-relaxed">
+                                    End-to-end product, design &amp; engineering support tailored to your goals.
+                                  </p>
+                                </div>
+                                <Link
+                                  href="/our-services"
+                                  onClick={() => setServicesOpen(false)}
+                                  className="group/cta mt-6 inline-flex items-center gap-2 text-sm font-semibold text-white"
+                                >
+                                  <span className="relative">
+                                    View all services
+                                    <span className="absolute left-0 -bottom-0.5 h-[1.5px] w-full bg-[#4D6DFF] scale-x-0 origin-left transition-transform duration-300 group-hover/cta:scale-x-100" />
+                                  </span>
+                                  <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover/cta:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 5l7 7-7 7" />
+                                  </svg>
+                                </Link>
+                              </div>
+
+                              {/* Right list */}
+                              <motion.div
+                                variants={listContainer}
+                                initial="initial"
+                                animate="animate"
+                                className="w-[62%] p-4 max-h-[360px] overflow-y-auto"
+                              >
+                                {services.map((service, i) => (
+                                  <motion.div key={i} variants={listItem}>
+                                    <Link
+                                      href={service.path}
+                                      onClick={() => setServicesOpen(false)}
+                                      className="group/item flex items-center gap-3 rounded-xl px-3 py-2.5 transition-colors duration-200 hover:bg-white/[0.06]"
+                                    >
+                                      <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-white/25 transition-all duration-200 group-hover/item:bg-[#4D6DFF] group-hover/item:scale-125" />
+                                      <span className="text-sm text-white/85 transition-colors duration-200 group-hover/item:text-white">
+                                        {service.label}
+                                      </span>
+                                      <svg
+                                        className="ml-auto w-3.5 h-3.5 text-[#4D6DFF] opacity-0 -translate-x-1 transition-all duration-200 group-hover/item:opacity-100 group-hover/item:translate-x-0"
+                                        fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"
+                                      >
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                                      </svg>
+                                    </Link>
+                                  </motion.div>
+                                ))}
+                              </motion.div>
+                            </div>
                           </div>
                         </motion.div>
                       )}
@@ -211,8 +272,15 @@ export default function Header() {
                       <span className="block translate-y-0 transition duration-300 group-hover:-translate-y-[150%]">{link.name}</span>
                       <span className="absolute left-0 top-0 block translate-y-[150%] text-[#2934E4] transition duration-300 group-hover:translate-y-0">{link.name}</span>
                     </button>
-                    <button onClick={() => { setIndustriesOpen((v) => !v); setServicesOpen(false); }} className="ml-1 opacity-0 group-hover/industries:opacity-100 transition">
-                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <button
+                      onClick={() => { setIndustriesOpen((v) => !v); setServicesOpen(false); }}
+                      className="ml-1 opacity-0 group-hover/industries:opacity-100 transition"
+                      aria-label="Toggle industries menu"
+                    >
+                      <svg
+                        className={`w-3 h-3 text-white transition-transform duration-300 ${industriesOpen ? 'rotate-180' : ''}`}
+                        fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"
+                      >
                         <path d="M6 9l6 6 6-6" />
                       </svg>
                     </button>
@@ -221,18 +289,51 @@ export default function Header() {
                         <motion.div
                           {...dropdownMotion}
                           style={{ transformOrigin: 'top left' }}
-                          className="absolute top-full left-0 mt-4 w-[320px] bg-[#010509]/95 backdrop-blur-xl border border-[#0B2CC3]/50 rounded-2xl p-6 z-50 shadow-2xl shadow-blue-900/20"
+                          className="absolute top-full left-0 mt-5 w-[360px] rounded-[22px] p-[1px] bg-gradient-to-br from-white/15 via-[#0B2CC3]/40 to-white/5 shadow-[0_25px_60px_-15px_rgba(0,10,60,0.7)] z-50"
                         >
-                          <div className="flex justify-start mb-5">
-                          </div>
-                          <div className="flex flex-col gap-3">
-                            {industries.map((industry, i) => (
-                              <Link key={i} href={industry.path} onClick={() => setIndustriesOpen(false)}
-                                className="relative inline-flex h-5 overflow-hidden text-sm font-medium text-white group">
-                                <span className="absolute left-0 top-0 transition duration-300 group-hover:-translate-y-[150%]">{industry.label}</span>
-                                <span className="absolute left-0 top-0 translate-y-[150%] text-[#0B2CC3] transition duration-300 group-hover:translate-y-0">{industry.label}</span>
+                          <div className="relative rounded-[21px] bg-[#040814]/98 backdrop-blur-2xl overflow-hidden">
+                            <div className="pointer-events-none absolute -top-20 -right-14 w-56 h-56 bg-[#0B2CC3]/25 rounded-full blur-[70px]" />
+
+                            <div className="relative p-5">
+                              <div className="px-2 pb-3 mb-2 border-b border-white/10">
+                                <span className="text-[11px] tracking-[0.18em] uppercase text-[#7C8DFF] font-semibold">Industries</span>
+                                <p className="text-white/50 text-xs mt-1">Sectors we partner with</p>
+                              </div>
+
+                              <motion.div variants={listContainer} initial="initial" animate="animate" className="flex flex-col max-h-[300px] overflow-y-auto">
+                                {industries.map((industry, i) => (
+                                  <motion.div key={i} variants={listItem}>
+                                    <Link
+                                      href={industry.path}
+                                      onClick={() => setIndustriesOpen(false)}
+                                      className="group/item flex items-center gap-3 rounded-xl px-3 py-2.5 transition-colors duration-200 hover:bg-white/[0.06] capitalize"
+                                    >
+                                      <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-white/25 transition-all duration-200 group-hover/item:bg-[#4D6DFF] group-hover/item:scale-125" />
+                                      <span className="text-sm text-white/85 transition-colors duration-200 group-hover/item:text-white">
+                                        {industry.label}
+                                      </span>
+                                      <svg
+                                        className="ml-auto w-3.5 h-3.5 text-[#4D6DFF] opacity-0 -translate-x-1 transition-all duration-200 group-hover/item:opacity-100 group-hover/item:translate-x-0"
+                                        fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"
+                                      >
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                                      </svg>
+                                    </Link>
+                                  </motion.div>
+                                ))}
+                              </motion.div>
+
+                              <Link
+                                href="/industries"
+                                onClick={() => setIndustriesOpen(false)}
+                                className="group/cta mt-3 flex items-center justify-center gap-2 rounded-xl border border-white/10 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-white/[0.06]"
+                              >
+                                View all industries
+                                <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover/cta:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 5l7 7-7 7" />
+                                </svg>
                               </Link>
-                            ))}
+                            </div>
                           </div>
                         </motion.div>
                       )}

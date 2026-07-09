@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import axios from 'axios';
 import { motion, AnimatePresence } from 'framer-motion';
 import API_BASE_URL from '../lib/api';
@@ -13,10 +14,20 @@ const ContactModal = ({
   contactPhone,
   messagePlaceholder = 'Your message',
 }) => {
+  const [mounted, setMounted] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
   const [alert, setAlert] = useState({ show: false, type: '', message: '' });
   const [toastKey, setToastKey] = useState(0);
   const [loading, setLoading] = useState(false);
+
+  // mount check for portal + scroll lock while modal is open
+  useEffect(() => {
+    setMounted(true);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -91,8 +102,19 @@ const ContactModal = ({
     }
   };
 
-  return (
-    <section className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center px-4 sm:px-6">
+  // portal ke bina render hi mat karo (SSR/hydration safety)
+  if (!mounted) return null;
+
+  return createPortal(
+    <section
+      className="fixed inset-0 z-[9999] bg-black/90 flex items-center justify-center px-4 sm:px-6"
+      onClick={(e) => {
+        // sirf tab close karo jab click seedha backdrop (outside box) par ho
+        if (e.target === e.currentTarget) {
+          onClose();
+        }
+      }}
+    >
       <AnimatePresence>
         <motion.div
           key="contactModal"
@@ -101,6 +123,7 @@ const ContactModal = ({
           exit={{ opacity: 0, scale: 0.8, y: -20 }}
           transition={{ type: 'spring', stiffness: 300, damping: 25 }}
           className="relative w-full max-w-4xl bg-[#040010] border border-white/20 rounded-2xl p-6 sm:p-8 lg:p-12 flex flex-col lg:flex-row gap-8 max-h-[90vh] overflow-y-auto"
+          onClick={(e) => e.stopPropagation()}
         >
           <button onClick={onClose} className="absolute top-4 right-4 text-white/70 hover:text-white text-xl">✕</button>
 
@@ -150,7 +173,7 @@ const ContactModal = ({
           <AnimatePresence>
             {alert.show && (
               <motion.div key={toastKey} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 40 }} transition={{ duration: 0.3 }}
-                className="fixed bottom-6 right-6 z-50 w-[90vw] sm:w-[360px]">
+                className="fixed bottom-6 right-6 z-[9999] w-[90vw] sm:w-[360px]">
                 <div className={`relative overflow-hidden rounded-xl border p-4 text-white shadow-lg ${alert.type === 'success' ? 'bg-gradient-to-r from-[#0B2CC3] to-[#4D6DFF] border-[#6D87FF]' : 'bg-gradient-to-r from-[#7A0000] to-[#b30089] border-[#f44308]'}`}>
                   <p className="text-sm font-medium leading-snug">{alert.message}</p>
                   <motion.div initial={{ width: '100%' }} animate={{ width: '0%' }} transition={{ duration: 5, ease: 'linear' }} className="absolute bottom-0 left-0 h-[3px] bg-white/70" />
@@ -160,7 +183,8 @@ const ContactModal = ({
           </AnimatePresence>
         </motion.div>
       </AnimatePresence>
-    </section>
+    </section>,
+    document.body
   );
 };
 

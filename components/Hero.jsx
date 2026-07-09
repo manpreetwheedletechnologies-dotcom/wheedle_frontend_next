@@ -10,7 +10,7 @@ import API_BASE_URL from '../lib/api';
 import Badge from './Badge';
 import LogosData from '../lib/LogosData';
 
-const ContactModal = dynamic(() => import('./ContactModal'), { ssr: true });
+const ContactModal = dynamic(() => import('./ContactModal'), { ssr: false });
 
 export default function Hero({ openBot }) {
   const [openContact, setOpenContact] = useState(false);
@@ -34,6 +34,7 @@ export default function Hero({ openBot }) {
       <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
         <img src="/BG.png" alt="Background" className="w-full h-full object-cover opacity-20" />
       </div>
+
       <div className="relative w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 max-w-7xl mx-auto flex flex-col items-center text-center">
         <Badge text={heroData.badge} />
         <motion.h1 animate={{ y: [0, -15, 0] }} transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
@@ -42,9 +43,11 @@ export default function Hero({ openBot }) {
             <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
           ))}
         </motion.h1>
+
         <p className="text-[12px] sm:text-[10px] md:text-[14px] lg:text-[15px] xl:text-[16px] text-white leading-[1.7] lg:leading-[1.8] mb-8 sm:mb-9 md:mb-10 lg:mb-12 max-w-[90%] sm:max-w-[540px] md:max-w-[650px] lg:max-w-[750px] px-2 font-normal">
           {heroData.description}
         </p>
+
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 lg:gap-6 mb-10 sm:mb-12 md:mb-14 lg:mb-16 w-full sm:w-auto">
           <button
             className="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-6 sm:px-9 md:px-10 lg:px-11 h-[54px] sm:h-[56px] lg:h-[60px] bg-gradient-to-l from-[#1131c8] via-[#4b6bfd] to-[#1131c8] text-white text-[15px] sm:text-[16px] lg:text-[17px] font-medium rounded-full hover:bg-[#2563eb] transition-all shadow-md shadow-neutral-600 max-w-[400px] sm:max-w-none hover:bg-gradient-to-r hover:from-[#1131c8] hover:via-[#212ba9] hover:to-[#212ba9] border-2 border-blue-300"
@@ -57,11 +60,7 @@ export default function Hero({ openBot }) {
             <Button padding="28px" onClick={openBot}>Chat with Our AI Assistant</Button>
           </div>
         </div>
-        {openContact && (
-          <ContactModal onClose={() => setOpenContact(false)} title="Unlock Your Free Consultation"
-            description="" contactEmail="info@wheedletechnologies.ai"
-            contactPhone="+91 9717672561" messagePlaceholder="Tell us your message" />
-        )}
+
         <div className="relative w-full max-w-[1100px] px-0 mt-[-1%] mb-0 sm:mt-0 overflow-hidden">
           <img
             src={LogosData.dashboard}
@@ -70,6 +69,17 @@ export default function Hero({ openBot }) {
           />
         </div>
       </div>
+
+      {openContact && (
+        <ContactModal
+          onClose={() => setOpenContact(false)}
+          title="Unlock Your Free Consultation"
+          description=""
+          contactEmail="info@wheedletechnologies.ai"
+          contactPhone="+91 9717672561"
+          messagePlaceholder="Tell us your message"
+        />
+      )}
     </section>
   );
 }

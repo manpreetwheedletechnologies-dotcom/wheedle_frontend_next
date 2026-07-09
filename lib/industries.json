@@ -1,1147 +1,1408 @@
 {
-  "Healthcare-Industry": {
-    "heroSection": {
-  "badge": "Next-Gen Fintech Marketing",
-  "titleMain": "AI-Powered Digital Marketing Solutions",
-  "titlePrefix": "for the ",
-  "titleHighlight": "Finance Industry",
-  "tagline": "Build Trust. Generate Quality Leads. Accelerate Financial Growth.",
-  "description": "Today's customers research financial products online before making a decision. Whether they're looking for loans, insurance, investment advice, or financial planning, they expect fast responses, personalized experiences, and secure digital interactions.",
-  "buttons": [
-    { "label": "Start Growing Today", "url": "#", "style": "primary" },
-    { "label": "View Case Studies", "url": "#", "style": "secondary" }
-  ]
-},
-
-"challengesSection": {
-  "title": "Challenges in the Finance Industry",
-  "description": "Traditional methods are no longer sufficient in a landscape dominated by digital-first competitors and high customer expectations.",
-  "list": [
-    { "icon": "Users", "title": "Low-Quality Leads", "description": "Attracting traffic is easy; attracting qualified prospects ready to invest or borrow is the real challenge." },
-    { "icon": "ShieldCheck", "title": "Building Customer Trust", "description": "In finance, trust is everything. Establishing authority in a crowded digital space requires precision." },
-    { "icon": "UserCog", "title": "Manual Lead Management", "description": "Delayed responses lead to lost opportunities. Manual systems can't keep up with the 24/7 digital economy." },
-    { "icon": "Eye", "title": "Low Online Visibility", "description": "Without a dominant search presence, you're invisible to potential clients searching for financial solutions." },
-    { "icon": "Wallet", "title": "High Acquisition Costs", "description": "Inefficient marketing spends result in astronomical CPAs that erode your profitability margins." },
-    { "icon": "TrendingUp", "title": "Poor Conversion Rates", "description": "Website visitors aren't becoming clients. You need optimized funnels powered by behavioral intelligence." }
-  ]
-},
-    "servicesSection": {
-      "title": "Our Solutions for Financial Services ",
-      "titleHighlight": "",
-      "services": [
-        {
-          "title": "Search Engine",
-          "highlight": "Optimization (SEO)",
-          "description": "Increase visibility when potential clients search for:",
-          "list": [
-            "Financial Advisor Near Me",
-            "Home Loans & Mortgages",
-            "Wealth Management Services",
-            "Insurance Solutions",
-            "Tax & Accounting Services",
-            "Investment Planning"
-          ]
-        },
-        {
-          "title": "Website Design &",
-          "highlight": "Development",
-          "description": "Create Digital Experiences That Inspire Confidence",
-          "list": [
-            "Responsive & secure websites",
-            "Lead generation landing Pages",
-            "Appointment scheduling integration",
-            "Financial service portals",
-            "Conversion-focused design",
-            "Mobile-optimized UI"
-          ]
-        },
-        {
-          "title": "Reputation",
-          "highlight": "Management",
-          "description": "We help businesses strengthen their reputation:",
-          "list": [
-            "Review Generation Strategies",
-            "Brand Monitoring",
-            "Trust-Building Content",
-            "Online Credibility Enhancement",
-            "Customer Feedback"
-          ]
-        },
-        {
-          "title": "Social Media",
-          "highlight": "Marketing",
-          "description": "Educate, engage, and build authority with:",
-          "list": [
-            "Financial Literacy Content",
-            "Investment Insights",
-            "Market Updates",
-            "Client Success Stories",
-            "Brand Awareness Campaigns",
-            "Thought Leadership Content"
-          ]
-        },
-        {
-          "title": "Performance",
-          "highlight": "Marketing",
-          "description": "Reach high-intent prospects through:",
-          "list": [
-            "Google Ads",
-            "Meta Advertising",
-            "Re-marketing Campaigns",
-            "Lead Generation Funnels",
-            "Location-Based Campaigns",
-            "Conversion Optimization"
-          ]
-        },
-        {
-          "title": "Content",
-          "highlight": "Marketing",
-          "description": "Position your business as a trusted financial expert:",
-          "list": [
-            "Educational Blogs",
-            "Financial Guides",
-            "Industry Reports",
-            "Video Content",
-            "Newsletters",
-            "Case Studies"
-          ]
-        }
-      ]
-    },
-   
-   "whyChooseSection": {
-  "title": "Why Choose Wheedle AI?",
-  "highlight": { "icon": "ShieldCheck", "label": "Trusted Experts" },
-  "list": [
-    { "icon": "Target", "title": "Generate High-Intent Leads", "description": "Connect with customers actively searching for financial products." },
-    { "icon": "ShieldCheck", "title": "Build Customer Trust", "description": "Create a credible presence through information-dense, authority-building content." },
-    { "icon": "Zap", "title": "Faster Customer Engagement", "description": "Respond instantly with AI-powered chatbots and automated communication." },
-    { "icon": "TrendingUp", "title": "Maximize Marketing ROI", "description": "Track campaign performance with real-time analytics and optimized budget allocation." }
-  ]
-},
-
-
-"aiImpactSection": {
-  "title": "AI is Transforming Financial Services",
-  "description": "AI is reshaping the financial industry by enabling businesses to provide seamless digital experiences while driving sustainable business growth.",
-  "list": [
-    { "icon": "MousePointerClick", "color": "blue", "title": "Automate customer support", "description": "Hand off repetitive queries to intelligent bots, freeing humans for complex tasks." },
-    { "icon": "FileText", "color": "purple", "title": "Qualify and prioritize leads", "description": "Use predictive models to identify which prospects are most likely to convert." },
-    { "icon": "Target", "color": "orange", "title": "Personalize recommendations", "description": "Provide the right financial product to the right person at the right time." },
-    { "icon": "User", "color": "blue", "title": "Improve customer onboarding", "description": "Streamline KYC and documentation processes through intelligent automation." },
-    { "icon": "Zap", "color": "purple", "title": "Enhance operational efficiency", "description": "Reduce manual labor and human error across marketing and sales operations." },
-    { "icon": "ShieldCheck", "color": "orange", "title": "Increase customer retention", "description": "Predict churn before it happens and engage customers with value-added services." }
-  ]
-},
-
-"aboutSection": {
-  "label": "About Us",
-  "description": "At Wheedle Technologies AI, we understand that in finance, trust compounds like interest. Our solutions are engineered to help financial businesses attract better-fit customers, streamline every touchpoint of their journey, and build the kind of long-term relationships that drive durable growth."
-},
-
-"ctaCardSection": {
-  "title": "Ready to Grow Your Financial Business?",
-  "description": "Whether you're looking to generate more loan enquiries, increase insurance leads, attract investors, or strengthen your digital presence, Wheedle AI delivers intelligent marketing solutions.",
-  "button": {
-    "label": "Book a Free Consultation",
-    "url": "https://wheedletechnologies.tech/"
-  }
-},
-
-    "businessSection": {
-  "title": "AI-Powered Solutions for Financial Businesses",
-  "description": "We bridge the gap between traditional financial stability and the cutting-edge velocity of artificial intelligence.",
-  "items": [
-    {
-      "title": "Financial Digital Marketing",
-      "description": "Reach high-intent customers through SEO, paid advertising, social media marketing, and content strategies tailored specifically for the financial sector.",
-      "image": "/assets/images/financial-digital-marketing.png",
-      "imageAlt": "Financial trading chart dashboard",
-      "listType": "checklist",
-      "list": ["Precision Audience Targeting", "Compliant Creative Assets"]
-    },
-    {
-      "title": "SEO for Financial Businesses",
-      "description": "Improve visibility for high-intent searches. Our SEO strategies improve search rankings and drive qualified enquires from customers actively seeking financial solutions.",
-      "image": "/assets/images/financial-seo-analytics.png",
-      "imageAlt": "SEO analytics dashboard with magnifying glass over charts",
-      "listType": "tags",
-      "list": ["Personal Loans", "Home Loans", "Wealth Management"]
-    },
-    {
-      "title": "AI Chatbot",
-      "description": "Deliver instant support with an AI-powered chatbot that can answer product-related questions, capture qualified leads, and assist with document requirements 24/7.",
-      "image": "/assets/images/financial-ai-chatbot.png",
-      "imageAlt": "Neon AI chatbot robot assistant",
-      "listType": "none",
-      "list": []
-    }
-  ]
-},
-
-
-"servicesGridSection": {
-  "title": "Our Finance Marketing Services",
-  "description": "A full suite of digital weapons for the modern financial institution.",
-  "list": [
-    { "icon": "Zap", "title": "AI Digital Marketing" },
-    { "icon": "Search", "title": "Financial SEO" },
-    { "icon": "BarChart3", "title": "Google Ads Management" },
-    { "icon": "Search", "title": "Social Media Marketing" },
-    { "icon": "Globe", "title": "Website Development" },
-    { "icon": "MessageSquare", "title": "AI Chatbots" },
-    { "icon": "Zap", "title": "AI Lead Generation" },
-    { "icon": "Archive", "title": "Marketing Automation" },
-    { "icon": "Reply", "title": "WhatsApp Automation" },
-    { "icon": "FileEdit", "title": "Content Marketing" },
-    { "icon": "ShieldCheck", "title": "Reputation Management" },
-    { "icon": "BarChart3", "title": "Analytics & Reporting" }
-  ]
-},
-
-    "accelerateGrowth": {
-      "title": "Industry Challenges We Help Solve",
-      "description": "In an industry where credibility drives conversions, your digital presence can be your greatest competitive advantage. Wheedle helps financial services businesses attract more qualified clients, strengthen trust, and build lasting customer relationships through strategic digital solutions."
-    },
-    "ctaSection": {
-      "headline": "Ready to launch Smarter Campaigns?",
-      "subHeadline": "Generate your first AI-powered advertising strategy in minutes.",
-      "buttons": [
-        {
-          "label": "Start 3 Days Trial for Free",
-          "url": "#",
-          "style": "primary"
-        },
-        {
-          "label": "Watch the Demo",
-          "url": "#",
-          "style": "secondary"
-        }
-      ],
-      "finePrint": "Join 1,000+ businesses using Wheelee to plan, launch, and optimize winning ad campaigns. 3 days free trial • No credit card required"
-    },
-    "faqSection": {
-      "title": "Frequently asked questions",
-      "faqs": [
-        {
-          "id": 1,
-          "question": "Lorem ipsum dolor sit amet consectetur. Sagittis id.",
-          "answer": "Lorem ipsum dolor sit amet consectetur. In augue ipsum ultrices. Ac pharetra ultrices consectetur consequat tellus mattis. Nec aliquam ante sagittis dui sed egestas. Orci, nunc orci, semper nunc, arcu mauris. Nulla porttitor ornare metus tortor consequat eget orci. Mauris magna nisi, diam orci duis. Viverra neque ullamcorper dui, nisi eget, posuere proin. In nam nisi, scelerisque tortor nec. Nisi amet, pulvinar aenean turpis egestas nisi. Tristique. Nulla est, amet, nisi ut orci.",
-          "isOpen": true
-        },
-        {
-          "id": 2,
-          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "isOpen": false
-        },
-        {
-          "id": 3,
-          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "isOpen": false
-        },
-        {
-          "id": 4,
-          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "isOpen": false
-        },
-        {
-          "id": 5,
-          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "isOpen": false
-        }
-      ]
-    },
-    "newsletterSection": {
-      "title": "Stay connected with our newsletter",
-      "placeholderText": "Your email",
-      "buttonText": "Subscribe"
-    },
-    "footer": {
-      "brand": {
-        "name": "Wheelee.ai",
-        "description": "We're building the future of automated commerce. Wheelee.ai uses state-of-the-art Generative AI to manage world-class marketing & creation at scale."
-      },
-      "socialLinks": [
-        {
-          "platform": "Instagram",
-          "url": "#",
-          "icon": "instagram"
-        },
-        {
-          "platform": "Facebook",
-          "url": "#",
-          "icon": "facebook"
-        },
-        {
-          "platform": "Twitter",
-          "url": "#",
-          "icon": "twitter"
-        },
-        {
-          "platform": "YouTube",
-          "url": "#",
-          "icon": "youtube"
-        }
-      ],
-      "columns": [
-        {
-          "header": "Product",
-          "links": [
-            {
-              "label": "AI Ads",
-              "url": "#"
-            },
-            {
-              "label": "B2B Partner",
-              "url": "#"
-            },
-            {
-              "label": "AI Sale Bot",
-              "url": "#"
-            },
-            {
-              "label": "AI Website",
-              "url": "#"
-            },
-            {
-              "label": "Workflows",
-              "url": "#"
-            }
-          ]
-        },
-        {
-          "header": "Company",
-          "links": [
-            {
-              "label": "About Us",
-              "url": "#"
-            },
-            {
-              "label": "Blog",
-              "url": "#"
-            },
-            {
-              "label": "Contact",
-              "url": "#"
-            },
-            {
-              "label": "Security",
-              "url": "#"
-            }
-          ]
-        },
-        {
-          "header": "Community",
-          "links": [
-            {
-              "label": "Twitter",
-              "url": "#"
-            },
-            {
-              "label": "Linkedin",
-              "url": "#"
-            },
-            {
-              "label": "Discord",
-              "url": "#"
-            },
-            {
-              "label": "Tutorials",
-              "url": "#"
-            },
-            {
-              "label": "Service Status",
-              "url": "#"
-            }
-          ]
-        }
-      ],
-      "copyright": "© 2026 Wheelee Technologies Inc. All rights reserved. Built with ❤️ for Indian brands.",
-      "legalLinks": [
-        {
-          "label": "Terms",
-          "url": "#"
-        },
-        {
-          "label": "Privacy",
-          "url": "#"
-        },
-        {
-          "label": "Cookies",
-          "url": "#"
-        }
-      ]
-    }
-  },
-
-  
- 
- 
-  
- 
-  "Automotive-Industry":  {
-    "heroSection": {
-  "badge": "Next-Gen Fintech Marketing",
-  "titleMain": "AI-Powered Digital Marketing Solutions",
-  "titlePrefix": "for the ",
-  "titleHighlight": "Finance Industry",
-  "tagline": "Build Trust. Generate Quality Leads. Accelerate Financial Growth.",
-  "description": "Today's customers research financial products online before making a decision. Whether they're looking for loans, insurance, investment advice, or financial planning, they expect fast responses, personalized experiences, and secure digital interactions.",
-  "buttons": [
-    { "label": "Start Growing Today", "url": "#", "style": "primary" },
-    { "label": "View Case Studies", "url": "#", "style": "secondary" }
-  ]
-},
-
-"challengesSection": {
-  "title": "Challenges in the Finance Industry",
-  "description": "Traditional methods are no longer sufficient in a landscape dominated by digital-first competitors and high customer expectations.",
-  "list": [
-    { "icon": "Users", "title": "Low-Quality Leads", "description": "Attracting traffic is easy; attracting qualified prospects ready to invest or borrow is the real challenge." },
-    { "icon": "ShieldCheck", "title": "Building Customer Trust", "description": "In finance, trust is everything. Establishing authority in a crowded digital space requires precision." },
-    { "icon": "UserCog", "title": "Manual Lead Management", "description": "Delayed responses lead to lost opportunities. Manual systems can't keep up with the 24/7 digital economy." },
-    { "icon": "Eye", "title": "Low Online Visibility", "description": "Without a dominant search presence, you're invisible to potential clients searching for financial solutions." },
-    { "icon": "Wallet", "title": "High Acquisition Costs", "description": "Inefficient marketing spends result in astronomical CPAs that erode your profitability margins." },
-    { "icon": "TrendingUp", "title": "Poor Conversion Rates", "description": "Website visitors aren't becoming clients. You need optimized funnels powered by behavioral intelligence." }
-  ]
-},
-    "servicesSection": {
-      "title": "Our Solutions for Financial Services ",
-      "titleHighlight": "",
-      "services": [
-        {
-          "title": "Search Engine",
-          "highlight": "Optimization (SEO)",
-          "description": "Increase visibility when potential clients search for:",
-          "list": [
-            "Financial Advisor Near Me",
-            "Home Loans & Mortgages",
-            "Wealth Management Services",
-            "Insurance Solutions",
-            "Tax & Accounting Services",
-            "Investment Planning"
-          ]
-        },
-        {
-          "title": "Website Design &",
-          "highlight": "Development",
-          "description": "Create Digital Experiences That Inspire Confidence",
-          "list": [
-            "Responsive & secure websites",
-            "Lead generation landing Pages",
-            "Appointment scheduling integration",
-            "Financial service portals",
-            "Conversion-focused design",
-            "Mobile-optimized UI"
-          ]
-        },
-        {
-          "title": "Reputation",
-          "highlight": "Management",
-          "description": "We help businesses strengthen their reputation:",
-          "list": [
-            "Review Generation Strategies",
-            "Brand Monitoring",
-            "Trust-Building Content",
-            "Online Credibility Enhancement",
-            "Customer Feedback"
-          ]
-        },
-        {
-          "title": "Social Media",
-          "highlight": "Marketing",
-          "description": "Educate, engage, and build authority with:",
-          "list": [
-            "Financial Literacy Content",
-            "Investment Insights",
-            "Market Updates",
-            "Client Success Stories",
-            "Brand Awareness Campaigns",
-            "Thought Leadership Content"
-          ]
-        },
-        {
-          "title": "Performance",
-          "highlight": "Marketing",
-          "description": "Reach high-intent prospects through:",
-          "list": [
-            "Google Ads",
-            "Meta Advertising",
-            "Re-marketing Campaigns",
-            "Lead Generation Funnels",
-            "Location-Based Campaigns",
-            "Conversion Optimization"
-          ]
-        },
-        {
-          "title": "Content",
-          "highlight": "Marketing",
-          "description": "Position your business as a trusted financial expert:",
-          "list": [
-            "Educational Blogs",
-            "Financial Guides",
-            "Industry Reports",
-            "Video Content",
-            "Newsletters",
-            "Case Studies"
-          ]
-        }
-      ]
-    },
-   
-   "whyChooseSection": {
-  "title": "Why Choose Wheedle AI?",
-  "highlight": { "icon": "ShieldCheck", "label": "Trusted Experts" },
-  "list": [
-    { "icon": "Target", "title": "Generate High-Intent Leads", "description": "Connect with customers actively searching for financial products." },
-    { "icon": "ShieldCheck", "title": "Build Customer Trust", "description": "Create a credible presence through information-dense, authority-building content." },
-    { "icon": "Zap", "title": "Faster Customer Engagement", "description": "Respond instantly with AI-powered chatbots and automated communication." },
-    { "icon": "TrendingUp", "title": "Maximize Marketing ROI", "description": "Track campaign performance with real-time analytics and optimized budget allocation." }
-  ]
-},
-
-
-"aiImpactSection": {
-  "title": "AI is Transforming Financial Services",
-  "description": "AI is reshaping the financial industry by enabling businesses to provide seamless digital experiences while driving sustainable business growth.",
-  "list": [
-    { "icon": "MousePointerClick", "color": "blue", "title": "Automate customer support", "description": "Hand off repetitive queries to intelligent bots, freeing humans for complex tasks." },
-    { "icon": "FileText", "color": "purple", "title": "Qualify and prioritize leads", "description": "Use predictive models to identify which prospects are most likely to convert." },
-    { "icon": "Target", "color": "orange", "title": "Personalize recommendations", "description": "Provide the right financial product to the right person at the right time." },
-    { "icon": "User", "color": "blue", "title": "Improve customer onboarding", "description": "Streamline KYC and documentation processes through intelligent automation." },
-    { "icon": "Zap", "color": "purple", "title": "Enhance operational efficiency", "description": "Reduce manual labor and human error across marketing and sales operations." },
-    { "icon": "ShieldCheck", "color": "orange", "title": "Increase customer retention", "description": "Predict churn before it happens and engage customers with value-added services." }
-  ]
-},
-
-"aboutSection": {
-  "label": "About Us",
-  "description": "At Wheedle Technologies AI, we understand that in finance, trust compounds like interest. Our solutions are engineered to help financial businesses attract better-fit customers, streamline every touchpoint of their journey, and build the kind of long-term relationships that drive durable growth."
-},
-
-"ctaCardSection": {
-  "title": "Ready to Grow Your Financial Business?",
-  "description": "Whether you're looking to generate more loan enquiries, increase insurance leads, attract investors, or strengthen your digital presence, Wheedle AI delivers intelligent marketing solutions.",
-  "button": {
-    "label": "Book a Free Consultation",
-    "url": "https://wheedletechnologies.tech/"
-  }
-},
-
-    "businessSection": {
-  "title": "AI-Powered Solutions for Financial Businesses",
-  "description": "We bridge the gap between traditional financial stability and the cutting-edge velocity of artificial intelligence.",
-  "items": [
-    {
-      "title": "Financial Digital Marketing",
-      "description": "Reach high-intent customers through SEO, paid advertising, social media marketing, and content strategies tailored specifically for the financial sector.",
-      "image": "/assets/images/financial-digital-marketing.png",
-      "imageAlt": "Financial trading chart dashboard",
-      "listType": "checklist",
-      "list": ["Precision Audience Targeting", "Compliant Creative Assets"]
-    },
-    {
-      "title": "SEO for Financial Businesses",
-      "description": "Improve visibility for high-intent searches. Our SEO strategies improve search rankings and drive qualified enquires from customers actively seeking financial solutions.",
-      "image": "/assets/images/financial-seo-analytics.png",
-      "imageAlt": "SEO analytics dashboard with magnifying glass over charts",
-      "listType": "tags",
-      "list": ["Personal Loans", "Home Loans", "Wealth Management"]
-    },
-    {
-      "title": "AI Chatbot",
-      "description": "Deliver instant support with an AI-powered chatbot that can answer product-related questions, capture qualified leads, and assist with document requirements 24/7.",
-      "image": "/assets/images/financial-ai-chatbot.png",
-      "imageAlt": "Neon AI chatbot robot assistant",
-      "listType": "none",
-      "list": []
-    }
-  ]
-},
-
-
-"servicesGridSection": {
-  "title": "Our Finance Marketing Services",
-  "description": "A full suite of digital weapons for the modern financial institution.",
-  "list": [
-    { "icon": "Zap", "title": "AI Digital Marketing" },
-    { "icon": "Search", "title": "Financial SEO" },
-    { "icon": "BarChart3", "title": "Google Ads Management" },
-    { "icon": "Search", "title": "Social Media Marketing" },
-    { "icon": "Globe", "title": "Website Development" },
-    { "icon": "MessageSquare", "title": "AI Chatbots" },
-    { "icon": "Zap", "title": "AI Lead Generation" },
-    { "icon": "Archive", "title": "Marketing Automation" },
-    { "icon": "Reply", "title": "WhatsApp Automation" },
-    { "icon": "FileEdit", "title": "Content Marketing" },
-    { "icon": "ShieldCheck", "title": "Reputation Management" },
-    { "icon": "BarChart3", "title": "Analytics & Reporting" }
-  ]
-},
-
-    "accelerateGrowth": {
-      "title": "Industry Challenges We Help Solve",
-      "description": "In an industry where credibility drives conversions, your digital presence can be your greatest competitive advantage. Wheedle helps financial services businesses attract more qualified clients, strengthen trust, and build lasting customer relationships through strategic digital solutions."
-    },
-    "ctaSection": {
-      "headline": "Ready to launch Smarter Campaigns?",
-      "subHeadline": "Generate your first AI-powered advertising strategy in minutes.",
-      "buttons": [
-        {
-          "label": "Start 3 Days Trial for Free",
-          "url": "#",
-          "style": "primary"
-        },
-        {
-          "label": "Watch the Demo",
-          "url": "#",
-          "style": "secondary"
-        }
-      ],
-      "finePrint": "Join 1,000+ businesses using Wheelee to plan, launch, and optimize winning ad campaigns. 3 days free trial • No credit card required"
-    },
-    "faqSection": {
-      "title": "Frequently asked questions",
-      "faqs": [
-        {
-          "id": 1,
-          "question": "Lorem ipsum dolor sit amet consectetur. Sagittis id.",
-          "answer": "Lorem ipsum dolor sit amet consectetur. In augue ipsum ultrices. Ac pharetra ultrices consectetur consequat tellus mattis. Nec aliquam ante sagittis dui sed egestas. Orci, nunc orci, semper nunc, arcu mauris. Nulla porttitor ornare metus tortor consequat eget orci. Mauris magna nisi, diam orci duis. Viverra neque ullamcorper dui, nisi eget, posuere proin. In nam nisi, scelerisque tortor nec. Nisi amet, pulvinar aenean turpis egestas nisi. Tristique. Nulla est, amet, nisi ut orci.",
-          "isOpen": true
-        },
-        {
-          "id": 2,
-          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "isOpen": false
-        },
-        {
-          "id": 3,
-          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "isOpen": false
-        },
-        {
-          "id": 4,
-          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "isOpen": false
-        },
-        {
-          "id": 5,
-          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "isOpen": false
-        }
-      ]
-    },
-    "newsletterSection": {
-      "title": "Stay connected with our newsletter",
-      "placeholderText": "Your email",
-      "buttonText": "Subscribe"
-    },
-    "footer": {
-      "brand": {
-        "name": "Wheelee.ai",
-        "description": "We're building the future of automated commerce. Wheelee.ai uses state-of-the-art Generative AI to manage world-class marketing & creation at scale."
-      },
-      "socialLinks": [
-        {
-          "platform": "Instagram",
-          "url": "#",
-          "icon": "instagram"
-        },
-        {
-          "platform": "Facebook",
-          "url": "#",
-          "icon": "facebook"
-        },
-        {
-          "platform": "Twitter",
-          "url": "#",
-          "icon": "twitter"
-        },
-        {
-          "platform": "YouTube",
-          "url": "#",
-          "icon": "youtube"
-        }
-      ],
-      "columns": [
-        {
-          "header": "Product",
-          "links": [
-            {
-              "label": "AI Ads",
-              "url": "#"
-            },
-            {
-              "label": "B2B Partner",
-              "url": "#"
-            },
-            {
-              "label": "AI Sale Bot",
-              "url": "#"
-            },
-            {
-              "label": "AI Website",
-              "url": "#"
-            },
-            {
-              "label": "Workflows",
-              "url": "#"
-            }
-          ]
-        },
-        {
-          "header": "Company",
-          "links": [
-            {
-              "label": "About Us",
-              "url": "#"
-            },
-            {
-              "label": "Blog",
-              "url": "#"
-            },
-            {
-              "label": "Contact",
-              "url": "#"
-            },
-            {
-              "label": "Security",
-              "url": "#"
-            }
-          ]
-        },
-        {
-          "header": "Community",
-          "links": [
-            {
-              "label": "Twitter",
-              "url": "#"
-            },
-            {
-              "label": "Linkedin",
-              "url": "#"
-            },
-            {
-              "label": "Discord",
-              "url": "#"
-            },
-            {
-              "label": "Tutorials",
-              "url": "#"
-            },
-            {
-              "label": "Service Status",
-              "url": "#"
-            }
-          ]
-        }
-      ],
-      "copyright": "© 2026 Wheelee Technologies Inc. All rights reserved. Built with ❤️ for Indian brands.",
-      "legalLinks": [
-        {
-          "label": "Terms",
-          "url": "#"
-        },
-        {
-          "label": "Privacy",
-          "url": "#"
-        },
-        {
-          "label": "Cookies",
-          "url": "#"
-        }
-      ]
-    }
-  },
-
-
-
-
-
   "Financial": {
     "heroSection": {
-  "badge": "Next-Gen Fintech Marketing",
-  "titleMain": "AI-Powered Digital Marketing Solutions",
-  "titlePrefix": "for the ",
-  "titleHighlight": "Finance Industry",
-  "tagline": "Build Trust. Generate Quality Leads. Accelerate Financial Growth.",
-  "description": "Today's customers research financial products online before making a decision. Whether they're looking for loans, insurance, investment advice, or financial planning, they expect fast responses, personalized experiences, and secure digital interactions.",
-  "buttons": [
-    { "label": "Start Growing Today", "url": "#", "style": "primary" },
-    { "label": "View Case Studies", "url": "#", "style": "secondary" }
-  ]
-},
-
-"challengesSection": {
-  "title": "Challenges in the Finance Industry",
-  "description": "Traditional methods are no longer sufficient in a landscape dominated by digital-first competitors and high customer expectations.",
-  "list": [
-    { "icon": "Users", "title": "Low-Quality Leads", "description": "Attracting traffic is easy; attracting qualified prospects ready to invest or borrow is the real challenge." },
-    { "icon": "ShieldCheck", "title": "Building Customer Trust", "description": "In finance, trust is everything. Establishing authority in a crowded digital space requires precision." },
-    { "icon": "UserCog", "title": "Manual Lead Management", "description": "Delayed responses lead to lost opportunities. Manual systems can't keep up with the 24/7 digital economy." },
-    { "icon": "Eye", "title": "Low Online Visibility", "description": "Without a dominant search presence, you're invisible to potential clients searching for financial solutions." },
-    { "icon": "Wallet", "title": "High Acquisition Costs", "description": "Inefficient marketing spends result in astronomical CPAs that erode your profitability margins." },
-    { "icon": "TrendingUp", "title": "Poor Conversion Rates", "description": "Website visitors aren't becoming clients. You need optimized funnels powered by behavioral intelligence." }
-  ]
-},
-    "servicesSection": {
-      "title": "Our Solutions for Financial Services ",
-      "titleHighlight": "",
-      "services": [
-        {
-          "title": "Search Engine",
-          "highlight": "Optimization (SEO)",
-          "description": "Increase visibility when potential clients search for:",
-          "list": [
-            "Financial Advisor Near Me",
-            "Home Loans & Mortgages",
-            "Wealth Management Services",
-            "Insurance Solutions",
-            "Tax & Accounting Services",
-            "Investment Planning"
-          ]
-        },
-        {
-          "title": "Website Design &",
-          "highlight": "Development",
-          "description": "Create Digital Experiences That Inspire Confidence",
-          "list": [
-            "Responsive & secure websites",
-            "Lead generation landing Pages",
-            "Appointment scheduling integration",
-            "Financial service portals",
-            "Conversion-focused design",
-            "Mobile-optimized UI"
-          ]
-        },
-        {
-          "title": "Reputation",
-          "highlight": "Management",
-          "description": "We help businesses strengthen their reputation:",
-          "list": [
-            "Review Generation Strategies",
-            "Brand Monitoring",
-            "Trust-Building Content",
-            "Online Credibility Enhancement",
-            "Customer Feedback"
-          ]
-        },
-        {
-          "title": "Social Media",
-          "highlight": "Marketing",
-          "description": "Educate, engage, and build authority with:",
-          "list": [
-            "Financial Literacy Content",
-            "Investment Insights",
-            "Market Updates",
-            "Client Success Stories",
-            "Brand Awareness Campaigns",
-            "Thought Leadership Content"
-          ]
-        },
-        {
-          "title": "Performance",
-          "highlight": "Marketing",
-          "description": "Reach high-intent prospects through:",
-          "list": [
-            "Google Ads",
-            "Meta Advertising",
-            "Re-marketing Campaigns",
-            "Lead Generation Funnels",
-            "Location-Based Campaigns",
-            "Conversion Optimization"
-          ]
-        },
-        {
-          "title": "Content",
-          "highlight": "Marketing",
-          "description": "Position your business as a trusted financial expert:",
-          "list": [
-            "Educational Blogs",
-            "Financial Guides",
-            "Industry Reports",
-            "Video Content",
-            "Newsletters",
-            "Case Studies"
-          ]
-        }
-      ]
-    },
-   
-   "whyChooseSection": {
-  "title": "Why Choose Wheedle AI?",
-  "highlight": { "icon": "ShieldCheck", "label": "Trusted Experts" },
-  "list": [
-    { "icon": "Target", "title": "Generate High-Intent Leads", "description": "Connect with customers actively searching for financial products." },
-    { "icon": "ShieldCheck", "title": "Build Customer Trust", "description": "Create a credible presence through information-dense, authority-building content." },
-    { "icon": "Zap", "title": "Faster Customer Engagement", "description": "Respond instantly with AI-powered chatbots and automated communication." },
-    { "icon": "TrendingUp", "title": "Maximize Marketing ROI", "description": "Track campaign performance with real-time analytics and optimized budget allocation." }
-  ]
-},
-
-
-"aiImpactSection": {
-  "title": "AI is Transforming Financial Services",
-  "description": "AI is reshaping the financial industry by enabling businesses to provide seamless digital experiences while driving sustainable business growth.",
-  "list": [
-    { "icon": "MousePointerClick", "color": "blue", "title": "Automate customer support", "description": "Hand off repetitive queries to intelligent bots, freeing humans for complex tasks." },
-    { "icon": "FileText", "color": "purple", "title": "Qualify and prioritize leads", "description": "Use predictive models to identify which prospects are most likely to convert." },
-    { "icon": "Target", "color": "orange", "title": "Personalize recommendations", "description": "Provide the right financial product to the right person at the right time." },
-    { "icon": "User", "color": "blue", "title": "Improve customer onboarding", "description": "Streamline KYC and documentation processes through intelligent automation." },
-    { "icon": "Zap", "color": "purple", "title": "Enhance operational efficiency", "description": "Reduce manual labor and human error across marketing and sales operations." },
-    { "icon": "ShieldCheck", "color": "orange", "title": "Increase customer retention", "description": "Predict churn before it happens and engage customers with value-added services." }
-  ]
-},
-
-"aboutSection": {
-  "label": "About Us",
-  "description": "At Wheedle Technologies AI, we understand that in finance, trust compounds like interest. Our solutions are engineered to help financial businesses attract better-fit customers, streamline every touchpoint of their journey, and build the kind of long-term relationships that drive durable growth."
-},
-
-"ctaCardSection": {
-  "title": "Ready to Grow Your Financial Business?",
-  "description": "Whether you're looking to generate more loan enquiries, increase insurance leads, attract investors, or strengthen your digital presence, Wheedle AI delivers intelligent marketing solutions.",
-  "button": {
-    "label": "Book a Free Consultation",
-    "url": "https://wheedletechnologies.tech/"
-  }
-},
-
-    "businessSection": {
-  "title": "AI-Powered Solutions for Financial Businesses",
-  "description": "We bridge the gap between traditional financial stability and the cutting-edge velocity of artificial intelligence.",
-  "items": [
-    {
-      "title": "Financial Digital Marketing",
-      "description": "Reach high-intent customers through SEO, paid advertising, social media marketing, and content strategies tailored specifically for the financial sector.",
-      "image": "/assets/images/financial-digital-marketing.png",
-      "imageAlt": "Financial trading chart dashboard",
-      "listType": "checklist",
-      "list": ["Precision Audience Targeting", "Compliant Creative Assets"]
-    },
-    {
-      "title": "SEO for Financial Businesses",
-      "description": "Improve visibility for high-intent searches. Our SEO strategies improve search rankings and drive qualified enquires from customers actively seeking financial solutions.",
-      "image": "/assets/images/financial-seo-analytics.png",
-      "imageAlt": "SEO analytics dashboard with magnifying glass over charts",
-      "listType": "tags",
-      "list": ["Personal Loans", "Home Loans", "Wealth Management"]
-    },
-    {
-      "title": "AI Chatbot",
-      "description": "Deliver instant support with an AI-powered chatbot that can answer product-related questions, capture qualified leads, and assist with document requirements 24/7.",
-      "image": "/assets/images/financial-ai-chatbot.png",
-      "imageAlt": "Neon AI chatbot robot assistant",
-      "listType": "none",
-      "list": []
-    }
-  ]
-},
-
-
-"servicesGridSection": {
-  "title": "Our Finance Marketing Services",
-  "description": "A full suite of digital weapons for the modern financial institution.",
-  "list": [
-    { "icon": "Zap", "title": "AI Digital Marketing" },
-    { "icon": "Search", "title": "Financial SEO" },
-    { "icon": "BarChart3", "title": "Google Ads Management" },
-    { "icon": "Search", "title": "Social Media Marketing" },
-    { "icon": "Globe", "title": "Website Development" },
-    { "icon": "MessageSquare", "title": "AI Chatbots" },
-    { "icon": "Zap", "title": "AI Lead Generation" },
-    { "icon": "Archive", "title": "Marketing Automation" },
-    { "icon": "Reply", "title": "WhatsApp Automation" },
-    { "icon": "FileEdit", "title": "Content Marketing" },
-    { "icon": "ShieldCheck", "title": "Reputation Management" },
-    { "icon": "BarChart3", "title": "Analytics & Reporting" }
-  ]
-},
-
-    "accelerateGrowth": {
-      "title": "Industry Challenges We Help Solve",
-      "description": "In an industry where credibility drives conversions, your digital presence can be your greatest competitive advantage. Wheedle helps financial services businesses attract more qualified clients, strengthen trust, and build lasting customer relationships through strategic digital solutions."
-    },
-    "ctaSection": {
-      "headline": "Ready to launch Smarter Campaigns?",
-      "subHeadline": "Generate your first AI-powered advertising strategy in minutes.",
+      "badge": "Next-Gen Fintech Marketing",
+      "titleMain": "AI-Powered Digital Marketing Solutions",
+      "titlePrefix": "for the ",
+      "titleHighlight": "Finance Industry",
+      "tagline": "Build Trust. Generate Quality Leads. Accelerate Financial Growth.",
+      "description": "Today's customers research financial products online before making a decision. Whether they're looking for loans, insurance, investment advice, or financial planning, they expect fast responses, personalized experiences, and secure digital interactions.",
       "buttons": [
         {
-          "label": "Start 3 Days Trial for Free",
-          "url": "#",
+          "label": "Start Growing Today",
+          "url": "https://wheedletechnologies.tech/",
           "style": "primary"
         },
         {
-          "label": "Watch the Demo",
+          "label": "View Case Studies",
           "url": "#",
           "style": "secondary"
         }
-      ],
-      "finePrint": "Join 1,000+ businesses using Wheelee to plan, launch, and optimize winning ad campaigns. 3 days free trial • No credit card required"
+      ]
     },
-    "faqSection": {
-      "title": "Frequently asked questions",
-      "faqs": [
+    "challengesSection": {
+      "title": "Challenges in the Finance Industry",
+      "description": "Traditional methods are no longer sufficient in a landscape dominated by digital-first competitors and high customer expectations.",
+      "list": [
         {
-          "id": 1,
-          "question": "Lorem ipsum dolor sit amet consectetur. Sagittis id.",
-          "answer": "Lorem ipsum dolor sit amet consectetur. In augue ipsum ultrices. Ac pharetra ultrices consectetur consequat tellus mattis. Nec aliquam ante sagittis dui sed egestas. Orci, nunc orci, semper nunc, arcu mauris. Nulla porttitor ornare metus tortor consequat eget orci. Mauris magna nisi, diam orci duis. Viverra neque ullamcorper dui, nisi eget, posuere proin. In nam nisi, scelerisque tortor nec. Nisi amet, pulvinar aenean turpis egestas nisi. Tristique. Nulla est, amet, nisi ut orci.",
-          "isOpen": true
+          "icon": "Users",
+          "title": "Low-Quality Leads",
+          "description": "Attracting traffic is easy; attracting qualified prospects ready to invest or borrow is the real challenge."
         },
         {
-          "id": 2,
-          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "isOpen": false
+          "icon": "ShieldCheck",
+          "title": "Building Customer Trust",
+          "description": "In finance, trust is everything. Establishing authority in a crowded digital space requires precision."
         },
         {
-          "id": 3,
-          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "isOpen": false
+          "icon": "UserCog",
+          "title": "Manual Lead Management",
+          "description": "Delayed responses lead to lost opportunities. Manual systems can't keep up with the 24/7 digital economy."
         },
         {
-          "id": 4,
-          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "isOpen": false
+          "icon": "Eye",
+          "title": "Low Online Visibility",
+          "description": "Without a dominant search presence, you're invisible to potential clients searching for financial solutions."
         },
         {
-          "id": 5,
-          "question": "Lorem ipsum dolor sit amet consectetur. Viverra.",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "isOpen": false
+          "icon": "Wallet",
+          "title": "High Acquisition Costs",
+          "description": "Inefficient marketing spends result in astronomical CPAs that erode your profitability margins."
+        },
+        {
+          "icon": "TrendingUp",
+          "title": "Poor Conversion Rates",
+          "description": "Website visitors aren't becoming clients. You need optimized funnels powered by behavioral intelligence."
         }
       ]
     },
-    "newsletterSection": {
-      "title": "Stay connected with our newsletter",
-      "placeholderText": "Your email",
-      "buttonText": "Subscribe"
-    },
-    "footer": {
-      "brand": {
-        "name": "Wheelee.ai",
-        "description": "We're building the future of automated commerce. Wheelee.ai uses state-of-the-art Generative AI to manage world-class marketing & creation at scale."
+    "whyChooseSection": {
+      "title": "Why Choose Wheedle AI?",
+      "highlight": {
+        "icon": "ShieldCheck",
+        "label": "Trusted Experts"
       },
-      "socialLinks": [
+      "list": [
         {
-          "platform": "Instagram",
-          "url": "#",
-          "icon": "instagram"
+          "icon": "Target",
+          "title": "Generate High-Intent Leads",
+          "description": "Connect with customers actively searching for financial products."
         },
         {
-          "platform": "Facebook",
-          "url": "#",
-          "icon": "facebook"
+          "icon": "ShieldCheck",
+          "title": "Build Customer Trust",
+          "description": "Create a credible presence through information-dense, authority-building content."
         },
         {
-          "platform": "Twitter",
-          "url": "#",
-          "icon": "twitter"
+          "icon": "Zap",
+          "title": "Faster Customer Engagement",
+          "description": "Respond instantly with AI-powered chatbots and automated communication."
         },
         {
-          "platform": "YouTube",
-          "url": "#",
-          "icon": "youtube"
-        }
-      ],
-      "columns": [
-        {
-          "header": "Product",
-          "links": [
-            {
-              "label": "AI Ads",
-              "url": "#"
-            },
-            {
-              "label": "B2B Partner",
-              "url": "#"
-            },
-            {
-              "label": "AI Sale Bot",
-              "url": "#"
-            },
-            {
-              "label": "AI Website",
-              "url": "#"
-            },
-            {
-              "label": "Workflows",
-              "url": "#"
-            }
-          ]
-        },
-        {
-          "header": "Company",
-          "links": [
-            {
-              "label": "About Us",
-              "url": "#"
-            },
-            {
-              "label": "Blog",
-              "url": "#"
-            },
-            {
-              "label": "Contact",
-              "url": "#"
-            },
-            {
-              "label": "Security",
-              "url": "#"
-            }
-          ]
-        },
-        {
-          "header": "Community",
-          "links": [
-            {
-              "label": "Twitter",
-              "url": "#"
-            },
-            {
-              "label": "Linkedin",
-              "url": "#"
-            },
-            {
-              "label": "Discord",
-              "url": "#"
-            },
-            {
-              "label": "Tutorials",
-              "url": "#"
-            },
-            {
-              "label": "Service Status",
-              "url": "#"
-            }
-          ]
-        }
-      ],
-      "copyright": "© 2026 Wheelee Technologies Inc. All rights reserved. Built with ❤️ for Indian brands.",
-      "legalLinks": [
-        {
-          "label": "Terms",
-          "url": "#"
-        },
-        {
-          "label": "Privacy",
-          "url": "#"
-        },
-        {
-          "label": "Cookies",
-          "url": "#"
+          "icon": "TrendingUp",
+          "title": "Maximize Marketing ROI",
+          "description": "Track campaign performance with real-time analytics and optimized budget allocation."
         }
       ]
+    },
+    "aiImpactSection": {
+      "title": "AI is Transforming Financial Services",
+      "description": "AI is reshaping the financial industry by enabling businesses to provide seamless digital experiences while driving sustainable business growth.",
+      "list": [
+        {
+          "icon": "MousePointerClick",
+          "color": "blue",
+          "title": "Automate customer support",
+          "description": "Hand off repetitive queries to intelligent bots, freeing humans for complex tasks."
+        },
+        {
+          "icon": "FileText",
+          "color": "purple",
+          "title": "Qualify and prioritize leads",
+          "description": "Use predictive models to identify which prospects are most likely to convert."
+        },
+        {
+          "icon": "Target",
+          "color": "orange",
+          "title": "Personalize recommendations",
+          "description": "Provide the right financial product to the right person at the right time."
+        },
+        {
+          "icon": "User",
+          "color": "blue",
+          "title": "Improve customer onboarding",
+          "description": "Streamline KYC and documentation processes through intelligent automation."
+        },
+        {
+          "icon": "Zap",
+          "color": "purple",
+          "title": "Enhance operational efficiency",
+          "description": "Reduce manual labor and human error across marketing and sales operations."
+        },
+        {
+          "icon": "ShieldCheck",
+          "color": "orange",
+          "title": "Increase customer retention",
+          "description": "Predict churn before it happens and engage customers with value-added services."
+        }
+      ]
+    },
+    "aboutSection": {
+      "label": "About Us",
+      "description": "At Wheedle Technologies AI, we understand that in finance, trust compounds like interest. Our solutions are engineered to help financial businesses attract better-fit customers, streamline every touchpoint of their journey, and build the kind of long-term relationships that drive durable growth."
+    },
+    "ctaCardSection": {
+      "title": "Ready to Grow Your Financial Business?",
+      "description": "Whether you're looking to generate more loan enquiries, increase insurance leads, attract investors, or strengthen your digital presence, Wheedle AI delivers intelligent marketing solutions.",
+      "button": {
+        "label": "Book a Free Consultation",
+        "url": "https://wheedletechnologies.tech/"
+      }
+    },
+    "businessSection": {
+      "title": "AI-Powered Solutions for Financial Businesses",
+      "description": "We bridge the gap between traditional financial stability and the cutting-edge velocity of artificial intelligence.",
+      "items": [
+        {
+          "title": "Financial Digital Marketing",
+          "description": "Reach high-intent customers through SEO, paid advertising, social media marketing, and content strategies tailored specifically for the financial sector.",
+          "image": "/indus/fin_1.png",
+          "imageAlt": "Financial trading chart dashboard",
+          "listType": "checklist",
+          "list": [
+            "Precision Audience Targeting",
+            "Compliant Creative Assets"
+          ]
+        },
+        {
+          "title": "SEO for Financial Businesses",
+          "description": "Improve visibility for high-intent searches. Our SEO strategies improve search rankings and drive qualified enquires from customers actively seeking financial solutions.",
+          "image": "/indus/fin_2.png",
+          "imageAlt": "SEO analytics dashboard with magnifying glass over charts",
+          "listType": "tags",
+          "list": [
+            "Personal Loans",
+            "Home Loans",
+            "Wealth Management"
+          ]
+        },
+        {
+          "title": "AI Chatbot",
+          "description": "Deliver instant support with an AI-powered chatbot that can answer product-related questions, capture qualified leads, and assist with document requirements 24/7.",
+          "image": "/indus/fin_3.png",
+          "imageAlt": "Neon AI chatbot robot assistant",
+          "listType": "none",
+          "list": []
+        }
+      ]
+    },
+    "servicesGridSection": {
+      "title": "Our Finance Marketing Services",
+      "description": "A full suite of digital weapons for the modern financial institution.",
+      "list": [
+        {
+          "icon": "Zap",
+          "title": "AI Digital Marketing"
+        },
+        {
+          "icon": "Search",
+          "title": "Financial SEO"
+        },
+        {
+          "icon": "BarChart3",
+          "title": "Google Ads Management"
+        },
+        {
+          "icon": "Search",
+          "title": "Social Media Marketing"
+        },
+        {
+          "icon": "Globe",
+          "title": "Website Development"
+        },
+        {
+          "icon": "MessageSquare",
+          "title": "AI Chatbots"
+        },
+        {
+          "icon": "Zap",
+          "title": "AI Lead Generation"
+        },
+        {
+          "icon": "Archive",
+          "title": "Marketing Automation"
+        },
+        {
+          "icon": "Reply",
+          "title": "WhatsApp Automation"
+        },
+        {
+          "icon": "FileEdit",
+          "title": "Content Marketing"
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Reputation Management"
+        },
+        {
+          "icon": "BarChart3",
+          "title": "Analytics & Reporting"
+        }
+      ]
+    }
+  },
+  "Manufacturing": {
+    "heroSection": {
+      "badge": "Next-Gen Manufacturing Marketing",
+      "titleMain": "AI-Powered Digital Marketing Solutions",
+      "titlePrefix": "for the ",
+      "titleHighlight": "Manufacturing Industry",
+      "tagline": "Generate Qualified B2B Leads. Increase RFQs. Accelerate Manufacturing Growth.",
+      "description": "Today's industrial buyers research suppliers, compare capabilities, and evaluate manufacturers online before making purchasing decisions. Whether they're looking for an OEM Manufacturer India, Industrial Equipment Manufacturer, or Contract Manufacturing Services, your digital presence plays a key role in winning new business. Wheedle AI combines AI, automation, and digital marketing to help manufacturers increase visibility, attract qualified buyers, generate more RFQs, and achieve sustainable business growth.",
+      "buttons": [
+        {
+          "label": "Start Growing Today",
+          "url": "https://wheedletechnologies.tech/",
+          "style": "primary"
+        },
+        {
+          "label": "View Case Studies",
+          "url": "#",
+          "style": "secondary"
+        }
+      ]
+    },
+    "challengesSection": {
+      "title": "Challenges in the Manufacturing Industry",
+      "description": "Manufacturing businesses operate in a highly competitive market where visibility, responsiveness, and digital engagement directly impact growth.",
+      "list": [
+        {
+          "icon": "Eye",
+          "title": "Limited Online Visibility",
+          "description": "Without a strong digital presence, manufacturers struggle to reach buyers searching for trusted suppliers and manufacturing partners."
+        },
+        {
+          "icon": "Users",
+          "title": "Difficulty Reaching Qualified Buyers",
+          "description": "Connecting with procurement teams, distributors, OEMs, and industrial buyers remains a significant challenge."
+        },
+        {
+          "icon": "Clock",
+          "title": "Long Buying Cycles",
+          "description": "Complex evaluation and approval processes often delay enquiries, RFQs, and purchasing decisions."
+        },
+        {
+          "icon": "TrendingUp",
+          "title": "Low Website Conversion Rates",
+          "description": "Many manufacturing websites generate traffic but fail to convert visitors into qualified B2B enquiries."
+        },
+        {
+          "icon": "Building2",
+          "title": "Dependence on Traditional Sales",
+          "description": "Relying only on exhibitions, referrals, and offline sales limits scalability and long-term growth."
+        },
+        {
+          "icon": "UserCog",
+          "title": "Manual Lead Management",
+          "description": "Slow responses and fragmented follow-ups can result in missed opportunities and lost business."
+        }
+      ]
+    },
+    "businessSection": {
+      "title": "AI-Powered Solutions for Manufacturing Businesses",
+      "description": "Helping manufacturers attract industrial buyers, automate customer engagement, and generate high-quality B2B enquiries.",
+      "items": [
+        {
+          "title": "Manufacturing Digital Marketing",
+          "description": "As a Manufacturing Digital Marketing Agency, we help manufacturers improve visibility through SEO, Google Ads, LinkedIn Marketing, and Manufacturing Export Marketing strategies designed to reach qualified buyers and decision-makers.",
+          "image": "/indus/menu_1.png",
+          "imageAlt": "Manufacturing digital marketing dashboard",
+          "listType": "checklist",
+          "list": [
+            "Industry-Specific Marketing Strategies",
+            "Targeted B2B Buyer Acquisition",
+            "Higher Quality Enquiries"
+          ]
+        },
+        {
+          "title": "Manufacturing SEO",
+          "description": "Our Manufacturing SEO strategies help your business rank for high-intent searches and connect with buyers actively looking for manufacturing suppliers and industrial partners.",
+          "image": "/indus/menu_2.png",
+          "imageAlt": "Manufacturing SEO analytics",
+          "listType": "tags",
+          "list": [
+            "Manufacturing Company India",
+            "Industrial Equipment Manufacturer",
+            "Sheet Metal Fabrication",
+            "Contract Manufacturing Services"
+          ]
+        },
+        {
+          "title": "AI Chatbots & B2B Lead Generation",
+          "description": "Respond instantly to product enquiries, RFQs, and technical questions with AI-powered assistants designed specifically for manufacturing businesses.",
+          "image": "/indus/menu_3.png",
+          "imageAlt": "AI chatbot for manufacturing businesses",
+          "listType": "none",
+          "list": []
+        }
+      ]
+    },
+    "servicesGridSection": {
+      "title": "Our Manufacturing Services",
+      "description": "An integrated suite of AI-powered solutions designed for manufacturing growth.",
+      "list": [
+        {
+          "icon": "Zap",
+          "title": "AI Digital Marketing"
+        },
+        {
+          "icon": "Search",
+          "title": "Manufacturing SEO"
+        },
+        {
+          "icon": "BarChart3",
+          "title": "Google Ads Management"
+        },
+        {
+          "icon": "Briefcase",
+          "title": "LinkedIn Marketing"
+        },
+        {
+          "icon": "Settings",
+          "title": "Marketing Automation"
+        },
+        {
+          "icon": "Globe",
+          "title": "Website Design & Development"
+        },
+        {
+          "icon": "MessageSquare",
+          "title": "AI Chatbots"
+        },
+        {
+          "icon": "Target",
+          "title": "B2B Lead Generation"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "WhatsApp Automation"
+        },
+        {
+          "icon": "FileText",
+          "title": "Content Marketing"
+        },
+        {
+          "icon": "Factory",
+          "title": "Industrial Branding"
+        },
+        {
+          "icon": "BarChart3",
+          "title": "Analytics & Performance Reporting"
+        }
+      ]
+    },
+    "whyChooseSection": {
+      "title": "Why Choose Wheedle AI?",
+      "highlight": {
+        "icon": "Factory",
+        "label": "Industrial Experts"
+      },
+      "list": [
+        {
+          "icon": "Target",
+          "title": "Generate Qualified B2B Leads",
+          "description": "Our targeted campaigns reach the right decision-makers in the industrial sector, from procurement managers to technical directors."
+        },
+        {
+          "icon": "TrendingUp",
+          "title": "Increase Brand Visibility",
+          "description": "Establish your manufacturing company as a global leader with a powerful digital presence and thought-leadership content."
+        },
+        {
+          "icon": "Zap",
+          "title": "Automate Lead Management",
+          "description": "AI-driven workflows ensure every technical inquiry is handled instantly, reducing response times and increasing conversion rates."
+        },
+        {
+          "icon": "Users",
+          "title": "Build Stronger Customer Relationships",
+          "description": "Consistent engagement through digital channels helps nurture long-term partnerships and repeat business from industrial buyers."
+        },
+        {
+          "icon": "BarChart3",
+          "title": "Maximize Marketing ROI",
+          "description": "Data-driven strategies and AI optimization ensure your marketing budget is spent efficiently to deliver the highest impact."
+        }
+      ]
+    },
+    "aiImpactSection": {
+      "title": "AI is Transforming Manufacturing",
+      "description": "AI helps manufacturers modernize sales, improve customer engagement, and accelerate business growth.",
+      "list": [
+        {
+          "icon": "Target",
+          "color": "blue",
+          "title": "Generate Qualified B2B Leads",
+          "description": "Identify buyers with the highest purchase intent."
+        },
+        {
+          "icon": "FileText",
+          "color": "purple",
+          "title": "Automate RFQ Management",
+          "description": "Respond instantly to product enquiries and RFQs."
+        },
+        {
+          "icon": "Users",
+          "color": "orange",
+          "title": "Improve Distributor Engagement",
+          "description": "Strengthen communication with dealers and channel partners."
+        },
+        {
+          "icon": "User",
+          "color": "blue",
+          "title": "Personalize Buyer Experiences",
+          "description": "Deliver relevant product information based on customer requirements."
+        },
+        {
+          "icon": "Zap",
+          "color": "purple",
+          "title": "Improve Operational Efficiency",
+          "description": "Reduce manual work across marketing, sales, and customer support."
+        },
+        {
+          "icon": "BarChart3",
+          "color": "orange",
+          "title": "Optimize Marketing Performance",
+          "description": "Use AI insights to improve ROI and campaign performance."
+        }
+      ]
+    },
+    "aboutSection": {
+      "label": "About Us",
+      "description": "Wheedle Technologies AI is a dedicated AI-powered digital marketing agency for manufacturing companies, industrial suppliers, and factories. We specialize in helping businesses in the industrial sector grow by combining advanced AI technology with proven digital marketing strategies to generate qualified leads and drive industrial excellence."
+    },
+    "ctaCardSection": {
+      "title": "Ready to Generate More Industrial Leads?",
+      "description": "Whether you're looking to attract industrial buyers, increase RFQs, expand your manufacturing business, or strengthen your digital presence, Wheedle AI delivers AI-powered marketing and automation solutions designed for measurable growth.",
+      "button": {
+        "label": "Book a Free Consultation",
+        "url": "https://wheedletechnologies.tech/"
+      }
+    }
+  },
+  "MSME": {
+    "heroSection": {
+      "badge": "Next-Gen MSME Growth Solutions",
+      "titleMain": "AI-Powered Digital Marketing Solutions",
+      "titlePrefix": "for ",
+      "titleHighlight": "MSMEs",
+      "tagline": "Empowering Small Businesses with Smarter Digital Growth",
+      "description": "MSMEs are the backbone of the economy, but competing with larger brands requires more than traditional marketing. From generating quality leads to building an online presence, businesses need intelligent solutions that deliver measurable results. Wheedle AI helps MSMEs leverage AI-powered marketing, automation, SEO, and lead generation to attract customers, increase visibility, and accelerate growth.",
+      "buttons": [
+        {
+          "label": "Start Growing Today",
+          "url": "https://wheedletechnologies.tech/",
+          "style": "primary"
+        },
+        {
+          "label": "View Case Studies",
+          "url": "#",
+          "style": "secondary"
+        }
+      ]
+    },
+    "challengesSection": {
+      "title": "Challenges MSMEs Face",
+      "description": "Traditional business methods alone are no longer enough in an increasingly digital marketplace.",
+      "list": [
+        {
+          "icon": "Wallet",
+          "title": "Limited Marketing Budgets",
+          "description": "Growing businesses often struggle to compete with enterprises that have significantly larger marketing investments."
+        },
+        {
+          "icon": "Eye",
+          "title": "Low Online Visibility",
+          "description": "Without a strong digital presence, customers may never discover your products or services."
+        },
+        {
+          "icon": "Target",
+          "title": "Inconsistent Lead Generation",
+          "description": "Generating a steady flow of qualified enquiries remains a challenge for many MSMEs."
+        },
+        {
+          "icon": "UserCog",
+          "title": "Manual Customer Follow-ups",
+          "description": "Delayed responses and manual communication often result in lost opportunities."
+        },
+        {
+          "icon": "Award",
+          "title": "Limited Brand Awareness",
+          "description": "Building trust and recognition in a crowded market requires consistent digital engagement."
+        },
+        {
+          "icon": "TrendingUp",
+          "title": "Difficulty Scaling Operations",
+          "description": "Business growth becomes difficult without automation and streamlined processes."
+        }
+      ]
+    },
+    "businessSection": {
+      "title": "AI-Powered Solutions for MSMEs Businesses",
+      "description": "Helping MSMEs attract customers, automate customer engagement, and generate high-quality leads.",
+      "items": [
+        {
+          "title": "Digital Marketing for MSMEs",
+          "description": "Build a strong online presence with integrated digital marketing strategies including SEO, social media marketing, paid advertising, content marketing, and website optimization.",
+          "image": "/indus/msme_1.png",
+          "imageAlt": "Digital marketing for MSMEs",
+          "listType": "checklist",
+          "list": [
+            "Precision Audience Targeting",
+            "Cost-Effective Growth Strategies"
+          ]
+        },
+        {
+          "title": "SEO for Local & Growing Businesses",
+          "description": "Improve visibility for customers actively searching for your products and services. Our SEO strategies help businesses rank higher on search engines and attract high-intent customers ready to buy.",
+          "image": "/indus/msme_2.png",
+          "imageAlt": "SEO for MSMEs",
+          "listType": "tags",
+          "list": [
+            "Best Business Near Me",
+            "Small Business Solutions",
+            "Local Service Provider",
+            "Business Growth Services"
+          ]
+        },
+        {
+          "title": "AI Chatbot for Customer Engagement",
+          "description": "Deliver instant customer support with AI-powered chatbots that answer queries, capture leads, schedule appointments, and provide 24/7 assistance.",
+          "image": "/indus/msme_3.png",
+          "imageAlt": "AI chatbot for MSMEs",
+          "listType": "none",
+          "list": []
+        }
+      ]
+    },
+    "servicesGridSection": {
+      "title": "Our MSME Growth Services",
+      "description": "A complete suite of AI-powered digital solutions designed for growing businesses.",
+      "list": [
+        {
+          "icon": "Zap",
+          "title": "AI Digital Marketing"
+        },
+        {
+          "icon": "Search",
+          "title": "Search Engine Optimization"
+        },
+        {
+          "icon": "BarChart3",
+          "title": "Google Ads Management"
+        },
+        {
+          "icon": "Share2",
+          "title": "Social Media Marketing"
+        },
+        {
+          "icon": "Globe",
+          "title": "Website Design & Development"
+        },
+        {
+          "icon": "MessageSquare",
+          "title": "AI Chatbots"
+        },
+        {
+          "icon": "Target",
+          "title": "Lead Generation"
+        },
+        {
+          "icon": "Settings",
+          "title": "Marketing Automation"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "WhatsApp Automation"
+        },
+        {
+          "icon": "FileText",
+          "title": "Content Marketing"
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Reputation Management"
+        },
+        {
+          "icon": "BarChart3",
+          "title": "Analytics & Reporting"
+        }
+      ]
+    },
+    "whyChooseSection": {
+      "title": "Why Choose Wheedle AI?",
+      "highlight": {
+        "icon": "BadgeCheck",
+        "label": "Trusted Experts"
+      },
+      "list": [
+        {
+          "icon": "Wallet",
+          "title": "Affordable Growth Solutions",
+          "description": "High-impact marketing tailored for small and medium enterprises."
+        },
+        {
+          "icon": "Target",
+          "title": "Generate More Qualified Leads",
+          "description": "Targeted campaigns that connect with customers ready to buy."
+        },
+        {
+          "icon": "TrendingUp",
+          "title": "Build a Strong Digital Brand",
+          "description": "Consistent, professional presence across all digital channels."
+        },
+        {
+          "icon": "Zap",
+          "title": "Automate Business Operations",
+          "description": "Free up time by automating follow-ups and customer interactions."
+        }
+      ]
+    },
+    "aiImpactSection": {
+      "title": "AI is Transforming MSME Growth",
+      "description": "AI is enabling small and medium businesses to compete with larger enterprises while improving efficiency and profitability.",
+      "list": [
+        {
+          "icon": "MessageSquare",
+          "color": "blue",
+          "title": "Automate Customer Support",
+          "description": "Handle routine customer queries instantly with intelligent AI assistants."
+        },
+        {
+          "icon": "Target",
+          "color": "purple",
+          "title": "Generate Better Leads",
+          "description": "Identify and prioritize prospects most likely to convert."
+        },
+        {
+          "icon": "User",
+          "color": "orange",
+          "title": "Personalize Customer Experiences",
+          "description": "Deliver relevant products and services to the right customer at the right time."
+        },
+        {
+          "icon": "Zap",
+          "color": "blue",
+          "title": "Improve Operational Efficiency",
+          "description": "Reduce manual effort across sales, marketing, and customer support."
+        },
+        {
+          "icon": "BarChart3",
+          "color": "purple",
+          "title": "Optimize Marketing Budgets",
+          "description": "Allocate spending more effectively with data-driven insights."
+        },
+        {
+          "icon": "RefreshCw",
+          "color": "orange",
+          "title": "Increase Customer Retention",
+          "description": "Engage customers proactively and build long-term loyalty."
+        }
+      ]
+    },
+    "aboutSection": {
+      "label": "About Us",
+      "description": "At Wheedle Technologies AI, we empower MSMEs with AI-powered digital marketing, automation, SEO, and lead generation solutions. Our mission is to help small and medium businesses strengthen their online presence, generate qualified leads, streamline operations, and achieve sustainable business growth."
+    },
+    "ctaCardSection": {
+      "title": "Ready to Grow Your MSME?",
+      "description": "Whether you're looking to generate more qualified leads, increase brand visibility, attract new customers, or strengthen your digital presence, Wheedle AI delivers intelligent marketing solutions designed for measurable growth.",
+      "button": {
+        "label": "Book a Free Consultation",
+        "url": "https://wheedletechnologies.tech/"
+      }
+    }
+  },
+  "Healthcare": {
+    "heroSection": {
+      "badge": "Next-Gen Healthcare Growth",
+      "titleMain": "AI-Powered Digital Marketing Solutions",
+      "titlePrefix": "for ",
+      "titleHighlight": "Modern Healthcare Providers",
+      "tagline": "Attract More Patients, Streamline Operations, and Deliver Exceptional Care Experiences",
+      "description": "Today's patients search online before choosing a healthcare provider. We help hospitals, clinics, diagnostic centres, and dental practices increase visibility, attract qualified patients, automate patient journeys, and drive sustainable growth with AI-powered digital marketing.",
+      "buttons": [
+        {
+          "label": "Start Growing Today",
+          "url": "https://wheedletechnologies.tech/",
+          "style": "primary"
+        },
+        {
+          "label": "View Case Studies",
+          "url": "#",
+          "style": "secondary"
+        }
+      ]
+    },
+    "challengesSection": {
+      "title": "Challenges in the Healthcare Industry",
+      "description": "Traditional methods are no longer sufficient in a landscape dominated by digital-first competitors and high patient expectations.",
+      "list": [
+        {
+          "icon": "Eye",
+          "title": "Limited Online Visibility",
+          "description": "Patients can't choose your practice if they can't find you through search engines or local listings."
+        },
+        {
+          "icon": "Users",
+          "title": "Inconsistent Patient Enquiries",
+          "description": "Generating a steady flow of qualified patient enquiries and appointment bookings remains a challenge."
+        },
+        {
+          "icon": "Settings",
+          "title": "Manual Administrative Processes",
+          "description": "Manual workflows reduce efficiency and consume valuable staff time."
+        },
+        {
+          "icon": "Clock",
+          "title": "Delayed Patient Responses",
+          "description": "Slow response times often result in missed opportunities and lower patient satisfaction."
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Building Patient Trust",
+          "description": "Trust, credibility, and online reputation influence healthcare decisions long before the first consultation."
+        },
+        {
+          "icon": "TrendingUp",
+          "title": "Rising Patient Acquisition Costs",
+          "description": "Increasing competition continues to raise the cost of acquiring new patients."
+        }
+      ]
+    },
+    "businessSection": {
+      "title": "AI-Powered Solutions for Healthcare Providers",
+      "description": "Helping healthcare organizations attract patients, automate operations, and deliver better healthcare experiences.",
+      "items": [
+        {
+          "title": "Healthcare Digital Marketing",
+          "description": "Grow your practice with a Healthcare Digital Marketing Agency that combines SEO, Google Ads, content marketing, and Hospital Social Media Marketing strategies to increase visibility, generate qualified patient enquiries, and strengthen your online presence.",
+          "image": "/indus/health_1.png",
+          "imageAlt": "Healthcare digital marketing dashboard",
+          "listType": "checklist",
+          "list": [
+            "Increased Patient Visibility",
+            "Stronger Brand Authority",
+            "Higher Appointment Bookings"
+          ]
+        },
+        {
+          "title": "Healthcare SEO",
+          "description": "Our Medical SEO Services India help healthcare providers rank higher for high-intent searches and connect with patients actively looking for healthcare services.",
+          "image": "/indus/health_2.png",
+          "imageAlt": "Healthcare SEO analytics",
+          "listType": "tags",
+          "list": [
+            "Dental Clinic Near Me",
+            "Best Dentist in India",
+            "Teeth Braces Treatment Cost",
+            "Painless Root Canal Near Me"
+          ]
+        },
+        {
+          "title": "AI Chatbot & AI Appointment Booking",
+          "description": "Deliver instant support with AI-powered assistants that help patients book appointments, answer common questions, share consultation timings, and provide treatment information—available 24/7.",
+          "image": "/indus/health_3.png",
+          "imageAlt": "AI chatbot for healthcare",
+          "listType": "none",
+          "list": []
+        }
+      ]
+    },
+    "servicesGridSection": {
+      "title": "Our Healthcare Marketing Services",
+      "description": "An integrated suite of AI-powered solutions designed for healthcare growth.",
+      "list": [
+        {
+          "icon": "Zap",
+          "title": "AI Digital Marketing"
+        },
+        {
+          "icon": "Search",
+          "title": "Healthcare SEO"
+        },
+        {
+          "icon": "BarChart3",
+          "title": "Google Ads Management"
+        },
+        {
+          "icon": "Share2",
+          "title": "Hospital Social Media Marketing"
+        },
+        {
+          "icon": "Settings",
+          "title": "Marketing Automation"
+        },
+        {
+          "icon": "Globe",
+          "title": "Website Design & Development"
+        },
+        {
+          "icon": "MessageSquare",
+          "title": "AI Chatbots"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "AI Appointment Booking"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "WhatsApp Automation"
+        },
+        {
+          "icon": "FileText",
+          "title": "Content Marketing"
+        },
+        {
+          "icon": "Star",
+          "title": "Patient Review Management"
+        },
+        {
+          "icon": "BarChart3",
+          "title": "Analytics & Performance Reporting"
+        }
+      ]
+    },
+    "whyChooseSection": {
+      "title": "Why Choose Wheedle AI?",
+      "highlight": {
+        "icon": "ShieldCheck",
+        "label": "Healthcare Experts"
+      },
+      "list": [
+        {
+          "icon": "HeartHandshake",
+          "title": "Patient-Centric Growth",
+          "description": "Marketing strategies designed to build trust and educate patients, not just sell."
+        },
+        {
+          "icon": "Zap",
+          "title": "Instant Enquiry Response",
+          "description": "AI agents respond to patient questions instantly, significantly improving conversion rates."
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "HIPAA-Compliant Engagement",
+          "description": "Safe and secure digital automation that respects patient privacy and data standards."
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Automated Clinic Operations",
+          "description": "Reduce staff workload by automating bookings, reminders, and follow-up care instructions."
+        }
+      ]
+    },
+    "aiImpactSection": {
+      "title": "AI is Transforming Healthcare",
+      "description": "AI helps healthcare providers improve efficiency, enhance patient engagement, and deliver better digital experiences.",
+      "list": [
+        {
+          "icon": "MessageSquare",
+          "color": "blue",
+          "title": "Respond Faster",
+          "description": "Provide instant responses to patient enquiries."
+        },
+        {
+          "icon": "CalendarCheck",
+          "color": "purple",
+          "title": "Automate Appointment Booking",
+          "description": "Reduce manual scheduling and improve convenience with AI Appointment Booking."
+        },
+        {
+          "icon": "Users",
+          "color": "orange",
+          "title": "Improve Patient Engagement",
+          "description": "Maintain consistent communication throughout the patient journey."
+        },
+        {
+          "icon": "User",
+          "color": "blue",
+          "title": "Personalized Patient Experiences",
+          "description": "Deliver relevant healthcare information and recommendations."
+        },
+        {
+          "icon": "TrendingUp",
+          "color": "purple",
+          "title": "Increase Patient Conversions",
+          "description": "Convert more enquiries into confirmed appointments."
+        },
+        {
+          "icon": "BarChart3",
+          "color": "orange",
+          "title": "Smarter Business Decisions",
+          "description": "Optimize marketing performance using real-time analytics and AI insights."
+        }
+      ]
+    },
+    "aboutSection": {
+      "label": "About Us",
+      "description": "At Wheedle Technologies AI, we believe that healthcare is built on trust. Our mission is to bridge the gap between world-class medical expertise and the digital tools required to reach patients today. We help modern providers build strong digital brands that reflect their commitment to care."
+    },
+    "ctaCardSection": {
+      "title": "Ready to Build the Future of Patient Acquisition?",
+      "description": "Whether you're looking to fill your dental chairs, increase specialized medical enquiries, or strengthen your clinic's digital presence, Wheedle AI delivers intelligent growth solutions.",
+      "button": {
+        "label": "Book a Free Consultation",
+        "url": "https://wheedletechnologies.tech/"
+      }
+    }
+  },
+  "Automotive": {
+    "heroSection": {
+      "badge": "The Future of Automotive Retail is Already Here",
+      "titleMain": "AI-Powered Digital Marketing Solutions",
+      "titlePrefix": "for the ",
+      "titleHighlight": "Automotive Industry",
+      "tagline": "Generate More Enquiries. Increase Test Drives. Build Long-Term Customer Relationships.",
+      "description": "Today's buyers begin their vehicle journey online. They compare models, explore features, review financing options, and shortlist dealerships before visiting a showroom. Wheedle AI helps dealerships, automobile brands, EV manufacturers, and service centres attract high-intent customers, automate engagement, and drive measurable business growth.",
+      "buttons": [
+        {
+          "label": "Start Growing Today",
+          "url": "https://wheedletechnologies.tech/",
+          "style": "primary"
+        },
+        {
+          "label": "View Case Studies",
+          "url": "#",
+          "style": "secondary"
+        }
+      ]
+    },
+    "challengesSection": {
+      "title": "Challenges in the Automotive Industry",
+      "description": "Modern vehicle buyers expect fast responses, personalized experiences, and a seamless buying journey.",
+      "list": [
+        {
+          "icon": "Users",
+          "title": "Low Buying Intent",
+          "description": "Generating enquiries is easy, but converting them into qualified buyers remains a challenge."
+        },
+        {
+          "icon": "Globe",
+          "title": "Showroom Traffic is Moving Online",
+          "description": "Most customers research vehicles online before visiting a dealership."
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Missed Test Drive Opportunities",
+          "description": "Delayed scheduling and follow-ups often result in lost sales opportunities."
+        },
+        {
+          "icon": "Clock",
+          "title": "Slow Customer Response",
+          "description": "Manual processes lead to delayed responses and missed enquiries."
+        },
+        {
+          "icon": "RefreshCw",
+          "title": "Limited Customer Retention",
+          "description": "Many automotive businesses struggle to stay connected with customers after the purchase."
+        },
+        {
+          "icon": "TrendingUp",
+          "title": "Rising Advertising Costs",
+          "description": "Increasing competition continues to raise customer acquisition costs."
+        }
+      ]
+    },
+    "whyChooseSection": {
+      "title": "Why Choose Wheedle AI?",
+      "highlight": {
+        "icon": "Car",
+        "label": "Automotive Experts"
+      },
+      "list": [
+        {
+          "icon": "Target",
+          "title": "Generate Qualified Leads",
+          "description": "Marketing strategies designed to filter high-intent buyers ready to make a purchase decision."
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Increase Test Drive Bookings",
+          "description": "AI agents respond instantly to schedule visits, ensuring no potential buyer is left waiting."
+        },
+        {
+          "icon": "Zap",
+          "title": "Faster Sales Process",
+          "description": "Streamline the journey from digital enquiry to physical showroom visit through automation."
+        },
+        {
+          "icon": "BarChart3",
+          "title": "Data-Driven Growth",
+          "description": "Track every campaign dollar to actual showroom visits and vehicle sales for maximum ROI."
+        }
+      ]
+    },
+    "aiImpactSection": {
+      "title": "AI is Transforming the Automotive Industry",
+      "description": "AI helps automotive businesses attract buyers, automate engagement, and improve operational efficiency.",
+      "list": [
+        {
+          "icon": "Target",
+          "color": "blue",
+          "title": "Capture & Qualify Leads",
+          "description": "Identify high-intent buyers automatically."
+        },
+        {
+          "icon": "MessageSquare",
+          "color": "purple",
+          "title": "Deliver Instant Customer Support",
+          "description": "Provide 24/7 assistance with AI-powered conversations."
+        },
+        {
+          "icon": "CalendarCheck",
+          "color": "orange",
+          "title": "Automate Test Drive & Service Bookings",
+          "description": "Reduce manual work and improve customer convenience."
+        },
+        {
+          "icon": "User",
+          "color": "blue",
+          "title": "Personalize Every Customer Journey",
+          "description": "Recommend vehicles and services based on customer preferences."
+        },
+        {
+          "icon": "RefreshCw",
+          "color": "purple",
+          "title": "Improve Customer Retention",
+          "description": "Keep customers engaged with automated reminders and follow-ups."
+        },
+        {
+          "icon": "BarChart3",
+          "color": "orange",
+          "title": "Optimize Marketing Performance",
+          "description": "Use real-time analytics and AI insights to maximize campaign performance."
+        }
+      ]
+    },
+    "aboutSection": {
+      "label": "About Us",
+      "description": "At Wheedle Technologies AI, we help dealerships, automobile brands, EV businesses, and service centres grow through AI-powered digital marketing, automation, and lead generation. Our solutions are designed to increase enquiries, improve customer engagement, and drive sustainable business growth in a rapidly evolving automotive landscape."
+    },
+    "ctaCardSection": {
+      "title": "Ready to Accelerate Your Automotive Business?",
+      "description": "Whether you're looking to generate more vehicle enquiries, increase Car Test Drive Booking Online, grow your dealership, or strengthen after-sales engagement, Wheedle AI delivers intelligent growth solutions.",
+      "button": {
+        "label": "Book an Automotive Growth Strategy Session",
+        "url": "https://wheedletechnologies.tech/"
+      }
+    },
+    "businessSection": {
+      "title": "AI-Powered Solutions for Automotive Businesses",
+      "description": "Helping dealerships and automotive brands attract buyers, automate customer engagement, and increase conversions.",
+      "items": [
+        {
+          "title": "Automotive Digital Marketing",
+          "description": "Grow your business with Car Dealership Digital Marketing, EV Digital Marketing Strategy India, Google Ads, Meta Advertising, and Social Media Marketing designed to increase brand visibility, generate qualified leads, and improve vehicle sales.",
+          "image": "/indus/fin_1.png",
+          "imageAlt": "Automotive digital marketing dashboard",
+          "listType": "checklist",
+          "list": [
+            "More Qualified Vehicle Enquiries",
+            "Increased Brand Visibility",
+            "Higher Sales Opportunities"
+          ]
+        },
+        {
+          "title": "Automotive SEO",
+          "description": "Our Automotive SEO strategies help your business rank higher for high-intent searches and connect with customers ready to buy or service their vehicles.",
+          "image": "/indus/fin_2.png",
+          "imageAlt": "Automotive SEO analytics dashboard",
+          "listType": "tags",
+          "list": [
+            "Car Showroom Near Me",
+            "Best Car Dealership in City",
+            "Car Service Center Near Me",
+            "Electric Vehicle Dealer"
+          ]
+        },
+        {
+          "title": "AI Chatbot & Test Drive Booking Automation",
+          "description": "Improve customer engagement with AI-powered assistants that instantly respond to enquiries and guide customers through every stage of the buying journey.",
+          "image": "/indus/fin_3.png",
+          "imageAlt": "AI automotive chatbot assisting customers",
+          "listType": "none",
+          "list": []
+        }
+      ]
+    },
+    "servicesGridSection": {
+      "title": "Our Automotive Marketing Services",
+      "description": "A complete suite of AI-powered solutions designed for modern automotive businesses.",
+      "list": [
+        {
+          "icon": "Zap",
+          "title": "AI Digital Marketing"
+        },
+        {
+          "icon": "Search",
+          "title": "Automotive SEO"
+        },
+        {
+          "icon": "BarChart3",
+          "title": "Google Ads Management"
+        },
+        {
+          "icon": "Megaphone",
+          "title": "Meta Advertising"
+        },
+        {
+          "icon": "Share2",
+          "title": "Social Media Marketing"
+        },
+        {
+          "icon": "Globe",
+          "title": "Website Design & Development"
+        },
+        {
+          "icon": "MessageSquare",
+          "title": "AI Chatbots"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Test Drive Booking Automation"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "WhatsApp Automation"
+        },
+        {
+          "icon": "Database",
+          "title": "CRM Integration"
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Reputation Management"
+        },
+        {
+          "icon": "BarChart3",
+          "title": "Performance Analytics"
+        }
+      ]
+    }
+  },
+  "Education": {
+    "heroSection": {
+      "badge": "The Future of Education Industry is Already Here",
+      "titleMain": "AI-Powered Digital Marketing Solutions",
+      "titlePrefix": "for the ",
+      "titleHighlight": "Education Industry",
+      "tagline": "Turn Student Interest into Admissions with AI-Powered Growth.",
+      "description": "Today's students and parents research, compare, and engage with educational institutions online before making admission decisions. Wheedle AI helps schools, colleges, universities, coaching institutes, and EdTech brands attract qualified enquiries, automate student engagement, and convert interest into enrollments with AI-powered marketing.",
+      "buttons": [
+        {
+          "label": "Start Growing Today",
+          "url": "https://wheedletechnologies.tech/",
+          "style": "primary"
+        },
+        {
+          "label": "View Case Studies",
+          "url": "#",
+          "style": "secondary"
+        }
+      ]
+    },
+    "challengesSection": {
+      "title": "Challenges in the Education Industry",
+      "description": "Educational institutions need more than visibility—they need meaningful engagement that converts enquiries into admissions.",
+      "list": [
+        {
+          "icon": "Target",
+          "title": "Low Admission Conversions",
+          "description": "Many students show interest, but only a small percentage complete the enrollment process."
+        },
+        {
+          "icon": "TrendingUp",
+          "title": "Rising Competition",
+          "description": "Students compare institutions across search engines, social media, and digital platforms before making a decision."
+        },
+        {
+          "icon": "UserCog",
+          "title": "Manual Admission Management",
+          "description": "Handling enquiries manually slows response times and reduces admission opportunities."
+        },
+        {
+          "icon": "Clock",
+          "title": "Slow Student Responses",
+          "description": "Delayed communication often causes students to choose competing institutions."
+        },
+        {
+          "icon": "GitBranch",
+          "title": "Disconnected Admission Journey",
+          "description": "Inconsistent communication creates friction throughout the enrollment process."
+        },
+        {
+          "icon": "Wallet",
+          "title": "Rising Student Acquisition Costs",
+          "description": "Increasing competition makes it more expensive to generate quality admissions."
+        }
+      ]
+    },
+    "businessSection": {
+      "title": "AI-Powered Solutions for Education Businesses",
+      "description": "Helping educational institutions attract students, automate engagement, and increase admissions.",
+      "items": [
+        {
+          "title": "Education Digital Marketing",
+          "description": "As an AI Powered Education Marketing partner, we combine SEO, Google Ads, Meta Advertising, and performance marketing to help educational institutions increase visibility, attract qualified students, and strengthen their digital presence.",
+          "image": "/indus/edu_1.png",
+          "imageAlt": "Education digital marketing dashboard",
+          "listType": "checklist",
+          "list": [
+            "Increased Visibility",
+            "Better Student Engagement",
+            "Higher Admission Intent"
+          ]
+        },
+        {
+          "title": "Education SEO",
+          "description": "Our Education SEO strategies help your institution rank for high-intent student searches and connect with prospective learners actively exploring educational opportunities.",
+          "image": "/indus/edu_2.png",
+          "imageAlt": "Education SEO analytics",
+          "listType": "tags",
+          "list": [
+            "Best School Near Me",
+            "Top University India",
+            "BBA College Admission 2025",
+            "E-Learning SEO Services"
+          ]
+        },
+        {
+          "title": "AI Chatbots & Student Admission Automation",
+          "description": "Provide instant support to students and parents with AI-powered admission assistants available 24/7.",
+          "image": "/indus/edu_3.png",
+          "imageAlt": "AI chatbot for student admissions",
+          "listType": "none",
+          "list": []
+        }
+      ]
+    },
+    "servicesGridSection": {
+      "title": "Our Education Marketing Services",
+      "description": "A complete suite of AI-powered solutions for educational institutions.",
+      "list": [
+        {
+          "icon": "Zap",
+          "title": "AI Digital Marketing"
+        },
+        {
+          "icon": "Search",
+          "title": "Education SEO"
+        },
+        {
+          "icon": "BarChart3",
+          "title": "Google Ads Management"
+        },
+        {
+          "icon": "Megaphone",
+          "title": "Meta Advertising"
+        },
+        {
+          "icon": "Share2",
+          "title": "Social Media Marketing"
+        },
+        {
+          "icon": "Globe",
+          "title": "Website Design & Development"
+        },
+        {
+          "icon": "MessageSquare",
+          "title": "AI Chatbots"
+        },
+        {
+          "icon": "GraduationCap",
+          "title": "Admission Lead Generation"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "WhatsApp Automation"
+        },
+        {
+          "icon": "FileText",
+          "title": "Content Marketing"
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Online Reputation Management"
+        },
+        {
+          "icon": "BarChart3",
+          "title": "Analytics & Performance Tracking"
+        }
+      ]
+    },
+    "whyChooseSection": {
+      "title": "Why Choose Wheedle AI?",
+      "highlight": {
+        "icon": "GraduationCap",
+        "label": "Education Experts"
+      },
+      "list": [
+        {
+          "icon": "TrendingUp",
+          "title": "Increase Student Enquiries",
+          "description": "Boost the volume of high-quality applications through targeted digital strategies."
+        },
+        {
+          "icon": "Zap",
+          "title": "Faster Student Engagement",
+          "description": "Reduce response time to zero with intelligent AI automation."
+        },
+        {
+          "icon": "Target",
+          "title": "Improve Admission Conversions",
+          "description": "Turn student interest into enrollments with data-driven admission funnels."
+        },
+        {
+          "icon": "BarChart3",
+          "title": "Higher Quality Leads",
+          "description": "Focus on attracting prospective students who are more likely to complete admissions."
+        }
+      ]
+    },
+    "aiImpactSection": {
+      "title": "AI is Transforming Education",
+      "description": "AI helps educational institutions automate admissions, personalize student engagement, and optimize enrollment growth.",
+      "list": [
+        {
+          "icon": "MessageSquare",
+          "color": "blue",
+          "title": "Automate Admission Enquiries",
+          "description": "Scale your reach without increasing your administrative overhead."
+        },
+        {
+          "icon": "User",
+          "color": "purple",
+          "title": "Personalize Student Communication",
+          "description": "Deliver tailored content based on individual student interests and behaviors."
+        },
+        {
+          "icon": "Target",
+          "color": "orange",
+          "title": "Improve Lead Qualification",
+          "description": "Focus your counseling team on students most likely to enroll."
+        },
+        {
+          "icon": "TrendingUp",
+          "color": "blue",
+          "title": "Increase Enrollment Rates",
+          "description": "Optimize every step of the student journey from discovery to registration."
+        },
+        {
+          "icon": "Zap",
+          "color": "purple",
+          "title": "Reduce Administrative Work",
+          "description": "Free up staff for high-value face-to-face student interactions."
+        },
+        {
+          "icon": "BarChart3",
+          "color": "orange",
+          "title": "Optimize Marketing Performance",
+          "description": "Continuous AI learning improves campaign efficiency day over day."
+        }
+      ]
+    },
+    "aboutSection": {
+      "label": "About Us",
+      "description": "At Wheedle Technologies AI, we help schools, colleges, universities, coaching institutes, and EdTech brands combine AI, automation, and digital marketing to improve student acquisition and build scalable admission systems."
+    },
+    "ctaCardSection": {
+      "title": "Ready to Build a Smarter Admissions Engine?",
+      "description": "Whether you're looking to increase student enquiries, improve admission conversions, automate engagement, or grow your institution's digital presence, Wheedle AI delivers AI-powered solutions designed for the future of education.",
+      "button": {
+        "label": "Book a Free Consultation",
+        "url": "https://wheedletechnologies.tech/"
+      }
     }
   }
 }
