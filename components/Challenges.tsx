@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import {
   Users,
@@ -27,9 +27,6 @@ import {
  * JSON so this one component serves every industry.
  */
 
-// Map of icon-name strings (as stored in JSON) -> lucide-react component.
-// Add new entries here as new industries need new icons; unknown names
-// fall back to Sparkles so a typo in JSON never breaks the page.
 const ICONS: Record<string, LucideIcon> = {
   Users,
   UserCog,
@@ -78,20 +75,70 @@ const cardVariants: any = {
   },
 };
 
+// --- 3D tilt card: solid clean navy-blue card, tilts toward the cursor ---
+function TiltCard({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [tilt, setTilt] = useState({ rx: 0, ry: 0 });
+  const Icon = ICONS[icon] || Sparkles;
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const el = ref.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const px = (e.clientX - rect.left) / rect.width;
+    const py = (e.clientY - rect.top) / rect.height;
+    setTilt({ rx: (0.5 - py) * 14, ry: (px - 0.5) * 14 });
+  };
+
+  const handleMouseLeave = () => setTilt({ rx: 0, ry: 0 });
+
+  return (
+    <motion.div
+      variants={cardVariants}
+      style={{ perspective: 800 }}
+      className="group"
+    >
+      <div
+        ref={ref}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          transform: `rotateX(${tilt.rx}deg) rotateY(${tilt.ry}deg) scale(${
+            tilt.rx || tilt.ry ? 1.03 : 1
+          })`,
+          transformStyle: "preserve-3d",
+          transition: "transform 0.25s ease-out",
+        }}
+        className="relative h-full rounded-2xl border border-[#1c2f6e] bg-[#0d1a4a] px-6 py-8 text-center transition-colors duration-300 hover:border-[#2a4090]"
+      >
+        <h3
+          style={{ transform: "translateZ(25px)" }}
+          className="text-base md:text-lg font-bold text-white leading-snug"
+        >
+          {title}
+        </h3>
+        <p
+          style={{ transform: "translateZ(18px)" }}
+          className="mt-3 text-sm leading-relaxed text-white"
+        >
+          {description}
+        </p>
+      </div>
+    </motion.div>
+  );
+}
+
 export default function Challenges({ data }: ChallengesProps) {
   return (
     <section className="relative w-full overflow-hidden bg-[#05070d]">
-      {/* ambient glow, continues the hero's atmosphere */}
-      <div className="pointer-events-none absolute inset-0">
-        <div
-          className="absolute left-1/2 top-0 -translate-x-1/2 w-[900px] h-[600px]"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(11,44,195,0.35) 0%, rgba(6,101,255,0.12) 40%, rgba(5,7,13,0) 70%)",
-          }}
-        />
-      </div>
-
       <div className="relative z-10 w-full max-w-6xl mx-auto px-6 py-16 md:py-20 lg:py-24">
         {/* Heading */}
         <motion.div
@@ -104,39 +151,27 @@ export default function Challenges({ data }: ChallengesProps) {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
             {data.title}
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-sm md:text-base leading-relaxed text-gray-400">
+          <p className="mt-4 max-w-5xl mx-auto text-sm md:text-base leading-relaxed text-white">
             {data.description}
           </p>
         </motion.div>
 
         {/* Cards */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.15 }}
         >
-          {data.list?.map((item, i) => {
-            const Icon = ICONS[item.icon] || Sparkles;
-            return (
-              <motion.div
-                key={i}
-                variants={cardVariants}
-                className="rounded-2xl border border-white/[0.06] bg-white/[0.03] p-6 backdrop-blur-sm transition-colors duration-300 hover:border-white/[0.14] hover:bg-white/[0.05]"
-              >
-                <div className="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-white/10 bg-white/5 text-cyan-300">
-                  <Icon size={18} strokeWidth={1.75} />
-                </div>
-                <h3 className="mt-4 text-base md:text-[17px] font-semibold text-white">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-gray-400">
-                  {item.description}
-                </p>
-              </motion.div>
-            );
-          })}
+          {data.list?.map((item, i) => (
+            <TiltCard
+              key={i}
+              icon={item.icon}
+              title={item.title}
+              description={item.description}
+            />
+          ))}
         </motion.div>
       </div>
     </section>

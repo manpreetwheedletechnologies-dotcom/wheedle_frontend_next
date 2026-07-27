@@ -5,14 +5,15 @@ import { getIndustryBySlug, getAllIndustrySlugs } from "../../../lib/industries"
 
 import HeroSection from "../../../components/HeroSection";
 import WhyChoose from "../../../components/WhyChoose";
-import About from "../../../components/About";
-import Newsletter from "../../../components/Newsletter";
+// import About from "../../../components/About";
+// import Newsletter from "../../../components/Newsletter";
 import Cta from "../../../components/Cta";
 import Business from "../../../components/Business";
 import Services from "../../../components/Services";
 import AiImpact from "../../../components/AiImpact";
 import Challenges from "../../../components/Challenges";
 import PageWrapper from "../../../components/PageWrapper";
+import AiChatbot from "../../../components/AiChatbot";
 
 export function generateStaticParams() {
   return getAllIndustrySlugs().map((slug) => ({ slug }));
@@ -41,6 +42,10 @@ export default async function IndustryPage({
 
       <Business data={industry.businessSection} />
 
+      {industry.aiChatbotSection && (
+        <AiChatbot data={industry.aiChatbotSection} />
+      )}
+
       {industry.servicesGridSection && (
         <Services data={industry.servicesGridSection} />
       )}
@@ -53,15 +58,15 @@ export default async function IndustryPage({
         <AiImpact data={industry.aiImpactSection} />
       )}
 
-      {industry.aboutSection && (
+      {/* {industry.aboutSection && (
         <About data={industry.aboutSection} />
-      )}
+      )} */}
 
       {industry.ctaCardSection && (
         <Cta data={industry.ctaCardSection} />
       )}
 
-      <Newsletter
+      {/* <Newsletter
         content={{
           titleLine1: "Subscribe to Our",
           titleLine2Primary: slug,
@@ -73,7 +78,7 @@ export default async function IndustryPage({
           buttonText: "Subscribe",
           successMessage: "Thanks for subscribing 🎉",
         }}
-      />
+      /> */}
     </PageWrapper>
   );
 }

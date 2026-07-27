@@ -1,12 +1,13 @@
 {
   "Financial": {
-    "heroSection": {
-      "badge": "Next-Gen Fintech Marketing",
+ "heroSection": {
+      "bannerImage": "/indus/financial_hero_banner.png",
+      "badge": "AI-POWERED FINANCE GROWTH SOLUTIONS",
       "titleMain": "AI-Powered Digital Marketing Solutions",
-      "titlePrefix": "for the ",
-      "titleHighlight": "Finance Industry",
-      "tagline": "Build Trust. Generate Quality Leads. Accelerate Financial Growth.",
-      "description": "Today's customers research financial products online before making a decision. Whether they're looking for loans, insurance, investment advice, or financial planning, they expect fast responses, personalized experiences, and secure digital interactions.",
+      "titlePrefix": "for ",
+      "titleHighlight": "MSMEs",
+      "tagline": "Empowering Financial Businesses with Smarter AI Growth",
+      "description": "In today's digital-first world, customers research loans, insurance, investments, and financial advice online before making decisions. They expect instant responses, personalized guidance, and secure digital interactions, and traditional marketing alone can't keep up.Wheedle Technologies AI helps banks, NBFCs, insurers, fintechs, wealth firms, and financial consultants grow digitally, generate quality leads, and automate customer engagement with AI.",
       "buttons": [
         {
           "label": "Start Growing Today",
@@ -21,457 +22,430 @@
       ]
     },
     "challengesSection": {
-      "title": "Challenges in the Finance Industry",
-      "description": "Traditional methods are no longer sufficient in a landscape dominated by digital-first competitors and high customer expectations.",
+      "title": "Challenges Financial Businesses Face",
+      "description": "Traditional methods are no longer enough in an increasingly digital, competitive finance market.",
       "list": [
         {
-          "icon": "Users",
-          "title": "Low-Quality Leads",
-          "description": "Attracting traffic is easy; attracting qualified prospects ready to invest or borrow is the real challenge."
-        },
-        {
-          "icon": "ShieldCheck",
-          "title": "Building Customer Trust",
-          "description": "In finance, trust is everything. Establishing authority in a crowded digital space requires precision."
-        },
-        {
-          "icon": "UserCog",
-          "title": "Manual Lead Management",
-          "description": "Delayed responses lead to lost opportunities. Manual systems can't keep up with the 24/7 digital economy."
+          "icon": "Wallet",
+          "title": "Rising Digital Competition",
+          "description": "Standing out among banks, NBFCs, and fintechs is harder than ever."
         },
         {
           "icon": "Eye",
-          "title": "Low Online Visibility",
-          "description": "Without a dominant search presence, you're invisible to potential clients searching for financial solutions."
+          "title": "Low-Quality Leads",
+          "description": "Generating inquiries that actually convert remains a constant struggle."
         },
         {
-          "icon": "Wallet",
+          "icon": "Target",
+          "title": "Trust & Credibility Gaps",
+          "description": "Customers need trust before choosing banks or advisors."
+        },
+        {
+          "icon": "UserCog",
+          "title": "Manual Enquiry Handling",
+          "description": "Delayed responses lead to lost follow-ups and poor user experience."
+        },
+        {
+          "icon": "Award",
           "title": "High Acquisition Costs",
-          "description": "Inefficient marketing spends result in astronomical CPAs that erode your profitability margins."
+          "description": "Growing the right customer base without overspending remains difficult."
         },
         {
           "icon": "TrendingUp",
           "title": "Poor Conversion Rates",
-          "description": "Website visitors aren't becoming clients. You need optimized funnels powered by behavioral intelligence."
+          "description": "Generating visitors isn't enough without converting them into customers."
         }
       ]
-    },
-    "whyChooseSection": {
-      "title": "Why Choose Wheedle AI?",
-      "highlight": {
-        "icon": "ShieldCheck",
-        "label": "Trusted Experts"
-      },
-      "list": [
-        {
-          "icon": "Target",
-          "title": "Generate High-Intent Leads",
-          "description": "Connect with customers actively searching for financial products."
-        },
-        {
-          "icon": "ShieldCheck",
-          "title": "Build Customer Trust",
-          "description": "Create a credible presence through information-dense, authority-building content."
-        },
-        {
-          "icon": "Zap",
-          "title": "Faster Customer Engagement",
-          "description": "Respond instantly with AI-powered chatbots and automated communication."
-        },
-        {
-          "icon": "TrendingUp",
-          "title": "Maximize Marketing ROI",
-          "description": "Track campaign performance with real-time analytics and optimized budget allocation."
-        }
-      ]
-    },
-    "aiImpactSection": {
-      "title": "AI is Transforming Financial Services",
-      "description": "AI is reshaping the financial industry by enabling businesses to provide seamless digital experiences while driving sustainable business growth.",
-      "list": [
-        {
-          "icon": "MousePointerClick",
-          "color": "blue",
-          "title": "Automate customer support",
-          "description": "Hand off repetitive queries to intelligent bots, freeing humans for complex tasks."
-        },
-        {
-          "icon": "FileText",
-          "color": "purple",
-          "title": "Qualify and prioritize leads",
-          "description": "Use predictive models to identify which prospects are most likely to convert."
-        },
-        {
-          "icon": "Target",
-          "color": "orange",
-          "title": "Personalize recommendations",
-          "description": "Provide the right financial product to the right person at the right time."
-        },
-        {
-          "icon": "User",
-          "color": "blue",
-          "title": "Improve customer onboarding",
-          "description": "Streamline KYC and documentation processes through intelligent automation."
-        },
-        {
-          "icon": "Zap",
-          "color": "purple",
-          "title": "Enhance operational efficiency",
-          "description": "Reduce manual labor and human error across marketing and sales operations."
-        },
-        {
-          "icon": "ShieldCheck",
-          "color": "orange",
-          "title": "Increase customer retention",
-          "description": "Predict churn before it happens and engage customers with value-added services."
-        }
-      ]
-    },
-    "aboutSection": {
-      "label": "About Us",
-      "description": "At Wheedle Technologies AI, we understand that in finance, trust compounds like interest. Our solutions are engineered to help financial businesses attract better-fit customers, streamline every touchpoint of their journey, and build the kind of long-term relationships that drive durable growth."
-    },
-    "ctaCardSection": {
-      "title": "Ready to Grow Your Financial Business?",
-      "description": "Whether you're looking to generate more loan enquiries, increase insurance leads, attract investors, or strengthen your digital presence, Wheedle AI delivers intelligent marketing solutions.",
-      "button": {
-        "label": "Book a Free Consultation",
-        "url": "https://wheedletechnologies.tech/"
-      }
     },
     "businessSection": {
-      "title": "AI-Powered Solutions for Financial Businesses",
-      "description": "We bridge the gap between traditional financial stability and the cutting-edge velocity of artificial intelligence.",
-      "items": [
-        {
-          "title": "Financial Digital Marketing",
-          "description": "Reach high-intent customers through SEO, paid advertising, social media marketing, and content strategies tailored specifically for the financial sector.",
-          "image": "/indus/fin_1.png",
-          "imageAlt": "Financial trading chart dashboard",
-          "listType": "checklist",
-          "list": [
-            "Precision Audience Targeting",
-            "Compliant Creative Assets"
-          ]
-        },
-        {
-          "title": "SEO for Financial Businesses",
-          "description": "Improve visibility for high-intent searches. Our SEO strategies improve search rankings and drive qualified enquires from customers actively seeking financial solutions.",
-          "image": "/indus/fin_2.png",
-          "imageAlt": "SEO analytics dashboard with magnifying glass over charts",
-          "listType": "tags",
-          "list": [
-            "Personal Loans",
-            "Home Loans",
-            "Wealth Management"
-          ]
-        },
-        {
-          "title": "AI Chatbot",
-          "description": "Deliver instant support with an AI-powered chatbot that can answer product-related questions, capture qualified leads, and assist with document requirements 24/7.",
-          "image": "/indus/fin_3.png",
-          "imageAlt": "Neon AI chatbot robot assistant",
-          "listType": "none",
-          "list": []
-        }
-      ]
-    },
-    "servicesGridSection": {
-      "title": "Our Finance Marketing Services",
-      "description": "A full suite of digital weapons for the modern financial institution.",
-      "list": [
-        {
-          "icon": "Zap",
-          "title": "AI Digital Marketing"
-        },
-        {
-          "icon": "Search",
-          "title": "Financial SEO"
-        },
-        {
-          "icon": "BarChart3",
-          "title": "Google Ads Management"
-        },
-        {
-          "icon": "Search",
-          "title": "Social Media Marketing"
-        },
-        {
-          "icon": "Globe",
-          "title": "Website Development"
-        },
-        {
-          "icon": "MessageSquare",
-          "title": "AI Chatbots"
-        },
-        {
-          "icon": "Zap",
-          "title": "AI Lead Generation"
-        },
-        {
-          "icon": "Archive",
-          "title": "Marketing Automation"
-        },
-        {
-          "icon": "Reply",
-          "title": "WhatsApp Automation"
-        },
-        {
-          "icon": "FileEdit",
-          "title": "Content Marketing"
-        },
-        {
-          "icon": "ShieldCheck",
-          "title": "Reputation Management"
-        },
-        {
-          "icon": "BarChart3",
-          "title": "Analytics & Reporting"
-        }
-      ]
+   
+    "items": [
+      {
+        "variant": "card",
+        "title": "AI Automation for Financial Services",
+        "description": "Build a strong, trustworthy digital presence with fully automated marketing, SEO, paid advertising, social media, content, and AI-driven lead generation, all working together.",
+        "image": "/indus/financial1.jpg",
+        "imageAlt": "Digital marketing for MSMEs",
+        "listType": "checklist",
+        "list": [
+          "Precision Targeting for High-Intent Finance Customers",
+          "Automation-First, Cost-Effective Growth"
+        ]
+      },
+      {
+        "variant": "plain",
+        "title": "SEO for Financial Businesses",
+        "description": "Improve visibility for customers actively searching for financial solutions.",
+        "listType": "tags",
+        "tagListTitle": "Keyword Pills:",
+        "tagList": [
+          {
+             "image": "/indus/financial_icon1.png",
+        "imageAlt": "icon",
+            "label": "Personal Loan Provider"
+          },
+          {
+            "image": "/indus/financial_icon2.png",
+        "imageAlt": "icon",
+            "label": "Home Loan Provider"
+          },
+          {
+            "image": "/indus/financial_icon3.png",
+        "imageAlt": "icon",
+            "label": "Insurance Advisor Near Me"
+          },
+          {
+           "image": "/indus/financial_icon4.png",
+        "imageAlt": "icon",
+            "label": "Investment Consultant"
+          }
+        ]
+      }
+     
+    ]
+  },
+  "aiChatbotSection": {
+    "image": "/indus/msme_chatbot_robot.png",
+    "imageAlt": "AI Chatbot robot assistant",
+    "title": "AI Chatbot for Financial Customer Engagement",
+    "description": "Deliver instant, 24×7 support with an AI-powered chatbot that can:",
+     "bullets": [
+    "Answer product and eligibility questions instantly",
+    "Explain loan and insurance options",
+    "Capture and qualify leads automatically"
+   
+  ],
+    "button": {
+      "label": "Explore AI Agents",
+      "url": "https://wheedletechnologies.tech/"
     }
   },
-  "Manufacturing": {
-    "heroSection": {
-      "badge": "Next-Gen Manufacturing Marketing",
+    "servicesGridSection": {
+    "title": "Our Finance Growth Services",
+    "description": "A complete suite of AI-Automation-powered solutions designed for financial businesses.",
+    "list": [
+      {
+        "image": "/indus/msme_service_digital_marketing.jpg",
+        "imageAlt": "AI-Powered Digital Marketing",
+        "title": "AI-Powered Digital Marketing"
+      },
+      {
+        "image": "/indus/financial_service_chatbots.jpg",
+        "imageAlt": "Smart Customer Support Chatbots",
+        "title": "Ai Chatbots & Cusotomer Support"
+      },
+      {
+        "image": "/indus/financial_service_lead_automation.jpg",
+        "imageAlt": "Sales and Lead Generation Automation",
+        "title": "Ai Lead Generation & Qualification"
+      },
+      {
+        "image": "/indus/financial1_marketing.jpg",
+        "imageAlt": "Data-Driven Business Insights",
+        "title": "Marketing Automation"
+      },
+      {
+        "image": "/indus/financial_data_driven.jpg",
+        "imageAlt": "Automated Content and Branding",
+        "title": "Data-Driven Insights & Reporting"
+      },
+      {
+        "image": "/indus/financial_management.jpg",
+        "imageAlt": "Process and Operations Automation",
+        "title": "Online Reputation Management"
+      }
+    ]
+  },
+   "whyChooseSection": {
+    "title": "Why Choose Wheedle AI?",
+    "list": [
+      {
+        "title": "Generate High-Intent Leads",
+        "description": "Connect with customers actively searching for financial products."
+      },
+      {
+        "title": "Build Customer Trust",
+        "description": "A credible online presence through SEO, content, and reputation management."
+      },
+      {
+        "title": "Faster Engagement, Fully Automated",
+        "description": "AI chatbots and automated workflows respond instantly."
+      },
+      {
+        "title": "Increase Conversion Rates",
+        "description": "AI-driven lead nurturing ensures timely, personalized follow-ups."
+      },
+      {
+        "title": "Maximize Marketing ROI",
+        "description": "Track performance in real time and optimize spend automatically."
+      }
+    ]
+  },
+    "aiImpactSection": {
+    "title": "Frequently Asked Questions",
+    "description": "AI is enabling financial businesses to compete smarter, respond faster, and grow with confidence.",
+    "list": [
+      {
+        "title": "How can AI help financial businesses?",
+        "description": "AI automates engagement, qualifies leads, personalizes communication, and boosts customer acquisition."
+      },
+      {
+        "title": "Do you provide digital marketing for banks and NBFCs?",
+        "description": "Yes, we specialize in providing AI-powered digital marketing solutions for financial institutions."
+      },
+      {
+        "title": "Can Wheedle AI generate qualified financial leads?",
+        "description": "Absolutely. Our AI-driven lead generation and qualification tools help financial businesses connect with high-intent prospects."
+      },
+      {
+        "title": "Do you offer marketing automation for financial services?",
+        "description": "Yes, we provide marketing automation solutions that streamline campaigns, nurture leads, and improve conversion rates for financial businesses."
+      }
+     
+    ]
+  },
+    
+  "ctaCardSection": {
+    "image": "/indus/msme_cta_robot.png",
+    "imageAlt": "AI robot assistant",
+    "titleLine1": "Ready to Grow",
+    "titleHighlight": "Finance?",
+    "description": "Whether you're looking to generate more loan enquiries, increase insurance leads, attract investors, or strengthen your digital presence, Wheedle Technologies AI delivers intelligent, automation-first marketing solutions built to help financial businesses grow faster and smarter.",
+    "button": {
+      "label": "Book a Free Consultation",
+      "url": "https://wheedletechnologies.tech/"
+    }
+  }
+  },
+  "Telecom": {
+  "heroSection": {
+      "bannerImage": "/indus/tele_hero_banner.jpg",
+      "badge": "AI-POWERED TELECOM SOLUTIONS",
       "titleMain": "AI-Powered Digital Marketing Solutions",
-      "titlePrefix": "for the ",
-      "titleHighlight": "Manufacturing Industry",
-      "tagline": "Generate Qualified B2B Leads. Increase RFQs. Accelerate Manufacturing Growth.",
-      "description": "Today's industrial buyers research suppliers, compare capabilities, and evaluate manufacturers online before making purchasing decisions. Whether they're looking for an OEM Manufacturer India, Industrial Equipment Manufacturer, or Contract Manufacturing Services, your digital presence plays a key role in winning new business. Wheedle AI combines AI, automation, and digital marketing to help manufacturers increase visibility, attract qualified buyers, generate more RFQs, and achieve sustainable business growth.",
+      "titlePrefix": "for ",
+      "titleHighlight": "MSMEs",
+      "tagline": "Empowering Telecom Businesses with Smarter AI Growth",
+      "description": "Customers today compare mobile plans, broadband packages, and enterprise connectivity options online before switching providers or signing up. They expect instant answers, personalized recommendations, and fast issue resolution, and manual sales and support processes can't keep pace with that expectation. AI automates lead generation, customer engagement, and growth for telecom businesses.",
       "buttons": [
         {
-          "label": "Start Growing Today",
-          "url": "https://wheedletechnologies.tech/",
+          "label": "Book a Strategy Session",
+          "url": "",
           "style": "primary"
         },
         {
-          "label": "View Case Studies",
-          "url": "#",
+          "label": "Explore Solutions",
+          "url": "https://wheedletechnologies.tech/",
           "style": "secondary"
         }
       ]
     },
     "challengesSection": {
-      "title": "Challenges in the Manufacturing Industry",
-      "description": "Manufacturing businesses operate in a highly competitive market where visibility, responsiveness, and digital engagement directly impact growth.",
+      "title": "Challenges Telecom Businesses Face",
+      "description": "Traditional marketing and manual support processes are no longer enough in a highly competitive, digital-first telecom market.",
       "list": [
         {
+          "icon": "Wallet",
+          "title": "Intense Market Competition",
+          "description": "Compete against large telecom brands and emerging providers for customer attention."
+        },
+        {
           "icon": "Eye",
-          "title": "Limited Online Visibility",
-          "description": "Without a strong digital presence, manufacturers struggle to reach buyers searching for trusted suppliers and manufacturing partners."
+          "title": "High Customer Churn",
+          "description": "Subscribers switch providers quickly when service or support expectations aren't fulfilled."
         },
         {
-          "icon": "Users",
-          "title": "Difficulty Reaching Qualified Buyers",
-          "description": "Connecting with procurement teams, distributors, OEMs, and industrial buyers remains a significant challenge."
-        },
-        {
-          "icon": "Clock",
-          "title": "Long Buying Cycles",
-          "description": "Complex evaluation and approval processes often delay enquiries, RFQs, and purchasing decisions."
-        },
-        {
-          "icon": "TrendingUp",
-          "title": "Low Website Conversion Rates",
-          "description": "Many manufacturing websites generate traffic but fail to convert visitors into qualified B2B enquiries."
-        },
-        {
-          "icon": "Building2",
-          "title": "Dependence on Traditional Sales",
-          "description": "Relying only on exhibitions, referrals, and offline sales limits scalability and long-term growth."
+          "icon": "Target",
+          "title": "Support Teams Overloaded",
+          "description": "High enquiry volumes overwhelm support teams and slow response times."
         },
         {
           "icon": "UserCog",
-          "title": "Manual Lead Management",
-          "description": "Slow responses and fragmented follow-ups can result in missed opportunities and lost business."
+          "title": "Low-Quality Leads",
+          "description": "Generating subscribers who convert consistently is a major marketing challenge."
+        },
+        {
+          "icon": "Award",
+          "title": "Rising Acquisition Costs",
+          "description": "Reaching new subscribers grows more expensive as competition increases."
+        },
+        {
+          "icon": "TrendingUp",
+          "title": "Disconnected Customer Journeys",
+          "description": "Fragmented communication across sales, support, and billing creates poor experiences."
         }
       ]
     },
     "businessSection": {
-      "title": "AI-Powered Solutions for Manufacturing Businesses",
-      "description": "Helping manufacturers attract industrial buyers, automate customer engagement, and generate high-quality B2B enquiries.",
-      "items": [
-        {
-          "title": "Manufacturing Digital Marketing",
-          "description": "As a Manufacturing Digital Marketing Agency, we help manufacturers improve visibility through SEO, Google Ads, LinkedIn Marketing, and Manufacturing Export Marketing strategies designed to reach qualified buyers and decision-makers.",
-          "image": "/indus/menu_1.png",
-          "imageAlt": "Manufacturing digital marketing dashboard",
-          "listType": "checklist",
-          "list": [
-            "Industry-Specific Marketing Strategies",
-            "Targeted B2B Buyer Acquisition",
-            "Higher Quality Enquiries"
-          ]
-        },
-        {
-          "title": "Manufacturing SEO",
-          "description": "Our Manufacturing SEO strategies help your business rank for high-intent searches and connect with buyers actively looking for manufacturing suppliers and industrial partners.",
-          "image": "/indus/menu_2.png",
-          "imageAlt": "Manufacturing SEO analytics",
-          "listType": "tags",
-          "list": [
-            "Manufacturing Company India",
-            "Industrial Equipment Manufacturer",
-            "Sheet Metal Fabrication",
-            "Contract Manufacturing Services"
-          ]
-        },
-        {
-          "title": "AI Chatbots & B2B Lead Generation",
-          "description": "Respond instantly to product enquiries, RFQs, and technical questions with AI-powered assistants designed specifically for manufacturing businesses.",
-          "image": "/indus/menu_3.png",
-          "imageAlt": "AI chatbot for manufacturing businesses",
-          "listType": "none",
-          "list": []
-        }
-      ]
-    },
-    "servicesGridSection": {
-      "title": "Our Manufacturing Services",
-      "description": "An integrated suite of AI-powered solutions designed for manufacturing growth.",
-      "list": [
-        {
-          "icon": "Zap",
-          "title": "AI Digital Marketing"
-        },
-        {
-          "icon": "Search",
-          "title": "Manufacturing SEO"
-        },
-        {
-          "icon": "BarChart3",
-          "title": "Google Ads Management"
-        },
-        {
-          "icon": "Briefcase",
-          "title": "LinkedIn Marketing"
-        },
-        {
-          "icon": "Settings",
-          "title": "Marketing Automation"
-        },
-        {
-          "icon": "Globe",
-          "title": "Website Design & Development"
-        },
-        {
-          "icon": "MessageSquare",
-          "title": "AI Chatbots"
-        },
-        {
-          "icon": "Target",
-          "title": "B2B Lead Generation"
-        },
-        {
-          "icon": "MessageCircle",
-          "title": "WhatsApp Automation"
-        },
-        {
-          "icon": "FileText",
-          "title": "Content Marketing"
-        },
-        {
-          "icon": "Factory",
-          "title": "Industrial Branding"
-        },
-        {
-          "icon": "BarChart3",
-          "title": "Analytics & Performance Reporting"
-        }
-      ]
-    },
-    "whyChooseSection": {
-      "title": "Why Choose Wheedle AI?",
-      "highlight": {
-        "icon": "Factory",
-        "label": "Industrial Experts"
+   
+    "items": [
+      {
+        "variant": "card",
+        "title": "How AI Benefits Telecom Businesses",
+        "description": "We help operators and telecom retailers replace manual, disconnected processes with automated systems that run 24/7 across marketing, sales, customer support, and subscriber management.",
+        "image": "/indus/tele_1.jpg",
+        "imageAlt": "Education Growth",
+        "listType": "checklist",
+        "list": [
+          "Automated plan lead capture",
+          "AI-driven customer targeting",
+          "Target High Intent Customers"
+        ]
       },
-      "list": [
-        {
-          "icon": "Target",
-          "title": "Generate Qualified B2B Leads",
-          "description": "Our targeted campaigns reach the right decision-makers in the industrial sector, from procurement managers to technical directors."
-        },
-        {
-          "icon": "TrendingUp",
-          "title": "Increase Brand Visibility",
-          "description": "Establish your manufacturing company as a global leader with a powerful digital presence and thought-leadership content."
-        },
-        {
-          "icon": "Zap",
-          "title": "Automate Lead Management",
-          "description": "AI-driven workflows ensure every technical inquiry is handled instantly, reducing response times and increasing conversion rates."
-        },
-        {
-          "icon": "Users",
-          "title": "Build Stronger Customer Relationships",
-          "description": "Consistent engagement through digital channels helps nurture long-term partnerships and repeat business from industrial buyers."
-        },
-        {
-          "icon": "BarChart3",
-          "title": "Maximize Marketing ROI",
-          "description": "Data-driven strategies and AI optimization ensure your marketing budget is spent efficiently to deliver the highest impact."
-        }
-      ]
-    },
-    "aiImpactSection": {
-      "title": "AI is Transforming Manufacturing",
-      "description": "AI helps manufacturers modernize sales, improve customer engagement, and accelerate business growth.",
-      "list": [
-        {
-          "icon": "Target",
-          "color": "blue",
-          "title": "Generate Qualified B2B Leads",
-          "description": "Identify buyers with the highest purchase intent."
-        },
-        {
-          "icon": "FileText",
-          "color": "purple",
-          "title": "Automate RFQ Management",
-          "description": "Respond instantly to product enquiries and RFQs."
-        },
-        {
-          "icon": "Users",
-          "color": "orange",
-          "title": "Improve Distributor Engagement",
-          "description": "Strengthen communication with dealers and channel partners."
-        },
-        {
-          "icon": "User",
-          "color": "blue",
-          "title": "Personalize Buyer Experiences",
-          "description": "Deliver relevant product information based on customer requirements."
-        },
-        {
-          "icon": "Zap",
-          "color": "purple",
-          "title": "Improve Operational Efficiency",
-          "description": "Reduce manual work across marketing, sales, and customer support."
-        },
-        {
-          "icon": "BarChart3",
-          "color": "orange",
-          "title": "Optimize Marketing Performance",
-          "description": "Use AI insights to improve ROI and campaign performance."
-        }
-      ]
-    },
-    "aboutSection": {
-      "label": "About Us",
-      "description": "Wheedle Technologies AI is a dedicated AI-powered digital marketing agency for manufacturing companies, industrial suppliers, and factories. We specialize in helping businesses in the industrial sector grow by combining advanced AI technology with proven digital marketing strategies to generate qualified leads and drive industrial excellence."
-    },
-    "ctaCardSection": {
-      "title": "Ready to Generate More Industrial Leads?",
-      "description": "Whether you're looking to attract industrial buyers, increase RFQs, expand your manufacturing business, or strengthen your digital presence, Wheedle AI delivers AI-powered marketing and automation solutions designed for measurable growth.",
-      "button": {
-        "label": "Book a Free Consultation",
-        "url": "https://wheedletechnologies.tech/"
+      {
+        "variant": "plain",
+        "title": "Target High-Intent Customers",
+        "description": "Improve visibility for high-intent searches from customers actively comparing plans and providers.",
+        "listType": "tags",
+        "tagListTitle": "Target Search Opportunities",
+        "tagList": [
+          {
+             "image": "/indus/tele_icon1.png",
+        "imageAlt": "icon",
+            "label": "Best Mobile Network Near Me"
+          },
+          {
+            "image": "/indus/tele_icon2.png",
+        "imageAlt": "icon",
+            "label": "Broadband Plans"
+          },
+          {
+            "image": "/indus/tele_icon3.png",
+        "imageAlt": "icon",
+            "label": "Prepaid Recharge Offers"
+          },
+          {
+           "image": "/indus/tele_icon4.png",
+        "imageAlt": "icon",
+            "label": "Business Internet Plans"
+          }
+        ]
       }
+     
+    ]
+  },
+  "aiChatbotSection": {
+    "image": "/indus/msme_chatbot_robot.png",
+    "imageAlt": "AI Chatbot for Telecom Customer Support",
+    "title": "AI Chatbot for Customer Engagement",
+    "description": "Deliver instant support with an AI-powered chatbot that can:",
+    "bullets": [
+    "Answer Telecom Queries Instantly",
+    "Answer Telecom Queries Instantly",
+    "Resolve Complaints Automatically",
+    "Schedule Technician Visits and Installation Appointments"
+   ],
+    "button": {
+      "label": "Explore AI Agents",
+      "url": "https://wheedletechnologies.tech/"
     }
+  },
+    "servicesGridSection": {
+    "title": "Our Telecom Growth Services",
+    "description": "A complete suite of AI-Automation-powered solutions designed for telecom operators and retailers.",
+    "list": [
+      {
+        "image": "/indus/tele_service_digital_marketing.avif",
+        "imageAlt": "AI-Powered Digital Marketing",
+        "title": "AI Digital Marketing"
+      },
+      {
+        "image": "/indus/tele_service_chatbots.jpg",
+        "imageAlt": "Smart Customer Support Chatbots",
+        "title": "AI Chatbots & Support Automation"
+      },
+      {
+        "image": "/indus/edu_service_lead_automation.jpg",
+        "imageAlt": "Sales and Lead Generation Automation",
+        "title": "Subscriber Lead Generation"
+      },
+      {
+        "image": "/indus/edu_service_insights.jpg",
+        "imageAlt": "Data-Driven Business Insights",
+        "title": "Marketing Automation"
+      },
+      {
+        "image": "/indus/msme_service_content_branding.jpg",
+        "imageAlt": "Automated Content and Branding",
+        "title": "Website & App Landing Pages"
+      },
+      {
+        "image": "/indus/edu_service_process_automation.jpg",
+        "imageAlt": "Process and Operations Automation",
+        "title": "Analytics & Performance Reporting"
+      }
+    ]
+  },
+   "whyChooseSection": {
+    "title": "Why Telecom Businesses Choose Wheedle AI",
+    "list": [
+      {
+        "title": "Subscriber Growth Built on Data",
+        "description": "Generate more qualified enquiries through precision targeting and AI insights."
+      },
+      {
+        "title": "Faster Support, Fully Automated",
+        "description": "Resolve customer queries and complaints the moment they arrive."
+      },
+      {
+        "title": "Trust-Building Digital Presence",
+        "description": "Proactive engagement and faster resolution improve retention."
+      },
+      {
+        "title": "Measurable Performance",
+        "description": "Track every campaign, enquiry, and conversion through actionable analytics."
+      },
+      {
+        "title": "Growth Infrastructure That Scales",
+        "description": "From regional ISPs to nationwide operators, our systems grow with you."
+      }
+    ]
+  },
+    "aiImpactSection": {
+    "title": "How AI Is Transforming the Telecom Industry",
+    "description": "AI is enabling telecom businesses to reduce support workload, engage customers faster, and reduce churn.",
+    "list": [
+      {
+        "title": "Automate Customer Support",
+        "description": "AI instantly answers common customer queries and resolves issues around the clock."
+      },
+      {
+        "title": "Improve Lead Qualification",
+        "description": "Automatically identify and prioritize high-intent prospects for better conversions."
+      },
+      {
+        "title": "Personalize Plan Recommendations",
+        "description": "Recommend the most suitable mobile, broadband, or business plans based on customer needs."
+      },
+      {
+        "title": "Reduce Customer Churn",
+        "description": "Engage subscribers proactively with personalized communication and timely support."
+      },
+      {
+        "title": "Reduce Operational Overhead",
+        "description": "Automate repetitive support and administrative tasks to improve efficiency."
+      },
+      {
+        "title": "Optimize Marketing Investment",
+        "description": "Use AI-powered insights and analytics to maximize campaign performance and marketing ROI."
+      }
+    ]
+  },
+    
+  "ctaCardSection": {
+    "image": "/indus/msme_cta_robot.png",
+    "imageAlt": "AI robot assistant",
+    "titleLine1": "Ready to Grow Telecom ",
+    "titleHighlight": "Business?",
+    "description": "Whether you're looking to acquire more subscribers, reduce churn, automate customer support, or strengthen your digital presence, Wheedle Technologies AI delivers intelligent, automation-first growth solutions built for the telecom industry.",
+    "button": {
+      "label": "Book a Strategy Session",
+      "url": "https://wheedletechnologies.tech/"
+    }
+  }
   },
   "MSME": {
     "heroSection": {
+      "bannerImage": "/indus/msme_hero_banner.png",
       "badge": "Next-Gen MSME Growth Solutions",
       "titleMain": "AI-Powered Digital Marketing Solutions",
       "titlePrefix": "for ",
@@ -528,657 +502,855 @@
       ]
     },
     "businessSection": {
-      "title": "AI-Powered Solutions for MSMEs Businesses",
-      "description": "Helping MSMEs attract customers, automate customer engagement, and generate high-quality leads.",
-      "items": [
-        {
-          "title": "Digital Marketing for MSMEs",
-          "description": "Build a strong online presence with integrated digital marketing strategies including SEO, social media marketing, paid advertising, content marketing, and website optimization.",
-          "image": "/indus/msme_1.png",
-          "imageAlt": "Digital marketing for MSMEs",
-          "listType": "checklist",
-          "list": [
-            "Precision Audience Targeting",
-            "Cost-Effective Growth Strategies"
-          ]
-        },
-        {
-          "title": "SEO for Local & Growing Businesses",
-          "description": "Improve visibility for customers actively searching for your products and services. Our SEO strategies help businesses rank higher on search engines and attract high-intent customers ready to buy.",
-          "image": "/indus/msme_2.png",
-          "imageAlt": "SEO for MSMEs",
-          "listType": "tags",
-          "list": [
-            "Best Business Near Me",
-            "Small Business Solutions",
-            "Local Service Provider",
-            "Business Growth Services"
-          ]
-        },
-        {
-          "title": "AI Chatbot for Customer Engagement",
-          "description": "Deliver instant customer support with AI-powered chatbots that answer queries, capture leads, schedule appointments, and provide 24/7 assistance.",
-          "image": "/indus/msme_3.png",
-          "imageAlt": "AI chatbot for MSMEs",
-          "listType": "none",
-          "list": []
-        }
-      ]
-    },
-    "servicesGridSection": {
-      "title": "Our MSME Growth Services",
-      "description": "A complete suite of AI-powered digital solutions designed for growing businesses.",
-      "list": [
-        {
-          "icon": "Zap",
-          "title": "AI Digital Marketing"
-        },
-        {
-          "icon": "Search",
-          "title": "Search Engine Optimization"
-        },
-        {
-          "icon": "BarChart3",
-          "title": "Google Ads Management"
-        },
-        {
-          "icon": "Share2",
-          "title": "Social Media Marketing"
-        },
-        {
-          "icon": "Globe",
-          "title": "Website Design & Development"
-        },
-        {
-          "icon": "MessageSquare",
-          "title": "AI Chatbots"
-        },
-        {
-          "icon": "Target",
-          "title": "Lead Generation"
-        },
-        {
-          "icon": "Settings",
-          "title": "Marketing Automation"
-        },
-        {
-          "icon": "MessageCircle",
-          "title": "WhatsApp Automation"
-        },
-        {
-          "icon": "FileText",
-          "title": "Content Marketing"
-        },
-        {
-          "icon": "ShieldCheck",
-          "title": "Reputation Management"
-        },
-        {
-          "icon": "BarChart3",
-          "title": "Analytics & Reporting"
-        }
-      ]
-    },
-    "whyChooseSection": {
-      "title": "Why Choose Wheedle AI?",
-      "highlight": {
-        "icon": "BadgeCheck",
-        "label": "Trusted Experts"
+   
+    "items": [
+      {
+        "variant": "card",
+        "title": "Digital Marketing for MSMEs",
+        "description": "Build a strong online presence with integrated digital marketing strategies including SEO, social media marketing, paid advertising, content marketing, and website optimization.",
+        "image": "/indus/msme_1.jpg",
+        "imageAlt": "Digital marketing for MSMEs",
+        "listType": "checklist",
+        "list": [
+          "Precision Audience Targeting",
+          "Cost-Effective Growth Strategies"
+        ]
       },
-      "list": [
-        {
-          "icon": "Wallet",
-          "title": "Affordable Growth Solutions",
-          "description": "High-impact marketing tailored for small and medium enterprises."
-        },
-        {
-          "icon": "Target",
-          "title": "Generate More Qualified Leads",
-          "description": "Targeted campaigns that connect with customers ready to buy."
-        },
-        {
-          "icon": "TrendingUp",
-          "title": "Build a Strong Digital Brand",
-          "description": "Consistent, professional presence across all digital channels."
-        },
-        {
-          "icon": "Zap",
-          "title": "Automate Business Operations",
-          "description": "Free up time by automating follow-ups and customer interactions."
-        }
-      ]
-    },
-    "aiImpactSection": {
-      "title": "AI is Transforming MSME Growth",
-      "description": "AI is enabling small and medium businesses to compete with larger enterprises while improving efficiency and profitability.",
-      "list": [
-        {
-          "icon": "MessageSquare",
-          "color": "blue",
-          "title": "Automate Customer Support",
-          "description": "Handle routine customer queries instantly with intelligent AI assistants."
-        },
-        {
-          "icon": "Target",
-          "color": "purple",
-          "title": "Generate Better Leads",
-          "description": "Identify and prioritize prospects most likely to convert."
-        },
-        {
-          "icon": "User",
-          "color": "orange",
-          "title": "Personalize Customer Experiences",
-          "description": "Deliver relevant products and services to the right customer at the right time."
-        },
-        {
-          "icon": "Zap",
-          "color": "blue",
-          "title": "Improve Operational Efficiency",
-          "description": "Reduce manual effort across sales, marketing, and customer support."
-        },
-        {
-          "icon": "BarChart3",
-          "color": "purple",
-          "title": "Optimize Marketing Budgets",
-          "description": "Allocate spending more effectively with data-driven insights."
-        },
-        {
-          "icon": "RefreshCw",
-          "color": "orange",
-          "title": "Increase Customer Retention",
-          "description": "Engage customers proactively and build long-term loyalty."
-        }
-      ]
-    },
-    "aboutSection": {
-      "label": "About Us",
-      "description": "At Wheedle Technologies AI, we empower MSMEs with AI-powered digital marketing, automation, SEO, and lead generation solutions. Our mission is to help small and medium businesses strengthen their online presence, generate qualified leads, streamline operations, and achieve sustainable business growth."
-    },
-    "ctaCardSection": {
-      "title": "Ready to Grow Your MSME?",
-      "description": "Whether you're looking to generate more qualified leads, increase brand visibility, attract new customers, or strengthen your digital presence, Wheedle AI delivers intelligent marketing solutions designed for measurable growth.",
-      "button": {
-        "label": "Book a Free Consultation",
-        "url": "https://wheedletechnologies.tech/"
+      {
+        "variant": "plain",
+        "title": "SEO for Local & Growing Businesses",
+        "description": "Improve visibility for customers actively searching for your products and services. Our SEO strategies help businesses rank higher on search engines and attract high-intent customers ready to buy.",
+        "listType": "tags",
+        "tagListTitle": "Keyword Pills:",
+        "tagList": [
+          {
+             "image": "/indus/msme_icon1.png",
+        "imageAlt": "icon",
+            "label": "Best Business Near Me"
+          },
+          {
+            "image": "/indus/msme_icon2.png",
+        "imageAlt": "icon",
+            "label": "Local Service Provider"
+          },
+          {
+            "image": "/indus/msme_icon3.png",
+        "imageAlt": "icon",
+            "label": "Small Business Solutions"
+          },
+          {
+           "image": "/indus/msme_icon4.png",
+        "imageAlt": "icon",
+            "label": "Business Growth Services"
+          }
+        ]
       }
+     
+    ]
+  },
+  "aiChatbotSection": {
+    "image": "/indus/msme_chatbot_robot.png",
+    "imageAlt": "AI Chatbot robot assistant",
+    "title": "AI Chatbot for Customer Engagement",
+    "description": "Deliver instant customer support with AI-powered chatbots that answer queries, capture leads, schedule appointments, and provide 24/7 assistance.",
+    "button": {
+      "label": "Explore AI Agents",
+      "url": "https://wheedletechnologies.tech/"
     }
+  },
+    "servicesGridSection": {
+    "title": "Our MSME Growth Services",
+    "description": "A complete suite of AI-powered digital solutions designed for growing businesses.",
+    "list": [
+      {
+        "image": "/indus/msme_service_digital_marketing.jpg",
+        "imageAlt": "AI-Powered Digital Marketing",
+        "title": "AI-Powered Digital Marketing"
+      },
+      {
+        "image": "/indus/msme_service_chatbots.jpg",
+        "imageAlt": "Smart Customer Support Chatbots",
+        "title": "Smart Customer Support (Chatbots)"
+      },
+      {
+        "image": "/indus/msme_service_lead_automation.jpg",
+        "imageAlt": "Sales and Lead Generation Automation",
+        "title": "Sales & Lead Generation Automation"
+      },
+      {
+        "image": "/indus/msme_service_insights.jpg",
+        "imageAlt": "Data-Driven Business Insights",
+        "title": "Data-Driven Business Insights"
+      },
+      {
+        "image": "/indus/msme_service_content_branding.jpg",
+        "imageAlt": "Automated Content and Branding",
+        "title": "Automated Content & Branding"
+      },
+      {
+        "image": "/indus/msme_service_process_automation.jpg",
+        "imageAlt": "Process and Operations Automation",
+        "title": "Process & Operations Automation"
+      }
+    ]
+  },
+   "whyChooseSection": {
+    "title": "Why Choose Wheedle AI?",
+    "list": [
+      {
+        "title": "Affordable Growth Solutions",
+        "description": "Flexible and cost-effective marketing solutions built specifically for MSMEs."
+      },
+      {
+        "title": "Generate More Qualified Leads",
+        "description": "Reach customers actively searching for your products and services."
+      },
+      {
+        "title": "Build a Strong Digital Brand",
+        "description": "Establish credibility through professional websites, content, and branding."
+      },
+      {
+        "title": "Automate Business Operations",
+        "description": "Reduce manual work with AI-powered communication and workflows."
+      },
+      {
+        "title": "Scale with Confidence",
+        "description": "Whether expanding locally or nationally, our strategies grow alongside your business."
+      }
+    ]
+  },
+    "aiImpactSection": {
+    "title": "AI is Transforming MSME Growth",
+    "description": "AI is enabling small and medium businesses to compete with larger enterprises while improving efficiency and profitability.",
+    "list": [
+      {
+        "title": "Automate Customer Support",
+        "description": "Handle routine customer queries instantly with intelligent AI assistants."
+      },
+      {
+        "title": "Generate Better Leads",
+        "description": "Identify and prioritize prospects most likely to convert."
+      },
+      {
+        "title": "Personalize Customer Experiences",
+        "description": "Deliver relevant products and services to the right customer at the right time."
+      },
+      {
+        "title": "Improve Operational Efficiency",
+        "description": "Reduce manual effort across sales, marketing, and customer support."
+      },
+      {
+        "title": "Optimize Marketing Budgets",
+        "description": "Allocate spending more effectively with data-driven insights."
+      },
+      {
+        "title": "Increase Customer Retention",
+        "description": "Engage customers proactively and build long-term loyalty."
+      }
+    ]
+  },
+    
+  "ctaCardSection": {
+    "image": "/indus/msme_cta_robot.png",
+    "imageAlt": "AI robot assistant",
+    "titleLine1": "Ready to Grow Your",
+    "titleHighlight": "MSME?",
+    "description": "Whether you're launching a startup, expanding your business, or looking to generate more qualified leads, Wheedle AI provides intelligent digital marketing solutions that help your business grow faster and smarter.",
+    "button": {
+      "label": "Book a Free Consultation",
+      "url": "https://wheedletechnologies.tech/"
+    }
+  }
   },
   "Healthcare": {
     "heroSection": {
-      "badge": "Next-Gen Healthcare Growth",
-      "titleMain": "AI-Powered Digital Marketing Solutions",
-      "titlePrefix": "for ",
-      "titleHighlight": "Modern Healthcare Providers",
+      "bannerImage": "/indus/health_hero_banner.png",
+      "badge": "AI-POWERED GROWTH FOR MODERN HEALTHCARE",
+      
       "tagline": "Attract More Patients, Streamline Operations, and Deliver Exceptional Care Experiences",
-      "description": "Today's patients search online before choosing a healthcare provider. We help hospitals, clinics, diagnostic centres, and dental practices increase visibility, attract qualified patients, automate patient journeys, and drive sustainable growth with AI-powered digital marketing.",
+      "description": "Today's patients begin their healthcare journey online. Whether they are searching for a specialist, comparing treatment options, booking consultations, or evaluating healthcare providers, your digital presence shapes their first impression and influences their decision-making.",
       "buttons": [
         {
-          "label": "Start Growing Today",
-          "url": "https://wheedletechnologies.tech/",
+          "label": "Book a Free Consultation",
+          "url": "",
           "style": "primary"
         },
         {
-          "label": "View Case Studies",
-          "url": "#",
+          "label": "Explore Solutions",
+          "url": "https://wheedletechnologies.tech/",
           "style": "secondary"
         }
       ]
     },
     "challengesSection": {
-      "title": "Challenges in the Healthcare Industry",
-      "description": "Traditional methods are no longer sufficient in a landscape dominated by digital-first competitors and high patient expectations.",
+      "title": "The Challenges Shaping Modern Healthcare Growth",
+      "description": "Healthcare providers operate in an environment where patient expectations continue to rise while competition intensifies across every specialty.",
       "list": [
         {
+          "icon": "Wallet",
+          "title": "Limited Visibility in an Increasingly Digital World",
+          "description": "Patients are searching online every day for doctors and specialists. If they can't find you, they'll find someone else."
+        },
+        {
           "icon": "Eye",
-          "title": "Limited Online Visibility",
-          "description": "Patients can't choose your practice if they can't find you through search engines or local listings."
+          "title": "Inconsistent Patient Enquiries and Appointment Bookings",
+          "description": "Generating a predictable flow of qualified patient enquiries remains a challenge for many practices."
         },
         {
-          "icon": "Users",
-          "title": "Inconsistent Patient Enquiries",
-          "description": "Generating a steady flow of qualified patient enquiries and appointment bookings remains a challenge."
+          "icon": "Target",
+          "title": "Administrative Processes Slow Growth",
+          "description": "Manual appointment booking, patient follow-ups, and paperwork reduce operational efficiency."
         },
         {
-          "icon": "Settings",
-          "title": "Manual Administrative Processes",
-          "description": "Manual workflows reduce efficiency and consume valuable staff time."
+          "icon": "UserCog",
+          "title": "Delayed Responses to Patient Enquiries",
+          "description": "Long response times often result in appointment loss and poor patient experience."
         },
         {
-          "icon": "Clock",
-          "title": "Delayed Patient Responses",
-          "description": "Slow response times often result in missed opportunities and lower patient satisfaction."
-        },
-        {
-          "icon": "ShieldCheck",
-          "title": "Building Patient Trust",
-          "description": "Trust, credibility, and online reputation influence healthcare decisions long before the first consultation."
+          "icon": "Award",
+          "title": "Building Trust Before the First Consultation",
+          "description": "Patients choose doctors they trust. A weak online reputation can limit long-term growth."
         },
         {
           "icon": "TrendingUp",
-          "title": "Rising Patient Acquisition Costs",
-          "description": "Increasing competition continues to raise the cost of acquiring new patients."
+          "title": "Managing Reviews and Online Reputation at Scale",
+          "description": "Your online reputation directly influences patient acquisition and conversions."
         }
       ]
     },
     "businessSection": {
-      "title": "AI-Powered Solutions for Healthcare Providers",
-      "description": "Helping healthcare organizations attract patients, automate operations, and deliver better healthcare experiences.",
-      "items": [
-        {
-          "title": "Healthcare Digital Marketing",
-          "description": "Grow your practice with a Healthcare Digital Marketing Agency that combines SEO, Google Ads, content marketing, and Hospital Social Media Marketing strategies to increase visibility, generate qualified patient enquiries, and strengthen your online presence.",
-          "image": "/indus/health_1.png",
-          "imageAlt": "Healthcare digital marketing dashboard",
-          "listType": "checklist",
-          "list": [
-            "Increased Patient Visibility",
-            "Stronger Brand Authority",
-            "Higher Appointment Bookings"
-          ]
-        },
-        {
-          "title": "Healthcare SEO",
-          "description": "Our Medical SEO Services India help healthcare providers rank higher for high-intent searches and connect with patients actively looking for healthcare services.",
-          "image": "/indus/health_2.png",
-          "imageAlt": "Healthcare SEO analytics",
-          "listType": "tags",
-          "list": [
-            "Dental Clinic Near Me",
-            "Best Dentist in India",
-            "Teeth Braces Treatment Cost",
-            "Painless Root Canal Near Me"
-          ]
-        },
-        {
-          "title": "AI Chatbot & AI Appointment Booking",
-          "description": "Deliver instant support with AI-powered assistants that help patients book appointments, answer common questions, share consultation timings, and provide treatment information—available 24/7.",
-          "image": "/indus/health_3.png",
-          "imageAlt": "AI chatbot for healthcare",
-          "listType": "none",
-          "list": []
-        }
-      ]
-    },
-    "servicesGridSection": {
-      "title": "Our Healthcare Marketing Services",
-      "description": "An integrated suite of AI-powered solutions designed for healthcare growth.",
-      "list": [
-        {
-          "icon": "Zap",
-          "title": "AI Digital Marketing"
-        },
-        {
-          "icon": "Search",
-          "title": "Healthcare SEO"
-        },
-        {
-          "icon": "BarChart3",
-          "title": "Google Ads Management"
-        },
-        {
-          "icon": "Share2",
-          "title": "Hospital Social Media Marketing"
-        },
-        {
-          "icon": "Settings",
-          "title": "Marketing Automation"
-        },
-        {
-          "icon": "Globe",
-          "title": "Website Design & Development"
-        },
-        {
-          "icon": "MessageSquare",
-          "title": "AI Chatbots"
-        },
-        {
-          "icon": "CalendarCheck",
-          "title": "AI Appointment Booking"
-        },
-        {
-          "icon": "MessageCircle",
-          "title": "WhatsApp Automation"
-        },
-        {
-          "icon": "FileText",
-          "title": "Content Marketing"
-        },
-        {
-          "icon": "Star",
-          "title": "Patient Review Management"
-        },
-        {
-          "icon": "BarChart3",
-          "title": "Analytics & Performance Reporting"
-        }
-      ]
-    },
-    "whyChooseSection": {
-      "title": "Why Choose Wheedle AI?",
-      "highlight": {
-        "icon": "ShieldCheck",
-        "label": "Healthcare Experts"
+   
+    "items": [
+      {
+        "variant": "card",
+        "title": "Build Visibility Where Patients Are Searching",
+        "description": "Increase your online presence through healthcare-focused SEO, paid advertising, content marketing, and social media campaigns designed specifically for patient acquisition.",
+        "image": "/indus/health_1.jpg",
+        "imageAlt": "Digital marketing for MSMEs",
+        "listType": "checklist",
+        "list": [
+          "Increased Patient Visibility",
+          "Higher Appointment Volume",
+          "Stronger Brand Authority"
+        ]
       },
-      "list": [
-        {
-          "icon": "HeartHandshake",
-          "title": "Patient-Centric Growth",
-          "description": "Marketing strategies designed to build trust and educate patients, not just sell."
-        },
-        {
-          "icon": "Zap",
-          "title": "Instant Enquiry Response",
-          "description": "AI agents respond to patient questions instantly, significantly improving conversion rates."
-        },
-        {
-          "icon": "ShieldCheck",
-          "title": "HIPAA-Compliant Engagement",
-          "description": "Safe and secure digital automation that respects patient privacy and data standards."
-        },
-        {
-          "icon": "CalendarCheck",
-          "title": "Automated Clinic Operations",
-          "description": "Reduce staff workload by automating bookings, reminders, and follow-up care instructions."
-        }
-      ]
-    },
-    "aiImpactSection": {
-      "title": "AI is Transforming Healthcare",
-      "description": "AI helps healthcare providers improve efficiency, enhance patient engagement, and deliver better digital experiences.",
-      "list": [
-        {
-          "icon": "MessageSquare",
-          "color": "blue",
-          "title": "Respond Faster",
-          "description": "Provide instant responses to patient enquiries."
-        },
-        {
-          "icon": "CalendarCheck",
-          "color": "purple",
-          "title": "Automate Appointment Booking",
-          "description": "Reduce manual scheduling and improve convenience with AI Appointment Booking."
-        },
-        {
-          "icon": "Users",
-          "color": "orange",
-          "title": "Improve Patient Engagement",
-          "description": "Maintain consistent communication throughout the patient journey."
-        },
-        {
-          "icon": "User",
-          "color": "blue",
-          "title": "Personalized Patient Experiences",
-          "description": "Deliver relevant healthcare information and recommendations."
-        },
-        {
-          "icon": "TrendingUp",
-          "color": "purple",
-          "title": "Increase Patient Conversions",
-          "description": "Convert more enquiries into confirmed appointments."
-        },
-        {
-          "icon": "BarChart3",
-          "color": "orange",
-          "title": "Smarter Business Decisions",
-          "description": "Optimize marketing performance using real-time analytics and AI insights."
-        }
-      ]
-    },
-    "aboutSection": {
-      "label": "About Us",
-      "description": "At Wheedle Technologies AI, we believe that healthcare is built on trust. Our mission is to bridge the gap between world-class medical expertise and the digital tools required to reach patients today. We help modern providers build strong digital brands that reflect their commitment to care."
-    },
-    "ctaCardSection": {
-      "title": "Ready to Build the Future of Patient Acquisition?",
-      "description": "Whether you're looking to fill your dental chairs, increase specialized medical enquiries, or strengthen your clinic's digital presence, Wheedle AI delivers intelligent growth solutions.",
-      "button": {
-        "label": "Book a Free Consultation",
-        "url": "https://wheedletechnologies.tech/"
+      {
+        "variant": "plain",
+        "title": "SEO for Local & Growing Businesses",
+        "description": "Patients search with urgency and intent. Our local SEO strategies ensure your practice appears when patients are ready to book consultations and begin treatment.",
+        "listType": "tags",
+        "tagListTitle": "Target Search Opportunities",
+        "tagList": [
+          {
+             "image": "/indus/msme_icon1.png",
+        "imageAlt": "icon",
+            "label": "Best Dentist in Delhi"
+          },
+          {
+            "image": "/indus/health_icon2.png",
+        "imageAlt": "icon",
+            "label": "Dental Clinic Near Me"
+          },
+          {
+            "image": "/indus/health_icon3.png",
+        "imageAlt": "icon",
+            "label": "Teeth Whitening Services"
+          },
+          {
+           "image": "/indus/health_icon4.png",
+        "imageAlt": "icon",
+            "label": "Dental Implant Cost"
+          }
+        ]
       }
+     
+    ]
+  },
+  "aiChatbotSection": {
+    "image": "/indus/msme_chatbot_robot.png",
+    "imageAlt": "AI Chatbot robot assistant",
+    "title": "Deliver Instant Support Through AI-Powered Patient Engagement",
+    "description": "Patients expect quick answers and seamless communication. Our healthcare AI assistants provide instant responses while reducing administrative workloads.",
+    "button": {
+      "label": "Explore AI Agents",
+      "url": "https://wheedletechnologies.tech/"
     }
+  },
+    "servicesGridSection": {
+    "title": "A Complete Healthcare Growth Ecosystem",
+    "description": "An integrated suite of AI, automation, and digital marketing solutions engineered for healthcare growth.",
+    "list": [
+      {
+        "image": "/indus/msme_service_digital_marketing.jpg",
+        "imageAlt": "AI Digital Marketing",
+        "title": "AI Digital Marketing"
+      },
+      {
+        "image": "/indus/health_service_chatbots.jpg",
+        "imageAlt": "Smart Customer Support Chatbots",
+        "title": "Healthcare SEO"
+      },
+      {
+        "image": "/indus/health_service_lead_automation.jpg",
+        "imageAlt": "Sales and Lead Generation Automation",
+        "title": "Google Ads Management"
+      },
+      {
+        "image": "/indus/financial_service_chatbots.jpg",
+        "imageAlt": "Data-Driven Business Insights",
+        "title": "AI Chatbot"
+      },
+      {
+        "image": "/indus/health_service_content_branding.jpg",
+        "imageAlt": "Automated Content and Branding",
+        "title": "AI Appointment Booking"
+      },
+      {
+        "image": "/indus/health_service_process_automation.jpeg",
+        "imageAlt": "Process and Operations Automation",
+        "title": "Marketing Automation"
+      }
+    ]
+  },
+   "whyChooseSection": {
+    "title": "Why Healthcare Trusts Wheedle AI",
+    "list": [
+      {
+        "title": "Healthcare Expertise for Patient Growth",
+        "description": "Compliant, patient-centric strategies for healthcare."
+      },
+      {
+        "title": "AI-Driven Operational Efficiency",
+        "description": "Automate tasks, boost engagement."
+      },
+      {
+        "title": "Data-Driven Growth Decisions",
+        "description": "Every campaign is backed by analytics and measurable performance insights."
+      },
+      {
+        "title": "Exceptional Patient Experiences",
+        "description": "Seamless patient journeys from enquiry to retention."
+      },
+      {
+        "title": "Built for Scalable Growth",
+        "description": "Built to grow with every healthcare provider."
+      }
+    ]
+  },
+    "aiImpactSection": {
+    "title": "AI Is Transforming Healthcare Growth",
+    "description": "Healthcare organizations are increasingly adopting AI to improve accessibility, patient experience, and operational efficiency.",
+    "list": [
+      {
+        "title": "Respond Instantly to Patient Enquiries",
+        "description": "AI chatbots respond to patient enquiries instantly, reducing wait times and increasing appointment bookings."
+      },
+      {
+        "title": "Automate Appointment Scheduling",
+        "description": "Automate appointment bookings, reminders, and confirmations to save staff time and improve efficiency."
+      },
+      {
+        "title": "Improve Patient Engagement",
+        "description": "Keep patients engaged with personalized communication, timely follow-ups, and 24/7 support."
+      },
+      {
+        "title": "Deliver Personalized Patient Experiences",
+        "description": "Use AI to provide customized recommendations and support based on each patient's needs."
+      },
+      {
+        "title": "Increase Lead Conversion Rates",
+        "description": "Capture, qualify, and nurture patient enquiries automatically to convert more visitors into appointments."
+      },
+      {
+        "title": "Make Smarter Growth Decisions",
+        "description": "Leverage real-time analytics and AI insights to optimize marketing and improve practice performance."
+      }
+    ]
+  },
+    
+  "ctaCardSection": {
+    "image": "/indus/msme_cta_robot.png",
+    "imageAlt": "AI robot assistant",
+    "titleLine1": "Ready to Grow Your",
+    "titleHighlight": "Practice?",
+    "description": "Whether you're looking to attract more patients, automate appointment scheduling, strengthen your reputation, or expand your healthcare network, Wheedle AI provides intelligent solutions designed for measurable growth.",
+    "button": {
+      "label": "Book a Free Consultation",
+      "url": "https://wheedletechnologies.tech/"
+    }
+  }
   },
   "Automotive": {
     "heroSection": {
-      "badge": "The Future of Automotive Retail is Already Here",
+      "bannerImage": "/indus/auto_hero_banner.png",
+      "badge": "THE FUTURE OF AUTOMOTIVE RETAIL IS ALREADY HERE",
       "titleMain": "AI-Powered Digital Marketing Solutions",
-      "titlePrefix": "for the ",
-      "titleHighlight": "Automotive Industry",
-      "tagline": "Generate More Enquiries. Increase Test Drives. Build Long-Term Customer Relationships.",
-      "description": "Today's buyers begin their vehicle journey online. They compare models, explore features, review financing options, and shortlist dealerships before visiting a showroom. Wheedle AI helps dealerships, automobile brands, EV manufacturers, and service centres attract high-intent customers, automate engagement, and drive measurable business growth.",
+      "titlePrefix": "for ",
+      "titleHighlight": "MSMEs",
+      "tagline": "From Search to Showroom - Power Every Stage of the Customer Journey with AI",
+      "description": "Generate More Enquiries. Fill More Test Drives, and Build Customers for Life. Today's buyers don't start their journey in your showroom; they start online. They compare models, explore features, watch reviews, schedule test drive options, and shortlist dealerships long before speaking to a sales advisor.AI-powered growth for dealerships, EV brands, and service centres.",
       "buttons": [
         {
-          "label": "Start Growing Today",
-          "url": "https://wheedletechnologies.tech/",
+          "label": "Book a Growth Consultation",
+          "url": "",
           "style": "primary"
         },
         {
-          "label": "View Case Studies",
-          "url": "#",
+          "label": "Explore Automotive Solutions",
+          "url": "https://wheedletechnologies.tech/",
           "style": "secondary"
         }
       ]
     },
     "challengesSection": {
-      "title": "Challenges in the Automotive Industry",
-      "description": "Modern vehicle buyers expect fast responses, personalized experiences, and a seamless buying journey.",
+      "title": "Attention Starts Before the Showroom",
+      "description": "Modern automotive buyers expect speed, convenience, and personalized experiences throughout their purchase journey.",
       "list": [
         {
-          "icon": "Users",
-          "title": "Low Buying Intent",
-          "description": "Generating enquiries is easy, but converting them into qualified buyers remains a challenge."
+          "icon": "Wallet",
+          "title": "High Visibility, Low Buying Intent",
+          "description": "Many visitors and impressions don't always translate into qualified vehicle enquiries."
         },
         {
-          "icon": "Globe",
-          "title": "Showroom Traffic is Moving Online",
-          "description": "Most customers research vehicles online before visiting a dealership."
+          "icon": "Eye",
+          "title": "Showroom Traffic Shifting Online",
+          "description": "Buying decisions increasingly begin with Google, social media, and review platforms."
         },
         {
-          "icon": "CalendarCheck",
-          "title": "Missed Test Drive Opportunities",
-          "description": "Delayed scheduling and follow-ups often result in lost sales opportunities."
+          "icon": "Target",
+          "title": "Test Drive Opportunities Lost",
+          "description": "Slow response times and manual follow-ups reduce completed test drive bookings."
         },
         {
-          "icon": "Clock",
-          "title": "Slow Customer Response",
-          "description": "Manual processes lead to delayed responses and missed enquiries."
+          "icon": "UserCog",
+          "title": "Conversations Falling Through the Cracks",
+          "description": "Missed enquiries and delayed responses result in lost customers."
         },
         {
-          "icon": "RefreshCw",
-          "title": "Limited Customer Retention",
-          "description": "Many automotive businesses struggle to stay connected with customers after the purchase."
+          "icon": "Award",
+          "title": "Customer Relationships End Too Soon",
+          "description": "Many businesses struggle to maintain engagement after the first interaction."
         },
         {
           "icon": "TrendingUp",
           "title": "Rising Advertising Costs",
-          "description": "Increasing competition continues to raise customer acquisition costs."
+          "description": "Growing competition makes customer acquisition more expensive."
         }
       ]
-    },
-    "whyChooseSection": {
-      "title": "Why Choose Wheedle AI?",
-      "highlight": {
-        "icon": "Car",
-        "label": "Automotive Experts"
-      },
-      "list": [
-        {
-          "icon": "Target",
-          "title": "Generate Qualified Leads",
-          "description": "Marketing strategies designed to filter high-intent buyers ready to make a purchase decision."
-        },
-        {
-          "icon": "CalendarCheck",
-          "title": "Increase Test Drive Bookings",
-          "description": "AI agents respond instantly to schedule visits, ensuring no potential buyer is left waiting."
-        },
-        {
-          "icon": "Zap",
-          "title": "Faster Sales Process",
-          "description": "Streamline the journey from digital enquiry to physical showroom visit through automation."
-        },
-        {
-          "icon": "BarChart3",
-          "title": "Data-Driven Growth",
-          "description": "Track every campaign dollar to actual showroom visits and vehicle sales for maximum ROI."
-        }
-      ]
-    },
-    "aiImpactSection": {
-      "title": "AI is Transforming the Automotive Industry",
-      "description": "AI helps automotive businesses attract buyers, automate engagement, and improve operational efficiency.",
-      "list": [
-        {
-          "icon": "Target",
-          "color": "blue",
-          "title": "Capture & Qualify Leads",
-          "description": "Identify high-intent buyers automatically."
-        },
-        {
-          "icon": "MessageSquare",
-          "color": "purple",
-          "title": "Deliver Instant Customer Support",
-          "description": "Provide 24/7 assistance with AI-powered conversations."
-        },
-        {
-          "icon": "CalendarCheck",
-          "color": "orange",
-          "title": "Automate Test Drive & Service Bookings",
-          "description": "Reduce manual work and improve customer convenience."
-        },
-        {
-          "icon": "User",
-          "color": "blue",
-          "title": "Personalize Every Customer Journey",
-          "description": "Recommend vehicles and services based on customer preferences."
-        },
-        {
-          "icon": "RefreshCw",
-          "color": "purple",
-          "title": "Improve Customer Retention",
-          "description": "Keep customers engaged with automated reminders and follow-ups."
-        },
-        {
-          "icon": "BarChart3",
-          "color": "orange",
-          "title": "Optimize Marketing Performance",
-          "description": "Use real-time analytics and AI insights to maximize campaign performance."
-        }
-      ]
-    },
-    "aboutSection": {
-      "label": "About Us",
-      "description": "At Wheedle Technologies AI, we help dealerships, automobile brands, EV businesses, and service centres grow through AI-powered digital marketing, automation, and lead generation. Our solutions are designed to increase enquiries, improve customer engagement, and drive sustainable business growth in a rapidly evolving automotive landscape."
-    },
-    "ctaCardSection": {
-      "title": "Ready to Accelerate Your Automotive Business?",
-      "description": "Whether you're looking to generate more vehicle enquiries, increase Car Test Drive Booking Online, grow your dealership, or strengthen after-sales engagement, Wheedle AI delivers intelligent growth solutions.",
-      "button": {
-        "label": "Book an Automotive Growth Strategy Session",
-        "url": "https://wheedletechnologies.tech/"
-      }
     },
     "businessSection": {
-      "title": "AI-Powered Solutions for Automotive Businesses",
-      "description": "Helping dealerships and automotive brands attract buyers, automate customer engagement, and increase conversions.",
-      "items": [
-        {
-          "title": "Automotive Digital Marketing",
-          "description": "Grow your business with Car Dealership Digital Marketing, EV Digital Marketing Strategy India, Google Ads, Meta Advertising, and Social Media Marketing designed to increase brand visibility, generate qualified leads, and improve vehicle sales.",
-          "image": "/indus/fin_1.png",
-          "imageAlt": "Automotive digital marketing dashboard",
-          "listType": "checklist",
-          "list": [
-            "More Qualified Vehicle Enquiries",
-            "Increased Brand Visibility",
-            "Higher Sales Opportunities"
-          ]
-        },
-        {
-          "title": "Automotive SEO",
-          "description": "Our Automotive SEO strategies help your business rank higher for high-intent searches and connect with customers ready to buy or service their vehicles.",
-          "image": "/indus/fin_2.png",
-          "imageAlt": "Automotive SEO analytics dashboard",
-          "listType": "tags",
-          "list": [
-            "Car Showroom Near Me",
-            "Best Car Dealership in City",
-            "Car Service Center Near Me",
-            "Electric Vehicle Dealer"
-          ]
-        },
-        {
-          "title": "AI Chatbot & Test Drive Booking Automation",
-          "description": "Improve customer engagement with AI-powered assistants that instantly respond to enquiries and guide customers through every stage of the buying journey.",
-          "image": "/indus/fin_3.png",
-          "imageAlt": "AI automotive chatbot assisting customers",
-          "listType": "none",
-          "list": []
-        }
-      ]
-    },
-    "servicesGridSection": {
-      "title": "Our Automotive Marketing Services",
-      "description": "A complete suite of AI-powered solutions designed for modern automotive businesses.",
-      "list": [
-        {
-          "icon": "Zap",
-          "title": "AI Digital Marketing"
-        },
-        {
-          "icon": "Search",
-          "title": "Automotive SEO"
-        },
-        {
-          "icon": "BarChart3",
-          "title": "Google Ads Management"
-        },
-        {
-          "icon": "Megaphone",
-          "title": "Meta Advertising"
-        },
-        {
-          "icon": "Share2",
-          "title": "Social Media Marketing"
-        },
-        {
-          "icon": "Globe",
-          "title": "Website Design & Development"
-        },
-        {
-          "icon": "MessageSquare",
-          "title": "AI Chatbots"
-        },
-        {
-          "icon": "CalendarCheck",
-          "title": "Test Drive Booking Automation"
-        },
-        {
-          "icon": "MessageCircle",
-          "title": "WhatsApp Automation"
-        },
-        {
-          "icon": "Database",
-          "title": "CRM Integration"
-        },
-        {
-          "icon": "ShieldCheck",
-          "title": "Reputation Management"
-        },
-        {
-          "icon": "BarChart3",
-          "title": "Performance Analytics"
-        }
-      ]
+   
+    "items": [
+      {
+        "variant": "card",
+        "title": "Show Up Where Buyers Begin Their Journey",
+        "description": "From search engines to social media, today's vehicle buyers spend weeks researching before making contact.Our automotive marketing strategies keep your brand visible at every decision-making stage.",
+        "image": "/indus/msme_1.jpg",
+        "imageAlt": "Digital marketing for MSMEs",
+        "listType": "checklist",
+        "list": [
+          "More Qualified Vehicle Enquiries",
+          "Increased Brand Visibility",
+          "Stronger Digital Presence",
+          "Higher Conversion Potential"
+        ]
+      },
+      {
+        "variant": "plain",
+        "title": "Reach Customers at the Right Moment",
+        "description": "Our automotive SEO strategies position your business in front of customers actively searching for vehicles and services.",
+        "listType": "tags",
+        "tagListTitle": "High-Intent Search Opportunities",
+        "tagList": [
+          {
+             "image": "/indus/auto_icon1.png",
+        "imageAlt": "icon",
+            "label": "Car Dealer Near Me"
+          },
+          {
+            "image": "/indus/auto_icon2.png",
+        "imageAlt": "icon",
+            "label": "Best Car Showroom"
+          },
+          {
+            "image": "/indus/auto_icon3.png",
+        "imageAlt": "icon",
+            "label": "Buy New Car Online"
+          },
+          {
+           "image": "/indus/auto_icon4.png",
+        "imageAlt": "icon",
+            "label": "Electric Vehicle Dealer"
+          },
+          {
+           "image": "/indus/auto_icon5.png",
+        "imageAlt": "icon",
+            "label": "Car Services Center Near Me"
+          },
+          {
+           "image": "/indus/auto_icon6.png",
+        "imageAlt": "icon",
+            "label": "Bike Showroom Near Me"
+          },
+            {
+           "image": "/indus/auto_icon7.png",
+        "imageAlt": "icon",
+            "label": "Used Car Dealer Near"
+          }
+        ]
+      }
+     
+    ]
+  },
+  "aiChatbotSection": {
+    "image": "/indus/auto_chatbot_robot.png",
+    "imageAlt": "AI Chatbot robot assistant",
+    "title": "Never Miss a Test Drive Opportunity Again",
+    "description": "Customer support doesn't need to be business hours. Our AI-powered automotive assistant engages customers instantly and guides them to the next step in their buying journey.",
+    "button": {
+      "label": "Explore AI Agents",
+      "url": "https://wheedletechnologies.tech/"
     }
+  },
+    "servicesGridSection": {
+    "title": "Complete Automotive Growth Stack",
+    "description": "An integrated ecosystem of AI, automation, and performance marketing built for modern mobility brands.",
+    "list": [
+      {
+        "image": "/indus/auto_service_digital_marketing.jpg",
+        "imageAlt": "AI-Powered Digital Marketing",
+        "title": "AI-Powered Digital Marketing"
+      },
+      {
+        "image": "/indus/auto_service_chatbots.jpg",
+        "imageAlt": "Smart Customer Support Chatbots",
+        "title": "Automative SEO"
+      },
+      {
+        "image": "/indus/auto_service_lead_automation.jpg",
+        "imageAlt": "Sales and Lead Generation Automation",
+        "title": "Google Ads Management"
+      },
+      {
+        "image": "/indus/auto_service_insights.png",
+        "imageAlt": "Data-Driven Business Insights",
+        "title": "Meta Advertising"
+      },
+      {
+        "image": "/indus/auto_service_content_branding.jpg",
+        "imageAlt": "Automated Content and Branding",
+        "title": "Social Media Marketing"
+      },
+      {
+        "image": "/indus/auto_service_process_automation.jpg",
+        "imageAlt": "Process and Operations Automation",
+        "title": "Website Design & Development"
+      }
+    ]
+  },
+   "whyChooseSection": {
+    "title": "Why Automotive Brands Choose Wheedle AI",
+    "list": [
+      {
+        "title": "Drive More Qualified Enquiries",
+        "description": "Reach customers actively researching vehicle and automotive services."
+      },
+      {
+        "title": "Increase Test Drive Conversions",
+        "description": "Automate scheduling and reminders to maximize dealership visits."
+      },
+      {
+        "title": "Improve Sales Velocity",
+        "description": "AI-powered lead nurturing ensures every opportunity receives timely follow-ups."
+      },
+      {
+        "title": "Deliver Better Customer Experiences",
+        "description": "Seamless communication at every stage."
+      },
+      {
+        "title": "Maximize Every Marketing Rupee",
+        "description": "Use analytics and AI insights to continuously optimize campaign performance."
+      }
+    ]
+  },
+    "aiImpactSection": {
+    "title": "Smarter Automotive Growth with AI",
+    "description": "AI is reshaping how automotive businesses attract customers, improve engagement, and increase revenue.",
+    "list": [
+      {
+        "title": "Capture and Qualify Leads Automatically",
+        "description": "Automatically identify, qualify, and prioritize high-intent buyers for faster sales."
+      },
+      {
+        "title": "Deliver Instant Customer Support",
+        "description": "Provide instant responses to customer enquiries 24/7 with AI-powered assistance."
+      },
+      {
+        "title": "Automate Test Drive and Service Bookings",
+        "description": "Simplify bookings with automated scheduling, reminders, and confirmations."
+      },
+      {
+        "title": "Personalize Every Interaction",
+        "description": "Deliver tailored recommendations and follow-ups based on customer preferences."
+      },
+      {
+        "title": "Increase Customer Retention",
+        "description": "Keep customers engaged through proactive communication and after-sales support."
+      },
+      {
+        "title": "Optimize Marketing Performance in Real Time",
+        "description": "Use AI insights and analytics to improve campaign performance and maximize ROI."
+      }
+    ]
+  },
+    
+  "ctaCardSection": {
+    "image": "/indus/msme_cta_robot.png",
+    "imageAlt": "AI robot assistant",
+    "titleLine1": "Ready to Accelerate",
+    "titleHighlight": "Growth?",
+    "description": "Whether you're looking to increase vehicle enquiries, improve test drive conversions, strengthen after-sales engagement, or grow your dealership network, Wheedle AI delivers intelligent solutions designed to accelerate results. Drive more leads, create better customer experiences, and unlock sustainable growth with AI-powered automotive marketing.",
+    "button": {
+      "label": "Book a Free Consultation",
+      "url": "https://wheedletechnologies.tech/"
+    }
+  }
   },
   "Education": {
     "heroSection": {
-      "badge": "The Future of Education Industry is Already Here",
+      "bannerImage": "/indus/edu_hero_banner.png",
+      "badge": "AI-POWERED EDUCATION SOLUTIONS",
       "titleMain": "AI-Powered Digital Marketing Solutions",
-      "titlePrefix": "for the ",
-      "titleHighlight": "Education Industry",
-      "tagline": "Turn Student Interest into Admissions with AI-Powered Growth.",
-      "description": "Today's students and parents research, compare, and engage with educational institutions online before making admission decisions. Wheedle AI helps schools, colleges, universities, coaching institutes, and EdTech brands attract qualified enquiries, automate student engagement, and convert interest into enrollments with AI-powered marketing.",
+      "titlePrefix": "for ",
+      "titleHighlight": "MSMEs",
+      "tagline": "Empowering EdTech & Education Businesses with Smarter AI Growth",
+      "description": "Schools, colleges, universities, coaching institutes, and EdTech platforms today compete in an increasingly crowded digital market. Generating enquiries, managing admissions communication, and converting interest into enrollments has become harder and doing it manually no longer scales.",
+      "buttons": [
+        {
+          "label": "Book a Strategy Session",
+          "url": "",
+          "style": "primary"
+        },
+        {
+          "label": "Explore Solutions",
+          "url": "https://wheedletechnologies.tech/",
+          "style": "secondary"
+        }
+      ]
+    },
+    "challengesSection": {
+      "title": "Challenges EdTech & Education Businesses Face",
+      "description": "Traditional marketing and manual admissions processes are no longer enough in a digital-first, highly competitive education market.",
+      "list": [
+        {
+          "icon": "Wallet",
+          "title": "Interest That Never Converts",
+          "description": "Thousands of enquiries, but only a fraction turn into actual admissions."
+        },
+        {
+          "icon": "Eye",
+          "title": "Rising Competition",
+          "description": "Institutions must stand out online against well-funded competitors."
+        },
+        {
+          "icon": "Target",
+          "title": "Admissions Teams Overloaded",
+          "description": "Manual enquiry handling slows responses and hurts conversion rates."
+        },
+        {
+          "icon": "UserCog",
+          "title": "Disconnected Enrollment Journeys",
+          "description": "Fragmented communication creates drop-offs across the student journey."
+        },
+        {
+          "icon": "Award",
+          "title": "Rising Acquisition Costs",
+          "description": "Quality student enquiries become expensive to acquire through paid campaigns."
+        },
+        {
+          "icon": "TrendingUp",
+          "title": "Low Digital Visibility",
+          "description": "Without strong search visibility, institutions struggle to attract prospective students."
+        }
+      ]
+    },
+    "businessSection": {
+   
+    "items": [
+      {
+        "variant": "card",
+        "title": "AI-Powered Education Growth",
+        "description": "We help institutions and EdTech platforms replace manual, disconnected processes with automated systems that run 24/7 across marketing, admissions, and student communication.",
+        "image": "/indus/edu_1.jpg.jpg",
+        "imageAlt": "Education Growth",
+        "listType": "checklist",
+        "list": [
+          "Automated lead capture & qualification",
+          "Route the right students & parents",
+          "Automated admission follow-ups"
+        ]
+      },
+      {
+        "variant": "plain",
+        "title": "Education & EdTech SEO",
+        "description": "Improve visibility for high-intent searches from prospective students and parents.",
+        "listType": "tags",
+        "tagListTitle": "Target Search Opportunities",
+        "tagList": [
+          {
+             "image": "/indus/edu_icon1.png",
+        "imageAlt": "icon",
+            "label": "Best School Near Me"
+          },
+          {
+            "image": "/indus/edu_icon2.png",
+        "imageAlt": "icon",
+            "label": "Best Collage Near Me"
+          },
+          {
+            "image": "/indus/edu_icon3.png",
+        "imageAlt": "icon",
+            "label": "Engineering Collage Admission"
+          },
+          {
+           "image": "/indus/edu_icon4.png",
+        "imageAlt": "icon",
+            "label": "Coaching Institute Near Me"
+          }
+        ]
+      }
+     
+    ]
+  },
+  "aiChatbotSection": {
+    "image": "/indus/edu_chatbot_robot.png",
+    "imageAlt": "AI Admission Assistant for Education Businesses",
+    "title": "AI Chatbot for Customer Engagement",
+    "description": "Give your institution round-the-clock enquiry handling with an AI-powered admission assistant that can:",
+    "bullets": [
+    "Instant admission support",
+    "Capture and qualify student details automatically",
+    "Schedule counselling sessions and campus visits",
+    "Share eligibility and course requirements"
+   ],
+    "button": {
+      "label": "Explore AI Agents",
+      "url": "https://wheedletechnologies.tech/"
+    }
+  },
+    "servicesGridSection": {
+    "title": "Our EdTech & Education Growth Services",
+    "description": "A complete suite of AI-Automation-powered solutions built for institutions and EdTech businesses.",
+    "list": [
+      {
+        "image": "/indus/msme_service_digital_marketing.jpg",
+        "imageAlt": "AI-Powered Digital Marketing",
+        "title": "AI Digital Marketing"
+      },
+      {
+        "image": "/indus/edu_service_chatbots.jpg",
+        "imageAlt": "Smart Customer Support Chatbots",
+        "title": "AI Admission Chatbots"
+      },
+      {
+        "image": "/indus/edu_service_lead_automation.jpg",
+        "imageAlt": "Sales and Lead Generation Automation",
+        "title": "Admission Lead Generation"
+      },
+      {
+        "image": "/indus/edu_service_insights.jpg",
+        "imageAlt": "Data-Driven Business Insights",
+        "title": "Marketing Automation"
+      },
+      {
+        "image": "/indus/msme_service_content_branding.jpg",
+        "imageAlt": "Automated Content and Branding",
+        "title": "Website Design & Development"
+      },
+      {
+        "image": "/indus/edu_service_process_automation.jpg",
+        "imageAlt": "Process and Operations Automation",
+        "title": "Analytics & Performance Reporting"
+      }
+    ]
+  },
+   "whyChooseSection": {
+    "title": "Why EdTech & Education Choose Wheedle AI",
+    "list": [
+      {
+        "title": "Admissions Growth Built on Data",
+        "description": "Generate more qualified enquiries through precision targeting and AI insights."
+      },
+      {
+        "title": "Faster Response, Fully Automated",
+        "description": "Engage prospective students the moment interest is shown."
+      },
+      {
+        "title": "Trust-Building Digital Presence",
+        "description": "Credible online experiences across every stage of the admission journey."
+      },
+      {
+        "title": "Measurable Performance",
+        "description": "Track every campaign, enquiry, and conversion through actionable analytics."
+      },
+      {
+        "title": "Growth Infrastructure That Scales",
+        "description": "From a single campus to a nationwide network, our systems grow with you."
+      }
+    ]
+  },
+    "aiImpactSection": {
+    "title": "How AI Transforms Education & EdTech",
+    "description": "AI is enabling education businesses to reduce manual workload, engage prospects faster, and convert more efficiently.",
+    "list": [
+      {
+        "title": "Automate Admission Enquiries",
+        "description": "AI handles admission enquiries instantly, ensuring every prospective student receives a timely response."
+      },
+      {
+        "title": "Improve Lead Qualification",
+        "description": "Automatically identify and prioritize high-intent students for faster admissions."
+      },
+      {
+        "title": "Personalize Communication",
+        "description": "Deliver personalized messages, follow-ups, and recommendations based on student interests."
+      },
+      {
+        "title": "Increase Enrollment Conversion",
+        "description": "Nurture enquiries with automated follow-ups to convert more prospects into enrollments."
+      },
+      {
+        "title": "Reduce Administrative Overhead",
+        "description": "Automate repetitive admission tasks so your team can focus on student success."
+      },
+      {
+        "title": "Optimize Marketing Investment",
+        "description": "Use AI-driven analytics to improve campaign performance and maximize marketing ROI."
+      }
+    ]
+  },
+    
+  "ctaCardSection": {
+    "image": "/indus/msme_cta_robot.png",
+    "imageAlt": "AI robot assistant",
+    "titleLine1": "Ready for Smarter",
+    "titleHighlight": "Admissions?",
+    "description": "Whether you're looking to increase enquiries, improve conversion rates, automate enrollment communication, or scale your institution's reach, Wheedle Technologies AI delivers intelligent, automation-first growth solutions built for the future of EdTech and education.",
+    "button": {
+      "label": "Book a Strategy Session",
+      "url": "https://wheedletechnologies.tech/"
+    }
+  }
+  },
+  "Manufacturing":{
+    "heroSection": {
+      "bannerImage": "/indus/manufecturing_hero_banner.jpg",
+      "badge": "AI-POWERED MANUFACTURING GROWTH SOLUTIONS",
+      "titleMain": "AI-Powered Digital Marketing Solutions",
+      "titlePrefix": "for ",
+      "titleHighlight": "MSMEs",
+      "tagline": "Empowering Manufacturing Businesses with Smarter AI Growth",
+      "description": "Buyers, distributors, and procurement teams today research suppliers, compare specifications, and shortlist manufacturers online long before placing an enquiry. They expect fast quotes, detailed product information, and reliable follow-up and manual sales processes often can't keep pace.",
       "buttons": [
         {
           "label": "Start Growing Today",
@@ -1193,216 +1365,208 @@
       ]
     },
     "challengesSection": {
-      "title": "Challenges in the Education Industry",
-      "description": "Educational institutions need more than visibility—they need meaningful engagement that converts enquiries into admissions.",
+      "title": "Challenges Manufacturing Businesses Face",
+      "description": "Traditional B2B sales methods are no longer enough in an increasingly digital, research-driven procurement market.",
       "list": [
         {
-          "icon": "Target",
-          "title": "Low Admission Conversions",
-          "description": "Many students show interest, but only a small percentage complete the enrollment process."
+          "icon": "Wallet",
+          "title": "Long, Complex Sales Cycles",
+          "description": "Industrial buying decisions involve multiple stakeholders and long RFQ evaluation processes."
         },
         {
-          "icon": "TrendingUp",
-          "title": "Rising Competition",
-          "description": "Students compare institutions across search engines, social media, and digital platforms before making a decision."
+          "icon": "Eye",
+          "title": "Low-Quality Enquiries",
+          "description": "Generating enquiries from genuine, ready-to-buy customers is difficult."
+        },
+        {
+          "icon": "Target",
+          "title": "Manual Quotes & Follow-Up Handling",
+          "description": "Delayed responses mean RFQs can be lost before buyers hear from you."
         },
         {
           "icon": "UserCog",
-          "title": "Manual Admission Management",
-          "description": "Handling enquiries manually slows response times and reduces admission opportunities."
+          "title": "Poor Online Visibility",
+          "description": "Many manufacturers remain invisible to buyers searching online."
         },
         {
-          "icon": "Clock",
-          "title": "Slow Student Responses",
-          "description": "Delayed communication often causes students to choose competing institutions."
+          "icon": "Award",
+          "title": "High Customer Acquisition Costs",
+          "description": "Reaching qualified B2B buyers becomes more expensive without proper targeting."
         },
         {
-          "icon": "GitBranch",
-          "title": "Disconnected Admission Journey",
-          "description": "Inconsistent communication creates friction throughout the enrollment process."
-        },
-        {
-          "icon": "Wallet",
-          "title": "Rising Student Acquisition Costs",
-          "description": "Increasing competition makes it more expensive to generate quality admissions."
+          "icon": "TrendingUp",
+          "title": "Disconnected Buyer Journeys",
+          "description": "Fragmented communication across sales, support, and technical teams creates poor buyer experiences."
         }
       ]
     },
     "businessSection": {
-      "title": "AI-Powered Solutions for Education Businesses",
-      "description": "Helping educational institutions attract students, automate engagement, and increase admissions.",
-      "items": [
-        {
-          "title": "Education Digital Marketing",
-          "description": "As an AI Powered Education Marketing partner, we combine SEO, Google Ads, Meta Advertising, and performance marketing to help educational institutions increase visibility, attract qualified students, and strengthen their digital presence.",
-          "image": "/indus/edu_1.png",
-          "imageAlt": "Education digital marketing dashboard",
-          "listType": "checklist",
-          "list": [
-            "Increased Visibility",
-            "Better Student Engagement",
-            "Higher Admission Intent"
-          ]
-        },
-        {
-          "title": "Education SEO",
-          "description": "Our Education SEO strategies help your institution rank for high-intent student searches and connect with prospective learners actively exploring educational opportunities.",
-          "image": "/indus/edu_2.png",
-          "imageAlt": "Education SEO analytics",
-          "listType": "tags",
-          "list": [
-            "Best School Near Me",
-            "Top University India",
-            "BBA College Admission 2025",
-            "E-Learning SEO Services"
-          ]
-        },
-        {
-          "title": "AI Chatbots & Student Admission Automation",
-          "description": "Provide instant support to students and parents with AI-powered admission assistants available 24/7.",
-          "image": "/indus/edu_3.png",
-          "imageAlt": "AI chatbot for student admissions",
-          "listType": "none",
-          "list": []
-        }
-      ]
-    },
-    "servicesGridSection": {
-      "title": "Our Education Marketing Services",
-      "description": "A complete suite of AI-powered solutions for educational institutions.",
-      "list": [
-        {
-          "icon": "Zap",
-          "title": "AI Digital Marketing"
-        },
-        {
-          "icon": "Search",
-          "title": "Education SEO"
-        },
-        {
-          "icon": "BarChart3",
-          "title": "Google Ads Management"
-        },
-        {
-          "icon": "Megaphone",
-          "title": "Meta Advertising"
-        },
-        {
-          "icon": "Share2",
-          "title": "Social Media Marketing"
-        },
-        {
-          "icon": "Globe",
-          "title": "Website Design & Development"
-        },
-        {
-          "icon": "MessageSquare",
-          "title": "AI Chatbots"
-        },
-        {
-          "icon": "GraduationCap",
-          "title": "Admission Lead Generation"
-        },
-        {
-          "icon": "MessageCircle",
-          "title": "WhatsApp Automation"
-        },
-        {
-          "icon": "FileText",
-          "title": "Content Marketing"
-        },
-        {
-          "icon": "ShieldCheck",
-          "title": "Online Reputation Management"
-        },
-        {
-          "icon": "BarChart3",
-          "title": "Analytics & Performance Tracking"
-        }
-      ]
-    },
-    "whyChooseSection": {
-      "title": "Why Choose Wheedle AI?",
-      "highlight": {
-        "icon": "GraduationCap",
-        "label": "Education Experts"
+   
+    "items": [
+      {
+        "variant": "card",
+        "title": "How AI Improves Manufacturing",
+        "description": "We help manufacturers and industrial suppliers replace manual, disconnected sales processes with automated systems that run 24/7 across marketing, lead handling, and buyer follow-up.",
+        "image": "/indus/manufecturing_1.jpg",
+        "imageAlt": "Digital marketing for MSMEs",
+        "listType": "checklist",
+        "list": [
+          "Automated enquiry & RFQ capture",
+          "AI targeting for B2B buyers",
+          "Automated quote & order updates"
+        ]
       },
-      "list": [
-        {
-          "icon": "TrendingUp",
-          "title": "Increase Student Enquiries",
-          "description": "Boost the volume of high-quality applications through targeted digital strategies."
-        },
-        {
-          "icon": "Zap",
-          "title": "Faster Student Engagement",
-          "description": "Reduce response time to zero with intelligent AI automation."
-        },
-        {
-          "icon": "Target",
-          "title": "Improve Admission Conversions",
-          "description": "Turn student interest into enrollments with data-driven admission funnels."
-        },
-        {
-          "icon": "BarChart3",
-          "title": "Higher Quality Leads",
-          "description": "Focus on attracting prospective students who are more likely to complete admissions."
-        }
-      ]
-    },
-    "aiImpactSection": {
-      "title": "AI is Transforming Education",
-      "description": "AI helps educational institutions automate admissions, personalize student engagement, and optimize enrollment growth.",
-      "list": [
-        {
-          "icon": "MessageSquare",
-          "color": "blue",
-          "title": "Automate Admission Enquiries",
-          "description": "Scale your reach without increasing your administrative overhead."
-        },
-        {
-          "icon": "User",
-          "color": "purple",
-          "title": "Personalize Student Communication",
-          "description": "Deliver tailored content based on individual student interests and behaviors."
-        },
-        {
-          "icon": "Target",
-          "color": "orange",
-          "title": "Improve Lead Qualification",
-          "description": "Focus your counseling team on students most likely to enroll."
-        },
-        {
-          "icon": "TrendingUp",
-          "color": "blue",
-          "title": "Increase Enrollment Rates",
-          "description": "Optimize every step of the student journey from discovery to registration."
-        },
-        {
-          "icon": "Zap",
-          "color": "purple",
-          "title": "Reduce Administrative Work",
-          "description": "Free up staff for high-value face-to-face student interactions."
-        },
-        {
-          "icon": "BarChart3",
-          "color": "orange",
-          "title": "Optimize Marketing Performance",
-          "description": "Continuous AI learning improves campaign efficiency day over day."
-        }
-      ]
-    },
-    "aboutSection": {
-      "label": "About Us",
-      "description": "At Wheedle Technologies AI, we help schools, colleges, universities, coaching institutes, and EdTech brands combine AI, automation, and digital marketing to improve student acquisition and build scalable admission systems."
-    },
-    "ctaCardSection": {
-      "title": "Ready to Build a Smarter Admissions Engine?",
-      "description": "Whether you're looking to increase student enquiries, improve admission conversions, automate engagement, or grow your institution's digital presence, Wheedle AI delivers AI-powered solutions designed for the future of education.",
-      "button": {
-        "label": "Book a Free Consultation",
-        "url": "https://wheedletechnologies.tech/"
+      {
+        "variant": "plain",
+        "title": "SEO for Manufacturing Businesses",
+        "description": "Improve visibility for high-intent searches from buyers and distributors actively sourcing suppliers.",
+        "listType": "tags",
+        "tagListTitle": "Keyword Pills:",
+        "tagList": [
+          {
+             "image": "/indus/manufecturing_icon1.png",
+        "imageAlt": "icon",
+            "label": "Industrial Equipment Manufacturer"
+          },
+          {
+            "image": "/indus/manufecturing_icon2.png",
+        "imageAlt": "icon",
+            "label": "Bulk Supplier Near Me"
+          },
+          {
+            "image": "/indus/manufecturing_icon3.png",
+        "imageAlt": "icon",
+            "label": "OEM Manufacturing Company"
+          },
+          {
+           "image": "/indus/manufecturing_icon4.png",
+        "imageAlt": "icon",
+            "label": "Custom Fabrication Services"
+          }
+        ]
       }
+     
+    ]
+  },
+  "aiChatbotSection": {
+    "image": "/indus/msme_chatbot_robot.png",
+    "imageAlt": "AI Chatbot robot assistant",
+    "title": "AI Chatbot for Manufacturing Support",
+    "description": "Deliver instant support with an AI-powered chatbot that can:",
+    "bullets":[
+      "Instant product specification answers",
+      "Capture and qualify B2B enquiries and RFQs",
+      "Share catalogues, pricing tiers, and MOQ details",
+      "Schedule supplier meetings and factory visits",
+      "Guide buyers through the enquiry-to-order process"
+    ],
+    "button": {
+      "label": "Explore AI Agents",
+      "url": "https://wheedletechnologies.tech/"
     }
+  },
+    "servicesGridSection": {
+    "title": "Our Manufacturing Growth Services",
+    "description": "A complete suite of AI-Automation-powered solutions designed for manufacturers and industrial suppliers.",
+    "list": [
+      {
+        "image": "/indus/Manufecturing_service_digital_marketing.png",
+        "imageAlt": "AI-Powered Digital Marketing",
+        "title": "AI Digital Marketing"
+      },
+      {
+        "image": "/indus/Manufecturing_service_chatbots.png",
+        "imageAlt": "Smart Customer Support Chatbots",
+        "title": "AI Chatbots & Buyer Support"
+      },
+      {
+        "image": "/indus/Manufecturing_service_lead_automation.jpg",
+        "imageAlt": "B2B Lead Generation",
+        "title": "B2B Lead Generation"
+      },
+      {
+        "image": "/indus/Manufecturing_service_insights.jpg.jpg",
+        "imageAlt": "Marketing Automation",
+        "title": "Marketing Automation"
+      },
+      {
+        "image": "/indus/msme_service_content_branding.jpg",
+        "imageAlt": "Website & Catalogue Design",
+        "title": "Website & Catalogue Design"
+      },
+      {
+        "image": "/indus/msme_service_process_automation.jpg",
+        "imageAlt": "Analytics & Performance Reporting",
+        "title": "Analytics & Performance Reporting"
+      }
+    ]
+  },
+   "whyChooseSection": {
+    "title": "Why Manufacturers Choose Wheedle AI?",
+    "list": [
+      {
+        "title": "Buyer Growth Built on Data",
+        "description": "Generate more qualified B2B enquiries through precision targeting and AI insights."
+      },
+      {
+        "title": "Faster Response, Fully Automated",
+        "description": "Engage buyers and respond to RFQs the moment interest is shown."
+      },
+      {
+        "title": "Stronger Buyer Trust",
+        "description": "A credible digital presence across every stage of the sourcing journey."
+      },
+      {
+        "title": "Measurable Performance",
+        "description": "Track every campaign, enquiry, and conversion through actionable analytics."
+      },
+      {
+        "title": "Growth Infrastructure That Scales",
+        "description": "Scales from single to multi-plant operations."
+      }
+    ]
+  },
+    "aiImpactSection": {
+    "title": "How AI Transforms Manufacturing Industry",
+    "description": "AI is enabling manufacturing businesses to respond faster, qualify buyers better, and win more orders.",
+    "list": [
+      {
+        "title": "Automate Enquiry & RFQ Handling",
+        "description": "Respond instantly to buyer enquiries and RFQ requests with AI-powered automation."
+      },
+      {
+        "title": "Improve Lead Qualification",
+        "description": "Identify and prioritize high-intent B2B buyers for faster conversions."
+      },
+      {
+        "title": "Personalize Buyer Communication",
+        "description": "Deliver personalized follow-ups, product information, and recommendations based on buyer needs."
+      },
+      {
+        "title": "Increase Enquiry-to-Order Conversion",
+        "description": "Automate nurturing and follow-ups to convert more enquiries into confirmed orders."
+      },
+      {
+        "title": "Reduce Sales & Admin Overhead",
+        "description": "Streamline repetitive sales and administrative tasks, allowing your team to focus on closing deals."
+      },
+      {
+        "title": "Optimize Marketing Investment",
+        "description": "Use AI-driven analytics to improve campaign performance and maximize marketing ROI."
+      }
+    ]
+  },
+    
+  "ctaCardSection": {
+    "image": "/indus/msme_cta_robot.png",
+    "imageAlt": "AI robot assistant",
+    "titleLine1": "Ready to Grow Your",
+    "titleHighlight": "Manufacturing?",
+    "description": "Whether you're looking to generate more B2B enquiries, reduce sales response times, automate buyer engagement, or strengthen your digital presence, Wheedle Technologies AI delivers intelligent, automation-first growth solutions built for the manufacturing industry.",
+    "button": {
+      "label": "Book a Strategy Session",
+      "url": "https://wheedletechnologies.tech/"
+    }
+  }
   }
 }

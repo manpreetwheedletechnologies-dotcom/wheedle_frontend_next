@@ -323,7 +323,7 @@ export default function Header() {
                                 ))}
                               </motion.div>
 
-                              <Link
+                              {/* <Link
                                 href="/industries"
                                 onClick={() => setIndustriesOpen(false)}
                                 className="group/cta mt-3 flex items-center justify-center gap-2 rounded-xl border border-white/10 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-white/[0.06]"
@@ -332,7 +332,7 @@ export default function Header() {
                                 <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover/cta:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 5l7 7-7 7" />
                                 </svg>
-                              </Link>
+                              </Link> */}
                             </div>
                           </div>
                         </motion.div>

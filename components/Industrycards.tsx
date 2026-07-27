@@ -41,7 +41,7 @@ interface HeroSection {
 
 interface WhyChooseSection {
     title: string;
-    highlight: HighlightItem;
+    highlight?: HighlightItem;
     list: WhyChooseItem[];
 }
 
@@ -103,7 +103,9 @@ const cardVariants = {
 
 function IndustryCard({ name, entry }: { name: string; entry: IndustryEntry }) {
     const { heroSection, whyChooseSection, servicesGridSection } = entry;
-    const HighlightIcon = getIcon(whyChooseSection.highlight.icon);
+    const HighlightIcon = getIcon(
+    whyChooseSection?.highlight?.icon ?? whyChooseSection?.list?.[0]?.icon ?? 'Sparkles'
+);
     const previewServices = servicesGridSection.list.slice(0, 4);
     const href = `/industry/${slugify(name)}`;
 
@@ -144,8 +146,8 @@ function IndustryCard({ name, entry }: { name: string; entry: IndustryEntry }) {
                             </span>
                         </h3>
                         <p className="mt-1 line-clamp-1 text-sm font-medium text-[#8ea1ff]">
-                            {whyChooseSection.highlight.label}
-                        </p>
+    {whyChooseSection?.highlight?.label ?? whyChooseSection?.list?.[0]?.title ?? ''}
+</p>
                     </div>
                 </div>
 
