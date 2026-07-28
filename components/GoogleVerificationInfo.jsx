@@ -9,15 +9,15 @@ const GoogleVerificationInfo = () => {
         <h2 className="text-3xl lg:text-5xl font-Gautam text-white mb-8">
           About{" "}
           <span className="text-white/60 font-normal">
-            Wheedle AI
+            WheedleTechnologies.AI
           </span>
         </h2>
 
         {/* About */}
         <p className="text-base md:text-lg text-white/80 leading-8">
-          Wheedle AI is an AI-powered digital marketing and business solutions platform that helps businesses streamline their online presence, automate marketing workflows, and accelerate growth through intelligent technology.
+          WheedleTechnologies.AI is an AI-powered digital marketing and business solutions platform that helps businesses streamline their online presence, automate marketing workflows, and accelerate growth through intelligent technology.
 
-Our platform provides AI-powered digital marketing services, SEO optimization, content generation, CRM and lead management, LinkedIn marketing, website and mobile application development, business automation, and custom AI solutions. Businesses can use Wheedle AI to manage digital operations, improve customer engagement, and optimize marketing performance from a unified platform.
+Our platform provides AI-powered digital marketing services, SEO optimization, content generation, CRM and lead management, LinkedIn marketing, website and mobile application development, business automation, and custom AI solutions. Businesses can use WheedleTechnologies.AI to manage digital operations, improve customer engagement, and optimize marketing performance from a unified platform.
         </p>
 
         <p className="text-base md:text-lg text-white/80 leading-8 mt-6">
@@ -57,7 +57,7 @@ Our platform provides AI-powered digital marketing services, SEO optimization, c
 </h3>
 
 <p className="text-white/80 leading-8">
-  Wheedle AI uses Google Sign-In to securely authenticate users and create their account.
+  WheedleTechnologies.AI uses Google Sign-In to securely authenticate users and create their account.
   We only request access to your basic Google profile information that is necessary to
   identify your account and provide our services.
 </p>
@@ -71,7 +71,7 @@ Our platform provides AI-powered digital marketing services, SEO optimization, c
 
     <p className="text-white/70 mt-2 leading-7">
       Your name, email address, and profile picture are used to create and
-      personalize your Wheedle AI account.
+      personalize your WheedleTechnologies.AI account.
     </p>
   </div>
 
@@ -82,7 +82,7 @@ Our platform provides AI-powered digital marketing services, SEO optimization, c
 
     <p className="text-white/70 mt-2 leading-7">
       Google Sign-In provides a secure authentication process without requiring
-      you to create a separate password for Wheedle AI.
+      you to create a separate password for WheedleTechnologies.AI.
     </p>
   </div>
 

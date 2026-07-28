@@ -157,7 +157,7 @@
     ]
   },
    "whyChooseSection": {
-    "title": "Why Choose Wheedle AI?",
+    "title": "Why Choose WheedleTechnologies.AI?",
     "list": [
       {
         "title": "Generate High-Intent Leads",
@@ -194,7 +194,7 @@
         "description": "Yes, we specialize in providing AI-powered digital marketing solutions for financial institutions."
       },
       {
-        "title": "Can Wheedle AI generate qualified financial leads?",
+        "title": "Can WheedleTechnologies.AI generate qualified financial leads?",
         "description": "Absolutely. Our AI-driven lead generation and qualification tools help financial businesses connect with high-intent prospects."
       },
       {
@@ -375,8 +375,141 @@
       }
     ]
   },
+
+
+
+  "aiAgentsSection": {
+    "title": "Key Features of AI Agents for Telecom",
+    "description": "Smart AI agents that improve subscriber engagement, increase sign-ups, reduce churn, and support telecom business growth.",
+    "robotImage": "/indus/msme_chatbot_robot.png",
+    "robotImageAlt": "AI Agent robot assistant for telecom",
+    "list": [
+      {
+        "label": "Review Generation Agent",
+        "title": "Review Generation Agent",
+        "points": [
+          "Auto-requests reviews from subscribers",
+          "Builds trust in network & service quality",
+          "More positive ratings online",
+          "Strengthens brand reputation",
+          "Zero manual follow-up"
+        ]
+      },
+      {
+        "label": "Review Response Agent",
+        "title": "Review Response Agent",
+        "points": [
+          "Replies to every review instantly",
+          "Protects brand reputation 24/7",
+          "Professional, empathetic tone",
+          "Turns complaints into recovery",
+          "Saves support team's time"
+        ]
+      },
+      {
+        "label": "Social Publishing Agent",
+        "title": "Social Publishing Agent",
+        "points": [
+          "Auto-posts plans & offer updates",
+          "Keeps brand consistently active",
+          "No dedicated content team needed",
+          "Builds recall for new offers",
+          "Saves marketing cost"
+        ]
+      },
+      {
+        "label": "Social Engagement Agent",
+        "title": "Social Engagement Agent",
+        "points": [
+          "Instant replies to plan & network queries",
+          "Never misses a switch/upgrade enquiry",
+          "24/7 responsiveness to subscribers",
+          "Builds stronger customer trust",
+          "Faster response = lower churn"
+        ]
+      },
+      {
+        "label": "Reporting Agent",
+        "title": "Reporting Agent",
+        "points": [
+          "Auto-generated performance reports",
+          "Clear visibility into subscriber acquisition",
+          "No manual data compilation",
+          "Supports smarter campaign decisions",
+          "Saves management time"
+        ]
+      },
+      {
+        "label": "Listings Optimization Agent",
+        "title": "Listings Optimization Agent",
+        "points": [
+          "Keeps store & service listings accurate",
+          "Improves local search ranking",
+          "More visibility for \"network near me\" searches",
+          "Attracts nearby subscribers",
+          "Fixes listing errors automatically"
+        ]
+      },
+      {
+        "label": "Lead Generation Agent",
+        "title": "Lead Generation Agent",
+        "points": [
+          "Captures plan & connection enquiries automatically",
+          "Qualifies high-intent switchers",
+          "Works across ads, forms & website",
+          "Delivers subscription-ready leads",
+          "Boosts sign-ups without extra staff"
+        ]
+      },
+      {
+        "label": "Contact Segmentation Agent",
+        "title": "Contact Segmentation Agent",
+        "points": [
+          "Auto-organizes subscriber data",
+          "Segments by plan, usage & churn risk",
+          "Enables targeted retention campaigns",
+          "Improves upsell & renewal outreach",
+          "Saves manual CRM effort"
+        ]
+      },
+      {
+        "label": "Template Design Agent",
+        "title": "Template Design Agent",
+        "points": [
+          "Instant plan & offer creatives",
+          "Consistent brand identity",
+          "Faster campaign launches",
+          "No design team required",
+          "Saves creative costs"
+        ]
+      },
+      {
+        "label": "Custom Agent",
+        "title": "Custom Agent",
+        "points": [
+          "Built for your subscriber workflow",
+          "Solves unique operational challenges",
+          "Fully tailored automation",
+          "Scales across regions & networks",
+          "One agent, unlimited use-cases"
+        ]
+      },
+      {
+        "label": "Full Website Architect",
+        "title": "Full Website Architect",
+        "points": [
+          "Builds a complete plans & offers website with AI",
+          "Showcases network & packages professionally",
+          "Conversion-focused for sign-ups",
+          "No developer needed",
+          "Saves cost & launch time"
+        ]
+      }
+    ]
+  },
+
    "whyChooseSection": {
-    "title": "Why Telecom Businesses Choose Wheedle AI",
+    "title": "Why Telecom Businesses Choose WheedleTechnologies.AI",
     "list": [
       {
         "title": "Subscriber Growth Built on Data",
@@ -451,7 +584,7 @@
       "titlePrefix": "for ",
       "titleHighlight": "MSMEs",
       "tagline": "Empowering Small Businesses with Smarter Digital Growth",
-      "description": "MSMEs are the backbone of the economy, but competing with larger brands requires more than traditional marketing. From generating quality leads to building an online presence, businesses need intelligent solutions that deliver measurable results. Wheedle AI helps MSMEs leverage AI-powered marketing, automation, SEO, and lead generation to attract customers, increase visibility, and accelerate growth.",
+      "description": "MSMEs are the backbone of the economy, but competing with larger brands requires more than traditional marketing. From generating quality leads to building an online presence, businesses need intelligent solutions that deliver measurable results. WheedleTechnologies.AI helps MSMEs leverage AI-powered marketing, automation, SEO, and lead generation to attract customers, increase visibility, and accelerate growth.",
       "buttons": [
         {
           "label": "Start Growing Today",
@@ -594,8 +727,138 @@
       }
     ]
   },
+
+  "aiAgentsSection": {
+    "title": "Key Features of AI Agents for MSME",
+    "description": "Smart AI agents that support better care and business growth.",
+    "robotImage": "/indus/msme_chatbot_robot.png",
+    "robotImageAlt": "AI Agent robot assistant",
+     "list": [
+      {
+        "label": "Review Generation Agent",
+        "title": "Review Generation Agent",
+        "points": [
+          "Auto-requests reviews from happy customers",
+          "Builds local trust fast",
+          "More 5-star ratings without effort",
+          "Attracts nearby footfall & enquiries",
+          "Zero manual follow-up needed"
+        ]
+      },
+      {
+        "label": "Review Response Agent",
+        "title": "Review Response Agent",
+        "points": [
+          "Replies to every review instantly",
+          "Protects small-business reputation",
+          "Personalized, professional tone",
+          "Recovers unhappy customers quickly",
+          "Saves owner's time daily"
+        ]
+      },
+      {
+        "label": "Social Publishing Agent",
+        "title": "Social Publishing Agent",
+        "points": [
+          "Auto-creates & schedules posts",
+          "Keeps business visible daily",
+          "No social media team needed",
+          "Consistent, professional branding",
+          "Saves marketing budget"
+        ]
+      },
+      {
+        "label": "Social Engagement Agent",
+        "title": "Social Engagement Agent",
+        "points": [
+          "Instant replies to DMs & comments",
+          "Never misses a customer enquiry",
+          "24/7 responsiveness",
+          "Builds community trust locally",
+          "Converts interest into visits"
+        ]
+      },
+      {
+        "label": "Reporting Agent",
+        "title": "Reporting Agent",
+        "points": [
+          "Simple, auto-generated reports",
+          "Clear view of what's working",
+          "No manual data tracking",
+          "Helps smarter budget decisions",
+          "Saves owner's time weekly"
+        ]
+      },
+      {
+        "label": "Listings Optimization Agent",
+        "title": "Listings Optimization Agent",
+        "points": [
+          "Keeps Google & directory listings accurate",
+          "Improves local search ranking",
+          "More visibility on Maps searches",
+          "Attracts nearby walk-in customers",
+          "Fixes listing errors automatically"
+        ]
+      },
+      {
+        "label": "Lead Generation Agent",
+        "title": "Lead Generation Agent",
+        "points": [
+          "Captures enquiries automatically",
+          "Qualifies serious customers",
+          "Works across ads, forms & website",
+          "Delivers ready-to-buy leads",
+          "Boosts conversion without extra staff"
+        ]
+      },
+      {
+        "label": "Contact Segmentation Agent",
+        "title": "Contact Segmentation Agent",
+        "points": [
+          "Auto-organizes customer contacts",
+          "Smarter targeting for offers",
+          "Personalized follow-ups at scale",
+          "Better repeat-customer marketing",
+          "Saves manual list management"
+        ]
+      },
+      {
+        "label": "Template Design Agent",
+        "title": "Template Design Agent",
+        "points": [
+          "Instant branded creatives",
+          "Consistent look across channels",
+          "Faster offer & promo launches",
+          "No designer required",
+          "Saves creative costs"
+        ]
+      },
+      {
+        "label": "Custom Agent",
+        "title": "Custom Agent",
+        "points": [
+          "Built for your specific business need",
+          "Solves unique daily challenges",
+          "Fully tailored automation",
+          "Grows with your business",
+          "One agent, many use-cases"
+        ]
+      },
+      {
+        "label": "Full Website Architect",
+        "title": "Full Website Architect",
+        "points": [
+          "Builds a complete business website with AI",
+          "Professional online presence fast",
+          "Conversion-ready design",
+          "No developer needed",
+          "Saves cost & launch time"
+        ]
+      }
+    ]
+  },
    "whyChooseSection": {
-    "title": "Why Choose Wheedle AI?",
+    "title": "Why Choose WheedleTechnologies.AI?",
     "list": [
       {
         "title": "Affordable Growth Solutions",
@@ -655,7 +918,7 @@
     "imageAlt": "AI robot assistant",
     "titleLine1": "Ready to Grow Your",
     "titleHighlight": "MSME?",
-    "description": "Whether you're launching a startup, expanding your business, or looking to generate more qualified leads, Wheedle AI provides intelligent digital marketing solutions that help your business grow faster and smarter.",
+    "description": "Whether you're launching a startup, expanding your business, or looking to generate more qualified leads, WheedleTechnologies.AI provides intelligent digital marketing solutions that help your business grow faster and smarter.",
     "button": {
       "label": "Book a Free Consultation",
       "url": "https://wheedletechnologies.tech/"
@@ -812,8 +1075,139 @@
       }
     ]
   },
+
+
+   "aiAgentsSection": {
+    "title": "Key Features of AI Agents for Healthcare",
+    "description": "Smart AI agents that improve patient engagement, increase appointment bookings, strengthen healthcare reputation, and simplify clinic operations.",
+    "robotImage": "/indus/msme_chatbot_robot.png",
+    "robotImageAlt": "AI Agent robot assistant for healthcare",
+    "list": [
+      {
+        "label": "Review Generation Agent",
+        "title": "Review Generation Agent",
+        "points": [
+          "Auto-requests reviews from patients",
+          "Builds trust in care quality",
+          "More positive ratings online",
+          "Strengthens clinic/hospital reputation",
+          "Zero manual follow-up"
+        ]
+      },
+      {
+        "label": "Review Response Agent",
+        "title": "Review Response Agent",
+        "points": [
+          "Replies to every review instantly",
+          "Protects healthcare reputation",
+          "Compassionate, professional tone",
+          "Resolves patient concerns quickly",
+          "Saves front-desk team's time"
+        ]
+      },
+      {
+        "label": "Social Publishing Agent",
+        "title": "Social Publishing Agent",
+        "points": [
+          "Auto-posts health tips & clinic updates",
+          "Keeps practice visible daily",
+          "No content team needed",
+          "Builds community trust",
+          "Saves marketing budget"
+        ]
+      },
+      {
+        "label": "Social Engagement Agent",
+        "title": "Social Engagement Agent",
+        "points": [
+          "Instant replies to patient queries",
+          "Never misses an appointment enquiry",
+          "24/7 responsiveness to patients",
+          "Builds trust before first visit",
+          "Faster replies = more bookings"
+        ]
+      },
+      {
+        "label": "Reporting Agent",
+        "title": "Reporting Agent",
+        "points": [
+          "Auto-generated appointment & campaign reports",
+          "Clear visibility into patient acquisition",
+          "No manual data tracking",
+          "Supports smarter decisions",
+          "Saves admin's time"
+        ]
+      },
+      {
+        "label": "Listings Optimization Agent",
+        "title": "Listings Optimization Agent",
+        "points": [
+          "Keeps clinic & hospital listings accurate",
+          "Improves local search ranking",
+          "More visibility for \"doctor/clinic near me\" searches",
+          "Attracts nearby patients",
+          "Fixes listing errors automatically"
+        ]
+      },
+      {
+        "label": "Lead Generation Agent",
+        "title": "Lead Generation Agent",
+        "points": [
+          "Captures appointment enquiries automatically",
+          "Qualifies serious patient leads",
+          "Works across ads, forms & website",
+          "Delivers booking-ready leads",
+          "Boosts appointments without extra staff"
+        ]
+      },
+      {
+        "label": "Contact Segmentation Agent",
+        "title": "Contact Segmentation Agent",
+        "points": [
+          "Auto-organizes patient data",
+          "Segments by treatment interest & visit stage",
+          "Enables targeted health-reminder campaigns",
+          "Improves follow-up & recall outreach",
+          "Saves manual CRM effort"
+        ]
+      },
+      {
+        "label": "Template Design Agent",
+        "title": "Template Design Agent",
+        "points": [
+          "Instant health awareness creatives",
+          "Consistent clinic branding",
+          "Faster campaign launches",
+          "No designer required",
+          "Saves creative costs"
+        ]
+      },
+      {
+        "label": "Custom Agent",
+        "title": "Custom Agent",
+        "points": [
+          "Built for your clinic's workflow",
+          "Solves unique patient-care challenges",
+          "Fully tailored automation",
+          "Scales across multiple locations",
+          "One agent, unlimited use-cases"
+        ]
+      },
+      {
+        "label": "Full Website Architect",
+        "title": "Full Website Architect",
+        "points": [
+          "Builds a complete healthcare website with AI",
+          "Showcases services & doctors professionally",
+          "Conversion-focused for appointment bookings",
+          "No developer needed",
+          "Saves cost & launch time"
+        ]
+      }
+    ]
+  },
    "whyChooseSection": {
-    "title": "Why Healthcare Trusts Wheedle AI",
+    "title": "Why Healthcare Trusts WheedleTechnologies.AI",
     "list": [
       {
         "title": "Healthcare Expertise for Patient Growth",
@@ -873,7 +1267,7 @@
     "imageAlt": "AI robot assistant",
     "titleLine1": "Ready to Grow Your",
     "titleHighlight": "Practice?",
-    "description": "Whether you're looking to attract more patients, automate appointment scheduling, strengthen your reputation, or expand your healthcare network, Wheedle AI provides intelligent solutions designed for measurable growth.",
+    "description": "Whether you're looking to attract more patients, automate appointment scheduling, strengthen your reputation, or expand your healthcare network, WheedleTechnologies.AI provides intelligent solutions designed for measurable growth.",
     "button": {
       "label": "Book a Free Consultation",
       "url": "https://wheedletechnologies.tech/"
@@ -1048,8 +1442,139 @@
       }
     ]
   },
+
+
+   "aiAgentsSection": {
+    "title": "Key Features of AI Agents for Automobiles",
+    "description": "Smart AI agents that increase buyer engagement, generate qualified leads, improve dealership operations, and accelerate automobile sales.",
+    "robotImage": "/indus/msme_chatbot_robot.png",
+    "robotImageAlt": "AI Agent robot assistant for automobiles",
+    "list": [
+      {
+        "label": "Review Generation Agent",
+        "title": "Review Generation Agent",
+        "points": [
+          "Auto-requests reviews from buyers & service customers",
+          "Builds showroom & service trust",
+          "More 5-star ratings online",
+          "Strengthens dealership reputation",
+          "Zero manual follow-up"
+        ]
+      },
+      {
+        "label": "Review Response Agent",
+        "title": "Review Response Agent",
+        "points": [
+          "Replies to every review instantly",
+          "Protects dealership reputation",
+          "Professional, reassuring tone",
+          "Resolves service complaints fast",
+          "Saves service team's time"
+        ]
+      },
+      {
+        "label": "Social Publishing Agent",
+        "title": "Social Publishing Agent",
+        "points": [
+          "Auto-posts new models & offers",
+          "Keeps dealership visible daily",
+          "No content team needed",
+          "Builds excitement for launches",
+          "Saves marketing budget"
+        ]
+      },
+      {
+        "label": "Social Engagement Agent",
+        "title": "Social Engagement Agent",
+        "points": [
+          "Instant replies to test-drive & service queries",
+          "Never misses a buyer enquiry",
+          "24/7 responsiveness to customers",
+          "Builds trust before showroom visit",
+          "Faster replies = more walk-ins"
+        ]
+      },
+      {
+        "label": "Reporting Agent",
+        "title": "Reporting Agent",
+        "points": [
+          "Auto-generated sales & footfall reports",
+          "Clear visibility into enquiry sources",
+          "No manual data tracking",
+          "Supports smarter ad spend decisions",
+          "Saves management time"
+        ]
+      },
+      {
+        "label": "Listings Optimization Agent",
+        "title": "Listings Optimization Agent",
+        "points": [
+          "Keeps showroom & service listings accurate",
+          "Improves local search ranking",
+          "More visibility for \"dealer near me\" searches",
+          "Attracts nearby buyers",
+          "Fixes listing errors automatically"
+        ]
+      },
+      {
+        "label": "Lead Generation Agent",
+        "title": "Lead Generation Agent",
+        "points": [
+          "Captures test-drive & purchase enquiries automatically",
+          "Qualifies serious buyers",
+          "Works across ads, forms & website",
+          "Delivers showroom-ready leads",
+          "Boosts sales without extra staff"
+        ]
+      },
+      {
+        "label": "Contact Segmentation Agent",
+        "title": "Contact Segmentation Agent",
+        "points": [
+          "Auto-organizes buyer & service customer data",
+          "Segments by model interest & purchase stage",
+          "Enables targeted offer campaigns",
+          "Improves service-reminder outreach",
+          "Saves manual CRM effort"
+        ]
+      },
+      {
+        "label": "Template Design Agent",
+        "title": "Template Design Agent",
+        "points": [
+          "Instant model & offer creatives",
+          "Consistent dealership branding",
+          "Faster campaign launches",
+          "No designer required",
+          "Saves creative costs"
+        ]
+      },
+      {
+        "label": "Custom Agent",
+        "title": "Custom Agent",
+        "points": [
+          "Built for your dealership workflow",
+          "Solves unique sales & service challenges",
+          "Fully tailored automation",
+          "Scales across showroom locations",
+          "One agent, unlimited use-cases"
+        ]
+      },
+      {
+        "label": "Full Website Architect",
+        "title": "Full Website Architect",
+        "points": [
+          "Builds a complete dealership website with AI",
+          "Showcases models & offers professionally",
+          "Conversion-focused for test-drive bookings",
+          "No developer needed",
+          "Saves cost & launch time"
+        ]
+      }
+    ]
+  },
    "whyChooseSection": {
-    "title": "Why Automotive Brands Choose Wheedle AI",
+    "title": "Why Automotive Brands Choose WheedleTechnologies.AI",
     "list": [
       {
         "title": "Drive More Qualified Enquiries",
@@ -1109,7 +1634,7 @@
     "imageAlt": "AI robot assistant",
     "titleLine1": "Ready to Accelerate",
     "titleHighlight": "Growth?",
-    "description": "Whether you're looking to increase vehicle enquiries, improve test drive conversions, strengthen after-sales engagement, or grow your dealership network, Wheedle AI delivers intelligent solutions designed to accelerate results. Drive more leads, create better customer experiences, and unlock sustainable growth with AI-powered automotive marketing.",
+    "description": "Whether you're looking to increase vehicle enquiries, improve test drive conversions, strengthen after-sales engagement, or grow your dealership network, WheedleTechnologies.AI delivers intelligent solutions designed to accelerate results. Drive more leads, create better customer experiences, and unlock sustainable growth with AI-powered automotive marketing.",
     "button": {
       "label": "Book a Free Consultation",
       "url": "https://wheedletechnologies.tech/"
@@ -1274,8 +1799,140 @@
       }
     ]
   },
+
+   "aiAgentsSection": {
+    "title": "Key Features of AI Agents",
+    "description": "Smart AI agents that support better business growth.",
+    "robotImage": "/indus/msme_chatbot_robot.png",
+    "robotImageAlt": "AI Agent robot assistant",
+    "list": [
+      {
+        "label": "Review Generation Agent",
+        "title": "Review Generation Agent",
+        "points": [
+          "Auto-requests reviews from students & parents",
+          "Builds institutional trust",
+          "More 5-star ratings & testimonials",
+          "Strengthens admissions credibility",
+          "Zero manual follow-up"
+        ]
+      },
+      {
+        "label": "Review Response Agent",
+        "title": "Review Response Agent",
+        "points": [
+          "Replies to every review instantly",
+          "Protects institution's reputation",
+          "Warm, professional tone",
+          "Resolves parent concerns quickly",
+          "Saves admin team's time"
+        ]
+      },
+      {
+        "label": "Social Publishing Agent",
+        "title": "Social Publishing Agent",
+        "points": [
+          "Auto-posts programs & campus updates",
+          "Keeps institution visible daily",
+          "No dedicated content team needed",
+          "Builds brand recall with parents",
+          "Saves marketing budget"
+        ]
+      },
+      {
+        "label": "Social Engagement Agent",
+        "title": "Social Engagement Agent",
+        "points": [
+          "Instant replies to admission queries",
+          "Never misses a prospective enquiry",
+          "24/7 responsiveness to parents",
+          "Builds trust during decision-making",
+          "Faster replies = more admissions"
+        ]
+      },
+      {
+        "label": "Reporting Agent",
+        "title": "Reporting Agent",
+        "points": [
+          "Auto-generated admissions reports",
+          "Clear view of enquiry-to-enrollment funnel",
+          "No manual data tracking",
+          "Supports smarter counselling decisions",
+          "Saves leadership's time"
+        ]
+      },
+      {
+        "label": "Listings Optimization Agent",
+        "title": "Listings Optimization Agent",
+        "points": [
+          "Keeps Google & education directory listings accurate",
+          "Improves local search ranking",
+          "More visibility for \"best school/college near me\"",
+          "Attracts nearby applicants",
+          "Fixes listing errors automatically"
+        ]
+      },
+      {
+        "label": "Lead Generation Agent",
+        "title": "Lead Generation Agent",
+        "points": [
+          "Captures admission enquiries automatically",
+          "Qualifies high-intent applicants",
+          "Works across ads, forms & website",
+          "Delivers enrollment-ready leads",
+          "Boosts admissions without extra staff"
+        ]
+      },
+      {
+        "label": "Contact Segmentation Agent",
+        "title": "Contact Segmentation Agent",
+        "points": [
+          "Auto-organizes applicant & parent data",
+          "Segments by program & application stage",
+          "Enables personalized counselling outreach",
+          "Improves nurture campaign performance",
+          "Saves manual CRM effort"
+        ]
+      },
+      {
+        "label": "Template Design Agent",
+        "title": "Template Design Agent",
+        "points": [
+          "Instant brochures & admission creatives",
+          "Consistent institutional branding",
+          "Faster campaign launches",
+          "No designer required",
+          "Saves creative costs"
+        ]
+      },
+      {
+        "label": "Custom Agent",
+        "title": "Custom Agent",
+        "points": [
+          "Built for your admissions workflow",
+          "Solves unique institutional challenges",
+          "Fully tailored automation",
+          "Scales across campuses",
+          "One agent, unlimited use-cases"
+        ]
+      },
+      {
+        "label": "Full Website Architect",
+        "title": "Full Website Architect",
+        "points": [
+          "Builds a complete admissions website with AI",
+          "Showcases programs professionally",
+          "Conversion-focused for enquiries",
+          "No developer needed",
+          "Saves cost & launch time"
+        ]
+      }
+    ]
+  },
+
+  
    "whyChooseSection": {
-    "title": "Why EdTech & Education Choose Wheedle AI",
+    "title": "Why EdTech & Education Choose WheedleTechnologies.AI",
     "list": [
       {
         "title": "Admissions Growth Built on Data",
@@ -1501,8 +2158,139 @@
       }
     ]
   },
+
+
+  "aiAgentsSection": {
+    "title": "Key Features of AI Agents For Manufacturing",
+    "description": "Smart AI agents that support better business growth.",
+    "robotImage": "/indus/msme_chatbot_robot.png",
+    "robotImageAlt": "AI Agent robot assistant",
+    "list": [
+      {
+        "label": "Review Generation Agent",
+        "title": "Review Generation Agent",
+        "points": [
+          "Auto-collects buyer & distributor feedback",
+          "Builds supplier credibility",
+          "Strengthens B2B trust signals",
+          "Improves brand perception online",
+          "No manual review requests"
+        ]
+      },
+      {
+        "label": "Review Response Agent",
+        "title": "Review Response Agent",
+        "points": [
+          "Responds to feedback instantly",
+          "Protects industrial brand reputation",
+          "Professional, consistent tone",
+          "Resolves buyer concerns fast",
+          "Saves sales team's time"
+        ]
+      },
+      {
+        "label": "Social Publishing Agent",
+        "title": "Social Publishing Agent",
+        "points": [
+          "Auto-posts product & plant updates",
+          "Keeps brand active on LinkedIn & social",
+          "Builds industry authority",
+          "No in-house content team needed",
+          "Saves marketing overhead"
+        ]
+      },
+      {
+        "label": "Social Engagement Agent",
+        "title": "Social Engagement Agent",
+        "points": [
+          "Instant replies to buyer queries",
+          "Never misses a sourcing enquiry",
+          "24/7 responsiveness to distributors",
+          "Builds stronger channel trust",
+          "Faster response = faster orders"
+        ]
+      },
+      {
+        "label": "Reporting Agent",
+        "title": "Reporting Agent",
+        "points": [
+          "Auto-generated sales & campaign reports",
+          "Clear visibility into enquiry sources",
+          "No manual data compilation",
+          "Supports data-driven decisions",
+          "Saves management time"
+        ]
+      },
+      {
+        "label": "Listings Optimization Agent",
+        "title": "Listings Optimization Agent",
+        "points": [
+          "Keeps business directories & B2B listings accurate",
+          "Improves visibility to sourcing buyers",
+          "Better ranking on industrial marketplaces",
+          "Attracts genuine procurement searches",
+          "Fixes listing errors automatically"
+        ]
+      },
+      {
+        "label": "Lead Generation Agent",
+        "title": "Lead Generation Agent",
+        "points": [
+          "Captures RFQs automatically",
+          "Qualifies genuine B2B buyers",
+          "Works across ads, website & forms",
+          "Delivers order-ready enquiries",
+          "Shortens the sales cycle"
+        ]
+      },
+      {
+        "label": "Contact Segmentation Agent",
+        "title": "Contact Segmentation Agent",
+        "points": [
+          "Auto-organizes buyer & distributor data",
+          "Segments by product interest & order size",
+          "Enables targeted B2B campaigns",
+          "Improves account-based marketing",
+          "Saves manual CRM effort"
+        ]
+      },
+      {
+        "label": "Template Design Agent",
+        "title": "Template Design Agent",
+        "points": [
+          "Instant catalogues & spec sheets",
+          "Consistent brand identity",
+          "Faster quote & proposal creation",
+          "No design team required",
+          "Saves creative costs"
+        ]
+      },
+      {
+        "label": "Custom Agent",
+        "title": "Custom Agent",
+        "points": [
+          "Built for your production workflow",
+          "Solves unique operational challenges",
+          "Fully tailored automation",
+          "Scales with plant capacity",
+          "One agent, unlimited use-cases"
+        ]
+      },
+      {
+        "label": "Full Website Architect",
+        "title": "Full Website Architect",
+        "points": [
+          "Builds a complete B2B website with AI",
+          "Showcases products & capabilities professionally",
+          "Conversion-focused for buyer enquiries",
+          "No developer needed",
+          "Saves cost & launch time"
+        ]
+      }
+    ]
+  },
    "whyChooseSection": {
-    "title": "Why Manufacturers Choose Wheedle AI?",
+    "title": "Why Manufacturers Choose WheedleTechnologies.AI?",
     "list": [
       {
         "title": "Buyer Growth Built on Data",

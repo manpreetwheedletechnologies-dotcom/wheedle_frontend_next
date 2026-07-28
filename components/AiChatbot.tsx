@@ -65,21 +65,22 @@ export default function AiChatbot({ data }: AiChatbotProps) {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <div className="relative rounded-2xl overflow-visible cursor-pointer">
-              <img
-                src={data.image}
-                alt={data.imageAlt || data.title}
-                 draggable={false}
-                className="w-full h-auto object-contain select-none transition-transform duration-700 ease-out group-hover:scale-110 origin-center"
-              />
-              {/* popup / zoom overlay on hover */}
-              <div
-                aria-hidden
-                className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-300"
-              >
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-black/50 backdrop-blur-sm border border-white/30 scale-90 group-hover:scale-100 transition-transform duration-300">
-                  <Maximize2 size={18} className="text-white" />
+            <div className="relative flex justify-center lg:justify-start">
+              {/* AI Bot Glow Ring - Cyan/Blue gradient */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#0665ff]/10 to-[#22d3ee]/10 blur-3xl" />
+              <div className="relative group rounded-2xl overflow-visible cursor-pointer">
+                <img
+                  src={data.image}
+                  alt={data.imageAlt || data.title}
+                  draggable={false}
+                  className="w-full h-auto object-contain select-none transition-transform duration-700 ease-out group-hover:scale-110 origin-center drop-shadow-[0_0_35px_rgba(6,101,255,0.4)]"
+                />
+
+                {/* Scanning line effect with gradient */}
+                <div className="absolute inset-0 overflow-hidden rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                  <div className="absolute top-0 left-0 h-full w-1/2 bg-gradient-to-r from-transparent via-[#22d3ee]/10 to-transparent transform -skew-x-12 animate-pulse" />
                 </div>
+
               </div>
             </div>
           </motion.div>
@@ -110,18 +111,18 @@ export default function AiChatbot({ data }: AiChatbotProps) {
             </motion.p>
 
             {data.bullets && data.bullets.length > 0 && (
-  <motion.ul
-    variants={itemVariants}
-    className="mt-5 space-y-3 text-left text-white max-w-xl mx-auto md:mx-0"
-  >
-    {data.bullets.map((item, index) => (
-      <li key={index} className="flex items-start gap-3">
-        <span className="mt-2 h-2 w-2 rounded-full bg-blue-500 shrink-0"></span>
-        <span>{item}</span>
-      </li>
-    ))}
-  </motion.ul>
-)}
+              <motion.ul
+                variants={itemVariants}
+                className="mt-5 space-y-3 text-left text-white max-w-xl mx-auto md:mx-0"
+              >
+                {data.bullets.map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <span className="mt-2 h-2 w-2 rounded-full bg-blue-500 shrink-0"></span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </motion.ul>
+            )}
 
             <motion.div variants={itemVariants} className="mt-8">
               <Link

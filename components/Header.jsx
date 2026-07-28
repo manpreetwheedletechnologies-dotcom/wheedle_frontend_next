@@ -194,10 +194,10 @@ export default function Header() {
                           style={{ transformOrigin: 'top left' }}
                           className="absolute top-full left-0 mt-5 w-[520px] xl:w-[580px] rounded-[22px] p-[1px] bg-gradient-to-br from-white/15 via-[#0B2CC3]/40 to-white/5 shadow-[0_25px_60px_-15px_rgba(0,10,60,0.7)] z-50"
                         >
-                          <div className="relative rounded-[21px] bg-[#040814]/98 backdrop-blur-2xl overflow-hidden">
+                          <div className="relative rounded-[21px] bg-[#040814] backdrop-blur-2xl overflow-hidden">
                             {/* ambient glow */}
-                            <div className="pointer-events-none absolute -top-24 -left-16 w-64 h-64 bg-[#0B2CC3]/30 rounded-full blur-[80px]" />
-                            <div className="pointer-events-none absolute -bottom-20 -right-10 w-56 h-56 bg-[#4D6DFF]/15 rounded-full blur-[80px]" />
+                            <div className="pointer-events-none absolute -top-24 -left-16 w-64 h-64 bg-[#0B2CC3] rounded-full blur-[80px]" />
+                            <div className="pointer-events-none absolute -bottom-20 -right-10 w-56 h-56 bg-[#4D6DFF] rounded-full blur-[80px]" />
 
                             <div className="relative flex">
                               {/* Left rail */}
@@ -291,8 +291,8 @@ export default function Header() {
                           style={{ transformOrigin: 'top left' }}
                           className="absolute top-full left-0 mt-5 w-[360px] rounded-[22px] p-[1px] bg-gradient-to-br from-white/15 via-[#0B2CC3]/40 to-white/5 shadow-[0_25px_60px_-15px_rgba(0,10,60,0.7)] z-50"
                         >
-                          <div className="relative rounded-[21px] bg-[#040814]/98 backdrop-blur-2xl overflow-hidden">
-                            <div className="pointer-events-none absolute -top-20 -right-14 w-56 h-56 bg-[#0B2CC3]/25 rounded-full blur-[70px]" />
+                          <div className="relative rounded-[21px] bg-[#040814] backdrop-blur-2xl overflow-hidden">
+                            <div className="pointer-events-none absolute -top-20 -right-14 w-56 h-56 bg-[#0B2CC3] rounded-full blur-[70px]" />
 
                             <div className="relative p-5">
                               <div className="px-2 pb-3 mb-2 border-b border-white/10">

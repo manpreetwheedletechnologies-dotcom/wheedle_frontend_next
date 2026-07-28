@@ -14,6 +14,7 @@ import AiImpact from "../../../components/AiImpact";
 import Challenges from "../../../components/Challenges";
 import PageWrapper from "../../../components/PageWrapper";
 import AiChatbot from "../../../components/AiChatbot";
+import AiAgents from "../../../components/AiAgents";
 
 export function generateStaticParams() {
   return getAllIndustrySlugs().map((slug) => ({ slug }));
@@ -46,8 +47,14 @@ export default async function IndustryPage({
         <AiChatbot data={industry.aiChatbotSection} />
       )}
 
+
+
       {industry.servicesGridSection && (
         <Services data={industry.servicesGridSection} />
+      )}
+
+       {industry.aiAgentsSection && (
+        <AiAgents data={industry.aiAgentsSection} />
       )}
 
       {industry.whyChooseSection && (

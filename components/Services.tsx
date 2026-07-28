@@ -31,53 +31,93 @@ const containerVariants: any = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.08, delayChildren: 0.1 },
+    transition: { staggerChildren: 0.1, delayChildren: 0.15 },
   },
 };
 
 const cardVariants: any = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 30, scale: 0.95 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.55, ease: "easeOut" },
+    scale: 1,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
   },
 };
 
 export default function Services({ data }: ServicesProps) {
   return (
-    <section className="relative w-full overflow-hidden bg-[#05070d]">
+    <section className="relative w-full overflow-hidden">
+      {/* Animated gradient orbs */}
       <div className="pointer-events-none absolute inset-0">
         <div
-          className="absolute left-1/2 top-0 -translate-x-1/2 w-[900px] h-[500px]"
+          className="absolute left-1/2 top-0 -translate-x-1/2 w-[1000px] h-[600px] opacity-60"
           style={{
             background:
-              "radial-gradient(circle, rgba(11,44,195,0.3) 0%, rgba(6,101,255,0.1) 40%, rgba(5,7,13,0) 70%)",
+              "radial-gradient(circle at 30% 20%, rgba(11,44,195,0.35) 0%, rgba(6,101,255,0.12) 45%, rgba(5,7,13,0) 70%)",
+          }}
+        />
+        <div
+          className="absolute right-0 bottom-1/4 w-[600px] h-[400px] opacity-30"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(99,102,241,0.2) 0%, rgba(5,7,13,0) 70%)",
           }}
         />
       </div>
 
-      {/* Slightly narrower container -> cards ki width kam */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-10 py-16 md:py-20 lg:py-24">
-        {/* Heading */}
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-10 py-20 md:py-28 lg:py-32">
+        {/* Heading with enhanced styling */}
         <motion.div
-          className="text-center mb-12 md:mb-14"
-          initial={{ opacity: 0, y: 16 }}
+          className="text-center mb-16 md:mb-20"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
+          {/* Decorative line above title */}
+          <motion.div
+            className="w-16 h-1 bg-gradient-to-r from-blue-400 to-blue-700 mx-auto rounded-full mb-5"
+            initial={{ width: 0 }}
+            whileInView={{ width: 64 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          />
+
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight">
             {data.title}
           </h2>
-          <p className="mt-3 text-sm md:text-base italic font-medium text-gray-300">
-            {data.description}
-          </p>
+
+          <motion.div
+            className="mt-4 max-w-2xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <p className="text-base md:text-lg font-light text-gray-300 leading-relaxed">
+              {data.description}
+            </p>
+          </motion.div>
+
+          {/* Decorative dots */}
+          <div className="flex justify-center gap-2 mt-6">
+            {[...Array(3)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="w-1.5 h-1.5 rounded-full bg-blue-500/40"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.4 + i * 0.1 }}
+              />
+            ))}
+          </div>
         </motion.div>
 
         {/* Grid */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -87,187 +127,59 @@ export default function Services({ data }: ServicesProps) {
             <motion.div
               key={i}
               variants={cardVariants}
-              className="group relative rounded-2xl overflow-hidden shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_55px_-15px_rgba(75,107,253,0.55)]"
+              className="group relative rounded-2xl overflow-hidden bg-gradient-to-b from-white/[0.03] to-white/[0.01] border border-white/[0.06] shadow-[0_8px_32px_-12px_rgba(0,0,0,0.6)] transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_60px_-20px_rgba(59,130,246,0.4)] hover:border-blue-500/30"
             >
-              {/* Image now fills the whole card -> card height increased */}
-              <div className="relative w-full h-[210px] md:h-[230px] overflow-hidden">
+              {/* Card number badge */}
+              <div className="absolute top-4 left-4 z-10">
+                <span className="text-xs font-mono font-bold text-blue-400/60 bg-black/40 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              </div>
+
+              {/* Image container with overlay gradient */}
+              <div className="relative w-full h-[220px] md:h-[250px] overflow-hidden bg-[#0a0f1e]">
                 <img
                   src={item.image}
                   alt={item.imageAlt || item.title}
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 />
-                {/* hover glow overlay */}
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1131c8]/0 to-transparent opacity-0 group-hover:opacity-100 group-hover:from-[#1131c8]/25 transition-opacity duration-500"
-                />
+                {/* Gradient overlay - appears on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#05070d] via-transparent to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-500" />
+                {/* Color overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-600/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
 
-              {/* Title with white bg - hidden by default, slides in from top only on hover */}
-              <div className="absolute top-0 left-0 right-0 flex items-center justify-center text-center px-4 py-4 min-h-[76px] bg-white/95 -translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
-                <h3 className="text-[15px] md:text-base font-bold text-[#0a1330] leading-snug">
+              {/* Title - slides up from bottom */}
+              <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-[#05070d] via-[#05070d]/80 to-transparent translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-[15px] md:text-base font-semibold text-white leading-snug group-hover:text-blue-400 transition-colors duration-300">
                   {item.title}
                 </h3>
+                {/* Subtle underline animation */}
+                <div className="w-0 h-0.5 bg-gradient-to-r from-blue-400 to-blue-700 mt-2 group-hover:w-1/3 transition-all duration-500 rounded-full" />
               </div>
 
-              {/* border glow ring on hover */}
-              <div
-                aria-hidden
-                className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-blue-300/0 group-hover:ring-blue-300/50 transition-all duration-500"
-              />
+              {/* Glow ring on hover */}
+              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-blue-500/0 group-hover:ring-blue-500/30 transition-all duration-500" />
+
+              {/* Background glow on hover */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent rounded-2xl" />
+              </div>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* Bottom decorative element */}
+        <motion.div
+          className="mt-16 flex justify-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+        >
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
         </motion.div>
       </div>
     </section>
   );
 }
-
-
-
-// "use client";
-
-// import React from "react";
-// import { motion } from "framer-motion";
-// import {
-//   Zap,
-//   Search,
-//   BarChart3,
-//   Globe,
-//   MessageSquare,
-//   Archive,
-//   Reply,
-//   FileEdit,
-//   ShieldCheck,
-//   Target,
-//   Users,
-//   Mail,
-//   Sparkles,
-//   type LucideIcon,
-// } from "lucide-react";
-
-// /**
-//  * Services
-//  * --------
-//  * "Our <Industry> Marketing Services" numbered grid used across every
-//  * /industry/[slug] page. Title, subtitle and every card (icon + title)
-//  * come from JSON so this one component serves every industry. Card
-//  * numbers (01, 02, ...) are derived from array order, not stored in JSON.
-//  */
-
-// // Map of icon-name strings (as stored in JSON) -> lucide-react component.
-// // Add new entries here as new industries need new icons; unknown names
-// // fall back to Sparkles so a typo in JSON never breaks the page.
-// const ICONS: Record<string, LucideIcon> = {
-//   Zap,
-//   Search,
-//   BarChart3,
-//   Globe,
-//   MessageSquare,
-//   Archive,
-//   Reply,
-//   FileEdit,
-//   ShieldCheck,
-//   Target,
-//   Users,
-//   Mail,
-// };
-
-// type ServiceItem = {
-//   icon: string; // key into ICONS
-//   title: string;
-// };
-
-// export type ServicesData = {
-//   title: string;
-//   description: string;
-//   list: ServiceItem[];
-// };
-
-// type ServicesProps = {
-//   data: ServicesData;
-// };
-
-// const containerVariants: any = {
-//   hidden: { opacity: 0 },
-//   visible: {
-//     opacity: 1,
-//     transition: { staggerChildren: 0.06, delayChildren: 0.1 },
-//   },
-// };
-
-// const cardVariants: any = {
-//   hidden: { opacity: 0, y: 18 },
-//   visible: {
-//     opacity: 1,
-//     y: 0,
-//     transition: { duration: 0.5, ease: "easeOut" },
-//   },
-// };
-
-// export default function Services({ data }: ServicesProps) {
-//   return (
-//     <section className="relative w-full overflow-hidden bg-[#05070d]">
-//       <div className="pointer-events-none absolute inset-0">
-//         <div
-//           className="absolute left-1/2 top-0 -translate-x-1/2 w-[900px] h-[500px]"
-//           style={{
-//             background:
-//               "radial-gradient(circle, rgba(11,44,195,0.3) 0%, rgba(6,101,255,0.1) 40%, rgba(5,7,13,0) 70%)",
-//           }}
-//         />
-//       </div>
-
-//       <div className="relative z-10 w-full max-w-6xl mx-auto px-6 py-16 md:py-20 lg:py-24">
-//         {/* Heading */}
-//         <motion.div
-//           className="text-center mb-12 md:mb-14"
-//           initial={{ opacity: 0, y: 16 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           viewport={{ once: true, amount: 0.4 }}
-//           transition={{ duration: 0.6, ease: "easeOut" }}
-//         >
-//           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
-//             {data.title}
-//           </h2>
-//           <p className="mt-4 max-w-xl mx-auto text-sm md:text-base leading-relaxed text-gray-400">
-//             {data.description}
-//           </p>
-//         </motion.div>
-
-//         {/* Grid */}
-//         <motion.div
-//           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
-//           variants={containerVariants}
-//           initial="hidden"
-//           whileInView="visible"
-//           viewport={{ once: true, amount: 0.1 }}
-//         >
-//           {data.list?.map((item, i) => {
-//             const Icon = ICONS[item.icon] || Sparkles;
-//             const number = String(i + 1).padStart(2, "0");
-//             return (
-//               <motion.div
-//                 key={i}
-//                 variants={cardVariants}
-//                 className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 transition-colors duration-300 hover:border-white/[0.14] hover:bg-white/[0.05]"
-//               >
-//                 <div className="flex items-start justify-between">
-//                   <span className="text-xs font-medium text-gray-500">
-//                     {number}
-//                   </span>
-//                   <span className="text-blue-400">
-//                     <Icon size={18} strokeWidth={1.75} />
-//                   </span>
-//                 </div>
-//                 <h3 className="mt-6 text-[15px] md:text-base font-semibold text-white">
-//                   {item.title}
-//                 </h3>
-//               </motion.div>
-//             );
-//           })}
-//         </motion.div>
-//       </div>
-//     </section>
-//   );
-// }
