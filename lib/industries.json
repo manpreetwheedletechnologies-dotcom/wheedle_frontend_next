@@ -156,6 +156,138 @@
       }
     ]
   },
+
+  "aiAgentsSection": {
+  "title": "Key Features of AI Agents For Finance",
+  "description": "Smart AI agents that support better business growth.",
+  "robotImage": "/indus/msme_chatbot_robot.png",
+  "robotImageAlt": "AI Agent robot assistant",
+  "list": [
+    {
+      "label": "Review Generation Agent",
+      "title": "Review Generation Agent",
+      "points": [
+        "Auto-requests reviews from loan/insurance customers",
+        "Builds trust in financial credibility",
+        "More 5-star ratings across Google & finance platforms",
+        "Strengthens brand reputation for high-value decisions",
+        "Zero manual follow-up needed"
+      ]
+    },
+    {
+      "label": "Review Response Agent",
+      "title": "Review Response Agent",
+      "points": [
+        "Replies to every review instantly",
+        "Protects financial brand reputation",
+        "Professional, compliance-safe tone",
+        "Resolves customer concerns quickly",
+        "Saves support team's time"
+      ]
+    },
+    {
+      "label": "Social Publishing Agent",
+      "title": "Social Publishing Agent",
+      "points": [
+        "Auto-posts product & rate updates",
+        "Keeps brand consistently visible",
+        "Builds authority in financial services",
+        "No dedicated content team needed",
+        "Saves marketing budget"
+      ]
+    },
+    {
+      "label": "Social Engagement Agent",
+      "title": "Social Engagement Agent",
+      "points": [
+        "Instant replies to loan/insurance queries",
+        "Never misses a high-intent enquiry",
+        "24/7 responsiveness to prospects",
+        "Builds trust before conversion",
+        "Faster response = more applications"
+      ]
+    },
+    {
+      "label": "Reporting Agent",
+      "title": "Reporting Agent",
+      "points": [
+        "Auto-generated lead & campaign reports",
+        "Clear visibility into enquiry-to-conversion funnel",
+        "No manual data compilation",
+        "Supports smarter budget decisions",
+        "Saves management time"
+      ]
+    },
+    {
+      "label": "Listings Optimization Agent",
+      "title": "Listings Optimization Agent",
+      "points": [
+        "Keeps branch/office listings accurate",
+        "Improves local search ranking",
+        "More visibility for \"loan/insurance advisor near me\"",
+        "Attracts nearby customers",
+        "Fixes listing errors automatically"
+      ]
+    },
+    {
+      "label": "Lead Generation Agent",
+      "title": "Lead Generation Agent",
+      "points": [
+        "Captures loan/insurance/investment enquiries automatically",
+        "Qualifies high-intent, credit-ready leads",
+        "Works across ads, forms & website",
+        "Delivers application-ready leads",
+        "Boosts conversions without extra staff"
+      ]
+    },
+    {
+      "label": "Contact Segmentation Agent",
+      "title": "Contact Segmentation Agent",
+      "points": [
+        "Auto-organizes customer & prospect data",
+        "Segments by product interest & eligibility stage",
+        "Enables targeted, compliant campaigns",
+        "Improves renewal & cross-sell outreach",
+        "Saves manual CRM effort"
+      ]
+    },
+    {
+      "label": "Template Design Agent",
+      "title": "Template Design Agent",
+      "points": [
+        "Instant branded creatives for offers & rates",
+        "Consistent, compliant brand identity",
+        "Faster campaign launches",
+        "No designer required",
+        "Saves creative costs"
+      ]
+    },
+    {
+      "label": "Custom Agent",
+      "title": "Custom Agent",
+      "points": [
+        "Built for your specific financial workflow",
+        "Solves unique compliance/process challenges",
+        "Fully tailored automation",
+        "Scales across branches/verticals",
+        "One agent, unlimited use-cases"
+      ]
+    },
+    {
+      "label": "Full Website Architect",
+      "title": "Full Website Architect",
+      "points": [
+        "Builds a complete financial services website with AI",
+        "Showcases products & trust signals professionally",
+        "Conversion-focused for loan/insurance enquiries",
+        "No developer needed",
+        "Saves cost & launch time"
+      ]
+    }
+  ]
+},
+
+
    "whyChooseSection": {
     "title": "Why Choose WheedleTechnologies.AI?",
     "list": [
@@ -2356,5 +2488,465 @@
       "url": "https://wheedletechnologies.tech/"
     }
   }
+  },
+  "FMCG":{
+    "heroSection": {
+      "bannerImage": "/indus/fmcg_hero_banner.png",
+      "badge": "AI-POWERED GROWTH SOLUTIONS FOR THE FMCG",
+      "titleMain": "AI-Powered Digital Marketing Solutions",
+      "titlePrefix": "for ",
+      "titleHighlight": "MSMEs",
+      "tagline": "Empowering FMCG Businesses with Smarter AI Growth",
+      "description": "Consumers today discover, compare, and decide on everyday products online long before they reach the shelf through reviews, social content, and search. At the same time, distributors and retailers expect fast responses, accurate stock information, and reliable communication from brands.",
+      "buttons": [
+        {
+          "label": "Start Growing Today",
+          "url": "https://wheedletechnologies.tech/",
+          "style": "primary"
+        },
+        {
+          "label": "View Case Studies",
+          "url": "#",
+          "style": "secondary"
+        }
+      ]
+    },
+    "challengesSection": {
+      "title": "Challenges FMCG Businesses Face",
+      "description": "Traditional marketing and manual distributor management are no longer enough in a fast-moving, highly competitive consumer market.",
+      "list": [
+        {
+          "icon": "Wallet",
+          "title": "Intense Category Competition",
+          "description": "Countless brands compete for the same shelf space and consumer attention."
+        },
+        {
+          "icon": "Eye",
+          "title": "Low Brand Recall",
+          "description": "Without consistent visibility, products get overlooked at the point of purchase."
+        },
+        {
+          "icon": "Target",
+          "title": "Distributor & Retailer Enquiries Overload",
+          "description": "Manual enquiry handling slows response times and order coordination."
+        },
+        {
+          "icon": "UserCog",
+          "title": "Inconsistent Lead Quality",
+          "description": "Generating qualified retailer and distributor enquiries remains difficult."
+        },
+        {
+          "icon": "Award",
+          "title": "Rising Acquisition Costs",
+          "description": "Reaching the right retail and consumer audience becomes increasingly expensive."
+        },
+        {
+          "icon": "TrendingUp",
+          "title": "Disconnected Customer Journeys",
+          "description": "Fragmented communication between sales, support, and marketing teams reduces efficiency."
+        }
+      ]
+    },
+    "businessSection": {
+   
+    "items": [
+      {
+        "variant": "card",
+        "title": "How AI Transforms FMCG Businesses",
+        "description": "We help FMCG brands and distributors replace manual, disconnected processes with automated systems that run 24/7 across marketing, distribution management, customer communication, and order management.",
+        "image": "/indus/fmcg_1.jpg",
+        "imageAlt": "Digital marketing for MSMEs",
+        "listType": "checklist",
+        "list": [
+          "Automated lead capture for enquiries",
+          "AI targeting for high-intent buyers",
+          "Automated order & stock updates"
+        ]
+      },
+      {
+        "variant": "plain",
+        "title": "SEO for FMCG Businesses",
+        "description": "Improve visibility for high-intent searches from consumers, retailers, and distributors.",
+        "listType": "tags",
+        "tagListTitle": "Keyword Pills:",
+        "tagList": [
+          {
+             "image": "/indus/fmcg_icon1.png",
+        "imageAlt": "icon",
+            "label": "Best FMCG Brand Near Me"
+          },
+          {
+            "image": "/indus/fmcg_icon2.png",
+        "imageAlt": "icon",
+            "label": "Wholesale Grocery Supplier"
+          },
+          {
+            "image": "/indus/fmcg_icon3.png",
+        "imageAlt": "icon",
+            "label": "FMCG Distributor Near Me"
+          },
+          {
+           "image": "/indus/fmcg_icon4.png",
+        "imageAlt": "icon",
+            "label": "Bulk Consumer Goods Supplier"
+          }
+        ]
+      }
+     
+    ]
+  },
+  "aiChatbotSection": {
+    "image": "/indus/msme_chatbot_robot.png",
+    "imageAlt": "AI Chatbot for FMCG Engagement",
+    "title": "AI Chatbot for Manufacturing Support",
+    "description": "Deliver instant support with an AI-powered chatbot that can:",
+    "bullets":[
+      "Instant product availability answers",
+      "Capture and qualify distributor and retailer enquiries",
+      "Share catalogues, pricing tables, and MOQ details",
+      "Guide consumers to nearby stockists and retail outlets",
+      "Handle consumer feedback and product enquiries 24/7"
+    ],
+    "button": {
+      "label": "Explore AI Agents",
+      "url": "https://wheedletechnologies.tech/"
+    }
+  },
+    "servicesGridSection": {
+    "title": "Our FMCG Growth Services",
+    "description": "A complete suite of AI-Automation-powered solutions designed for FMCG brands and distributors.",
+    "list": [
+      {
+        "image": "/indus/fmcg_service_digital_marketing.jpg",
+        "imageAlt": "AI-Powered Digital Marketing",
+        "title": "AI Digital Marketing"
+      },
+      {
+        "image": "/indus/fmcg_service_chatbots.jpg",
+        "imageAlt": "Smart Customer Support Chatbots",
+        "title": "AI Chatbots & Trade Support"
+      },
+      {
+        "image": "/indus/fmcg_service_lead_automation.jpg",
+        "imageAlt": "B2B Lead Generation",
+        "title": "Distributor & Retail Lead Generation"
+      },
+      {
+        "image": "/indus/fmcg_service_insights.jpg",
+        "imageAlt": "Marketing Automation",
+        "title": "Marketing Automation"
+      },
+      {
+        "image": "/indus/msme_service_content_branding.jpg",
+        "imageAlt": "Website & Catalogue Design",
+        "title": "Website & Catalogue Design"
+      },
+      {
+        "image": "/indus/fmcg_service_process_automation.jpg",
+        "imageAlt": "Analytics & Performance Reporting",
+        "title": "Analytics & Performance Reporting"
+      }
+    ]
+  },
+
+
+  
+   "whyChooseSection": {
+    "title": "Why FMCG Businesses Choose Wheedle Tech?",
+    "list": [
+      {
+        "title": "Brand Recall Built on Data",
+        "description": "Boost consumer & trade engagement with AI."
+      },
+      {
+        "title": "Faster Trade Response, Fully Automated",
+        "description": "Engage distributors and retailers the moment interest is shown."
+      },
+      {
+        "title": "Stronger Consumer Trust",
+        "description": "A credible digital presence across every touchpoint of the buying journey."
+      },
+      {
+        "title": "Measurable Performance",
+        "description": "Track every campaign, enquiry, and conversion through actionable analytics."
+      },
+      {
+        "title": "Growth Infrastructure That Scales",
+        "description": "From regional brands to nationwide FMCG networks, our systems grow with you."
+      }
+    ]
+  },
+    "aiImpactSection": {
+    "title": "How AI Is Transforming the FMCG Industry",
+    "description": "AI is enabling FMCG businesses to build stronger brand recall, engage trade partners faster, and drive repeat sales.",
+    "list": [
+      {
+        "title": "Automate Consumer & Trade Support",
+        "description": "Instant, AI-handled responses to product and stockist queries."
+      },
+      {
+        "title": "Improve Lead Qualification",
+        "description": "Automatically identify and prioritize high-quality distributor and retailer leads."
+      },
+      {
+        "title": "Personalize Consumer Engagement",
+        "description": "Deliver personalized product recommendations, offers, and follow-ups based on customer preferences."
+      },
+      {
+        "title": "Increase Repeat Purchase & Loyalty",
+        "description": "Keep customers engaged with automated campaigns, reminders, and loyalty-focused communication."
+      },
+      {
+        "title": "Reduce Sales & Support Overhead",
+        "description": "Automate repetitive sales and support tasks to improve operational efficiency."
+      },
+      {
+        "title": "Optimize Marketing Investment",
+        "description": "Use AI-driven analytics to optimize campaigns, improve ROI, and maximize marketing performance."
+      }
+    ]
+  },
+    
+  "ctaCardSection": {
+    "image": "/indus/msme_cta_robot.png",
+    "imageAlt": "AI robot assistant",
+    "titleLine1": "Ready to Grow Your FMCG",
+    "titleHighlight": "Business?",
+    "description": "Whether you're looking to build stronger brand recall, expand your distributor network, automate consumer engagement, or strengthen your digital presence, Wheedle Technologies AI delivers intelligent, automation-first growth solutions built for the FMCG industry.",
+    "button": {
+      "label": "Book a Strategy Session",
+      "url": "https://wheedletechnologies.tech/"
+    }
   }
+  },
+   "Service":{
+    "heroSection": {
+      "bannerImage": "/indus/service_hero_banner.jpg",
+      "badge": "AI-POWERED GROWTH FOR SERVICE BUSINESSES",
+      "titleMain": "AI-Powered Digital Marketing Solutions",
+      "titlePrefix": "for ",
+      "titleHighlight": "MSMEs",
+      "tagline": "Empowering Service Businesses with Smarter AI Growth",
+      "description": "From professional consultants and legal firms to salons, real estate agents, repair services, and home-service providers, customers today search, compare, and book services online before making a decision. They expect instant responses, transparent information, and reliable follow-up, and manual enquiry handling often can't keep up.",
+      "buttons": [
+        {
+          "label": "Start Growing Today",
+          "url": "https://wheedletechnologies.tech/",
+          "style": "primary"
+        },
+        {
+          "label": "View Case Studies",
+          "url": "#",
+          "style": "secondary"
+        }
+      ]
+    },
+    "challengesSection": {
+      "title": "Challenges Service Businesses Face",
+      "description": "Traditional marketing and manual booking/enquiry management are no longer enough in a digital-first, review-driven services market.",
+      "list": [
+        {
+          "icon": "Wallet",
+          "title": "High Local & Online Competition",
+          "description": "Countless service providers compete for the same customer attention."
+        },
+        {
+          "icon": "Eye",
+          "title": "Low-Quality Enquiries",
+          "description": "Generating enquiries from genuinely interested, ready-to-book customers remains difficult."
+        },
+        {
+          "icon": "Target",
+          "title": "Manual Booking & Follow-up",
+          "description": "Delayed responses result in lost enquiries before customers book."
+        },
+        {
+          "icon": "UserCog",
+          "title": "Trust & Credibility Gaps",
+          "description": "Customers compare reviews, ratings, and reputation before choosing a provider."
+        },
+        {
+          "icon": "Award",
+          "title": "Rising Acquisition Costs",
+          "description": "Reaching customers costs more across search and paid advertising platforms."
+        },
+        {
+          "icon": "TrendingUp",
+          "title": "Disconnected Customer Journeys",
+          "description": "Fragmented communication across enquiries, bookings, and follow-ups creates poor customer experiences."
+        }
+      ]
+    },
+    "businessSection": {
+   
+    "items": [
+      {
+        "variant": "card",
+        "title": "How AI Improves Service Businesses",
+        "description": "We help service providers of every kind replace manual, disconnected processes with automated systems that run 24/7 across marketing, bookings, and customer communication.",
+        "image": "/indus/service_1.jpg",
+        "imageAlt": "Digital marketing for MSMEs",
+        "listType": "checklist",
+        "list": [
+          "Automated enquiry & booking capture",
+          "AI targeting for nearby customers",
+          "Automated appointment reminders & follow-ups"
+        ]
+      },
+      {
+        "variant": "plain",
+        "title": "SEO for Service Businesses",
+        "description": "Improve visibility for high-intent searches from customers actively looking for services near them.",
+        "listType": "tags",
+        "tagListTitle": "Keyword Pills:",
+        "tagList": [
+          {
+             "image": "/indus/service_icon1.png",
+        "imageAlt": "icon",
+            "label": "Best Service Provider Near Me"
+          },
+          {
+            "image": "/indus/service_icon2.png",
+        "imageAlt": "icon",
+            "label": "Consultant Near Me"
+          },
+          {
+            "image": "/indus/service_icon3.png",
+        "imageAlt": "icon",
+            "label": "Home Repair Services"
+          },
+          {
+           "image": "/indus/service_icon4.png",
+        "imageAlt": "icon",
+            "label": "Legal & Financial Advisor"
+          }
+        ]
+      }
+     
+    ]
+  },
+  "aiChatbotSection": {
+    "image": "/indus/msme_chatbot_robot.png",
+    "imageAlt": "AI Chatbot for FMCG Engagement",
+    "title": "AI Chatbot for Service Business Customer Engagement",
+    "description": "Deliver instant support with an AI-powered chatbot that can:",
+    "bullets":[
+      "Answer service, pricing & availability questions instantly",
+      "Capture and qualify enquiries automatically",
+      "Schedule appointments, consultations, and site visits",
+      "Share service catalogues, packages, and requirements"
+    ],
+    "button": {
+      "label": "Explore AI Agents",
+      "url": "https://wheedletechnologies.tech/"
+    }
+  },
+    "servicesGridSection": {
+    "title": "Our Services Sector Growth Solutions",
+    "description": "A complete suite of AI-Automation-powered solutions built for every kind of service business.",
+    "list": [
+      {
+        "image": "/indus/service_digital_marketing.jpg",
+        "imageAlt": "AI-Powered Digital Marketing",
+        "title": "AI Digital Marketing"
+      },
+      {
+        "image": "/indus/service_chatbots.jpg",
+        "imageAlt": "Smart Customer Support Chatbots",
+        "title": "AI Chatbots & Booking Automation"
+      },
+      {
+        "image": "/indus/service_lead_automation.jpg",
+        "imageAlt": "B2B Lead Generation",
+        "title": "Lead Generation & Qualification"
+      },
+      {
+        "image": "/indus/service_insights.jpg",
+        "imageAlt": "Marketing Automation",
+        "title": "Marketing Automation"
+      },
+      {
+        "image": "/indus/service_content_branding.jpg",
+        "imageAlt": "Website & Catalogue Design",
+        "title": "Website & Booking Page Design"
+      },
+      {
+        "image": "/indus/service_process_automation.jpg",
+        "imageAlt": "Analytics & Performance Reporting",
+        "title": "Analytics & Performance Reporting"
+      }
+    ]
+  },
+
+
+  
+   "whyChooseSection": {
+    "title": "Why Service Businesses Choose Wheedle Tech",
+    "list": [
+      {
+        "title": "Enquiry Growth Built on Data",
+        "description": "Generate qualified enquiries with AI targeting."
+      },
+      {
+        "title": "Faster Response, Fully Automated",
+        "description": "Engage customers the moment interest is shown."
+      },
+      {
+        "title": "Trust-Building Digital Presence",
+        "description": "Strong reviews and a credible online presence at every touchpoint."
+      },
+      {
+        "title": "Measurable Performance",
+        "description": "Track every campaign, enquiry, and conversion through actionable analytics."
+      },
+      {
+        "title": "Growth Infrastructure That Scales",
+        "description": "Scales from solo consultants to multi-location businesses."
+      }
+    ]
+  },
+    "aiImpactSection": {
+    "title": "How AI Is Transforming the Services Sector",
+    "description": "AI is enabling service businesses of every kind to respond faster, book more customers, and operate more efficiently.",
+    "list": [
+      {
+        "title": "Automate Enquiry & Booking Handling",
+        "description": "Instant, AI-handled response to service and appointment requests."
+      },
+      {
+        "title": "Improve Lead Qualification",
+        "description": "Automatically identify and prioritize high-intent customers ready to book your services."
+      },
+      {
+        "title": "Personalize Consumer Engagement",
+        "description": "Deliver tailored messages, follow-ups, and recommendations based on customer needs."
+      },
+      {
+        "title": "Increase Enquiry-to-Booking Conversion",
+        "description": "Automate nurturing and reminders to convert more enquiries into confirmed bookings."
+      },
+      {
+        "title": "Reduce Administrative Overhead",
+        "description": "Streamline repetitive administrative tasks so your team can focus on delivering excellent service."
+      },
+      {
+        "title": "Optimize Marketing Investment",
+        "description": "Use AI-powered analytics to improve campaign performance and maximize marketing ROI."
+      }
+    ]
+  },
+    
+  "ctaCardSection": {
+    "image": "/indus/msme_cta_robot.png",
+    "imageAlt": "AI robot assistant",
+    "titleLine1": "Transform Your Service Business",
+    "titleHighlight": "with AI",
+    "description": "Your customers expect fast responses, seamless booking experiences, and personalized service. Wheedle Technologies AI empowers service businesses with smart automation, AI-driven marketing, and customer engagement solutions that help you generate more enquiries, convert more leads, and build lasting client relationships—all while reducing manual effort.",
+    "button": {
+      "label": "Book a Strategy Session",
+      "url": "https://wheedletechnologies.tech/"
+    }
+  }
+  }
+
 }
