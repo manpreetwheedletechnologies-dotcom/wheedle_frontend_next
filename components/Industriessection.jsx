@@ -169,7 +169,7 @@ function IndustryCard({ industry, index }) {
   );
 }
 
-export default function IndustriesSection() {
+export default function IndustriesSection({limit}) {
   const [headerRef, headerVisible] = useRevealOnScroll(0.3);
 
   return (
@@ -195,12 +195,12 @@ export default function IndustriesSection() {
             </span>
           </h2>
           <p className="text-slate-400 text-base md:text-lg">
-            Six industries, one intelligent growth engine. Every playbook is
+            Nine industries, one intelligent growth engine. Every playbook is
             tailored to how your buyers actually search, compare and decide.
           </p>
         </div>
 
-              <IndustriesCards/>
+              <IndustriesCards limit={limit} />
 
         <div className="mt-14 flex justify-center">
           <Link

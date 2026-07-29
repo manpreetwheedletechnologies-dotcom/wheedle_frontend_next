@@ -97,7 +97,7 @@ export default function LandingPageClient() {
                 <Vision />
                 <Steps />
                 <Features />
-                <IndustriesSection />
+                <IndustriesSection limit={3} />
                 <GoogleVerificationInfo />
                 <Businesses />
                 <Newsletter

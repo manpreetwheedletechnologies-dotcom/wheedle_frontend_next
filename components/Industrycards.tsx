@@ -195,8 +195,17 @@ function IndustryCard({ name, entry }: { name: string; entry: IndustryEntry }) {
 
 // ---- grid ----------------------------------------------------------------
 
-export default function IndustryCards() {
-    const industries = Object.entries(data);
+interface IndustryCardsProps {
+    limit?: number;
+}
+
+export default function IndustryCards({ limit }: IndustryCardsProps) {
+    const allIndustries = Object.entries(data);
+
+    const industries =
+        typeof limit === 'number'
+            ? allIndustries.slice(0, limit)
+            : allIndustries;
 
     return (
         <section className="relative w-full sm:px-8 lg:px-16">

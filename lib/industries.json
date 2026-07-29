@@ -5,7 +5,7 @@
       "badge": "AI-POWERED FINANCE GROWTH SOLUTIONS",
       "titleMain": "AI-Powered Digital Marketing Solutions",
       "titlePrefix": "for ",
-      "titleHighlight": "MSMEs",
+      "titleHighlight": "Finance",
       "tagline": "Empowering Financial Businesses with Smarter AI Growth",
       "description": "In today's digital-first world, customers research loans, insurance, investments, and financial advice online before making decisions. They expect instant responses, personalized guidance, and secure digital interactions, and traditional marketing alone can't keep up.Wheedle Technologies AI helps banks, NBFCs, insurers, fintechs, wealth firms, and financial consultants grow digitally, generate quality leads, and automate customer engagement with AI.",
       "buttons": [
@@ -355,7 +355,7 @@
       "badge": "AI-POWERED TELECOM SOLUTIONS",
       "titleMain": "AI-Powered Digital Marketing Solutions",
       "titlePrefix": "for ",
-      "titleHighlight": "MSMEs",
+      "titleHighlight": "Telecom",
       "tagline": "Empowering Telecom Businesses with Smarter AI Growth",
       "description": "Customers today compare mobile plans, broadband packages, and enterprise connectivity options online before switching providers or signing up. They expect instant answers, personalized recommendations, and fast issue resolution, and manual sales and support processes can't keep pace with that expectation. AI automates lead generation, customer engagement, and growth for telecom businesses.",
       "buttons": [
@@ -1061,7 +1061,9 @@
     "heroSection": {
       "bannerImage": "/indus/health_hero_banner.png",
       "badge": "AI-POWERED GROWTH FOR MODERN HEALTHCARE",
-      
+       "titleMain": "AI-Powered Healthcare Solutions",
+      "titlePrefix": "for ",
+      "titleHighlight": "Healthcare",
       "tagline": "Attract More Patients, Streamline Operations, and Deliver Exceptional Care Experiences",
       "description": "Today's patients begin their healthcare journey online. Whether they are searching for a specialist, comparing treatment options, booking consultations, or evaluating healthcare providers, your digital presence shapes their first impression and influences their decision-making.",
       "buttons": [
@@ -1412,7 +1414,7 @@
       "badge": "THE FUTURE OF AUTOMOTIVE RETAIL IS ALREADY HERE",
       "titleMain": "AI-Powered Digital Marketing Solutions",
       "titlePrefix": "for ",
-      "titleHighlight": "MSMEs",
+      "titleHighlight": "Automotive",
       "tagline": "From Search to Showroom - Power Every Stage of the Customer Journey with AI",
       "description": "Generate More Enquiries. Fill More Test Drives, and Build Customers for Life. Today's buyers don't start their journey in your showroom; they start online. They compare models, explore features, watch reviews, schedule test drive options, and shortlist dealerships long before speaking to a sales advisor.AI-powered growth for dealerships, EV brands, and service centres.",
       "buttons": [
@@ -1779,7 +1781,7 @@
       "badge": "AI-POWERED EDUCATION SOLUTIONS",
       "titleMain": "AI-Powered Digital Marketing Solutions",
       "titlePrefix": "for ",
-      "titleHighlight": "MSMEs",
+      "titleHighlight": "Education",
       "tagline": "Empowering EdTech & Education Businesses with Smarter AI Growth",
       "description": "Schools, colleges, universities, coaching institutes, and EdTech platforms today compete in an increasingly crowded digital market. Generating enquiries, managing admissions communication, and converting interest into enrollments has become harder and doing it manually no longer scales.",
       "buttons": [
@@ -2137,7 +2139,7 @@
       "badge": "AI-POWERED MANUFACTURING GROWTH SOLUTIONS",
       "titleMain": "AI-Powered Digital Marketing Solutions",
       "titlePrefix": "for ",
-      "titleHighlight": "MSMEs",
+      "titleHighlight": "Manufacturing",
       "tagline": "Empowering Manufacturing Businesses with Smarter AI Growth",
       "description": "Buyers, distributors, and procurement teams today research suppliers, compare specifications, and shortlist manufacturers online long before placing an enquiry. They expect fast quotes, detailed product information, and reliable follow-up and manual sales processes often can't keep pace.",
       "buttons": [
@@ -2495,7 +2497,7 @@
       "badge": "AI-POWERED GROWTH SOLUTIONS FOR THE FMCG",
       "titleMain": "AI-Powered Digital Marketing Solutions",
       "titlePrefix": "for ",
-      "titleHighlight": "MSMEs",
+      "titleHighlight": "FMCG",
       "tagline": "Empowering FMCG Businesses with Smarter AI Growth",
       "description": "Consumers today discover, compare, and decide on everyday products online long before they reach the shelf through reviews, social content, and search. At the same time, distributors and retailers expect fast responses, accurate stock information, and reliable communication from brands.",
       "buttons": [
@@ -2649,7 +2651,135 @@
     ]
   },
 
-
+  "aiAgentsSection": {
+  "title": "Key Features of AI Agents For FMCG",
+  "description": "Smart AI agents that support better business growth.",
+  "robotImage": "/indus/msme_chatbot_robot.png",
+  "robotImageAlt": "AI Agent robot assistant",
+  "list": [
+    {
+      "label": "Review Generation Agent",
+      "title": "Review Generation Agent",
+      "points": [
+        "Auto-requests reviews from consumers & retailers",
+        "Builds trust in product quality",
+        "More 5-star ratings across Google & marketplaces",
+        "Strengthens brand perception at shelf & online",
+        "Zero manual follow-up needed"
+      ]
+    },
+    {
+      "label": "Review Response Agent",
+      "title": "Review Response Agent",
+      "points": [
+        "Replies to every consumer review instantly",
+        "Protects brand reputation across platforms",
+        "Consistent, on-brand tone",
+        "Resolves product complaints quickly",
+        "Saves brand team's time"
+      ]
+    },
+    {
+      "label": "Social Publishing Agent",
+      "title": "Social Publishing Agent",
+      "points": [
+        "Auto-posts product launches & offers",
+        "Keeps brand consistently visible",
+        "Builds recall across categories",
+        "No dedicated content team needed",
+        "Saves marketing budget"
+      ]
+    },
+    {
+      "label": "Social Engagement Agent",
+      "title": "Social Engagement Agent",
+      "points": [
+        "Instant replies to consumer & retailer DMs",
+        "Never misses a stockist enquiry",
+        "24/7 responsiveness to trade & consumers",
+        "Builds stronger brand trust",
+        "Faster response = faster orders"
+      ]
+    },
+    {
+      "label": "Reporting Agent",
+      "title": "Reporting Agent",
+      "points": [
+        "Auto-generated sales & campaign reports",
+        "Clear visibility into distribution performance",
+        "No manual data compilation",
+        "Supports data-driven decisions",
+        "Saves management time"
+      ]
+    },
+    {
+      "label": "Listings Optimization Agent",
+      "title": "Listings Optimization Agent",
+      "points": [
+        "Keeps retailer & marketplace listings accurate",
+        "Improves local & online search ranking",
+        "More visibility for \"stockist near me\" searches",
+        "Attracts nearby retail buyers",
+        "Fixes listing errors automatically"
+      ]
+    },
+    {
+      "label": "Lead Generation Agent",
+      "title": "Lead Generation Agent",
+      "points": [
+        "Captures distributor & retailer enquiries automatically",
+        "Qualifies genuine trade & bulk-order leads",
+        "Works across ads, website & forms",
+        "Delivers order-ready enquiries",
+        "Shortens distributor onboarding cycle"
+      ]
+    },
+    {
+      "label": "Contact Segmentation Agent",
+      "title": "Contact Segmentation Agent",
+      "points": [
+        "Auto-organizes consumer & trade contacts",
+        "Segments by product interest & order volume",
+        "Enables targeted trade & consumer campaigns",
+        "Improves repeat-purchase marketing",
+        "Saves manual CRM effort"
+      ]
+    },
+    {
+      "label": "Template Design Agent",
+      "title": "Template Design Agent",
+      "points": [
+        "Instant packaging & offer creatives",
+        "Consistent brand identity across channels",
+        "Faster campaign & promo launches",
+        "No design team required",
+        "Saves creative costs"
+      ]
+    },
+    {
+      "label": "Custom Agent",
+      "title": "Custom Agent",
+      "points": [
+        "Built for your specific brand workflow",
+        "Solves unique trade or consumer challenges",
+        "Fully tailored automation",
+        "Scales across product lines & regions",
+        "One agent, unlimited use-cases"
+      ]
+    },
+    {
+      "label": "Full Website Architect",
+      "title": "Full Website Architect",
+      "points": [
+        "Builds a complete brand/D2C website with AI",
+        "Showcases products & catalogues professionally",
+        "Conversion-focused for consumers & distributors",
+        "No developer needed",
+        "Saves cost & launch time"
+      ]
+    }
+  ]
+},
   
    "whyChooseSection": {
     "title": "Why FMCG Businesses Choose Wheedle Tech?",
@@ -2725,7 +2855,7 @@
       "badge": "AI-POWERED GROWTH FOR SERVICE BUSINESSES",
       "titleMain": "AI-Powered Digital Marketing Solutions",
       "titlePrefix": "for ",
-      "titleHighlight": "MSMEs",
+      "titleHighlight": "Service",
       "tagline": "Empowering Service Businesses with Smarter AI Growth",
       "description": "From professional consultants and legal firms to salons, real estate agents, repair services, and home-service providers, customers today search, compare, and book services online before making a decision. They expect instant responses, transparent information, and reliable follow-up, and manual enquiry handling often can't keep up.",
       "buttons": [
@@ -2878,7 +3008,135 @@
     ]
   },
 
-
+  "aiAgentsSection": {
+  "title": "Key Features of AI Agents For Services",
+  "description": "Smart AI agents that support better business growth.",
+  "robotImage": "/indus/msme_chatbot_robot.png",
+  "robotImageAlt": "AI Agent robot assistant",
+  "list": [
+    {
+      "label": "Review Generation Agent",
+      "title": "Review Generation Agent",
+      "points": [
+        "Auto-requests reviews from customers post-service",
+        "Builds trust for every service booking decision",
+        "More 5-star ratings across Google & platforms",
+        "Strengthens credibility for high-consideration services",
+        "Zero manual follow-up needed"
+      ]
+    },
+    {
+      "label": "Review Response Agent",
+      "title": "Review Response Agent",
+      "points": [
+        "Replies to every review instantly",
+        "Protects service brand reputation",
+        "Professional, reassuring tone",
+        "Resolves customer concerns quickly",
+        "Saves front-desk team's time"
+      ]
+    },
+    {
+      "label": "Social Publishing Agent",
+      "title": "Social Publishing Agent",
+      "points": [
+        "Auto-posts service updates & offers",
+        "Keeps business consistently visible",
+        "Builds authority & credibility online",
+        "No dedicated content team needed",
+        "Saves marketing budget"
+      ]
+    },
+    {
+      "label": "Social Engagement Agent",
+      "title": "Social Engagement Agent",
+      "points": [
+        "Instant replies to booking & service queries",
+        "Never misses a customer enquiry",
+        "24/7 responsiveness across channels",
+        "Builds trust before first appointment",
+        "Faster replies = more bookings"
+      ]
+    },
+    {
+      "label": "Reporting Agent",
+      "title": "Reporting Agent",
+      "points": [
+        "Auto-generated booking & campaign reports",
+        "Clear visibility into enquiry-to-booking funnel",
+        "No manual data tracking",
+        "Supports smarter business decisions",
+        "Saves owner/manager's time"
+      ]
+    },
+    {
+      "label": "Listings Optimization Agent",
+      "title": "Listings Optimization Agent",
+      "points": [
+        "Keeps Google & directory listings accurate",
+        "Improves local search ranking",
+        "More visibility for \"service near me\" searches",
+        "Attracts nearby customers",
+        "Fixes listing errors automatically"
+      ]
+    },
+    {
+      "label": "Lead Generation Agent",
+      "title": "Lead Generation Agent",
+      "points": [
+        "Captures service enquiries automatically",
+        "Qualifies high-intent, ready-to-book customers",
+        "Works across ads, forms & website",
+        "Delivers booking-ready leads",
+        "Boosts conversions without extra staff"
+      ]
+    },
+    {
+      "label": "Contact Segmentation Agent",
+      "title": "Contact Segmentation Agent",
+      "points": [
+        "Auto-organizes client & prospect data",
+        "Segments by service interest & booking stage",
+        "Enables personalized follow-up campaigns",
+        "Improves repeat-customer retention",
+        "Saves manual CRM effort"
+      ]
+    },
+    {
+      "label": "Template Design Agent",
+      "title": "Template Design Agent",
+      "points": [
+        "Instant branded creatives for offers & promotions",
+        "Consistent brand identity across channels",
+        "Faster campaign launches",
+        "No designer required",
+        "Saves creative costs"
+      ]
+    },
+    {
+      "label": "Custom Agent",
+      "title": "Custom Agent",
+      "points": [
+        "Built for your specific service workflow",
+        "Solves unique booking or operational challenges",
+        "Fully tailored automation",
+        "Scales across locations or service lines",
+        "One agent, unlimited use-cases"
+      ]
+    },
+    {
+      "label": "Full Website Architect",
+      "title": "Full Website Architect",
+      "points": [
+        "Builds a complete service business website with AI",
+        "Showcases services & credibility professionally",
+        "Conversion-focused for bookings & enquiries",
+        "No developer needed",
+        "Saves cost & launch time"
+      ]
+    }
+  ]
+},
   
    "whyChooseSection": {
     "title": "Why Service Businesses Choose Wheedle Tech",
