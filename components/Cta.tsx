@@ -159,7 +159,7 @@ export default function Cta({ data }: CtaProps) {
               className="text-2xl md:text-3xl lg:text-[40px] font-bold leading-tight text-white [text-wrap:balance]"
             >
               {data.titleLine1}
-              <br />
+              
               <motion.span
                 className="bg-gradient-to-r from-[#9DB6FF] to-[#4b6bfd] bg-clip-text text-transparent inline-block"
                 animate={{
@@ -171,7 +171,7 @@ export default function Cta({ data }: CtaProps) {
                   ease: "linear",
                 }}
                 style={{ backgroundSize: "200% 200%" }}
-              >
+              > 
                 {data.titleHighlight}
               </motion.span>
             </motion.h2>

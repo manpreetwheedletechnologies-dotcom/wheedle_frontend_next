@@ -1,10 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Button from "./Button_x";
-
+import dynamic from 'next/dynamic';
+const ContactModal = dynamic(() => import('./ContactModal'), { ssr: false });
 /**
  * HeroSection
  * -----------
@@ -58,6 +59,7 @@ const containerVariants: any = {
 };
 
 export default function HeroSection({ data }: HeroSectionProps) {
+  const [openContact, setOpenContact] = useState(false);
   return (
     <section className="relative w-full bg-[#05070d]">
       {/* --- full-bleed banner ---
@@ -162,7 +164,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
             {data.buttons?.map((btn, i) =>
               btn.style === "secondary" ? (
                 <Link key={i} href={btn.url}>
-                  <Button padding="25px 20px">{btn.label}</Button>
+                  <Button onClick={() => setOpenContact(true)} padding="25px 20px">{btn.label}</Button>
                 </Link>
               ) : (
                 <Link key={i} href={btn.url} className="group relative">
@@ -192,6 +194,16 @@ export default function HeroSection({ data }: HeroSectionProps) {
           />
         </motion.div>
       </motion.div>
+      {openContact && (
+        <ContactModal
+          onClose={() => setOpenContact(false)}
+          title="Get the Complete Case Study"
+          description="Enter your details to receive the full case study and learn how we delivered measurable results."
+          contactEmail="info@wheedletechnologies.ai"
+          contactPhone="+91 9717672561"
+          messagePlaceholder="Your message (optional)"
+        />
+      )}
     </section>
   );
 }
