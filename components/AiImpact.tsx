@@ -82,7 +82,7 @@ export default function AiImpact({ data }: AiImpactProps) {
   return (
     <section
       ref={sectionRef}
-      className="relative py-24 overflow-hidden"
+      className="relative py-12 md:py-16 lg:py-24 overflow-hidden"
       style={{
         backgroundColor: "#050a12",
         minHeight: "100vh",
@@ -105,13 +105,13 @@ export default function AiImpact({ data }: AiImpactProps) {
         }}
       />
 
-      <div className="relative max-w-5xl mx-auto px-6">
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <h2
           className="
             text-center
             font-semibold
-            mb-4
+            mb-3 md:mb-4
             bg-gradient-to-r
             from-white
             via-[#e8eaff]
@@ -120,7 +120,7 @@ export default function AiImpact({ data }: AiImpactProps) {
             text-transparent
           "
           style={{
-            fontSize: "52px",
+            fontSize: "clamp(32px, 8vw, 52px)",
             letterSpacing: "-0.5px",
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? 'translateY(0)' : 'translateY(-30px)',
@@ -132,10 +132,10 @@ export default function AiImpact({ data }: AiImpactProps) {
 
         {/* Description */}
         <p
-          className="text-center mx-auto mb-14"
+          className="text-center mx-auto mb-8 md:mb-10 lg:mb-14 px-2"
           style={{
             color: "rgba(255,255,255,0.55)",
-            fontSize: "16px",
+            fontSize: "clamp(14px, 2vw, 16px)",
             lineHeight: "1.85",
             maxWidth: "600px",
             opacity: isVisible ? 1 : 0,
@@ -147,7 +147,7 @@ export default function AiImpact({ data }: AiImpactProps) {
         </p>
 
         {/* Accordion List */}
-        <div className="flex flex-col gap-3 ">
+        <div className="flex flex-col gap-3 md:gap-4">
           {data.list?.map((item, index) => {
             const isOpen = openIndex === index;
             const delay = 0.3 + index * 0.15;
@@ -157,28 +157,27 @@ export default function AiImpact({ data }: AiImpactProps) {
                 key={index}
                 className="overflow-hidden"
                 style={{
-                  borderRadius: "45px",
+                  borderRadius: "clamp(20px, 4vw, 45px)",
                   border: "1px solid rgba(6,182,212,0.2)",
                   background: "rgba(0,0,0,0.55)",
                   opacity: isVisible ? 1 : 0,
                   transform: isVisible ? 'translateX(0)' : 'translateX(-40px)',
                   transition: `opacity 0.6s ease-out ${delay}s, transform 0.6s ease-out ${delay}s`,
-                 
                 }}
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full flex items-stretch"
+                  className="w-full flex flex-col sm:flex-row items-stretch"
                 >
                   {/* Left content */}
-                  <div className="flex-1 flex items-start gap-10 px-8 py-6 text-left">
+                  <div className="flex-1 flex items-start gap-3 sm:gap-6 md:gap-10 px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-left">
                     {/* Number */}
                     <span
-                      className="font-light"
+                      className="font-light flex-shrink-0"
                       style={{
                         color: "rgba(255,255,255,0.85)",
-                        fontSize: "18px",
-                        minWidth: "36px",
+                        fontSize: "clamp(14px, 2vw, 18px)",
+                        minWidth: "clamp(28px, 4vw, 36px)",
                         paddingTop: "2px",
                       }}
                     >
@@ -186,10 +185,14 @@ export default function AiImpact({ data }: AiImpactProps) {
                     </span>
 
                     {/* Title + Description */}
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-0">
                       <h3
                         className="text-white font-light"
-                        style={{ fontSize: "20px", lineHeight: "1.4" }}
+                        style={{
+                          fontSize: "clamp(16px, 2.5vw, 20px)",
+                          lineHeight: "1.4",
+                          wordBreak: "break-word",
+                        }}
                       >
                         {item.title}
                       </h3>
@@ -198,7 +201,7 @@ export default function AiImpact({ data }: AiImpactProps) {
                       <div
                         className={`grid transition-all duration-500 ease-in-out ${
                           isOpen
-                            ? "grid-rows-[1fr] opacity-100 mt-4"
+                            ? "grid-rows-[1fr] opacity-100 mt-2 sm:mt-3 md:mt-4"
                             : "grid-rows-[0fr] opacity-0"
                         }`}
                       >
@@ -206,7 +209,7 @@ export default function AiImpact({ data }: AiImpactProps) {
                           <p
                             style={{
                               color: "rgba(255,255,255,0.55)",
-                              fontSize: "15px",
+                              fontSize: "clamp(13px, 1.8vw, 15px)",
                               lineHeight: "1.85",
                             }}
                           >
@@ -217,21 +220,24 @@ export default function AiImpact({ data }: AiImpactProps) {
                     </div>
                   </div>
 
-                  {/* Toggle button */}
+                  {/* Toggle button - Full width on mobile */}
                   <div
-                    className="flex items-center justify-center transition-all duration-300"
+                    className="flex items-center justify-center transition-all duration-300 w-full sm:w-[80px] sm:flex-shrink-0"
                     style={{
-                      width: "80px",
-                      flexShrink: 0,
+                      minHeight: "clamp(48px, 8vw, 80px)",
                       background: isOpen
                         ? "linear-gradient(to bottom, #021753, #2266ee,#021753)"
                         : "#1a2530",
+                      borderRadius: "clamp(0px, 0vw, 0px)",
+                      ...(isOpen && {
+                        borderRadius: "0 0 clamp(20px, 4vw, 45px) clamp(20px, 4vw, 45px)",
+                      }),
                     }}
                   >
                     {isOpen ? (
-                      <Minus size={28} className="text-white" />
+                      <Minus size={clamp(24, 4, 28)} className="text-white" />
                     ) : (
-                      <Plus size={28} className="text-white" />
+                      <Plus size={clamp(24, 4, 28)} className="text-white" />
                     )}
                   </div>
                 </button>
@@ -242,4 +248,9 @@ export default function AiImpact({ data }: AiImpactProps) {
       </div>
     </section>
   );
+}
+
+// Helper function for responsive icon sizing
+function clamp(value: number, min: number, max: number): number {
+  return Math.min(Math.max(value, min), max);
 }

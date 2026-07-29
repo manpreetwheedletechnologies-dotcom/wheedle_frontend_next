@@ -47,8 +47,6 @@ export default async function IndustryPage({
         <AiChatbot data={industry.aiChatbotSection} />
       )}
 
-
-
       {industry.servicesGridSection && (
         <Services data={industry.servicesGridSection} />
       )}

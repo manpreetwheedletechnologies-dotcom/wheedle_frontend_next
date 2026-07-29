@@ -16,10 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/industries/page": [
+    "/about-us/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/industries/page.js"
+      "static/chunks/app/about-us/page.js"
     ],
     "/industry/[slug]/page": [
       "static/chunks/webpack.js",

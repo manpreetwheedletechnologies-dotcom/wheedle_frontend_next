@@ -68,13 +68,13 @@ export default function HeroSection({ data }: HeroSectionProps) {
           the page, switching to solid once the user scrolls past this
           section). A soft top-to-transparent vignette keeps header
           logo/nav legible regardless of what's underneath. */}
-      <div className="relative w-screen mx-[calc(50%-50vw)] bg-[#05070d] aspect-[3/4] sm:aspect-[16/9] md:aspect-[24/9] max-h-[380px] sm:max-h-[420px] overflow-hidden">
+      <div className="relative w-screen mx-[calc(50%-50vw)] bg-[#05070d] aspect-[3/4] sm:aspect-[16/9] md:aspect-[24/9] max-h-[480px] sm:max-h-[520px] overflow-hidden">
         <motion.img
           src={data.bannerImage}
           alt={data.titleHighlight}
-          className="absolute inset-0 w-full h-full object-cover object-[center_top_20%]"
+          className="absolute inset-0 w-full h-full object-cover object-center scale-[1.02]"
           initial={{ opacity: 0, scale: 1.08 }}
-          animate={{ opacity: 1, scale: 1 }}
+          animate={{ opacity: 1, scale: 1.02 }}
           transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
         />
 
@@ -82,16 +82,28 @@ export default function HeroSection({ data }: HeroSectionProps) {
             the banner doesn't feel flush against the very top edge */}
         <div className="absolute inset-x-0 top-0 h-28 sm:h-36 md:h-44 bg-gradient-to-b from-[#05070d] via-[#05070d]/70 to-transparent" />
 
-        {/* side vignettes blend full-bleed edges into the page bg */}
-        <div className="absolute inset-y-0 left-0 w-16 sm:w-24 bg-gradient-to-r from-[#05070d] to-transparent" />
-        <div className="absolute inset-y-0 right-0 w-16 sm:w-24 bg-gradient-to-l from-[#05070d] to-transparent" />
+        {/* side vignettes - stronger black gradients for full-page image effect */}
+        <div className="absolute inset-y-0 left-0 w-24 sm:w-32 md:w-40 bg-gradient-to-r from-[#05070d] via-[#05070d]/90 to-transparent" />
+        <div className="absolute inset-y-0 right-0 w-24 sm:w-32 md:w-40 bg-gradient-to-l from-[#05070d] via-[#05070d]/90 to-transparent" />
+
+        {/* center vignette - subtle radial darkening at the corners so
+            the black base feels balanced/centered behind the badge and
+            text instead of only living at the top/bottom/sides */}
+        <div
+          aria-hidden
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse at center, rgba(5,7,13,0) 45%, rgba(5,7,13,0.55) 100%)",
+          }}
+        />
 
         {/* bottom fade into the content area below */}
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#05070d] to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#05070d] to-transparent" />
       </div>
 
-      {/* --- title pill, overlapping banner bottom edge --- */}
-      <div className="relative z-10 mt-2 sm:mt-3 md:mt-4 flex justify-center px-4">
+      {/* --- title pill, pulled up so it overlaps further into the banner --- */}
+      <div className="relative z-10 -mt-10 sm:-mt-14 md:-mt-16 flex justify-center px-4">
         <motion.div
           initial={{ opacity: 0, y: 14, scale: 0.96 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -111,7 +123,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
 
       {/* --- content --- */}
       <motion.div
-        className="relative z-10 w-full max-w-4xl mx-auto px-6 pt-8 pb-10 md:pt-10 md:pb-12 flex flex-col items-center text-center"
+        className="relative z-10 w-full max-w-4xl mx-auto px-6 pt-6 pb-14 md:pt-8 md:pb-16 flex flex-col items-center text-center"
         initial="hidden"
         animate="visible"
         variants={containerVariants}

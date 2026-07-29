@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 /**
  * WhyChoose
@@ -57,7 +57,7 @@ function TiltCard({ title, description, index }: WhyChooseItem & { index: number
   };
 
   // Smooth pop-up animation when entering viewport
-  const popUpVariants = {
+  const popUpVariants: Variants = {
     hidden: { 
       opacity: 0, 
       y: 50,
@@ -77,7 +77,7 @@ function TiltCard({ title, description, index }: WhyChooseItem & { index: number
   };
 
   // Smooth auto-bounce animation - gentle and elegant
-  const bounceVariants = {
+  const bounceVariants: Variants = {
     initial: { y: 0 },
     bounce: {
       y: [0, -10, 0, -6, 0, -3, 0],
@@ -93,7 +93,7 @@ function TiltCard({ title, description, index }: WhyChooseItem & { index: number
   };
 
   // Gentle scale variant for smooth depth
-  const scaleVariants = {
+  const scaleVariants: Variants = {
     initial: { scale: 1 },
     bounce: {
       scale: [1, 1.02, 1, 1.015, 1, 1.008, 1],

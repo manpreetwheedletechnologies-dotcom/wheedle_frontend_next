@@ -14,9 +14,10 @@ export interface HeroButton {
 }
 
 export interface HeroSectionData {
+  bannerImage: string;
   badge: string;
   titleMain: string;
-  titlePrefix: string;
+  titlePrefix?: string;
   titleHighlight: string;
   tagline: string;
   description: string;
@@ -32,4 +33,6 @@ export interface IndustryData {
   aiImpactSection?: AiImpactData;
   aboutSection?: AboutData;
   ctaCardSection?: CtaData;
+  aiChatbotSection : any;
+  aiAgentsSection : any;
 }
