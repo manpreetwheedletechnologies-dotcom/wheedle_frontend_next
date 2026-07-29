@@ -163,11 +163,11 @@ export default function HeroSection({ data }: HeroSectionProps) {
           <div className="relative flex flex-col sm:flex-row items-center gap-5 sm:gap-7">
             {data.buttons?.map((btn, i) =>
               btn.style === "secondary" ? (
-                <Link key={i} href={btn.url}>
+                <Link key={i} href=''>
                   <Button onClick={() => setOpenContact(true)} padding="25px 20px">{btn.label}</Button>
                 </Link>
               ) : (
-                <Link key={i} href={btn.url} className="group relative">
+                <Link key={i} href='https://wheedletechnologies.tech/' className="group relative">
                   <span
                     aria-hidden
                     className="absolute -inset-1 rounded-full bg-gradient-to-r from-[#1131c8] via-[#4b6bfd] to-[#1131c8] opacity-40 blur-lg transition-opacity duration-300 group-hover:opacity-90"
