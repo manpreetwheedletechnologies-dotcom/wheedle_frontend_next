@@ -359,14 +359,14 @@
       "tagline": "Empowering Telecom Businesses with Smarter AI Growth",
       "description": "Customers today compare mobile plans, broadband packages, and enterprise connectivity options online before switching providers or signing up. They expect instant answers, personalized recommendations, and fast issue resolution, and manual sales and support processes can't keep pace with that expectation. AI automates lead generation, customer engagement, and growth for telecom businesses.",
       "buttons": [
-        {
-          "label": "Book a Strategy Session",
-          "url": "",
+      {
+          "label": "Start Growing Today",
+          "url": "https://wheedletechnologies.tech/",
           "style": "primary"
         },
         {
-          "label": "Explore Solutions",
-          "url": "https://wheedletechnologies.tech/",
+          "label": "View Case Studies",
+          "url": "#",
           "style": "secondary"
         }
       ]
@@ -1068,13 +1068,13 @@
       "description": "Today's patients begin their healthcare journey online. Whether they are searching for a specialist, comparing treatment options, booking consultations, or evaluating healthcare providers, your digital presence shapes their first impression and influences their decision-making.",
       "buttons": [
         {
-          "label": "Book a Free Consultation",
-          "url": "",
+          "label": "Start Growing Today",
+          "url": "https://wheedletechnologies.tech/",
           "style": "primary"
         },
         {
-          "label": "Explore Solutions",
-          "url": "https://wheedletechnologies.tech/",
+          "label": "View Case Studies",
+          "url": "#",
           "style": "secondary"
         }
       ]
@@ -1418,14 +1418,14 @@
       "tagline": "From Search to Showroom - Power Every Stage of the Customer Journey with AI",
       "description": "Generate More Enquiries. Fill More Test Drives, and Build Customers for Life. Today's buyers don't start their journey in your showroom; they start online. They compare models, explore features, watch reviews, schedule test drive options, and shortlist dealerships long before speaking to a sales advisor.AI-powered growth for dealerships, EV brands, and service centres.",
       "buttons": [
-        {
-          "label": "Book a Growth Consultation",
-          "url": "",
+       {
+          "label": "Start Growing Today",
+          "url": "https://wheedletechnologies.tech/",
           "style": "primary"
         },
         {
-          "label": "Explore Automotive Solutions",
-          "url": "https://wheedletechnologies.tech/",
+          "label": "View Case Studies",
+          "url": "#",
           "style": "secondary"
         }
       ]
@@ -1785,14 +1785,14 @@
       "tagline": "Empowering EdTech & Education Businesses with Smarter AI Growth",
       "description": "Schools, colleges, universities, coaching institutes, and EdTech platforms today compete in an increasingly crowded digital market. Generating enquiries, managing admissions communication, and converting interest into enrollments has become harder and doing it manually no longer scales.",
       "buttons": [
-        {
-          "label": "Book a Strategy Session",
-          "url": "",
+       {
+          "label": "Start Growing Today",
+          "url": "https://wheedletechnologies.tech/",
           "style": "primary"
         },
         {
-          "label": "Explore Solutions",
-          "url": "https://wheedletechnologies.tech/",
+          "label": "View Case Studies",
+          "url": "#",
           "style": "secondary"
         }
       ]
@@ -2501,7 +2501,7 @@
       "tagline": "Empowering FMCG Businesses with Smarter AI Growth",
       "description": "Consumers today discover, compare, and decide on everyday products online long before they reach the shelf through reviews, social content, and search. At the same time, distributors and retailers expect fast responses, accurate stock information, and reliable communication from brands.",
       "buttons": [
-        {
+       {
           "label": "Start Growing Today",
           "url": "https://wheedletechnologies.tech/",
           "style": "primary"
@@ -2859,7 +2859,7 @@
       "tagline": "Empowering Service Businesses with Smarter AI Growth",
       "description": "From professional consultants and legal firms to salons, real estate agents, repair services, and home-service providers, customers today search, compare, and book services online before making a decision. They expect instant responses, transparent information, and reliable follow-up, and manual enquiry handling often can't keep up.",
       "buttons": [
-        {
+       {
           "label": "Start Growing Today",
           "url": "https://wheedletechnologies.tech/",
           "style": "primary"
