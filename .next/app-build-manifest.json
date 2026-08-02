@@ -11,20 +11,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
     ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
     "/industry/[slug]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/industry/[slug]/page.js"
     ],
-    "/_not-found/page": [
+    "/industry/[slug]/case-study/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/industry/[slug]/case-study/page.js"
+    ],
+    "/industry/[slug]/case-study/[org]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/industry/[slug]/case-study/[org]/page.js"
     ]
   }
 }

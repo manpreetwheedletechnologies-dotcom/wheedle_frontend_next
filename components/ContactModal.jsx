@@ -107,7 +107,7 @@ const ContactModal = ({
 
   return createPortal(
     <section
-      className="fixed inset-0 z-[9999] bg-black/90 flex items-center justify-center px-4 sm:px-6"
+      className="fixed inset-0 z-10 bg-black/90 flex items-center justify-center px-4 sm:px-6"
       onClick={(e) => {
         // sirf tab close karo jab click seedha backdrop (outside box) par ho
         if (e.target === e.currentTarget) {
@@ -173,7 +173,7 @@ const ContactModal = ({
           <AnimatePresence>
             {alert.show && (
               <motion.div key={toastKey} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 40 }} transition={{ duration: 0.3 }}
-                className="fixed bottom-6 right-6 z-[9999] w-[90vw] sm:w-[360px]">
+                className="fixed bottom-6 right-6 z-10 w-[90vw] sm:w-[360px]">
                 <div className={`relative overflow-hidden rounded-xl border p-4 text-white shadow-lg ${alert.type === 'success' ? 'bg-gradient-to-r from-[#0B2CC3] to-[#4D6DFF] border-[#6D87FF]' : 'bg-gradient-to-r from-[#7A0000] to-[#b30089] border-[#f44308]'}`}>
                   <p className="text-sm font-medium leading-snug">{alert.message}</p>
                   <motion.div initial={{ width: '100%' }} animate={{ width: '0%' }} transition={{ duration: 5, ease: 'linear' }} className="absolute bottom-0 left-0 h-[3px] bg-white/70" />

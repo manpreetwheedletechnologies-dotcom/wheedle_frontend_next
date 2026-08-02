@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Maximize2 } from "lucide-react";
 
@@ -42,6 +41,16 @@ const itemVariants: any = {
 };
 
 export default function AiChatbot({ data }: AiChatbotProps) {
+  const handleExploreClick = () => {
+    const target = document.getElementById("ai-agents");
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else if (data.button.url) {
+      // Fallback for any page that doesn't render the AI Agents section.
+      window.location.href = data.button.url;
+    }
+  };
+
   return (
     <section className="relative w-full overflow-hidden bg-[#05070d]">
       {/* ambient glow */}
@@ -125,13 +134,14 @@ export default function AiChatbot({ data }: AiChatbotProps) {
             )}
 
             <motion.div variants={itemVariants} className="mt-8">
-              <Link
-                href={data.button.url}
+              <button
+                type="button"
+                onClick={handleExploreClick}
                 className="inline-flex items-center gap-2 rounded-xl border border-blue-400/40 bg-gradient-to-r from-[#0a1a6b] to-[#1131c8] px-6 py-3.5 text-sm md:text-[15px] font-semibold text-white shadow-[0_8px_24px_-8px_rgba(17,49,200,0.6)] transition-all duration-300 hover:border-blue-300/70 hover:from-[#0d2180] hover:to-[#1a3fe0] hover:shadow-[0_10px_32px_-6px_rgba(17,49,200,0.8)] hover:gap-3"
               >
                 {data.button.label}
                 <ArrowRight size={16} strokeWidth={2.25} />
-              </Link>
+              </button>
             </motion.div>
           </motion.div>
         </div>

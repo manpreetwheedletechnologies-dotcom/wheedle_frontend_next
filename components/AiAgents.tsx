@@ -434,7 +434,7 @@ export default function AiAgents({ data }: AiAgentsProps) {
   };
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#05070d]">
+    <section id="ai-agents" className="relative w-full overflow-hidden bg-[#05070d] scroll-mt-24">
       {/* Background gradient orbs */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[1200px] h-[800px] opacity-60"

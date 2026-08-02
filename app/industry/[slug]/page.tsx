@@ -35,7 +35,7 @@ export default async function IndustryPage({
 
   return (
     <PageWrapper>
-      <HeroSection data={industry.heroSection } />
+      <HeroSection data={industry.heroSection} caseStudySlug={slug.toLowerCase()} />
 
       {industry.challengesSection && (
         <Challenges data={industry.challengesSection} />

@@ -1,0 +1,96 @@
+{
+  "MSME": [
+    {
+      "hero": {
+        "bannerImage": "/indus/msme_hero_banner.png",
+        "badge": "CASE STUDY",
+        "clientTag": "Savorka Solar",
+        "titleMain": "95 Location-Verified Leads in 7 Days for Savorka Solar",
+        "tagline": "AI-Powered Digital Marketing & Lead Generation for Solar Energy",
+        "description": "Savorka Solar is a residential and commercial solar panel installation company serving Delhi-NCR, including Noida, Greater Noida, Ghaziabad, Meerut, Bulandshahr and Khurja. Wheedle Technologies rebuilt its paid, organic and social channels from the ground up to generate genuinely qualified, in-area leads."
+      },
+      "overview": [
+        {
+          "label": "Industry",
+          "value": "MSME / Solar Energy Installation"
+        },
+        {
+          "label": "Service",
+          "value": "Meta Ads, SEO & Social Media Management"
+        },
+        {
+          "label": "Duration",
+          "value": "First 30 Days"
+        },
+        {
+          "label": "Location",
+          "value": "Delhi-NCR (Noida, Ghaziabad, Meerut & More)"
+        }
+      ],
+      "challenge": {
+        "title": "The Challenge",
+        "description": "When we took over the account, core issues were identified across paid, organic and social channels alike.",
+        "points": [
+          "Meta Ads were generating leads from non-target locations such as Gonda, Gorakhpur and Bihar, resulting in zero conversion value despite a low cost-per-lead",
+          "The website had poor search visibility, was not indexed, and carried minimal domain authority",
+          "SEO groundwork remained incomplete after 1.5 months with a prior agency",
+          "Social media presence was inconsistent with no regular posting schedule",
+          "No qualifying mechanism existed in the lead form to filter genuine, high-intent prospects",
+          "Google My Business was underleveraged with no consistent updates"
+        ]
+      },
+      "solution": {
+        "title": "Our Approach",
+        "description": "We built a strong multi-channel foundation across Meta Ads, SEO and social media, all working in parallel.",
+        "points": [
+          "Restricted Meta Ads targeting strictly to Savorka Solar's actual service areas, eliminating wasted spend on irrelevant traffic",
+          "Added a qualifying question to the lead form (\"What is your monthly electricity bill?\") to filter out low-intent submissions",
+          "Ran multiple single-image ad creatives in parallel so the algorithm could optimise toward the best performers, with daily data-driven adjustments",
+          "Completed website indexing within 5 days and ran competitor keyword research across the Delhi-NCR solar market",
+          "Published SEO-optimised blog content and began structured backlink building and technical SEO fixes",
+          "Established consistent, platform-specific posting across Instagram, Facebook, LinkedIn and Google My Business"
+        ]
+      },
+      "results": {
+        "title": "The Results",
+        "description": "Within the first month, paid, organic and social channels were all moving in the same direction: qualified, in-area growth.",
+        "stats": [
+          {
+            "value": "95",
+            "label": "Leads Generated in 6-7 Days"
+          },
+          {
+            "value": "100%",
+            "label": "Leads From Target Service Areas"
+          },
+          {
+            "value": "2 → 15",
+            "label": "Domain Authority Growth"
+          },
+          {
+            "value": "5-8",
+            "label": "Keywords Ranking in Top 20"
+          }
+        ]
+      },
+      "testimonial": {
+        "quote": "Geographic precision and lead pre-qualification turned out to be non-negotiable — a low cost-per-lead from the wrong location delivers zero business value. Every lead from this campaign came from Savorka Solar's exact service areas, making each one a genuine sales opportunity.",
+        "author": "Key Takeaway",
+        "role": "Savorka Solar Case Study"
+      },
+      "cta": {
+        "image": "/indus/msme_cta_robot.png",
+        "imageAlt": "AI growth for MSMEs",
+        "titleLine1": "Ready to Become Our Next ",
+        "titleHighlight": "Success Story?",
+        "description": "Let's build an affordable, automation-first growth system for your business.",
+        "button": {
+          "label": "Start Growing Today",
+          "url": "https://wheedletechnologies.tech/"
+        }
+      },
+      "org": "Savorka Solar",
+      "orgSlug": "savorka-solar"
+    }
+  ]
+}

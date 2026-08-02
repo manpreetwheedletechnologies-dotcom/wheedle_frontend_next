@@ -38,6 +38,10 @@ export type HeroSectionData = {
 
 type HeroSectionProps = {
   data: HeroSectionData;
+  /** Industry slug, e.g. "financial" — used to link the "View Case
+   * Studies" button to /view-case-studies/[slug]. Optional so
+   * HeroSection keeps working anywhere it's used without a slug. */
+  caseStudySlug?: string;
 };
 
 const itemVariants: any = {
@@ -58,7 +62,7 @@ const containerVariants: any = {
   },
 };
 
-export default function HeroSection({ data }: HeroSectionProps) {
+export default function HeroSection({ data, caseStudySlug }: HeroSectionProps) {
   const [openContact, setOpenContact] = useState(false);
   return (
     <section className="relative w-full bg-[#05070d]">
@@ -163,9 +167,15 @@ export default function HeroSection({ data }: HeroSectionProps) {
           <div className="relative flex flex-col sm:flex-row items-center gap-5 sm:gap-7">
             {data.buttons?.map((btn, i) =>
               btn.style === "secondary" ? (
-                <Link key={i} href=''>
-                  <Button onClick={() => setOpenContact(true)} padding="25px 20px">{btn.label}</Button>
-                </Link>
+                btn.label === "View Case Studies" && caseStudySlug ? (
+                  <Link key={i} href={`/industry/${caseStudySlug}/case-study`}>
+                    <Button padding="25px 20px">{btn.label}</Button>
+                  </Link>
+                ) : (
+                  <Link key={i} href=''>
+                    <Button onClick={() => setOpenContact(true)} padding="25px 20px">{btn.label}</Button>
+                  </Link>
+                )
               ) : (
                 <Link key={i} href='https://wheedletechnologies.tech/' className="group relative">
                   <span

@@ -1,5 +1,5 @@
 {
+  "/industry/[slug]/case-study/page": "app/industry/[slug]/case-study/page.js",
   "/industry/[slug]/page": "app/industry/[slug]/page.js",
-  "/page": "app/page.js",
-  "/_not-found/page": "app/_not-found/page.js"
+  "/industry/[slug]/case-study/[org]/page": "app/industry/[slug]/case-study/[org]/page.js"
 }
