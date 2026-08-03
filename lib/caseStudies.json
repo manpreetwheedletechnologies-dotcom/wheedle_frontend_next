@@ -92,5 +92,100 @@
       "org": "Savorka Solar",
       "orgSlug": "savorka-solar"
     }
+  ],
+  "Service": [
+    {
+      "hero": {
+        "bannerImage": "/indus/service_hero_banner.jpg",
+        "badge": "CASE STUDY",
+        "clientTag": "Wheedle Technologies",
+        "titleMain": "Wheedle Technologies — SEO & Social Media Growth",
+        "tagline": "AI-Powered Website Development & Digital Marketing",
+        "description": "Wheedle Technologies is an AI-powered digital solutions company offering website development and end-to-end digital marketing services. The company leverages artificial intelligence to deliver faster, smarter, and more cost-effective solutions for businesses looking to establish and grow their online presence."
+      },
+      "overview": [
+        {
+          "label": "Industry",
+          "value": "AI-Powered Digital Solutions"
+        },
+        {
+          "label": "Service",
+          "value": "SEO & Social Media Optimisation"
+        },
+        {
+          "label": "Duration",
+          "value": "First 2 Months"
+        },
+        {
+          "label": "Location",
+          "value": "Pan-India / Digital"
+        }
+      ],
+      "challenge": {
+        "title": "The Challenge",
+        "description": "When the digital marketing engagement began, Wheedle Technologies faced a common challenge for growing businesses — a strong service offering but limited online visibility and no established social media presence.",
+        "points": [
+          "Website had zero domain authority and minimal search engine presence",
+          "No social media following across any platform — LinkedIn, Facebook, or GMB",
+          "Google My Business profile existed but had low visibility and no consistent activity",
+          "Organic search traffic was negligible with no structured SEO strategy in place",
+          "Brand credibility online was not reflective of the quality of services being offered"
+        ]
+      },
+      "solution": {
+        "title": "Our Approach",
+        "description": "The goal was to build measurable organic growth across both search and social — establishing Wheedle Technologies as a credible, visible brand in the AI website development and digital marketing space.",
+        "points": [
+          "Conducted a complete technical SEO audit and resolved foundational issues — indexing, meta tag optimization, heading structure, internal linking and crawlability",
+          "Carried out in-depth keyword research targeting high-intent, industry-relevant search terms and published content to drive qualified organic traffic",
+          "Implemented a structured backlink acquisition strategy focused on quality, relevant backlinks to build domain authority and search trust signals",
+          "Analysed competitor websites to identify keyword gaps and content opportunities for faster organic rankings",
+          "Built a consistent, platform-specific social media strategy across LinkedIn, Facebook and Google My Business from scratch",
+          "Positioned LinkedIn content toward business owners, startups and decision-makers to build credibility as an AI and digital marketing provider",
+          "Ran regular Facebook posting mixing educational content, service highlights and engagement-focused creatives",
+          "Kept Google My Business consistently updated with service information, posts and location-relevant content to improve local visibility"
+        ]
+      },
+      "results": {
+        "title": "The Results",
+        "description": "Within 2 months, SEO and social channels showed measurable, compounding growth from a near-zero baseline.",
+        "stats": [
+          {
+            "value": "00 → 12",
+            "label": "Domain Authority Growth"
+          },
+          {
+            "value": "Partial → Fully Indexed",
+            "label": "Website Indexing Status"
+          },
+          {
+            "value": "150+",
+            "label": "New LinkedIn Followers"
+          },
+          {
+            "value": "250+",
+            "label": "New Facebook Followers"
+          }
+        ]
+      },
+      "testimonial": {
+        "quote": "SEO and social media are long-term investments. The results achieved within 2 months represent just the beginning — with the foundation now in place, organic traffic, rankings and social media reach will continue to compound over time, reducing dependency on paid channels and building sustainable growth.",
+        "author": "Key Takeaway",
+        "role": "Wheedle Technologies Case Study"
+      },
+      "cta": {
+        "image": "/indus/service_cta_robot.png",
+        "imageAlt": "AI-powered growth for service businesses",
+        "titleLine1": "Ready to Become Our Next ",
+        "titleHighlight": "Success Story?",
+        "description": "Let's build an affordable, automation-first growth system for your business.",
+        "button": {
+          "label": "Start Growing Today",
+          "url": "https://wheedletechnologies.tech/"
+        }
+      },
+      "org": "Wheedle Technologies",
+      "orgSlug": "wheedle-technologies"
+    }
   ]
 }
