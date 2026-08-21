@@ -157,6 +157,38 @@ function Footer() {
                     </a>
                   </li>
 
+                  <li>
+                    <a
+                      href="/contact-us"
+                      className="group relative inline-flex h-5 overflow-hidden text-sm font-medium"
+                    >
+                      <span className="translate-y-0 transition duration-300 group-hover:-translate-y-[150%]">
+                        Contact Us
+                      </span>
+
+                      <span className="absolute translate-y-[150%] text-[#0B2CC3] transition duration-300 group-hover:translate-y-0">
+                        Contact Us
+                      </span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/cookie-policy"
+                      className="group relative inline-flex h-5 overflow-hidden text-sm font-medium"
+                    >
+                      <span className="translate-y-0 transition duration-300 group-hover:-translate-y-[150%]">
+                        Cookie Policy
+                      </span>
+
+                      <span className="absolute translate-y-[150%] text-[#0B2CC3] transition duration-300 group-hover:translate-y-0">
+                        Cookie Policy
+                      </span>
+                    </a>
+                  </li>
+
+                  
+
                 </ul>
               </div>
               {/* <div>
