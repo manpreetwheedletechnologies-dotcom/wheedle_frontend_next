@@ -30,8 +30,8 @@ const contactDetails = [
     icon: Phone,
     title: "Call Us",
     description: "Speak with our team",
-    value: "+91 9717672561",
-    href: "tel:+919717672561",
+    value: "+91 8130622635",
+    href: "tel:+91 8130622635",
   },
   {
     icon: MapPin,

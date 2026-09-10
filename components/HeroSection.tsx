@@ -210,7 +210,7 @@ export default function HeroSection({ data, caseStudySlug }: HeroSectionProps) {
           title="Get the Complete Case Study"
           description="Enter your details to receive the full case study and learn how we delivered measurable results."
           contactEmail="info@wheedletechnologies.ai"
-          contactPhone="+91 9717672561"
+          contactPhone="+91 8130622635"
           messagePlaceholder="Your message (optional)"
         />
       )}

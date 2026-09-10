@@ -339,7 +339,7 @@ function Footer() {
               title="Talk To An Expert"
               description=""
               contactEmail="info@wheedletechnologies.ai"
-              contactPhone="+91 9717672561"
+              contactPhone="+91 8130622635"
               messagePlaceholder="Tell us your message"
             />
           )}

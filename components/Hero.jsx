@@ -76,7 +76,7 @@ export default function Hero({ openBot }) {
           title="Unlock Your Free Consultation"
           description=""
           contactEmail="info@wheedletechnologies.ai"
-          contactPhone="+91 9717672561"
+          contactPhone="+91 8130622635"
           messagePlaceholder="Tell us your message"
         />
       )}

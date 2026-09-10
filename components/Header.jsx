@@ -385,7 +385,7 @@ export default function Header() {
       {openContact && (
         <ContactModal onClose={() => setOpenContact(false)} title="Contact Us"
           description="Tell us about your goals, and we'll get in touch. Let us grow together!!"
-          contactEmail="info@wheedletechnologies.ai" contactPhone="+91 9717672561"
+          contactEmail="info@wheedletechnologies.ai" contactPhone="+91 8130622635"
           messagePlaceholder="Tell us about your requirement" />
       )}
 
