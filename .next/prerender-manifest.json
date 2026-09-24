@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "76b1c2e78622171c5090b27f718a51a6",
-    "previewModeSigningKey": "f11cc2510464659467b536014694f3a785983b17437aa90725c66698b46f67e4",
-    "previewModeEncryptionKey": "02550e0f0b135b3434902bddc262dda378dbe9d24345c6f7e25b212cfb477cbe"
-  }
-}
+{"version":4,"routes":{"/our-service/ai-web-engineering-agents":{},"/our-service/ai-app-development-agent":{},"/our-service/software-development-agentic-platform":{},"/our-service/autonomous-it-consulting-and-advisory-agent":{},"/our-service/autonomous-digital-marketing-agents":{},"/our-service/ai-graphic-design-automation-agent":{},"/our-service/autonomous-ui-ux-design-intelligence":{},"/our-service/ai-solutions-and-intelligent-automation":{}},"dynamicRoutes":{"/our-service/[serviceKey]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/our-service/[serviceKey]","routeRegex":"^\\/our\\-service\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"07994e2af283a9161d549f862f5e8e05","previewModeSigningKey":"d6e7beec9cc59daf65394a9d63f96d85d10fe9076a3d49be050c84db335d650e","previewModeEncryptionKey":"e458fa50647ea376ba270a20131338e37202e0f599029b8a8e897d725f84c8d0"}}

@@ -1,3 +1,5 @@
 {
+  "/career/page": "app/career/page.js",
+  "/our-service/[serviceKey]/page": "app/our-service/[serviceKey]/page.js",
   "/page": "app/page.js"
 }
