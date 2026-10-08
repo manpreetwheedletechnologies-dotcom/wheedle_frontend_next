@@ -281,7 +281,7 @@ export default function CookiePolicyPage() {
               </p>
 
               <p className="mt-2 text-slate-600">
-                Greater Noida, Uttar Pradesh, India
+                Head Office, Greater Noida, Uttar Pradesh, India
               </p>
 
               <p className="mt-2 text-slate-600">

@@ -51,7 +51,7 @@ const contactDetails = [
 
 const offices = [
   {
-    name: "Greater Noida Office",
+    name: "Greater Noida (Head Office)",
     lines: ["Greater Noida", "Uttar Pradesh, India"],
     mapQuery: "Greater Noida, Uttar Pradesh, India",
   },

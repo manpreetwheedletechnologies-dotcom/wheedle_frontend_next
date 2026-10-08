@@ -21,6 +21,7 @@ import WhebotPage from '../components/WhebotPage';
 import IndustriesSection from '../components/Industriessection';
 
 import GoogleVerificationInfo from '../components/GoogleVerificationInfo';
+import OurPartner from '../components/OurPartner';
 
 // import AboutApp from "../components/AboutApp";
 // import AppFeatures from "../components/AppFeatures";
@@ -93,7 +94,9 @@ export default function LandingPageClient() {
                 className="w-full min-h-screen bg-cover bg-center bg-no-repeat"
                 style={{ backgroundImage: "url('/Main_BG.jpg')" }}
               >
+                <OurPartner />
                 <Partners />
+
                 <Vision />
                 <Steps />
                 <Features />
@@ -113,6 +116,7 @@ export default function LandingPageClient() {
                     successMessage: 'Your contact is successfully registered for newsletter',
                   }}
                 />
+                
                 <Testimonials />
                 {/* <Footer /> */}
               </div>
