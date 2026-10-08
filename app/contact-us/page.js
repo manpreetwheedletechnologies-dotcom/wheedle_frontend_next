@@ -35,10 +35,10 @@ const contactDetails = [
   },
   {
     icon: MapPin,
-    title: "Our Office",
-    description: "Visit our business office",
-    value: "Greater Noida, Uttar Pradesh, India",
-    href: null,
+    title: "Our Offices",
+    description: "Visit us at either of our locations",
+    value: "Greater Noida & Kolkata, India",
+    href: "#our-offices",
   },
   {
     icon: Clock3,
@@ -46,6 +46,23 @@ const contactDetails = [
     description: "Our usual support hours",
     value: "Monday – Saturday, 9:30 AM – 7:00 PM",
     href: null,
+  },
+];
+
+const offices = [
+  {
+    name: "Greater Noida Office",
+    lines: ["Greater Noida", "Uttar Pradesh, India"],
+    mapQuery: "Greater Noida, Uttar Pradesh, India",
+  },
+  {
+    name: "Kolkata Office",
+    lines: [
+      "M211, 2nd Floor, Webel IT Park,",
+      "Phase 1, DH Block, New Town,",
+      "Kolkata \u2013 700156, India",
+    ],
+    mapQuery: "Webel IT Park, DH Block, New Town, Kolkata 700156, India",
   },
 ];
 
@@ -129,6 +146,46 @@ export default function ContactUsPage() {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      {/* Our Offices */}
+      <section id="our-offices" className="mx-auto max-w-7xl scroll-mt-24 px-6 pb-16 lg:px-8 lg:pb-24">
+        <div className="mb-8 max-w-2xl">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-blue-600">
+            Our Offices
+          </p>
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            Find us in two cities
+          </h2>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {offices.map((office) => (
+            <div
+              key={office.name}
+              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+            >
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                <MapPin size={22} />
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">{office.name}</h3>
+              <address className="mt-3 text-sm not-italic leading-6 text-slate-700">
+                {office.lines.map((line) => (
+                  <span key={line} className="block">{line}</span>
+                ))}
+              </address>
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(office.mapQuery)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700"
+              >
+                View on Google Maps
+                <ArrowRight size={16} />
+              </a>
+            </div>
+          ))}
         </div>
       </section>
 

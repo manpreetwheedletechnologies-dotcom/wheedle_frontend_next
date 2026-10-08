@@ -800,6 +800,106 @@ const servicesData = {
       ],
     },
   },
+  datacenter: {
+    slug: "data-center-and-cloud-hosting",
+    seo: {
+      title: "Data Center & Cloud Hosting in Kolkata | Wheedle Technologies",
+      description:
+        "Secure and scalable hosting, VPS, dedicated servers, GPU servers, private cloud and colocation from our New Town, Kolkata data center, powered by HostGraber.",
+      url: "https://www.wheedletechnologies.ai/our-service/data-center-and-cloud-hosting",
+    },
+    /* ================= HERO DATA ================= */
+    hero: {
+      badge: "Our services",
+      title_main: "Data Center & Cloud Hosting",
+      title: "Enterprise Hosting from Kolkata, Eastern India",
+      description:
+        "Powered by HostGraber, our data center in New Town, Kolkata delivers low-latency, secure and scalable hosting for businesses across Eastern India and beyond.",
+    },
+
+    /* ================= SERVICES DATA ================= */
+    services: {
+      heading: "Our Hosting & Infrastructure Offerings:",
+
+      subheading: "Performance, Security & Reliability",
+      subText:
+        "From shared hosting to private cloud and colocation, we provide infrastructure for every scale, backed by 24x7 monitoring and expert support.",
+      jobs: [
+        {
+          title: "Web Hosting",
+          desc: "Secure, high-performance Shared, WordPress, E-Commerce and Application Hosting, optimised for speed and seamless scalability.",
+          img: "/Cloud1.jpg",
+        },
+        {
+          title: "VPS Hosting",
+          desc: "Dedicated performance with full root access, scalable resources and enhanced security for growing applications.",
+          img: "/backend1.jpg",
+        },
+        {
+          title: "Dedicated Servers",
+          desc: "Customisable server configurations with 24/7 monitoring and reliable uptime from our Kolkata data center.",
+          img: "/Enterprise.jpg",
+        },
+        {
+          title: "GPU Servers",
+          desc: "High-performance GPU servers for AI, machine learning, data analytics and rendering workloads.",
+          img: "/AI.jpg",
+        },
+        {
+          title: "SAS / NAS Storage",
+          desc: "Reliable, redundant storage for enterprise workloads, backups and shared environments, with seamless integration.",
+          img: "/Data Assessment & Readiness.jpg",
+        },
+        {
+          title: "Private Cloud & Colocation",
+          desc: "Fully dedicated, secure and scalable private cloud, or host your own hardware in our racks with redundant power, high-speed connectivity and 24/7 monitoring.",
+          img: "/full1.jpg",
+        },
+      ],
+    },
+
+    /* ================= LIFECYCLE DATA ================= */
+    lifecycle: {
+      heading: "Why Host With Us:",
+
+      subheading: "Built for Uptime and Peace of Mind",
+      subText:
+        "Our facility in New Town, Kolkata combines resilient power, robust networking and layered security to keep your critical workloads running.",
+      jobs: [
+        {
+          title: "Uninterrupted Power",
+          desc: "Redundant UPS systems and diesel generator backup to keep your infrastructure online.",
+          img: "/maintence1.jpg",
+        },
+        {
+          title: "Robust Network",
+          desc: "Carrier-neutral connectivity with multiple ISP connections for low-latency access across Eastern India.",
+          img: "/api1.jpg",
+        },
+        {
+          title: "Precision Cooling",
+          desc: "Advanced HVAC systems maintain optimal environmental conditions for your hardware.",
+          img: "/quality1.jpg",
+        },
+        {
+          title: "Top-Tier Security",
+          desc: "24/7 on-site security, CCTV monitoring and biometric, restricted-access entry zones.",
+          img: "/cyber.jpg",
+        },
+        {
+          title: "Fire Protection",
+          desc: "Smoke detection and fire suppression systems provide early warning and protection.",
+          img: "/Governance.jpg",
+        },
+        {
+          title: "24x7 Support",
+          desc: "Round-the-clock ticket and phone support with a dedicated account manager for instant assistance.",
+          img: "/Final Delivery & AI Support.jpg",
+        },
+      ],
+    },
+  },
+
 };
 
 export default servicesData;

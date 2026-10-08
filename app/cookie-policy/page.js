@@ -48,17 +48,18 @@ export default function CookiePolicyPage() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
       {/* Hero */}
-      <section className="border-b border-slate-200 bg-slate-50">
+                  <section className="relative overflow-hidden bg-slate-950">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.18),transparent_35%)]" />
         <div className="mx-auto max-w-5xl px-6 py-16 lg:px-8 lg:py-20">
           <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 text-white">
             <Cookie size={27} />
           </div>
 
-          <h1 className="text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-blue-400 sm:text-5xl ">
             Cookie Policy
           </h1>
 
-          <p className="mt-5 max-w-3xl text-base leading-8 text-slate-600">
+          <p className="mt-5 max-w-3xl text-base leading-8 text-white/80">
             This Cookie Policy explains how Wheedle Technologies uses, or may
             use, cookies and similar technologies when you visit our website.
             It also explains the choices available to you regarding these
@@ -281,6 +282,11 @@ export default function CookiePolicyPage() {
 
               <p className="mt-2 text-slate-600">
                 Greater Noida, Uttar Pradesh, India
+              </p>
+
+              <p className="mt-2 text-slate-600">
+                M211, 2nd Floor, Webel IT Park, Phase 1, DH Block, New Town,
+                Kolkata &ndash; 700156, India
               </p>
 
               <a
