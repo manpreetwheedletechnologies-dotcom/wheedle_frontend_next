@@ -284,10 +284,10 @@ export default function CookiePolicyPage() {
                 Head Office, Greater Noida, Uttar Pradesh, India
               </p>
 
-              <p className="mt-2 text-slate-600">
+              {/* <p className="mt-2 text-slate-600">
                 M211, 2nd Floor, Webel IT Park, Phase 1, DH Block, New Town,
                 Kolkata &ndash; 700156, India
-              </p>
+              </p> */}
 
               <a
                 href="mailto:info@wheedletechnologies.ai"

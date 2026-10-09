@@ -37,7 +37,7 @@ const contactDetails = [
     icon: MapPin,
     title: "Our Offices",
     description: "Visit us at either of our locations",
-    value: "Greater Noida & Kolkata, India",
+    value: "Greater Noida ,India",
     href: "#our-offices",
   },
   {
@@ -54,16 +54,16 @@ const offices = [
     name: "Greater Noida (Head Office)",
     lines: ["Greater Noida", "Uttar Pradesh, India"],
     mapQuery: "Greater Noida, Uttar Pradesh, India",
-  },
-  {
-    name: "Kolkata Office",
-    lines: [
-      "M211, 2nd Floor, Webel IT Park,",
-      "Phase 1, DH Block, New Town,",
-      "Kolkata \u2013 700156, India",
-    ],
-    mapQuery: "Webel IT Park, DH Block, New Town, Kolkata 700156, India",
-  },
+  }
+  // {
+  //   name: "Kolkata Office",
+  //   lines: [
+  //     "M211, 2nd Floor, Webel IT Park,",
+  //     "Phase 1, DH Block, New Town,",
+  //     "Kolkata \u2013 700156, India",
+  //   ],
+  //   mapQuery: "Webel IT Park, DH Block, New Town, Kolkata 700156, India",
+  // },
 ];
 
 export default function ContactUsPage() {

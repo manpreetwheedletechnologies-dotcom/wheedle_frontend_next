@@ -1,5 +1,6 @@
 {
-  "/page": "app/page.js",
+  "/contact-us/page": "app/contact-us/page.js",
   "/cookie-policy/page": "app/cookie-policy/page.js",
-  "/contact-us/page": "app/contact-us/page.js"
+  "/page": "app/page.js",
+  "/our-service/[serviceKey]/page": "app/our-service/[serviceKey]/page.js"
 }
